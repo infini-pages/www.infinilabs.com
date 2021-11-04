@@ -1,0 +1,15 @@
+/logs/
+log/
+yarn-error.log
+node_modules
+.idea/
+run/
+.DS_Store
+docker/.node_modules/*
+.vscode/
+/.public
+/vendor
+/bin
+*.exe
+web/.github/
+web/report*

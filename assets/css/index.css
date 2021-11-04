@@ -1,0 +1,53 @@
+/* INDEX STYLES
+-------------------------------------------------- */
+.customer-case {
+    background-color: white;
+}
+.customer-case .customer-brand {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5rem 0;
+}
+.customer-case .customer-brand .img-link {
+    padding: 1rem;
+}
+
+:root {
+    --swiper-navigation-size : 20px
+}
+.customer-case .swiper-voc {
+    width: 100%;
+}
+
+.customer-case .swiper-voc .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer-case .swiper-voc .swiper-slide .slide-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2.5rem;
+    max-width: 60rem;
+}
+.customer-case .swiper-voc .swiper-slide .slide-content>p {
+    padding: 1.5rem 0 2.5rem;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+/*
+ * Extra utilities
+ */
+
+@media (min-width: 768px) {
+
+}
