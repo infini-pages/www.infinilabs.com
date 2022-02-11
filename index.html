@@ -80,7 +80,7 @@
       }
     </style> -->
   </head>
-  <body>
+  <body data-spy="scroll" >
     <!-- <div class="bg-video">
     <video id="bg_video" src="assets/media/bg_video.mp4" autoplay loop muted></video>
     <div class="overlay"></div>
@@ -99,16 +99,16 @@
           <div class="menus">
             <ul>
               <li>
-                <div class="link"><a href="#">首页</a></div>
+                <div class="link"><a data-scroll href="#">首页</a></div>
               </li>
               <li>
-                <div class="link"><a href="#product_service">产品与服务</a></div>
+                <div class="link"><a data-scroll href="#product_service">产品与服务</a></div>
               </li>
               <li>
-                <div class="link"><a href="#usecase">用户案例</a></div>
+                <div class="link"><a data-scroll href="#usecase">用户案例</a></div>
               </li>
               <li>
-                <div class="link"><a href="#contact-us">联系我们</a></div>
+                <div class="link"><a data-scroll href="#contact-us">联系我们</a></div>
               </li>
             </ul>
           </div>
@@ -128,7 +128,7 @@
           <h2>极限网关</h2>
         </div>
         <div class="desc">
-          的高性能应用网关，它包含丰富的特性，使用起来也非常简单。极限网关工作的方式和普通的反向代理一样，我们一般是将网关部署在
+          极限网关 (INFINI Gateway) 是一个面向 Elasticsearch 的高性能应用网关，它包含丰富的特性，使用起来也非常简单。极限网关工作的方式和普通的反向代理一样，我们一般是将网关部署在
           Elasticsearch 集群前面， 将以往直接发送给 Elasticsearch
           的请求都发送给网关，再由网关转发给请求到后端的 Elasticsearch
           集群。因为网关位于在用户端和后端 Elasticsearch 之间，所以网关在中间可
@@ -172,7 +172,7 @@
           </div>
         </div>
         <div class="btn-w">
-          <a href="#" class="more-btn">了解更多</a>
+          <a href="https://极限网关.com/" class="more-btn">了解更多</a>
         </div>
       </section>
       <section class="sec data">
@@ -218,7 +218,7 @@
           </div>
         </div>
         <div class="btn-w">
-            <a href="#" class="more-btn">了解更多</a>
+            <a href="https://极限数据.com/" class="more-btn">了解更多</a>
           </div>
       </section>
       <section class="sec solution">
@@ -313,5 +313,11 @@
       </div>
     </div>
     </footer>
+
+    <script src="/assets/js/lib/jquery.min.js"></script>
+    <script src="/assets/js/plugins/smooth-scroll/smooth-scroll.min.js"></script>
+    <script>
+      smoothScroll.init();
+    </script>
   </body>
 </html>
