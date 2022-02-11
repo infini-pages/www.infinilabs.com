@@ -1,323 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="keywords" content="INFINI Labs offcial website" />
-    <meta
-      name="description"
-      content="We build tools to make your life easier."
-    />
-    <meta name="author" content="INFINI Labs" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="INFINI Labs offcial website">
+    <meta name="description" content="We build tools to make your life easier.">
+    <meta name="author" content="INFINI Labs">
     <title>INFINI Labs</title>
-    <link
-      rel="shortcut icon"
-      href="assets/media/favicons/infini_favicon_32.ico"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="160x160"
-      href="assets/media/favicons/infini_favicon_160.ico"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <!-- <style>
-      body {
-        background-image: url("/assets/media/bg_home.jpg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-      }
-      .mid {
-        width: 260px;
-        height: 100px;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -50px;
-        margin-left: -130px;
+    <link rel="shortcut icon" href="assets/media/favicons/infini_favicon_32.ico">
+    <link rel="apple-touch-icon" sizes="160x160" href="assets/media/favicons/infini_favicon_160.ico">
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .mid img {
-        width: 100%;
-      }
-      footer {
-        color: white;
-        margin-top: 4rem;
-        position: absolute;
-        bottom: 0;
-        text-align: center;
-        width: 100%;
-        font-size: 14px;
-      }
-
-      .bg-video .overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-      }
-
-      .bg-video #bg_video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-      }
-
-      @media (min-width: 768px) {
-        .mid {
-          width: 500px;
-          margin-left: -250px;
+    <style>
+        body {
+            /*background-color: black;*/
+            background-image: url("/assets/media/bg_home.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
         }
-      }
-    </style> -->
-  </head>
-  <body data-spy="scroll" >
-    <!-- <div class="bg-video">
+        .mid {
+            width: 260px;
+            height: 100px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -130px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mid img {
+            width: 100%;
+        }
+        footer {
+            color: white;
+            margin-top: 4rem;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .bg-video .overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .bg-video #bg_video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+
+        @media (min-width: 768px) {
+            .mid {
+                width: 500px;
+                margin-left: -250px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="bg-video">
     <video id="bg_video" src="assets/media/bg_video.mp4" autoplay loop muted></video>
     <div class="overlay"></div>
 </div>
 
 <div class="mid">
     <img src="/assets/media/logo/infini_labs_logo_white.png"/>
-</div> -->
-    <header class="header">
-      <div>
-        <img class="bg" src="assets/images/banner.png" />
-      </div>
-      <div class="content">
-        <div class="top">
-          <div class="logo"><img src="assets/images/infini-logo.png" /></div>
-          <div class="menus">
-            <ul>
-              <li>
-                <div class="link"><a data-scroll href="#">首页</a></div>
-              </li>
-              <li>
-                <div class="link"><a data-scroll href="#product_service">产品与服务</a></div>
-              </li>
-              <li>
-                <div class="link"><a data-scroll href="#usecase">用户案例</a></div>
-              </li>
-              <li>
-                <div class="link"><a data-scroll href="#contact-us">联系我们</a></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="desc">
-          专业的开源搜索与实时数据分析<br />整体解决方案提供商
-          <p class="rect"></p>
-        </div>
-      </div>
-    </header>
-    <section class="main">
-      <section class="sec gateway" id="product_service">
-        <div class="p-s">
-          <img src="assets/images/chanpin.png" />
-        </div>
-        <div class="sec-title">
-          <h2>极限网关</h2>
-        </div>
-        <div class="desc">
-          极限网关 (INFINI Gateway) 是一个面向 Elasticsearch 的高性能应用网关，它包含丰富的特性，使用起来也非常简单。极限网关工作的方式和普通的反向代理一样，我们一般是将网关部署在
-          Elasticsearch 集群前面， 将以往直接发送给 Elasticsearch
-          的请求都发送给网关，再由网关转发给请求到后端的 Elasticsearch
-          集群。因为网关位于在用户端和后端 Elasticsearch 之间，所以网关在中间可
-        </div>
-        <div class="sec fetures">
-          <div class="feture">
-            <dl>
-              <dt><img src="assets/images/qingjl.png" /></dt>
-              <dd>轻量级</dd>
-            </dl>
-          </div>
-          <div class="feture">
-            <dl>
-              <dt><img src="assets/images/jizhixn.png" /></dt>
-              <dd>极致性能</dd>
-            </dl>
-          </div>
-          <div class="feture">
-            <dl>
-              <dt><img src="assets/images/gaoky.png" /></dt>
-              <dd>高可用</dd>
-            </dl>
-          </div>
-          <div class="feture">
-            <dl>
-              <dt><img src="assets/images/kuabanb.png" /></dt>
-              <dd>跨版本支持</dd>
-            </dl>
-          </div>
-          <div class="feture">
-            <dl>
-              <dt><img src="assets/images/keguance.png" /></dt>
-              <dd>可观测性</dd>
-            </dl>
-          </div>
-          <div class="feture">
-            <dl>
-              <dt><img src="assets/images/linghuo.png" /></dt>
-              <dd>灵活可扩展</dd>
-            </dl>
-          </div>
-        </div>
-        <div class="btn-w">
-          <a href="https://极限网关.com/" class="more-btn">了解更多</a>
-        </div>
-      </section>
-      <section class="sec data">
-        <div class="sec-title">
-          <h2>极限数据</h2>
-        </div>
-        <div class="desc">
-          极限数据平台 (INFINI DATA PLATFORM) 是一款非常轻量级的多集群、
-          跨版本的 Elasticsearch 统一治理平台。 通过对 Elasticsearch
-          跨版本多集群的集中纳管，我们可以快速方便的企业内部的不同版本的多套
-          Elasticsearch 集群进行统一管理。
-        </div>
-        <div class="fetures">
-          <div class="feture">
-            <dl>
-              <dt>
-                <img src="assets/images/guanli.png" />
-                <p class="title">集群管理</p>
-              </dt>
-              <dd>无死角覆盖 Elasticsearch 所有版本</dd>
-            </dl>
-          </div>
-          <div class="feture">
-            <dl>
-              <dt>
-                <img src="assets/images/jiankong.png" />
-                <p class="title">集群监控</p>
-              </dt>
-              <dd>一键开启目标集群监控</br>
-                多个集群之间一键切换</dd>
-            </dl>
-          </div>
-          <div class="feture">
-            <dl>
-              <dt>
-                <img src="assets/images/mingling.png" />
-                <p class="title">命令工具</p>
-              </dt>
-              <dd>智能提示，效率倍增
-                </br>
-                常用命令，一键加载</dd>
-            </dl>
-          </div>
-        </div>
-        <div class="btn-w">
-            <a href="https://极限数据.com/" class="more-btn">了解更多</a>
-          </div>
-      </section>
-      <section class="sec solution">
-        <div class="sec-title">
-            <h2>企业级解决方案</h2>
-        </div>
-        <div class="fangan-wrapper">
-            <div class="fangan">
-                <div class="logo"><img src="assets/images/infini-logo.png"/></div>
-                <img src="assets/images/fangan.png"/>
-            </div>
-        </div>
-      </section>
-      <section class="sec usecase" id="usecase">
-        <div class="p-s">
-          <img src="assets/images/case.png" />
-        </div>
-        <div class="sec-title">
-          <h2>国内用户</h2>
-        </div>
-        <div class="user-wrapper">
-          <img src="assets/images/logo.png"/>
-        </div>
-      </section>
-      <section class="comment">
-        <div class="sec-title">
-          <h2>用户评价</h2>
-        </div>
-        <div class="comment-list">
-          <div class="comment-item">
-            <div class="name">李卓</div>
-            <div class="title">新东方运维数据组 | 资深工程师</div>
-            <div class="desc">使用极限网关可以帮助我们快速的定位访问异常的请求。可以从用户、索引层面更全面的掌握和分析集群访问情况，并能深入到索引层面进行精细化的访问控制。</div>
-          </div>
-          <div class="comment-item">
-            <div class="name">赵蒙</div>
-            <div class="title">邮储银行</div>
-            <div class="desc">在使用极限网关后，读取场景下kibana的性能从原来的100-1000ms提高到0.3-5ms之间，查询速率大幅度提高，同时网关自带的监控视图，可以对业务使用做到很好的监控统计，可以全局掌控用户数据查询的统计信息分布，具有非常直观的视图展示效果 。</div>
-          </div>
-          <div class="comment-item">
-            <div class="name">黄鹏</div>
-            <div class="title">蜜度运维部 | 大数据运维工程师</div>
-            <div class="desc">极限数据平台，部署集群监控方便，集群各维度指数全面，能快速上手。</div>
-          </div>
-          <div class="comment-item">
-            <div class="name">岑崟</div>
-            <div class="title">东方财富</div>
-            <div class="desc">自从使用极限网关之后，在写入速度和和查询速度均有明显提升，而且在ES集群升级、迁移、合并、拆分时对上游程序的影响最小化。</div>
-          </div>
-        </div>
-      </section>
-    </section>
-    <footer class="footer">
-      <div>
-      <div class="footer-wrapper">
-        <section class="logo">
-          <div>
-            <img src="assets/images/infini.png"/>
-          </div>
-          <div>
-            <img src="assets/images/infinilabs.png"/>
-          </div>
-        </section>
-        <section class="products">
-          <h2>产品</h2>
-          <p class="paragraph"><a href="https://极限网关.com/">极限网关</a></p>
-          <p class="paragraph"><a href="https://极限数据.com/">极限数据</a></p>
-        </section>
-        <section class="contact-us" id="contact-us">
-          <h2>联系我们</h2>
-          <p class="paragraph">电话： 400 139 9200</p>
-          <p class="paragraph">邮件： <a href="mailto://hello@infini.ltd">hello@infini.ltd</a></p>
-          <p class="paragraph">网址： <a href="https://infinilabs.com">https://infinilabs.com</a></p>
-        </section>
-        <section class="follow-us">
-          <h2>关注我们</h2>
-          <div class="qrcode">
-            <div>
-              <dl>
-                <dt> <img src="assets/images/wx.png"/></dt>
-                <dd>公众号</dd>
-              </dl>
-            </div>
-            <div>
-              <dl>
-                <dt><img src="assets/images/bzhan.png"/></dt>
-                <dd>bilibili</dd>
-              </dl>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-    </footer>
+</div>
 
-    <script src="/assets/js/lib/jquery.min.js"></script>
-    <script src="/assets/js/plugins/smooth-scroll/smooth-scroll.min.js"></script>
-    <script>
-      smoothScroll.init();
-    </script>
-  </body>
+</body>
 </html>
