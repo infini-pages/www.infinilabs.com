@@ -1,87 +1,18 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="INFINI Labs offcial website">
-    <meta name="description" content="We build tools to make your life easier.">
-    <meta name="author" content="INFINI Labs">
-    <title>INFINI Labs</title>
-    <link rel="shortcut icon" href="assets/media/favicons/infini_favicon_32.ico">
-    <link rel="apple-touch-icon" sizes="160x160" href="assets/media/favicons/infini_favicon_160.ico">
-
-    <style>
-        body {
-            /*background-color: black;*/
-            background-image: url("/assets/media/bg_home.jpg");
-            background-repeat: no-repeat;
-            background-size: 100%;
+<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimum-scale=1"><link rel="icon" href="/favicon.ico"><title>infini-labs</title><script>function isMobile() {
+      var userAgentInfo = navigator.userAgent.toLowerCase();
+      var agents = ["Android", "iPhone",
+        "SymbianOS", "Windows Phone",
+        "iPad", "iPod"];
+      var isMobile = false;
+      for (var v = 0; v < agents.length; v++) {
+        if (userAgentInfo.indexOf(agents[v].toLowerCase()) > 0) {
+          isMobile = true;
+          break;
         }
-        .mid {
-            width: 260px;
-            height: 100px;
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-top: -50px;
-            margin-left: -130px;
+      }
+      return isMobile;
+    }
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .mid img {
-            width: 100%;
-        }
-        footer {
-            color: white;
-            margin-top: 4rem;
-            position: absolute;
-            bottom: 0;
-            text-align: center;
-            width: 100%;
-            font-size: 14px;
-        }
-
-        .bg-video .overlay {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-        }
-
-        .bg-video #bg_video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-        }
-
-
-        @media (min-width: 768px) {
-            .mid {
-                width: 500px;
-                margin-left: -250px;
-            }
-        }
-
-    </style>
-</head>
-<body>
-<div class="bg-video">
-    <video id="bg_video" src="assets/media/bg_video.mp4" autoplay loop muted></video>
-    <div class="overlay"></div>
-</div>
-
-<div class="mid">
-    <img src="/assets/media/logo/infini_labs_logo_white.png"/>
-</div>
-
-</body>
-</html>
+    if (isMobile()) {
+      location.href = "/m/index.html"
+    }</script><script defer="defer" src="/js/chunk-vendors.a0798c8f.js"></script><script defer="defer" src="/js/app.157f6ed2.js"></script><link href="/css/chunk-vendors.1eac9a5a.css" rel="stylesheet"><link href="/css/app.66aa7460.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but infini-labs doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>

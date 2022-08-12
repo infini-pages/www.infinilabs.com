@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="578px" height="366px" viewBox="0 0 578 366" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 24</title>
+    <defs>
+        <linearGradient x1="0%" y1="44.9243779%" x2="94.2678881%" y2="44.9243779%" id="linearGradient-1">
+            <stop stop-color="#B0C8FF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#739DFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="93.9944314%" y1="49.6778537%" x2="8.6904401%" y2="50.3061596%" id="linearGradient-2">
+            <stop stop-color="#0098F5" offset="0%"></stop>
+            <stop stop-color="#005FE8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="93.9944314%" y1="0.266853047%" x2="8.6904401%" y2="97.265104%" id="linearGradient-3">
+            <stop stop-color="#0098F5" offset="0%"></stop>
+            <stop stop-color="#005FE8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="44.9243779%" x2="94.2678881%" y2="44.9243779%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#739DFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Console" transform="translate(-1042.000000, -4784.000000)">
+            <g id="编组-24" transform="translate(1042.000000, 4784.000000)">
+                <ellipse id="椭圆形备份-26" fill="url(#linearGradient-1)" opacity="0.1782539" cx="122.088428" cy="121.762195" rx="122.088428" ry="121.762195"></ellipse>
+                <rect id="矩形" stroke="#005FE8" fill="#006EEC" opacity="0.1" x="63.4615588" y="60.3469832" width="450.759844" height="285.979291" rx="7"></rect>
+                <rect id="矩形备份-136" stroke="#005FE8" fill="#FFFFFF" x="74.7123584" y="51.4402089" width="450.759844" height="285.979291" rx="7"></rect>
+                <rect id="矩形" fill="url(#linearGradient-2)" x="74.2123584" y="50.9402089" width="451.759844" height="36.2617864" rx="5"></rect>
+                <ellipse id="椭圆形" fill="#FFFFFF" cx="93.222261" cy="69.621526" rx="4.19347464" ry="4.18226926"></ellipse>
+                <ellipse id="椭圆形备份" fill="#FFFFFF" cx="107.899422" cy="69.621526" rx="4.19347464" ry="4.18226926"></ellipse>
+                <ellipse id="椭圆形备份-2" fill="#FFFFFF" cx="122.576583" cy="69.621526" rx="4.19347464" ry="4.18226926"></ellipse>
+                <rect id="矩形" fill="#DEE8FF" x="183.410856" y="112.023359" width="156.891966" height="13.3168285"></rect>
+                <rect id="矩形备份-193" fill="#DEE8FF" x="96.1221149" y="112.023359" width="78.0938295" height="17.5650247"></rect>
+                <rect id="矩形备份-200" fill="#DEE8FF" x="96.1221149" y="160.327177" width="78.0938295" height="64.7710287"></rect>
+                <rect id="矩形备份-202" fill="#DEE8FF" x="96.1221149" y="257.898748" width="78.0938295" height="53.7928882"></rect>
+                <rect id="矩形备份-196" fill="#DEE8FF" x="96.1221149" y="135.077454" width="36.917083" height="17.5650247"></rect>
+                <rect id="矩形备份-204" fill="#DEE8FF" x="96.1221149" y="233.880718" width="36.917083" height="16.7081943"></rect>
+                <rect id="矩形备份-198" fill="#DEE8FF" x="137.298861" y="135.077454" width="36.917083" height="17.5650247"></rect>
+                <rect id="矩形备份-206" fill="#DEE8FF" x="137.298861" y="233.880718" width="36.917083" height="16.7081943"></rect>
+                <rect id="矩形备份-49" fill="#DEE8FF" x="185.942065" y="155.219703" width="40.9202931" height="6.65841423"></rect>
+                <g id="编组-23" transform="translate(303.082809, 271.587992) scale(1, -1) translate(-303.082809, -271.587992) translate(185.942065, 230.968872)" fill="#DEE8FF">
+                    <rect id="矩形备份-185" x="0" y="15.3693966" width="40.6967844" height="6.58688427"></rect>
+                    <rect id="矩形备份-186" x="43.9965237" y="15.3693966" width="40.6967844" height="6.58688427"></rect>
+                    <rect id="矩形备份-187" x="0" y="45.0103759" width="40.6967844" height="6.58688427"></rect>
+                    <rect id="矩形备份-188" x="87.9930473" y="15.3693966" width="15.3987833" height="6.58688427"></rect>
+                    <rect id="矩形备份-189" x="43.9965237" y="45.0103759" width="15.3987833" height="6.58688427"></rect>
+                    <rect id="矩形备份-190" x="0" y="29.6409792" width="15.3987833" height="6.58688427"></rect>
+                    <rect id="矩形备份-191" x="0" y="74.6513551" width="15.3987833" height="6.58688427"></rect>
+                    <rect id="矩形备份-192" x="133.089484" y="0" width="15.3987833" height="6.58688427"></rect>
+                    <rect id="矩形备份-194" x="63.7949593" y="45.0103759" width="42.8966106" height="6.58688427"></rect>
+                    <rect id="矩形备份-195" x="20.8983487" y="29.6409792" width="43.9965237" height="6.58688427"></rect>
+                    <rect id="矩形备份-197" x="111.091222" y="15.3693966" width="43.9965237" height="6.58688427"></rect>
+                    <rect id="矩形备份-199" x="109.991309" y="29.6409792" width="124.290179" height="6.58688427"></rect>
+                    <rect id="矩形备份-201" x="0" y="0" width="76.9939164" height="6.58688427"></rect>
+                    <rect id="矩形备份-203" x="74.7940902" y="29.6409792" width="28.5977404" height="6.58688427"></rect>
+                    <rect id="矩形备份-205" x="0" y="59.2819585" width="76.9939164" height="6.58688427"></rect>
+                    <rect id="矩形备份-207" x="82.4934819" y="59.2819585" width="43.9965237" height="6.58688427"></rect>
+                    <rect id="矩形备份-208" x="82.4934819" y="0" width="43.9965237" height="6.58688427"></rect>
+                    <rect id="矩形备份-209" x="133.089484" y="59.2819585" width="61.5951331" height="6.58688427"></rect>
+                </g>
+                <ellipse id="椭圆形备份-8" fill="url(#linearGradient-3)" cx="74.8689334" cy="305.593549" rx="47.3324811" ry="47.206004"></ellipse>
+                <path d="M46.2531023,327.576508 L103.448583,327.576508 L103.448583,322.087438 L46.2531023,322.087438 L46.2531023,327.576508 Z M74.8508427,317.696182 L103.448583,317.696182 L103.448583,312.207112 L74.8508427,312.207112 L74.8508427,317.696182 Z M47.3530154,317.696182 L49.2140243,303.411312 L78.8551173,273.78362 L91.3495391,286.216629 L61.708446,315.84432 L47.3530154,317.696182 Z M53.6342487,305.543461 L52.8525809,311.109298 L58.4534652,310.332749 L82.5502343,286.386766 L77.6005109,281.468318 L53.6342487,305.543461 Z" id="bianji" fill="#FFFFFF"></path>
+                <rect id="矩形备份-169" fill="#DEE8FF" x="229.938589" y="155.219703" width="40.9202931" height="6.65841423"></rect>
+                <rect id="矩形备份-177" fill="#DEE8FF" x="185.942065" y="185.958497" width="40.9202931" height="6.65841423"></rect>
+                <rect id="矩形备份-170" fill="#DEE8FF" x="273.935112" y="155.219703" width="15.3451099" height="6.65841423"></rect>
+                <rect id="矩形备份-178" fill="#DEE8FF" x="229.938589" y="185.958497" width="15.3451099" height="6.65841423"></rect>
+                <rect id="矩形备份-173" fill="#DEE8FF" x="185.942065" y="170.5891" width="15.3451099" height="6.65841423"></rect>
+                <rect id="矩形备份-181" fill="#DEE8FF" x="185.610682" y="215.599476" width="15.3451099" height="6.65841423"></rect>
+                <rect id="矩形备份-171" fill="#DEE8FF" x="368.046989" y="140.529738" width="15.3451099" height="6.65841423"></rect>
+                <rect id="矩形备份-50" fill="#DEE8FF" x="294.833461" y="155.219703" width="44.2859679" height="6.65841423"></rect>
+                <rect id="矩形备份-179" fill="#DEE8FF" x="314.631897" y="185.958497" width="127.589919" height="6.65841423"></rect>
+                <rect id="矩形备份-174" fill="#DEE8FF" x="206.840414" y="170.5891" width="44.2859679" height="6.65841423"></rect>
+                <rect id="矩形备份-182" fill="#DEE8FF" x="206.71589" y="215.181093" width="44.2859679" height="6.65841423"></rect>
+                <rect id="矩形备份-51" fill="#DEE8FF" x="345.429463" y="155.219703" width="44.2859679" height="6.65841423"></rect>
+                <rect id="矩形备份-180" fill="#DEE8FF" x="250.836937" y="185.958497" width="57.9704152" height="6.65841423"></rect>
+                <rect id="矩形备份-175" fill="#DEE8FF" x="295.933374" y="170.5891" width="44.2859679" height="6.65841423"></rect>
+                <rect id="矩形备份-183" fill="#DEE8FF" x="295.659311" y="215.181093" width="44.2859679" height="6.65841423"></rect>
+                <rect id="矩形备份-44" fill="#DEE8FF" x="185.610682" y="140.876488" width="76.7557156" height="6.65841423"></rect>
+                <rect id="矩形备份-172" fill="#DEE8FF" x="392.725726" y="155.219703" width="76.7557156" height="6.65841423"></rect>
+                <rect id="矩形备份-176" fill="#DEE8FF" x="260.736155" y="170.5891" width="28.1327015" height="6.65841423"></rect>
+                <rect id="矩形备份-184" fill="#DEE8FF" x="260.631219" y="215.527843" width="28.1327015" height="6.65841423"></rect>
+                <rect id="矩形备份-60" fill="#DEE8FF" x="185.942065" y="200.230079" width="76.7557156" height="6.65841423"></rect>
+                <rect id="矩形备份-46" fill="#DEE8FF" x="268.948835" y="140.876488" width="44.2859679" height="6.65841423"></rect>
+                <rect id="矩形备份-61" fill="#DEE8FF" x="268.435547" y="200.230079" width="44.2859679" height="6.65841423"></rect>
+                <rect id="矩形备份-48" fill="#DEE8FF" x="317.82447" y="140.876488" width="44.2859679" height="6.65841423"></rect>
+                <rect id="矩形备份-62" fill="#DEE8FF" x="319.031549" y="200.230079" width="44.2859679" height="6.65841423"></rect>
+                <g id="系统-位置配置" transform="translate(537.364298, 333.614486) scale(-1, 1) translate(-537.364298, -333.614486) translate(504.916861, 301.228971)" fill="#005FE8" fill-rule="nonzero">
+                    <rect id="矩形" opacity="0" x="0" y="0" width="64.8948724" height="64.7710287"></rect>
+                    <polygon id="路径" points="64.8948724 0 36.5163447 64.7710287 29.0372107 35.7892319 0 28.3502793"></polygon>
+                </g>
+                <ellipse id="椭圆形备份-26" fill="#4A02BC" cx="569.193957" cy="276.763975" rx="8.806043" ry="8.78251236"></ellipse>
+                <ellipse id="椭圆形备份-25" fill="#FF9D00" cx="427.413568" cy="243.772423" rx="14.6810298" ry="14.6418006"></ellipse>
+                <ellipse id="椭圆形" stroke="#005FE8" stroke-width="8" fill="url(#linearGradient-4)" cx="502.666543" cy="86.6063254" rx="66.911016" ry="66.4177498"></ellipse>
+                <path d="M515.781418,75.4360279 L466.642637,50.9273689 L491.212028,99.9584689 L540.336814,124.48091 L515.781418,75.4360279 Z M497.976377,94.8399308 L478.741681,61.9055094 L511.739074,80.8512609 L497.976377,94.8399308 Z" id="Fill-3" fill="#005FE8" transform="translate(502.828402, 86.606325) scale(-1, 1) translate(-502.828402, -86.606325) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

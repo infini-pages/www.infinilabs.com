@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimum-scale=1.0">
+  <link rel="icon" href="/favicon.ico">
+  <title>INFINI Labs</title>
+
+  <style>
+    body {
+      background-image: url("/m/assets/media/bg_home.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    .mid {
+      width: 260px;
+      height: 100px;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -130px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+    }
+
+    .mid .contact {
+      color: white;
+      margin-top: 100px;
+    }
+
+    .mid .contact .item {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .mid .contact .item .icon {
+      width: 20px;
+    }
+
+    .mid img {
+      width: 100%;
+    }
+
+    footer {
+      color: white;
+      margin-top: 4rem;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    .bg-video .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .bg-video #bg_video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+
+    @media (min-width: 768px) {
+      .mid {
+        width: 500px;
+        margin-left: -250px;
+      }
+    }
+  </style>
+  <script>
+    function isMobile() {
+      var userAgentInfo = navigator.userAgent.toLowerCase();
+      var agents = ["Android", "iPhone",
+        "SymbianOS", "Windows Phone",
+        "iPad", "iPod"];
+      var isMobile = false;
+      for (var v = 0; v < agents.length; v++) {
+        if (userAgentInfo.indexOf(agents[v].toLowerCase()) > 0) {
+          isMobile = true;
+          break;
+        }
+      }
+      return isMobile;
+    }
+
+    if (!isMobile()) {
+      location.href = "/"
+    }
+
+  </script>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but the page doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div class="bg-video">
+    <video id="bg_video" src="/m/assets/media/bg_video.mp4" autoplay loop muted></video>
+    <div class="overlay"></div>
+  </div>
+
+  <div class="mid">
+    <img src="/m/assets/media/labs_logo_white.png" />
+    <div class="contact">
+      <div class="item">
+        <img class="icon" src="/m/assets/media/phone.svg" />
+        <span>(+86) 400-139-9200</span>
+
+      </div>
+      <div class="item">
+        <img class="icon" src="/m/assets/media/email.svg" />
+        <span>hello@infini.ltd</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
