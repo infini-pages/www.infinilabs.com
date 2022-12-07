@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/echo/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/initialization/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/platform/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/release-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/platform/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/log4j2_filtering/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/development/api/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/getting-started/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/agent/manage/manage/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/online_query_rewrite/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/devtool/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/data/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/platform/monitoring/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/system/security/user/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/agent/install/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/alerting/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/agent/install/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/system/cluster/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/alerting/message/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/migration/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/system/command/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/overview/-comparison/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/alerting/rule/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/tutorials/start_with_specify_user/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/getting-started/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/development/plugin/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/entry/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/request-logging/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/modules/floating_ip/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/system/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/data/indices/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/getting-started/ilm/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/data/alias/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/alerting/channel/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/tutorials/create_readonly_account/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/migration/migration/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/tutorials/role_with_different_rights/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/tutorials/role_with_index_limit/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/development/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/user-cases/stories/a_cross_region_cluster_access_locality/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/agent/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/data/view/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/router/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/user-cases/stories/indexing_speedup_for_big_index_rebuild/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/index_diff/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/modules/force_merge/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/getting-started/configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/getting-started/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/getting-started/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/system/security/role/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/screenshot/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/tutorials/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/system/security/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/data/discover/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/user-cases/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/overview/hardware/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/getting-started/optimization/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/flow/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/system/security/settings/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/user-cases/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/elasticsearch/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/context/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/tutorials/cluster_slow_request/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/tutorials/cluster_health_change/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/tutorials/cluster_node_disk_usage/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/troubleshooting/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/troubleshooting/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/getting-started/benchmark/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/tutorials/cluster_node_cpu_usage/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/tutorials/cluster_node_jvm_usage/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/tutorials/data_migration/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/release-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/release-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/upgrade/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/processors/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/reference/alerting/variables/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/es-hadoop_integration/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/prometheus_integration/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/proxy_elasticsearch/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/proxy_kibana/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/path_rewrite_by_javascript/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/console/resources/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/resources/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/fix_count_in_search_response/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/modules/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/tutorial/routing_to_cluser_by_index/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/config/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/docs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="/docs/"
+                />
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/basic_auth/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/processors/bulk_indexing/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/bulk_request_mutate/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/bulk_reshuffle/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/bulk_response_process/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/cache/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/clone/</loc>
+  </url>
+  
+  <url>
+    <loc>/products/console/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/context_filter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/context_limiter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/context_regex_replace/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/processors/dag/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/date_range_precision_tuning/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/drop/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/dump/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/processors/dump_hash/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/elasticsearch/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/elasticsearch_health_check/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/flow/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/processors/flow_runner/</loc>
+  </url>
+  
+  <url>
+    <loc>/products/gateway/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/http/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/processors/index_diff/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/processors/indexing_merge/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/javascript/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/processors/json_indexing/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/ldap_auth/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/logging/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/queue/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/processors/queue_consumer/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/ratio/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/record/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/redirect/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/redis_pubsub/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/processors/replay/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_api_key_filter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_api_key_limiter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_body_json_del/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_body_json_set/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_body_regex_replace/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_client_ip_filter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_client_ip_limiter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_header_filter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_host_filter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_host_limiter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_method_filter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_path_filter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_path_limiter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_user_filter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/request_user_limiter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/response_body_regex_replace/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/response_header_filter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/response_header_format/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/response_status_filter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/retry_limiter/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/sample/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/set_basic_auth/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/set_context/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/set_hostname/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/set_request_header/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/set_request_query_args/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/set_response/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/set_response_header/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/sleep/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/switch/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>/docs/latest/gateway/references/filters/translog/</loc>
+  </url>
+  
+  <url>
+    <loc>/download/</loc>
+  </url>
+  
+  <url>
+    <loc>/products/</loc>
+  </url>
+  
+  <url>
+    <loc>/company/</loc>
+  </url>
+  
+  <url>
+    <loc>/career/</loc>
+  </url>
+  
+  <url>
+    <loc>/support/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/latest/</loc>
+  </url>
+  
+  <url>
+    <loc>/pricing/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="/"
+                />
+  </url>
+  
+</urlset>

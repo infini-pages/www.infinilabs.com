@@ -1,0 +1,17 @@
+p img{
+
+}
+
+.img-link{
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 5px;
+    border: 1px solid #efeded;
+    float: left;
+    line-height: 0;
+}
+
+.img-link img{
+    height: 48px;
+    max-height: 48px;
+}

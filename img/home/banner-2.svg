@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="518px" height="277px" viewBox="0 0 518 277" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>banner-2</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="518" height="277"></rect>
+    </defs>
+    <g id="网站-pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(-615.000000, -432.000000)">
+            <g id="banner-2" transform="translate(615.000000, 432.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="蒙版"></g>
+                <g id="编组-11" mask="url(#mask-2)">
+                    <g transform="translate(8.222172, 1.890422)">
+                        <polygon id="矩形" stroke="none" fill="#432DE0" opacity="0.800037202" points="122.347116 0 507.277153 223.069963 507.277153 608 122.347116 384.930037"></polygon>
+                        <path d="M1,3.73528863 L157.277153,94.2991197 L157.277153,250.264711 L1,159.70088 L1,3.73528863 Z" id="矩形备份-138" stroke="#0291FF" stroke-width="2" fill="#0267FF" opacity="0.252511161"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

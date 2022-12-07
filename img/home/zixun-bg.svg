@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="350px" viewBox="0 0 1920 350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>zixun-bg</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1920" height="350"></rect>
+        <linearGradient x1="141.290871%" y1="92.3377885%" x2="0%" y2="27.5816399%" id="linearGradient-3">
+            <stop stop-color="#000FDF" offset="0%"></stop>
+            <stop stop-color="#005FE8" offset="99.9634643%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="网站-pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(0.000000, -4478.000000)">
+            <g id="zixun-bg" transform="translate(0.000000, 4478.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="矩形" fill="#005FE8" xlink:href="#path-1"></use>
+                <polygon id="矩形" fill="#432DE0" opacity="0.800037202" mask="url(#mask-2)" transform="translate(372.812135, 344.000000) scale(-1, 1) translate(-372.812135, -344.000000) " points="180.347116 40 565.277153 263.069963 565.277153 648 180.347116 424.930037"></polygon>
+                <path d="M486,92.7352886 L642.277153,183.29912 L642.277153,339.264711 L486,248.70088 L486,92.7352886 Z" id="矩形备份-138" stroke="#0291FF" stroke-width="2" fill="#0267FF" opacity="0.252511161" mask="url(#mask-2)" transform="translate(564.138577, 216.000000) scale(-1, 1) translate(-564.138577, -216.000000) "></path>
+                <g id="编组-2" mask="url(#mask-2)" fill="#D8D8D8" fill-opacity="0.201302482">
+                    <g transform="translate(1514.000000, 176.000000)">
+                        <rect id="矩形备份-28" x="34" y="0" width="23" height="23" rx="11.5"></rect>
+                        <rect id="矩形备份-29" x="0" y="0" width="23" height="23" rx="11.5"></rect>
+                        <rect id="矩形备份-30" x="68" y="0" width="23" height="23" rx="11.5"></rect>
+                    </g>
+                </g>
+                <path d="M1642,-62 C1643.65685,-62 1645,-60.6568542 1645,-59 L1645,108 C1645,109.656854 1643.65685,111 1642,111 L1613.82,111 L1596.5,141 L1579.179,111 L1377,111 C1375.34315,111 1374,109.656854 1374,108 L1374,-59 C1374,-60.6568542 1375.34315,-62 1377,-62 L1642,-62 Z" id="形状结合" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

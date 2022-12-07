@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1921px" height="640px" viewBox="0 0 1921 640" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>banner</title>
+    <defs>
+        <linearGradient x1="85.0598979%" y1="52.8475871%" x2="17.006634%" y2="46.2217229%" id="linearGradient-1">
+            <stop stop-color="#EAEFFF" offset="0%"></stop>
+            <stop stop-color="#A8C2FF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1,0 L1921,0 L1921,560 C1075.37168,465.091625 773.43001,456.554956 1015.17499,534.389994 C1256.91997,612.225031 918.528303,646.7617 0,638 L1,0 Z" id="path-2"></path>
+    </defs>
+    <g id="网站-pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="加入我们" transform="translate(0.000000, -70.000000)">
+            <g id="banner" transform="translate(0.000000, 70.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2" transform="translate(960.500000, 319.664870) scale(-1, 1) translate(-960.500000, -319.664870) "></use>
+                </mask>
+                <use id="矩形" fill="url(#linearGradient-1)" transform="translate(960.500000, 319.664870) scale(-1, 1) translate(-960.500000, -319.664870) " xlink:href="#path-2"></use>
+                <g id="编组" mask="url(#mask-3)">
+                    <g transform="translate(712.000000, 79.000000)">
+                        <polygon id="路径-21" fill="#527AF6" points="310.983224 346.702225 477.290114 174 717.541081 383.941431 1001.0695 383.941431 1209 509 0 509 249.793388 305.103945"></polygon>
+                        <polygon id="路径-22" fill="#0F056D" points="464.30024 328.07119 627.915481 114.74932 696.22305 114.74932 779.368301 0 921.317363 103.933388 966.841335 103.933388 1031.51909 188.671734 1106.55063 164.035595 1295 296.002577 1263.88668 616 16 556.084655"></polygon>
+                        <polygon id="路径-24" fill="#527AF6" points="779 0 855.881986 139.141401 895.265386 126.310472 950.981309 238.684962 1276 664 1248.064 259.946404 1106.12845 163.939818 1031.10926 188.561572 966.442162 103.872703 920.925687 103.872703"></polygon>
+                        <path d="M297,514.514239 C297,514.514239 399.361651,466.089867 604.084954,369.241121 L779.182768,236 L915.258255,369.241121 L1093.10921,270.484835 L1295,467.529741 L1093.10921,738 L591.519913,621.727059 C395.173304,550.251846 297,514.514239 297,514.514239 Z" id="路径-23" fill="#2A26BA"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

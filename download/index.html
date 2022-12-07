@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="zh" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.79.1" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="description" content="">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="下载" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/download/" />
+
+<title>下载 | INFINI Labs</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
+<link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
+<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+
+
+
+
+<link rel="alternate" type="application/rss+xml" href="/download/index.xml" title="INFINI Labs" />
+
+
+<script type="text/javascript"  src="/js/jquery-2.x.min.js"></script>
+<script defer src="/js/doc.js"></script>
+
+  <link rel="stylesheet" href="/download.min.b48a3703d167ee038adfaccc3bf51ab751a3c92b5b083b272fd3677c3b37408d.css" integrity="sha256-tIo3A9Fn7gOK36zMO/Uat1GjyStbCDsnL9NnfDs3QI0=">
+</head>
+
+<body dir=>
+
+  <div class="common-header resize-padding">
+    <a class="logo" href="/">
+        <img src="/img/header/logo.svg" />
+        <img class="moblie" src="/img/header/mobile-logo.svg" />
+    </a>
+    <div class="nav">
+        <ul>
+            
+            <li class="menu ">
+                <a class="menu-item" href="/">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu sub-menu">
+                <a class="menu-item" >
+                    产品
+                </a>
+                
+                <div class="sub-menu-content-wrap">
+                    <div class="sub-menu-content">
+                        
+                        <a class="sub-menu-item" href="/">
+                            
+                                <div class="logo">
+                                    <img src="/img/header/infini-search.svg"/>
+                                </div>
+                            
+                            
+                                <div class="desc">
+                                    INFINI SEARCH PLATFORM
+                                </div>
+                            
+                        </a>
+                        
+                        <a class="sub-menu-item" href="/products/console">
+                            
+                                <div class="name">
+                                    INFINI Console
+                                </div>
+                            
+                            
+                                <div class="desc">
+                                    一站式数据搜索分析与管理平台
+                                </div>
+                            
+                        </a>
+                        
+                        <a class="sub-menu-item" href="/products/gateway">
+                            
+                                <div class="name">
+                                    INFINI Gateway
+                                </div>
+                            
+                            
+                                <div class="desc">
+                                    面向搜索场景的高性能网关
+                                </div>
+                            
+                        </a>
+                        
+                    </div>
+                </div>
+                
+            </li>
+            
+            <li class="menu ">
+                <a class="menu-item" href="/pricing">
+                    报价
+                </a>
+                
+            </li>
+            
+            <li class="menu ">
+                <a class="menu-item" href="/support">
+                    文档
+                </a>
+                
+            </li>
+            
+            <li class="menu ">
+                <a class="menu-item" href="/download">
+                    下载
+                </a>
+                
+            </li>
+            
+            <li class="menu ">
+                <a class="menu-item" href="/company">
+                    关于
+                </a>
+                
+            </li>
+            
+            <li class="menu lang">
+                <a class="menu-item">
+                    <img src="/img/header/lang.svg" />
+                    <span>&nbsp;中文</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="mobile-nav">
+        <img 
+            id="mobile-nav-menu-icon" 
+            class="menu-icon" 
+            onclick="onMenuTouch(true)" 
+            src="/img/header/mobile-menu.svg"
+        />
+        <img 
+            id="mobile-nav-menu-close-icon" 
+            class="menu-icon close" 
+            onclick="onMenuTouch(false)"
+            src="/img/header/mobile-menu-close.svg"
+        />
+        <div id="mobile-nav-menu" class="menu">
+            
+                <a 
+                    class="item" 
+                    href="/"
+                    onclick=""
+                >
+                    首页
+                    
+                </a>
+                
+            
+                <a 
+                    class="item" 
+                    href="#"
+                    onclick="onMenuCollapse(&#34;/products&#34;)"
+                >
+                    产品
+                    
+                    <img 
+                        id="mobile-nav-menu-item-arrow" 
+                        src="/img/header/mobile-menu-right.svg" 
+                        data-active="false"
+                    />
+                    
+                </a>
+                
+                    <div id="/products-sub-menu" class="sub-menu">
+                        
+                            <a class="sub-item" href="/">
+                                INFINI Search
+                            </a>
+                        
+                            <a class="sub-item" href="/products/console">
+                                INFINI Console
+                            </a>
+                        
+                            <a class="sub-item" href="/products/gateway">
+                                INFINI Gateway
+                            </a>
+                        
+                    </div>
+                
+            
+                <a 
+                    class="item" 
+                    href="/pricing"
+                    onclick=""
+                >
+                    报价
+                    
+                </a>
+                
+            
+                <a 
+                    class="item" 
+                    href="/support"
+                    onclick=""
+                >
+                    文档
+                    
+                </a>
+                
+            
+                <a 
+                    class="item" 
+                    href="/download"
+                    onclick=""
+                >
+                    下载
+                    
+                </a>
+                
+            
+                <a 
+                    class="item" 
+                    href="/company"
+                    onclick=""
+                >
+                    关于
+                    
+                </a>
+                
+            
+        </div>
+    </div>
+</div>
+<script>
+    function onMenuTouch(visible) {
+        const menu = document.getElementById("mobile-nav-menu");
+        const menuIcon = document.getElementById("mobile-nav-menu-icon");
+        const closeIcon = document.getElementById("mobile-nav-menu-close-icon");
+        if (visible) {
+            menuIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+            menu.style.display = 'block';
+        } else {
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+            menu.style.display = 'none';
+        }
+    }
+    function onMenuCollapse(href) {
+        const arrow = document.getElementById("mobile-nav-menu-item-arrow");
+        const subMenu = document.getElementById(`${href}-sub-menu`);
+        if (arrow.getAttribute("data-active") === "true") {
+            arrow.setAttribute("data-active", "false")
+            arrow.setAttribute("src", "/img/header/mobile-menu-right.svg")
+            subMenu.style.display="none"
+        } else {
+            arrow.setAttribute("data-active", "true")
+            arrow.setAttribute("src", "/img/header/mobile-menu-bottom.svg")
+            subMenu.style.display="block"
+        }
+    }
+</script>
+
+  <div class="download resize-padding" id="download-content">
+    <div class="image">
+      <img src="/img/download/box.svg" />
+    </div>
+    <div class="wrapper">
+      <div class="title">下载中心</div>
+      <div class="content">
+        <div class="package">
+          <div class="tabs">
+            
+              <div 
+                id="download-tab-gateway" 
+                class="product  active  }}"
+                onclick="onTabChange({&#34;build_date&#34;:&#34;20-Nov-2022 12:49&#34;,&#34;defaultOS&#34;:&#34;linux&#34;,&#34;defaultPlatform&#34;:&#34;amd64&#34;,&#34;docker&#34;:{&#34;repo&#34;:&#34;https://hub.docker.com/r/infinilabs/gateway&#34;},&#34;key&#34;:&#34;gateway&#34;,&#34;number&#34;:769,&#34;os&#34;:[{&#34;key&#34;:&#34;linux&#34;,&#34;packageType&#34;:&#34;tar.gz&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;,&#34;arm5&#34;,&#34;arm6&#34;,&#34;arm64&#34;,&#34;arm7&#34;,&#34;mips&#34;,&#34;mips64&#34;,&#34;mips64le&#34;],&#34;title&#34;:&#34;Linux&#34;},{&#34;key&#34;:&#34;mac&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;amd64&#34;,&#34;arm64&#34;],&#34;title&#34;:&#34;Mac&#34;},{&#34;key&#34;:&#34;windows&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;],&#34;title&#34;:&#34;Windows&#34;}],&#34;release_notes_url&#34;:&#34;https://gateway.infinilabs.com/zh/docs/release-notes/&#34;,&#34;size&#34;:&#34;8M&#34;,&#34;title&#34;:&#34;INFINI Gateway&#34;,&#34;version&#34;:&#34;1.8.6&#34;})"
+              >
+                INFINI Gateway
+              </div>
+            
+              <div 
+                id="download-tab-console" 
+                class="product  }}"
+                onclick="onTabChange({&#34;build_date&#34;:&#34;23-Sep-2022 12:02&#34;,&#34;defaultOS&#34;:&#34;linux&#34;,&#34;defaultPlatform&#34;:&#34;amd64&#34;,&#34;docker&#34;:{&#34;repo&#34;:&#34;https://hub.docker.com/r/infinilabs/console&#34;},&#34;key&#34;:&#34;console&#34;,&#34;number&#34;:841,&#34;os&#34;:[{&#34;key&#34;:&#34;linux&#34;,&#34;packageType&#34;:&#34;tar.gz&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;,&#34;arm5&#34;,&#34;arm6&#34;,&#34;arm64&#34;,&#34;arm7&#34;,&#34;mips&#34;,&#34;mips64&#34;,&#34;mips64le&#34;],&#34;title&#34;:&#34;Linux&#34;},{&#34;key&#34;:&#34;mac&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;amd64&#34;,&#34;arm64&#34;],&#34;title&#34;:&#34;Mac&#34;},{&#34;key&#34;:&#34;windows&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;],&#34;title&#34;:&#34;Windows&#34;}],&#34;release_notes_url&#34;:&#34;https://console.infinilabs.com/zh/docs/release-notes/&#34;,&#34;size&#34;:&#34;15M&#34;,&#34;title&#34;:&#34;INFINI Console&#34;,&#34;version&#34;:&#34;0.6.0&#34;})"
+              >
+                INFINI Console
+              </div>
+            
+              <div 
+                id="download-tab-agent" 
+                class="product  }}"
+                onclick="onTabChange({&#34;build_date&#34;:&#34;25-Sep-2022 13:06&#34;,&#34;defaultOS&#34;:&#34;linux&#34;,&#34;defaultPlatform&#34;:&#34;amd64&#34;,&#34;docker&#34;:{&#34;repo&#34;:&#34;https://hub.docker.com/r/infinilabs/agent&#34;},&#34;key&#34;:&#34;agent&#34;,&#34;number&#34;:30,&#34;os&#34;:[{&#34;key&#34;:&#34;linux&#34;,&#34;packageType&#34;:&#34;tar.gz&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;,&#34;arm5&#34;,&#34;arm6&#34;,&#34;arm64&#34;,&#34;arm7&#34;,&#34;mips&#34;,&#34;mips64&#34;,&#34;mips64le&#34;],&#34;title&#34;:&#34;Linux&#34;},{&#34;key&#34;:&#34;mac&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;amd64&#34;,&#34;arm64&#34;],&#34;title&#34;:&#34;Mac&#34;},{&#34;key&#34;:&#34;windows&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;],&#34;title&#34;:&#34;Windows&#34;}],&#34;release_notes_url&#34;:&#34;&#34;,&#34;size&#34;:&#34;6M&#34;,&#34;title&#34;:&#34;INFINI Agent&#34;,&#34;version&#34;:&#34;0.2.1&#34;})"
+              >
+                INFINI Agent
+              </div>
+            
+          </div>
+
+          
+            <div class="tab-content" id="download-content-gateway" style="display:  block  ">
+                <div class="info">
+                  <div>
+                    <p>版本</p>
+                    <span>1.8.6-769</span>
+                    
+                      <a target="_blank" href="https://gateway.infinilabs.com/zh/docs/release-notes/">
+                        更新说明
+                      </a>
+                    
+                  </div>
+                  <div>
+                    <p>发布时间</p>
+                    <span>20-Nov-2022 12:49 </span>
+                  </div>
+                  <div>
+                    <p>文件体积</p>
+                    <span>8M</span>
+                  </div>
+              </div>
+              <div class="form">
+                <div class="download-common-title">
+                  <img src="/img/download/download.svg" />
+                  <div class="text">下载稳定版安装包</div>
+                </div>
+                <div class="content">
+                  <div class="item">
+                    <div class="label">操作系统</div>
+                    <select id="download-content-gateway-os" class="options" onchange="onOSChange(&#34;gateway&#34;, this.value)">
+                      
+                        <option value="linux"  selected >linux</option>
+                      
+                        <option value="mac" >mac</option>
+                      
+                        <option value="windows" >windows</option>
+                      
+                    </select>
+                  </div>
+                  <div class="item">
+                      <div class="label">CPU 架构</div>
+                      
+                        <select 
+                          id="download-content-gateway-os-linux-platform" 
+                          class="options download-os-platform-select"
+                          style="display:  block  "
+                        >
+                          
+                            <option value="386" >386</option>
+                          
+                            <option value="amd64"  selected >amd64</option>
+                          
+                            <option value="arm5" >arm5</option>
+                          
+                            <option value="arm6" >arm6</option>
+                          
+                            <option value="arm64" >arm64</option>
+                          
+                            <option value="arm7" >arm7</option>
+                          
+                            <option value="mips" >mips</option>
+                          
+                            <option value="mips64" >mips64</option>
+                          
+                            <option value="mips64le" >mips64le</option>
+                          
+                        </select>
+                      
+                        <select 
+                          id="download-content-gateway-os-mac-platform" 
+                          class="options download-os-platform-select"
+                          style="display:  none  "
+                        >
+                          
+                            <option value="amd64"  selected >amd64</option>
+                          
+                            <option value="arm64" >arm64</option>
+                          
+                        </select>
+                      
+                        <select 
+                          id="download-content-gateway-os-windows-platform" 
+                          class="options download-os-platform-select"
+                          style="display:  none  "
+                        >
+                          
+                            <option value="386" >386</option>
+                          
+                            <option value="amd64"  selected >amd64</option>
+                          
+                        </select>
+                      
+                  </div>
+                </div>
+                <div class="actions">
+                  <button onclick="onDownload({&#34;build_date&#34;:&#34;20-Nov-2022 12:49&#34;,&#34;defaultOS&#34;:&#34;linux&#34;,&#34;defaultPlatform&#34;:&#34;amd64&#34;,&#34;docker&#34;:{&#34;repo&#34;:&#34;https://hub.docker.com/r/infinilabs/gateway&#34;},&#34;key&#34;:&#34;gateway&#34;,&#34;number&#34;:769,&#34;os&#34;:[{&#34;key&#34;:&#34;linux&#34;,&#34;packageType&#34;:&#34;tar.gz&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;,&#34;arm5&#34;,&#34;arm6&#34;,&#34;arm64&#34;,&#34;arm7&#34;,&#34;mips&#34;,&#34;mips64&#34;,&#34;mips64le&#34;],&#34;title&#34;:&#34;Linux&#34;},{&#34;key&#34;:&#34;mac&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;amd64&#34;,&#34;arm64&#34;],&#34;title&#34;:&#34;Mac&#34;},{&#34;key&#34;:&#34;windows&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;],&#34;title&#34;:&#34;Windows&#34;}],&#34;release_notes_url&#34;:&#34;https://gateway.infinilabs.com/zh/docs/release-notes/&#34;,&#34;size&#34;:&#34;8M&#34;,&#34;title&#34;:&#34;INFINI Gateway&#34;,&#34;version&#34;:&#34;1.8.6&#34;})" >下载</button>
+                  <a href="http://release.infinilabs.com/gateway/snapshot/">查看快照版本></a>
+                </div>
+              </div>
+              <div class="docker">
+                <div class="download-common-title">
+                  <img src="/img/download/deploy.svg"/>
+                  <div class="text">您也可以进行容器部署</div>
+                </div>
+                <div class="desc">
+                  <a target="_blank" href="https://hub.docker.com/r/infinilabs/gateway">
+                    Docker 官方仓库
+                    <img src="/img/download/link.svg"/>
+                  </a>
+                  <span>或使用以下命令获取最新容器镜像：</span>
+                </div>
+                <div class="shell">
+                  docker pull infinilabs/gateway:1.8.6-769
+                </div>
+              </div>
+            </div>
+          
+            <div class="tab-content" id="download-content-console" style="display:  none  ">
+                <div class="info">
+                  <div>
+                    <p>版本</p>
+                    <span>0.6.0-841</span>
+                    
+                      <a target="_blank" href="https://console.infinilabs.com/zh/docs/release-notes/">
+                        更新说明
+                      </a>
+                    
+                  </div>
+                  <div>
+                    <p>发布时间</p>
+                    <span>23-Sep-2022 12:02 </span>
+                  </div>
+                  <div>
+                    <p>文件体积</p>
+                    <span>15M</span>
+                  </div>
+              </div>
+              <div class="form">
+                <div class="download-common-title">
+                  <img src="/img/download/download.svg" />
+                  <div class="text">下载稳定版安装包</div>
+                </div>
+                <div class="content">
+                  <div class="item">
+                    <div class="label">操作系统</div>
+                    <select id="download-content-console-os" class="options" onchange="onOSChange(&#34;console&#34;, this.value)">
+                      
+                        <option value="linux"  selected >linux</option>
+                      
+                        <option value="mac" >mac</option>
+                      
+                        <option value="windows" >windows</option>
+                      
+                    </select>
+                  </div>
+                  <div class="item">
+                      <div class="label">CPU 架构</div>
+                      
+                        <select 
+                          id="download-content-console-os-linux-platform" 
+                          class="options download-os-platform-select"
+                          style="display:  block  "
+                        >
+                          
+                            <option value="386" >386</option>
+                          
+                            <option value="amd64"  selected >amd64</option>
+                          
+                            <option value="arm5" >arm5</option>
+                          
+                            <option value="arm6" >arm6</option>
+                          
+                            <option value="arm64" >arm64</option>
+                          
+                            <option value="arm7" >arm7</option>
+                          
+                            <option value="mips" >mips</option>
+                          
+                            <option value="mips64" >mips64</option>
+                          
+                            <option value="mips64le" >mips64le</option>
+                          
+                        </select>
+                      
+                        <select 
+                          id="download-content-console-os-mac-platform" 
+                          class="options download-os-platform-select"
+                          style="display:  none  "
+                        >
+                          
+                            <option value="amd64"  selected >amd64</option>
+                          
+                            <option value="arm64" >arm64</option>
+                          
+                        </select>
+                      
+                        <select 
+                          id="download-content-console-os-windows-platform" 
+                          class="options download-os-platform-select"
+                          style="display:  none  "
+                        >
+                          
+                            <option value="386" >386</option>
+                          
+                            <option value="amd64"  selected >amd64</option>
+                          
+                        </select>
+                      
+                  </div>
+                </div>
+                <div class="actions">
+                  <button onclick="onDownload({&#34;build_date&#34;:&#34;23-Sep-2022 12:02&#34;,&#34;defaultOS&#34;:&#34;linux&#34;,&#34;defaultPlatform&#34;:&#34;amd64&#34;,&#34;docker&#34;:{&#34;repo&#34;:&#34;https://hub.docker.com/r/infinilabs/console&#34;},&#34;key&#34;:&#34;console&#34;,&#34;number&#34;:841,&#34;os&#34;:[{&#34;key&#34;:&#34;linux&#34;,&#34;packageType&#34;:&#34;tar.gz&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;,&#34;arm5&#34;,&#34;arm6&#34;,&#34;arm64&#34;,&#34;arm7&#34;,&#34;mips&#34;,&#34;mips64&#34;,&#34;mips64le&#34;],&#34;title&#34;:&#34;Linux&#34;},{&#34;key&#34;:&#34;mac&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;amd64&#34;,&#34;arm64&#34;],&#34;title&#34;:&#34;Mac&#34;},{&#34;key&#34;:&#34;windows&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;],&#34;title&#34;:&#34;Windows&#34;}],&#34;release_notes_url&#34;:&#34;https://console.infinilabs.com/zh/docs/release-notes/&#34;,&#34;size&#34;:&#34;15M&#34;,&#34;title&#34;:&#34;INFINI Console&#34;,&#34;version&#34;:&#34;0.6.0&#34;})" >下载</button>
+                  <a href="http://release.infinilabs.com/console/snapshot/">查看快照版本></a>
+                </div>
+              </div>
+              <div class="docker">
+                <div class="download-common-title">
+                  <img src="/img/download/deploy.svg"/>
+                  <div class="text">您也可以进行容器部署</div>
+                </div>
+                <div class="desc">
+                  <a target="_blank" href="https://hub.docker.com/r/infinilabs/console">
+                    Docker 官方仓库
+                    <img src="/img/download/link.svg"/>
+                  </a>
+                  <span>或使用以下命令获取最新容器镜像：</span>
+                </div>
+                <div class="shell">
+                  docker pull infinilabs/console:0.6.0-841
+                </div>
+              </div>
+            </div>
+          
+            <div class="tab-content" id="download-content-agent" style="display:  none  ">
+                <div class="info">
+                  <div>
+                    <p>版本</p>
+                    <span>0.2.1-30</span>
+                    
+                  </div>
+                  <div>
+                    <p>发布时间</p>
+                    <span>25-Sep-2022 13:06 </span>
+                  </div>
+                  <div>
+                    <p>文件体积</p>
+                    <span>6M</span>
+                  </div>
+              </div>
+              <div class="form">
+                <div class="download-common-title">
+                  <img src="/img/download/download.svg" />
+                  <div class="text">下载稳定版安装包</div>
+                </div>
+                <div class="content">
+                  <div class="item">
+                    <div class="label">操作系统</div>
+                    <select id="download-content-agent-os" class="options" onchange="onOSChange(&#34;agent&#34;, this.value)">
+                      
+                        <option value="linux"  selected >linux</option>
+                      
+                        <option value="mac" >mac</option>
+                      
+                        <option value="windows" >windows</option>
+                      
+                    </select>
+                  </div>
+                  <div class="item">
+                      <div class="label">CPU 架构</div>
+                      
+                        <select 
+                          id="download-content-agent-os-linux-platform" 
+                          class="options download-os-platform-select"
+                          style="display:  block  "
+                        >
+                          
+                            <option value="386" >386</option>
+                          
+                            <option value="amd64"  selected >amd64</option>
+                          
+                            <option value="arm5" >arm5</option>
+                          
+                            <option value="arm6" >arm6</option>
+                          
+                            <option value="arm64" >arm64</option>
+                          
+                            <option value="arm7" >arm7</option>
+                          
+                            <option value="mips" >mips</option>
+                          
+                            <option value="mips64" >mips64</option>
+                          
+                            <option value="mips64le" >mips64le</option>
+                          
+                        </select>
+                      
+                        <select 
+                          id="download-content-agent-os-mac-platform" 
+                          class="options download-os-platform-select"
+                          style="display:  none  "
+                        >
+                          
+                            <option value="amd64"  selected >amd64</option>
+                          
+                            <option value="arm64" >arm64</option>
+                          
+                        </select>
+                      
+                        <select 
+                          id="download-content-agent-os-windows-platform" 
+                          class="options download-os-platform-select"
+                          style="display:  none  "
+                        >
+                          
+                            <option value="386" >386</option>
+                          
+                            <option value="amd64"  selected >amd64</option>
+                          
+                        </select>
+                      
+                  </div>
+                </div>
+                <div class="actions">
+                  <button onclick="onDownload({&#34;build_date&#34;:&#34;25-Sep-2022 13:06&#34;,&#34;defaultOS&#34;:&#34;linux&#34;,&#34;defaultPlatform&#34;:&#34;amd64&#34;,&#34;docker&#34;:{&#34;repo&#34;:&#34;https://hub.docker.com/r/infinilabs/agent&#34;},&#34;key&#34;:&#34;agent&#34;,&#34;number&#34;:30,&#34;os&#34;:[{&#34;key&#34;:&#34;linux&#34;,&#34;packageType&#34;:&#34;tar.gz&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;,&#34;arm5&#34;,&#34;arm6&#34;,&#34;arm64&#34;,&#34;arm7&#34;,&#34;mips&#34;,&#34;mips64&#34;,&#34;mips64le&#34;],&#34;title&#34;:&#34;Linux&#34;},{&#34;key&#34;:&#34;mac&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;amd64&#34;,&#34;arm64&#34;],&#34;title&#34;:&#34;Mac&#34;},{&#34;key&#34;:&#34;windows&#34;,&#34;packageType&#34;:&#34;zip&#34;,&#34;platform&#34;:[&#34;386&#34;,&#34;amd64&#34;],&#34;title&#34;:&#34;Windows&#34;}],&#34;release_notes_url&#34;:&#34;&#34;,&#34;size&#34;:&#34;6M&#34;,&#34;title&#34;:&#34;INFINI Agent&#34;,&#34;version&#34;:&#34;0.2.1&#34;})" >下载</button>
+                  <a href="http://release.infinilabs.com/agent/snapshot/">查看快照版本></a>
+                </div>
+              </div>
+              <div class="docker">
+                <div class="download-common-title">
+                  <img src="/img/download/deploy.svg"/>
+                  <div class="text">您也可以进行容器部署</div>
+                </div>
+                <div class="desc">
+                  <a target="_blank" href="https://hub.docker.com/r/infinilabs/agent">
+                    Docker 官方仓库
+                    <img src="/img/download/link.svg"/>
+                  </a>
+                  <span>或使用以下命令获取最新容器镜像：</span>
+                </div>
+                <div class="shell">
+                  docker pull infinilabs/agent:0.2.1-30
+                </div>
+              </div>
+            </div>
+          
+        </div>
+        <div class="contact">
+          <div class="title">订阅电子邮件</div>
+          <div class="desc">获取 INFINI Labs 动态和最新产品信息</div>
+          <div id="mlb2-2463113" class="ml-subscribe-form ml-subscribe-form-2463113">
+            <div class="row-form">
+              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/247698/forms/73635285659813865/subscribe" data-code="" method="post" target="_blank">
+                <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="请输入电子邮件地址" autocomplete="email">
+                <input type="hidden" name="ml-submit" value="1">
+                <div class="ml-form-embedSubmit">
+                  <button type="submit" class="primary">订阅</button>
+                  <button disabled="disabled" style="display: none;" type="button" class="loading">
+                    <div class="ml-form-embedSubmitLoad"></div>
+                    <span class="sr-only">Loading...</span>
+                  </button>
+                </div>
+                <input type="hidden" name="anticsrf" value="true">
+              </form>
+              <div class="tips"><br /><i>请注意：提交此表后，即表明您同意 INFINI Labs 给您发送最新资讯、系列教程和活动信息。我们不会与其他第三方分享您的信息。</i></div>
+            </div>
+            <div class="row-success" style="display: none">
+              <div class="ml-form-successContent">
+                  <h2>谢谢您！</h2>
+                  <p>您已成功加入到我们的订阅者列表。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function ml_webform_success_2463113() {
+      var $ = ml_jQuery || jQuery;
+      $('.ml-subscribe-form-2463113 .row-success').show();
+      $('.ml-subscribe-form-2463113 .row-form').hide();
+    }
+  </script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v491724307ca3b85c1c754857e93994e5" type="text/javascript"></script>
+  <script>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '247698');
+  </script>
+
+  <script>
+    function formatParams() {
+      const { search } = window.location;
+      const formatSearch = search.substring(1);
+      const paramStrs = formatSearch.split("&");
+      const params = {};
+      for(let i =0; i< paramStrs.length; i++) {
+        if (paramStrs[i]) {
+          const arr = paramStrs[i].split("=");
+          if (arr.length === 2) {
+            params[arr[0]] = arr[1]
+          }
+        }
+      }
+      return params;
+    }
+
+    function replaceParam(paramName, value) {
+      const params = formatParams();
+      params[paramName] = value;
+      const { pathname } = window.location;
+      let search = "";
+      Object.keys(params).map((key) => {
+        search += key + "=" + params[key] + "&"
+      })
+      if (search) {
+        search = search.substring(0, search.length - 1)
+      } else {
+        search = `${paramName}=${value}`
+      }
+      const newPath = pathname + "?" + search;
+      history.replaceState("", "", newPath);
+    }
+
+    function onTabChange(item) {
+      const { key, defaultOS, defaultPlatform } = item;
+      const container = document.getElementById('download-content');
+      if (!container) return;
+      const tabs = container.getElementsByClassName('product')
+      for (let i=0; i<tabs.length; i++) {
+        tabs[i].className = `product${tabs[i].id === `download-tab-${key}` ? ' active': ''}`;
+      }
+      const contents = container.getElementsByClassName('tab-content')
+      for (let i=0; i<contents.length; i++) {
+        contents[i].style.display = contents[i].id === `download-content-${key}`? 'block' : 'none';
+      }
+      replaceParam("product", key)
+      onOSChange(key, defaultOS, defaultPlatform)
+    }
+    function onOSChange(productKey, osKey, platformKey) {
+      const container = document.getElementById('download-content');
+      if (!container) return;
+      const selects = container.getElementsByClassName('download-os-platform-select')
+      for (let i=0; i<selects.length; i++) {
+        selects[i].style.display = selects[i].id === `download-content-${productKey}-os-${osKey}-platform`? 'block' : 'none';
+      }
+    }
+    function onDownload(product) {
+      const { key, version, number, os } = product;
+      const osSelect = document.getElementById(`download-content-${key}-os`)
+      const osKey = osSelect.options[osSelect.selectedIndex].value
+      const platformSelect= document.getElementById(`download-content-${key}-os-${ osKey }-platform`)
+      const platformKey = platformSelect.options[platformSelect.selectedIndex].value;
+      const osItem = os.find((item) => item.key === osKey)
+      const url = `${key}/stable/${key}-${version}-${number}-${osKey}-${platformKey}.${osItem.packageType}`
+      window.open('https://release.infinilabs.com/'+url);
+    }
+    window.onload = function () {
+      const params = formatParams();
+      if (["gateway", "console", "agent"].includes(params.product)) {
+        const tab = document.getElementById(`download-tab-${params.product}`)
+        tab.click()
+      }
+    }
+  </script>
+
+  <div class="common-footer resize-padding">
+  <div class="top">
+    
+    <dl class="menu-item">
+      <dt>产品</dt>
+      
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              INFINI Search
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              INFINI Scale
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/products/gateway" target="_self">
+              INFINI Gateway
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/products/console" target="_self">
+              INFINI Console
+            </a>
+          </dd>
+        
+      
+    </dl>
+  
+    <dl class="menu-item">
+      <dt>解决方案</dt>
+      
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              实时搜索引擎
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              查询优化分析
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              异地容灾建设
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              搜索平台建设
+            </a>
+          </dd>
+        
+      
+    </dl>
+  
+    <dl class="menu-item">
+      <dt>支持</dt>
+      
+        
+          <dd>
+            
+            <a href="/support" target="_self">
+              常见问题
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/support" target="_self">
+              动手教程
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/support" target="_self">
+              文档中心
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/download" target="_self">
+              下载中心
+            </a>
+          </dd>
+        
+      
+    </dl>
+  
+    <dl class="menu-item">
+      <dt>关于我们</dt>
+      
+        
+          <dd>
+            
+            <a href="/company" target="_self">
+              公司简介
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/company" target="_self">
+              联系我们
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/career" target="_self">
+              工作机会
+            </a>
+          </dd>
+        
+      
+    </dl>
+  
+  <div class="others">
+    <div class="contact">
+      <span class="item">
+        <img src="/img/footer/phone.svg" />
+        <span>400-139-9200</span>
+      </span>
+      <a class="item" href="mailto://hello@infini.ltd" target="_blank">
+        <img src="/img/footer/email.svg" />
+        <span>hello@infini.ltd</span>
+      </a>
+    </div>
+    <div class="logos">
+      <a class="item infini-tooltip">
+        <img src="/img/footer/wechat.svg" />
+        <div class="infini-tooltip-content">
+          <img
+            class="tooltip-wechart-qrcode"
+            src="/img/footer/wechat_qrcode_infini_labs.jpg"
+          />
+        </div>
+      </a>
+      <a
+          href="https://space.bilibili.com/1171585214"
+          target="_blank"
+        >
+          <img src="/img/footer/bilibili.svg" />
+      </a>
+      <a href="https://twitter.com/infinilabs" target="_blank">
+          <img src="/img/footer/twitter.svg" />
+      </a>
+      <a href="https://github.com/infinilabs" target="_blank">
+          <img src="/img/footer/github.svg" />
+      </a>
+    </div>
+  </div>
+  </div>
+  <div class="bottom">
+    <div class="copy-right">
+      <a href="/" class="logo"></a>
+      <span class="text">Copyright &copy; 2022 INFINI Labs </span>
+    </div>
+    <button class="lang">
+      <img src="/img/footer/lang.svg" />
+      <span>&nbsp;中文</span>
+    </button>
+  </div>
+</div>
+
+</body>
+
+</html>

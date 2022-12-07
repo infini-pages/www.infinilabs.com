@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480px" height="500px" viewBox="0 0 480 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 27</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="480" height="500"></rect>
+    </defs>
+    <g id="网站-pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="关于我们" transform="translate(-720.000000, -1618.000000)">
+            <g id="编组-27" transform="translate(720.000000, 1618.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="蒙版"></g>
+                <g mask="url(#mask-2)">
+                    <g transform="translate(1.967213, 2.950820)">
+                        <g id="编组-26" opacity="0.301641555" stroke="none" fill-rule="evenodd" transform="translate(-0.000000, 0.000000)">
+                            <line x1="272.119603" y1="115.018459" x2="272.532787" y2="427.54918" id="路径-33备份-2" stroke="#01C8EF" stroke-dasharray="2"></line>
+                            <line x1="234.325214" y1="48.693946" x2="234.532787" y2="433.54918" id="路径-33备份-3" stroke="#01C8EF" stroke-dasharray="2"></line>
+                            <line x1="219.207458" y1="1.21600796e-13" x2="219.532787" y2="350.54918" id="路径-33备份-5" stroke="#01C8EF" stroke-dasharray="2"></line>
+                            <line x1="185.612445" y1="68.8431651" x2="186.032383" y2="441.183942" id="路径-33备份-4" stroke="#01C8EF"></line>
+                            <line x1="53.7520203" y1="124.253517" x2="53.5327869" y2="387.54918" id="路径-19" stroke="#01C8EF"></line>
+                            <line x1="0.839875317" y1="99.0669937" x2="1.25981298" y2="475.605525" id="路径-19备份" stroke="#01C8EF" stroke-dasharray="2"></line>
+                            <line x1="162.532787" y1="80.5491803" x2="162.515874" y2="405.605525" id="路径-29" stroke="#01C8EF" stroke-dasharray="2"></line>
+                            <line x1="108.343916" y1="152.798244" x2="108.763854" y2="506.668904" id="路径-30" stroke="#01C8EF"></line>
+                            <line x1="256.161972" y1="228.357816" x2="256.161972" y2="506.249129" id="路径-31" stroke="#01C8EF"></line>
+                            <line x1="247.763219" y1="178.824319" x2="247.532787" y2="293.54918" id="路径-31备份" stroke="#01C8EF" stroke-dasharray="2"></line>
+                            <line x1="368.705264" y1="75.5595714" x2="369.125202" y2="475.605525" id="路径-32" stroke="#01C8EF"></line>
+                            <line x1="476.209305" y1="130.130373" x2="476.629243" y2="462.235716" id="路径-33" stroke="#01C8EF" stroke-dasharray="2"></line>
+                            <line x1="423.29716" y1="104.104298" x2="423.532787" y2="399.54918" id="路径-33备份" stroke="#01C8EF"></line>
+                        </g>
+                        <polygon id="Stroke-7" stroke="#01C8EF" stroke-linecap="round" stroke-linejoin="round" points="256.27342 228.357816 476.209305 130.547509 423.700754 103.884254 247.948426 178.933392 185.52408 69.1748336 234.536497 48.2144739 272.616941 116.568558 368.716279 75.9626507 219.128504 0 0.839875317 98.3164691 53.3222153 125.034172 162.518952 78.9754252 185.733768 120.307303 108.457907 153.105002"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

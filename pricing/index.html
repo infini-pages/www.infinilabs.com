@@ -1,0 +1,3638 @@
+<!DOCTYPE html>
+<html lang="zh" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.79.1" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="description" content="">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="版本说明" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/pricing/" />
+
+<title>版本说明 | INFINI Labs</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
+<link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
+<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+
+
+
+
+<link rel="alternate" type="application/rss+xml" href="/pricing/index.xml" title="INFINI Labs" />
+
+
+<script type="text/javascript"  src="/js/jquery-2.x.min.js"></script>
+<script defer src="/js/doc.js"></script>
+
+  <link rel="stylesheet" href="/pricing.min.2eebf2312c3d074d7c7184864a980ee121f4f3ae794442f5196bc3d4c8082c16.css" integrity="sha256-LuvyMSw9B018cYSGSpgO4SH08655REL1GWvD1MgILBY=">
+</head>
+
+<body dir=>
+
+  <div class="common-header resize-padding">
+    <a class="logo" href="/">
+        <img src="/img/header/logo.svg" />
+        <img class="moblie" src="/img/header/mobile-logo.svg" />
+    </a>
+    <div class="nav">
+        <ul>
+            
+            <li class="menu ">
+                <a class="menu-item" href="/">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu sub-menu">
+                <a class="menu-item" >
+                    产品
+                </a>
+                
+                <div class="sub-menu-content-wrap">
+                    <div class="sub-menu-content">
+                        
+                        <a class="sub-menu-item" href="/">
+                            
+                                <div class="logo">
+                                    <img src="/img/header/infini-search.svg"/>
+                                </div>
+                            
+                            
+                                <div class="desc">
+                                    INFINI SEARCH PLATFORM
+                                </div>
+                            
+                        </a>
+                        
+                        <a class="sub-menu-item" href="/products/console">
+                            
+                                <div class="name">
+                                    INFINI Console
+                                </div>
+                            
+                            
+                                <div class="desc">
+                                    一站式数据搜索分析与管理平台
+                                </div>
+                            
+                        </a>
+                        
+                        <a class="sub-menu-item" href="/products/gateway">
+                            
+                                <div class="name">
+                                    INFINI Gateway
+                                </div>
+                            
+                            
+                                <div class="desc">
+                                    面向搜索场景的高性能网关
+                                </div>
+                            
+                        </a>
+                        
+                    </div>
+                </div>
+                
+            </li>
+            
+            <li class="menu ">
+                <a class="menu-item" href="/pricing">
+                    报价
+                </a>
+                
+            </li>
+            
+            <li class="menu ">
+                <a class="menu-item" href="/support">
+                    文档
+                </a>
+                
+            </li>
+            
+            <li class="menu ">
+                <a class="menu-item" href="/download">
+                    下载
+                </a>
+                
+            </li>
+            
+            <li class="menu ">
+                <a class="menu-item" href="/company">
+                    关于
+                </a>
+                
+            </li>
+            
+            <li class="menu lang">
+                <a class="menu-item">
+                    <img src="/img/header/lang.svg" />
+                    <span>&nbsp;中文</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="mobile-nav">
+        <img 
+            id="mobile-nav-menu-icon" 
+            class="menu-icon" 
+            onclick="onMenuTouch(true)" 
+            src="/img/header/mobile-menu.svg"
+        />
+        <img 
+            id="mobile-nav-menu-close-icon" 
+            class="menu-icon close" 
+            onclick="onMenuTouch(false)"
+            src="/img/header/mobile-menu-close.svg"
+        />
+        <div id="mobile-nav-menu" class="menu">
+            
+                <a 
+                    class="item" 
+                    href="/"
+                    onclick=""
+                >
+                    首页
+                    
+                </a>
+                
+            
+                <a 
+                    class="item" 
+                    href="#"
+                    onclick="onMenuCollapse(&#34;/products&#34;)"
+                >
+                    产品
+                    
+                    <img 
+                        id="mobile-nav-menu-item-arrow" 
+                        src="/img/header/mobile-menu-right.svg" 
+                        data-active="false"
+                    />
+                    
+                </a>
+                
+                    <div id="/products-sub-menu" class="sub-menu">
+                        
+                            <a class="sub-item" href="/">
+                                INFINI Search
+                            </a>
+                        
+                            <a class="sub-item" href="/products/console">
+                                INFINI Console
+                            </a>
+                        
+                            <a class="sub-item" href="/products/gateway">
+                                INFINI Gateway
+                            </a>
+                        
+                    </div>
+                
+            
+                <a 
+                    class="item" 
+                    href="/pricing"
+                    onclick=""
+                >
+                    报价
+                    
+                </a>
+                
+            
+                <a 
+                    class="item" 
+                    href="/support"
+                    onclick=""
+                >
+                    文档
+                    
+                </a>
+                
+            
+                <a 
+                    class="item" 
+                    href="/download"
+                    onclick=""
+                >
+                    下载
+                    
+                </a>
+                
+            
+                <a 
+                    class="item" 
+                    href="/company"
+                    onclick=""
+                >
+                    关于
+                    
+                </a>
+                
+            
+        </div>
+    </div>
+</div>
+<script>
+    function onMenuTouch(visible) {
+        const menu = document.getElementById("mobile-nav-menu");
+        const menuIcon = document.getElementById("mobile-nav-menu-icon");
+        const closeIcon = document.getElementById("mobile-nav-menu-close-icon");
+        if (visible) {
+            menuIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+            menu.style.display = 'block';
+        } else {
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+            menu.style.display = 'none';
+        }
+    }
+    function onMenuCollapse(href) {
+        const arrow = document.getElementById("mobile-nav-menu-item-arrow");
+        const subMenu = document.getElementById(`${href}-sub-menu`);
+        if (arrow.getAttribute("data-active") === "true") {
+            arrow.setAttribute("data-active", "false")
+            arrow.setAttribute("src", "/img/header/mobile-menu-right.svg")
+            subMenu.style.display="none"
+        } else {
+            arrow.setAttribute("data-active", "true")
+            arrow.setAttribute("src", "/img/header/mobile-menu-bottom.svg")
+            subMenu.style.display="block"
+        }
+    }
+</script>
+
+  <div class="pricing">
+    
+    <div class="banner resize-padding">
+      <div class="desc">
+        <div class="text">INFINI Search Platform</div>
+        <div class="text">助您应对各种业务场景中的搜索挑战</div>
+      </div>
+      <a href="http://elasticsearch.mikecrm.com/Gp7NAgk"><button>商务咨询</button></a>
+    </div>
+
+    <div class="features resize-padding">
+      <div class="row header" id="features-header">
+        <div class="col-name">功能</div>
+        <div class="col-edition">社区版</div>
+        <div class="col-edition">专业版</div>
+        <div class="col-edition">企业版</div>
+      </div>
+      
+        <div class="row group">
+          <span class="box"></span>部署环境支持
+        </div>
+        
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">Windows操作系统支持</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">Linux 操作系统支持</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">国产操作系统支持</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">国产芯片支持</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">Docker 容器环境支持</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">K8s 部署环境支持</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+        <div class="row group">
+          <span class="box"></span>搜索引擎系统支持
+        </div>
+        
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">Elasticsearch 2.x</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">Elasticsearch 5.x</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">Elasticsearch 6.x</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">Elasticsearch 7.x</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">Elasticsearch 8.x</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">OpenSearch 2.x</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">INFINI Search 1.x</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+        <div class="row group">
+          <span class="box"></span>集群管理
+        </div>
+        
+          
+            <div class="row type">集群接入</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">多集群统一接入</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">跨版本统一接入</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">HTTP 协议接入</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">HTTPS 协议接入</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+          
+            <div class="row type">多集群访问</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">支持搜索集群多集群操作</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持搜索集群多写</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持搜索多集群的流量迁移</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持搜索集群流量的按比例迁移</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持一个 Kibana 操作多个搜索集群</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+          
+            <div class="row type">多集群管理</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">多集群索引的管理</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群别名的管理</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群索引数据的快速检索</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群内索引文档数据的修改</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群内索引文档数据的删除</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群内索引数据视图的管理</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+        <div class="row group">
+          <span class="box"></span>监控告警
+        </div>
+        
+          
+            <div class="row type">平台监控</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">多集群集群层面的监控分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群节点层面的监控分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群主机层面的监控分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群索引层面的监控分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群错误日志的监控分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群废弃日志的监控分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群GC日志的监控分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+          
+            <div class="row type">告警通知</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">多集群平台自身的监控告警</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群业务数据的监控告警</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持可视化方式自定义告警规则</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持查看告警任务和执行报告</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持微信、钉钉告警通知对接</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">基于 Webhook 方式的第三方通知系统对接</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持邮件系统告警通知对接</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+        <div class="row group">
+          <span class="box"></span>审计分析
+        </div>
+        
+          
+            <div class="row type">日志查看</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">多集群服务端运行日志的统一查看</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群服务端错误日志的统一查看</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群服务端废弃日志的统一查看</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群服务端索引慢日志的统一查看</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群服务端查询慢日志的统一查看</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群服务端操作行为日志的统一查看</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群集群层面操作行为的浏览查看</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群集群索引操作行为的浏览查看</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+          
+            <div class="row type">查询分析</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">多集群查询慢日志分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群集群吞吐能力分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群后端节点流量分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群客户端调用方流量分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群基于 Token 的 API 访问分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群基于用户的操作日志的分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">多集群基于查询 DSL 规则的分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+          
+            <div class="row type">请求监控与分析</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">索引日志分析与审计</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">搜索日志分析与审计</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">搜索慢查询日志分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">集群吞吐能力分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">后端节点流量分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">客户端调用流量分析</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+          
+            <div class="row type">可视化分析</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">指标数据智能分析推送</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">自动化创建 Dashboard</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+        <div class="row group">
+          <span class="box"></span>容灾备份
+        </div>
+        
+          
+            <div class="row type">数据容灾</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">支持一对多写</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持双集群随时切换</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持节点故障自动处理</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持本地磁盘队列</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持对接 Kafka</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+          
+            <div class="row type">数据迁移</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">跨版本数据迁移</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">自定义多索引迁移</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">自定义索引数据范围迁移</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+        <div class="row group">
+          <span class="box"></span>服务高可用
+        </div>
+        
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">支持后端搜索集群的节点故障迁移</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持后端搜索集群新增节点的自动发现</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持搜索集群节点下线的自动移除</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持搜索集群停机故障的前端写入不中断</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持搜索集群请求遇后端故障的自动重传</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持基于本地局域网的浮动虚拟 IP</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持双机、多机热备、自动切换</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">单台服务器支持绑定多个浮动 IP</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+        <div class="row group">
+          <span class="box"></span>安全防护
+        </div>
+        
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">支持基于 Token 的 API 访问</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持原生的 Basic Auth 认证</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持与 LDAP 进行身份集成</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持与 Windows AD 进行身份集成</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持外部数据库的身份集成</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持基于 SAML 的单点登录</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持基于 OAuth 的单点登录</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持基于 RBAC 的访问控制</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持后台 UI 功能的访问控制</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持集群级别读写权限控制</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持索引级别读写权限控制</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持字段级别读写权限控制</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持 API 级别的权限控制</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">SSL 证书动态生成与管理</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">配置文件 Keystore 安全加密</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持 TLS 传输层加密</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持与 Hashcorp 的 Vault 集成</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持基于 IP 的黑白名单过滤</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持审计日志记录</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+        <div class="row group">
+          <span class="box"></span>流量管控
+        </div>
+        
+          
+            <div class="row type">流量限速</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">支持按照主机域名的请求和流量限速</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照访客 IP 的请求和流量限速</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照请求 Method 类型的请求和流量限速</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持索引级别的请求和流量限速</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照用户的请求和流量限速</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照 API Key 的请求和流量限速</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持手动添加固定延迟的限速</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持流量限速之后的规则处理</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持对批次请求按照索引级别进行流量限速</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+          
+            <div class="row type">流量过滤</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">支持按照主机域名的流量过滤</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照访客 IP 的流量过滤</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照请求 Method 类型的流量过滤</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照请求路径的流量过滤</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持索引级别的流量过滤</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照用户的流量过滤</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照 API Key 的流量过滤</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照请求头信息的流量过滤</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照响应头信息的流量过滤</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持按照响应状态码的流量过滤</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持流量过滤之后的规则处理</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+          
+            <div class="row type">流量干预</div>
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">支持搜索请求查询条件的改写</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持搜索登陆身份的改写</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持搜索请求头信息的改写</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持搜索求体的改写</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持搜索请求路径地址的改写</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持搜索查询时间范围精度的改写</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持批次请求的分片级别重新封装</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持批次请求的节点级别重新封装</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持批次请求的异步提交</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持单次索引请求的合并批次提交</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持任意请求的在线替换</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持重复请求的就近缓存</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持查询返回敏感词脱敏</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持基于异构数据源的索引文档字段编码转换</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+        <div class="row group">
+          <span class="box"></span>异构数据聚合
+        </div>
+        
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">支持本地文件数据源的在线聚合</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持 Elasticsearch 数据源的在线聚合</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持 MySQL 数据源的在线聚合</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持 PostgresSQL 数据源的在线聚合</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持 Oracle 数据源的在线聚合</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持 DB2 数据源的在线聚合</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持 Hbase 数据源的在线聚合</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持 MongoDB 数据源的在线聚合</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">支持 Redis 数据源的在线聚合</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+        <div class="row group">
+          <span class="box"></span>其他功能增强
+        </div>
+        
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">限速模式下的自动索引段合并</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">索引动态映射重命名</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">提供基于容量配额的索引存储管理</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+        <div class="row group">
+          <span class="box"></span>增值服务
+        </div>
+        
+          
+          <div class="list">
+            
+            <div class="row item">
+              <div class="col-name">视频教程</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">帮助中心</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">技术支持</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">销售顾问</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">专属顾问</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">需求优先响应</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">针对性解决方案</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/check.png" />
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">服务时间</div>
+              <div class="col-edition">
+                
+                  <img src="/img/pricing/no-check.png" />
+                
+              </div>
+              <div class="col-edition">
+                
+                  5*8
+                
+              </div>
+              <div class="col-edition">
+                
+                  7*24
+                
+              </div>
+            </div>
+          
+            <div class="row item">
+              <div class="col-name">服务方式</div>
+              <div class="col-edition">
+                
+                  社区
+                
+              </div>
+              <div class="col-edition">
+                
+                  邮件
+                
+              </div>
+              <div class="col-edition">
+                
+                  邮件、即时通讯工具、电话
+                
+              </div>
+            </div>
+          
+          </div>
+        
+      
+    </div>
+    
+    <div class="contact resize-padding">
+      <h3>有疑问？我们热切期待您的咨询。</h3>
+      <p>让我们更多地了解您的场景和需求，并为您找到合适的解决方案。</p>
+      <button onclick="window.open('http://elasticsearch.mikecrm.com/Gp7NAgk')">商务咨询</button>
+    </div>
+
+  </div>
+
+  <div class="common-footer resize-padding">
+  <div class="top">
+    
+    <dl class="menu-item">
+      <dt>产品</dt>
+      
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              INFINI Search
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              INFINI Scale
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/products/gateway" target="_self">
+              INFINI Gateway
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/products/console" target="_self">
+              INFINI Console
+            </a>
+          </dd>
+        
+      
+    </dl>
+  
+    <dl class="menu-item">
+      <dt>解决方案</dt>
+      
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              实时搜索引擎
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              查询优化分析
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              异地容灾建设
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="#" target="_self">
+              搜索平台建设
+            </a>
+          </dd>
+        
+      
+    </dl>
+  
+    <dl class="menu-item">
+      <dt>支持</dt>
+      
+        
+          <dd>
+            
+            <a href="/support" target="_self">
+              常见问题
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/support" target="_self">
+              动手教程
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/support" target="_self">
+              文档中心
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/download" target="_self">
+              下载中心
+            </a>
+          </dd>
+        
+      
+    </dl>
+  
+    <dl class="menu-item">
+      <dt>关于我们</dt>
+      
+        
+          <dd>
+            
+            <a href="/company" target="_self">
+              公司简介
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/company" target="_self">
+              联系我们
+            </a>
+          </dd>
+        
+          <dd>
+            
+            <a href="/career" target="_self">
+              工作机会
+            </a>
+          </dd>
+        
+      
+    </dl>
+  
+  <div class="others">
+    <div class="contact">
+      <span class="item">
+        <img src="/img/footer/phone.svg" />
+        <span>400-139-9200</span>
+      </span>
+      <a class="item" href="mailto://hello@infini.ltd" target="_blank">
+        <img src="/img/footer/email.svg" />
+        <span>hello@infini.ltd</span>
+      </a>
+    </div>
+    <div class="logos">
+      <a class="item infini-tooltip">
+        <img src="/img/footer/wechat.svg" />
+        <div class="infini-tooltip-content">
+          <img
+            class="tooltip-wechart-qrcode"
+            src="/img/footer/wechat_qrcode_infini_labs.jpg"
+          />
+        </div>
+      </a>
+      <a
+          href="https://space.bilibili.com/1171585214"
+          target="_blank"
+        >
+          <img src="/img/footer/bilibili.svg" />
+      </a>
+      <a href="https://twitter.com/infinilabs" target="_blank">
+          <img src="/img/footer/twitter.svg" />
+      </a>
+      <a href="https://github.com/infinilabs" target="_blank">
+          <img src="/img/footer/github.svg" />
+      </a>
+    </div>
+  </div>
+  </div>
+  <div class="bottom">
+    <div class="copy-right">
+      <a href="/" class="logo"></a>
+      <span class="text">Copyright &copy; 2022 INFINI Labs </span>
+    </div>
+    <button class="lang">
+      <img src="/img/footer/lang.svg" />
+      <span>&nbsp;中文</span>
+    </button>
+  </div>
+</div>
+
+  <script>
+    const header = document.getElementById("features-header")
+    const offsetTop = header.offsetTop;
+    if (header) {
+      window.addEventListener('scroll', function() {
+        const header = document.getElementById("features-header")
+        if (header) {
+          const view = document.getElementsByTagName("html")[0]
+          if (offsetTop < view.scrollTop) {
+            header.className = `row header fixed`
+          } else {
+            header.className = `row header`
+          }
+        }
+      })
+    }
+  </script>
+
+</body>
+
+</html>
