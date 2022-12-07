@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on INFINI Labs</title>
+    <link>/en/docs/latest/console/reference/system/security/</link>
+    <description>Recent content in Security on INFINI Labs</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/en/docs/latest/console/reference/system/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Role</title>
+      <link>/en/docs/latest/console/reference/system/security/role/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/console/reference/system/security/role/</guid>
+      <description>Role Management #  Introduction #  Role Management includes CURD operations for role. And INFINI Console has a builtin role named Administrator, it has all privileges , includes Platform and Data. The data role can help us control privileges of elasticsearch, includes elasticsearch api privileges which can be configured in the file config/permission.json of your setup path.
+Create Platform Role #   Input role name, role name should be unique.</description>
+    </item>
+    
+    <item>
+      <title>User</title>
+      <link>/en/docs/latest/console/reference/system/security/user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/console/reference/system/security/user/</guid>
+      <description>User Management #  Introduction #  User Management includes CURD operations and reset password for user.
+Create User #   User name is required, and it should be unique. Nick name, phone, email, is optional. Select one or more role. Tags is optional, it helps you group users.  Search User #  Input keywords and click the search button to query users.
+Update User #  Modify as needed, and then click the Save button to submit.</description>
+    </item>
+    
+    <item>
+      <title>Settings</title>
+      <link>/en/docs/latest/console/reference/system/security/settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/console/reference/system/security/settings/</guid>
+      <description>Settings #  Disable built-in users #  When the security is turned on, start the console without specifying the user and password, the system will have a The default built-in user admin. The built-in user can be disabled after adding a new user with administrator privileges.
+ Can&amp;rsquo;t disable yourself using built-in user  </description>
+    </item>
+    
+  </channel>
+</rss>

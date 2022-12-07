@@ -5,28 +5,30 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="配置#极限网关支持多种方式来修改配置。
-命令行参数#极限网关提供了命令行参数如下：
-✗ ./bin/gateway --helpUsage of ./bin/gateway:-config stringthe location of config file, default: gateway.yml (default &quot;gateway.yml&quot;)-debugrun in debug mode, gateway will quit with panic error-log stringthe log level,options:trace,debug,info,warn,error (default &quot;info&quot;)-v version常用的说明如下：
- config，指定配置文件名，默认的配置文件名为当前执行命令所在目录的 gateway.yml，如果你的配置文件放置在其他地方，可以通过指定参数来进行选择。 daemon，将网关切换到后台执行，一般还需要结合 pidfile 来保存进程号，方便后续的进程操作。  配置文件#极限网关的大部分配置都可以通过 gateway.yml 来进行配置，配置修改完成之后，需要重启网关程序才能生效。
-定义入口#每一个网关都至少要对外暴露一个服务的入口，用来接收业务的操作请求，这个在极限网关里面叫做 entry，通过下面的参数即可定义：
-entry:- name: es_gatewayenabled: truerouter: defaultnetwork:binding: 0.">
+<meta name="description" content="配置 #  极限网关支持多种方式来修改配置。
+命令行参数 #  极限网关提供了命令行参数如下：
+✗ ./bin/gateway --help Usage of ./bin/gateway: -config string the location of config file, default: gateway.yml (default &quot;gateway.yml&quot;) -debug run in debug mode, gateway will quit with panic error -log string the log level,options:trace,debug,info,warn,error (default &quot;info&quot;) -v version 常用的说明如下：
+ config，指定配置文件名，默认的配置文件名为当前执行命令所在目录的 gateway.yml，如果你的配置文件放置在其他地方，可以通过指定参数来进行选择。 daemon，将网关切换到后台执行，一般还需要结合 pidfile 来保存进程号，方便后续的进程操作。  配置文件 #  极限网关的大部分配置都可以通过 gateway.yml 来进行配置，配置修改完成之后，需要重启网关程序才能生效。
+定义入口 #  每一个网关都至少要对外暴露一个服务的入口，用来接收业务的操作请求，这个在极限网关里面叫做 entry，通过下面的参数即可定义：
+entry: - name: es_gateway enabled: true router: default network: binding: 0.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="配置网关" />
-<meta property="og:description" content="配置#极限网关支持多种方式来修改配置。
-命令行参数#极限网关提供了命令行参数如下：
-✗ ./bin/gateway --helpUsage of ./bin/gateway:-config stringthe location of config file, default: gateway.yml (default &quot;gateway.yml&quot;)-debugrun in debug mode, gateway will quit with panic error-log stringthe log level,options:trace,debug,info,warn,error (default &quot;info&quot;)-v version常用的说明如下：
- config，指定配置文件名，默认的配置文件名为当前执行命令所在目录的 gateway.yml，如果你的配置文件放置在其他地方，可以通过指定参数来进行选择。 daemon，将网关切换到后台执行，一般还需要结合 pidfile 来保存进程号，方便后续的进程操作。  配置文件#极限网关的大部分配置都可以通过 gateway.yml 来进行配置，配置修改完成之后，需要重启网关程序才能生效。
-定义入口#每一个网关都至少要对外暴露一个服务的入口，用来接收业务的操作请求，这个在极限网关里面叫做 entry，通过下面的参数即可定义：
-entry:- name: es_gatewayenabled: truerouter: defaultnetwork:binding: 0." />
+<meta property="og:description" content="配置 #  极限网关支持多种方式来修改配置。
+命令行参数 #  极限网关提供了命令行参数如下：
+✗ ./bin/gateway --help Usage of ./bin/gateway: -config string the location of config file, default: gateway.yml (default &quot;gateway.yml&quot;) -debug run in debug mode, gateway will quit with panic error -log string the log level,options:trace,debug,info,warn,error (default &quot;info&quot;) -v version 常用的说明如下：
+ config，指定配置文件名，默认的配置文件名为当前执行命令所在目录的 gateway.yml，如果你的配置文件放置在其他地方，可以通过指定参数来进行选择。 daemon，将网关切换到后台执行，一般还需要结合 pidfile 来保存进程号，方便后续的进程操作。  配置文件 #  极限网关的大部分配置都可以通过 gateway.yml 来进行配置，配置修改完成之后，需要重启网关程序才能生效。
+定义入口 #  每一个网关都至少要对外暴露一个服务的入口，用来接收业务的操作请求，这个在极限网关里面叫做 entry，通过下面的参数即可定义：
+entry: - name: es_gateway enabled: true router: default network: binding: 0." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/gateway/getting-started/configuration/" />
 
 <title>配置网关 | INFINI Labs</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="/en/docs/latest/gateway/getting-started/configuration/" title="Configuring the Gateway">
+
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 
@@ -3423,6 +3425,8 @@ entry:- name: es_gatewayenabled: truerouter: defaultnetwork:binding: 0." />
   
 
 
+  
+
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
   <ul>
@@ -3442,7 +3446,7 @@ entry:- name: es_gatewayenabled: truerouter: defaultnetwork:binding: 0." />
     </li>
     
     <li class="">
-      <a href="/en/" class="flex align-center">
+      <a href="/en/docs/latest/gateway/getting-started/configuration/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>

@@ -5,14 +5,14 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="主动合并索引分段#极限网关内置一个索引分段合并服务，可以主动对索引段文件进行合并，从而提升查询速度，段合并服务支持多个索引的依次顺序处理，并对合并任务状态进行了跟踪处理，避免大量段合并任务并行操作拖慢集群。
-如何开启#修改配置文件 gateway.yml，增加如下配置：
-force_merge:enabled: falseelasticsearch: devmin_num_segments: 20max_num_segments: 1indices:- index_name各参数说明如下：
+<meta name="description" content="主动合并索引分段 #  极限网关内置一个索引分段合并服务，可以主动对索引段文件进行合并，从而提升查询速度，段合并服务支持多个索引的依次顺序处理，并对合并任务状态进行了跟踪处理，避免大量段合并任务并行操作拖慢集群。
+如何开启 #  修改配置文件 gateway.yml，增加如下配置：
+force_merge: enabled: false elasticsearch: dev min_num_segments: 20 max_num_segments: 1 indices: - index_name 各参数说明如下：
    名称 类型 说明     enabled bool 是否启用该模块，默认是 false   elasticsearch string 操作的 Elasticsearch 集群 ID   min_num_segments int 超过多少分片的索引才会执行主动分片合并，以索引为单位的统计数目   max_num_segments int 将分片下的段文件合并之后，最多生成的段文件个数   indices array 需要进行分片合并的索引列表   discovery object 自动发现索引的相关设置   discovery.min_idle_time string 满足段合并条件的最小时间跨度，默认 1d   discovery.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="索引段合并" />
-<meta property="og:description" content="主动合并索引分段#极限网关内置一个索引分段合并服务，可以主动对索引段文件进行合并，从而提升查询速度，段合并服务支持多个索引的依次顺序处理，并对合并任务状态进行了跟踪处理，避免大量段合并任务并行操作拖慢集群。
-如何开启#修改配置文件 gateway.yml，增加如下配置：
-force_merge:enabled: falseelasticsearch: devmin_num_segments: 20max_num_segments: 1indices:- index_name各参数说明如下：
+<meta property="og:description" content="主动合并索引分段 #  极限网关内置一个索引分段合并服务，可以主动对索引段文件进行合并，从而提升查询速度，段合并服务支持多个索引的依次顺序处理，并对合并任务状态进行了跟踪处理，避免大量段合并任务并行操作拖慢集群。
+如何开启 #  修改配置文件 gateway.yml，增加如下配置：
+force_merge: enabled: false elasticsearch: dev min_num_segments: 20 max_num_segments: 1 indices: - index_name 各参数说明如下：
    名称 类型 说明     enabled bool 是否启用该模块，默认是 false   elasticsearch string 操作的 Elasticsearch 集群 ID   min_num_segments int 超过多少分片的索引才会执行主动分片合并，以索引为单位的统计数目   max_num_segments int 将分片下的段文件合并之后，最多生成的段文件个数   indices array 需要进行分片合并的索引列表   discovery object 自动发现索引的相关设置   discovery.min_idle_time string 满足段合并条件的最小时间跨度，默认 1d   discovery." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/gateway/references/modules/force_merge/" />
@@ -20,9 +20,11 @@ force_merge:enabled: falseelasticsearch: devmin_num_segments: 20max_num_segm
 <title>索引段合并 | INFINI Labs</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="/en/docs/latest/gateway/references/modules/force_merge/" title="Index Segment Merging">
+
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 
@@ -3419,6 +3421,8 @@ force_merge:enabled: falseelasticsearch: devmin_num_segments: 20max_num_segm
   
 
 
+  
+
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
   <ul>
@@ -3438,7 +3442,7 @@ force_merge:enabled: falseelasticsearch: devmin_num_segments: 20max_num_segm
     </li>
     
     <li class="">
-      <a href="/en/" class="flex align-center">
+      <a href="/en/docs/latest/gateway/references/modules/force_merge/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>

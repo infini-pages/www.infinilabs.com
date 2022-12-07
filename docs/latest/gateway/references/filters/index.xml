@@ -11,10 +11,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/echo/</guid>
-      <description>echo#描述#echo 过滤器是一个用于在返回结果里面输出指定字符信息的过滤器，常用于调试。
-功能演示#配置示例#一个简单的示例如下：
-flow:- name: hello_worldfilter:- echo:message: &amp;quot;hello infini\n&amp;quot;echo 过滤器可以设置重复输出相同的字符的次数，示例如下：
-...- echo:message: &amp;quot;hello gateway\n&amp;quot;repeat: 3...参数说明#   名称 类型 说明     message string 需要输出的字符内容   repeat int 重复次数   stdout bool 是否在终端也打印输出，默认为 false    </description>
+      <description>echo #  描述 #  echo 过滤器是一个用于在返回结果里面输出指定字符信息的过滤器，常用于调试。
+功能演示 #    配置示例 #  一个简单的示例如下：
+flow: - name: hello_world filter: - echo: message: &amp;quot;hello infini\n&amp;quot; echo 过滤器可以设置重复输出相同的字符的次数，示例如下：
+... - echo: message: &amp;quot;hello gateway\n&amp;quot; repeat: 3 ... 参数说明 #     名称 类型 说明     message string 需要输出的字符内容   repeat int 重复次数   stdout bool 是否在终端也打印输出，默认为 false    </description>
     </item>
     
     <item>
@@ -23,9 +23,9 @@ flow:- name: hello_worldfilter:- echo:message: &amp;quot;hello infini\n&amp;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/basic_auth/</guid>
-      <description>basic_auth#描述#basic_auth 过滤器用来验证请求的身份认证信息，适用于简单的身份认证。
-配置示例#一个简单的示例如下：
-flow:- name: basic_authfilter:- basic_auth:valid_users:medcl: passwdmedcl1: abc...参数说明#   名称 类型 说明     valid_users map 用户名和密码    </description>
+      <description>basic_auth #  描述 #  basic_auth 过滤器用来验证请求的身份认证信息，适用于简单的身份认证。
+配置示例 #  一个简单的示例如下：
+flow: - name: basic_auth filter: - basic_auth: valid_users: medcl: passwd medcl1: abc ... 参数说明 #     名称 类型 说明     valid_users map 用户名和密码    </description>
     </item>
     
     <item>
@@ -34,9 +34,9 @@ flow:- name: basic_authfilter:- basic_auth:valid_users:medcl: passwdmedcl1
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/bulk_request_mutate/</guid>
-      <description>bulk_request_mutate#描述#bulk_request_mutate 过滤器用来干预 Elasticsearch 的 Bulk 请求。
-配置示例#一个简单的示例如下：
-flow:- name: bulk_request_mutatefilter:- bulk_request_mutate:fix_null_id: truegenerate_enhanced_id: true# fix_null_type: true# default_type: m-type# default_index: m-index# index_rename:# &amp;quot;*&amp;quot;: index-new# index1: index-new# index2: index-new# index3: index3-new# index4: index3-new# medcl-dr3: index3-new# type_rename:# &amp;quot;*&amp;quot;: type-new# type1: type-new# type2: type-new# doc: type-new# doc1: type-new.</description>
+      <description>bulk_request_mutate #  描述 #  bulk_request_mutate 过滤器用来干预 Elasticsearch 的 Bulk 请求。
+配置示例 #  一个简单的示例如下：
+flow: - name: bulk_request_mutate filter: - bulk_request_mutate: fix_null_id: true generate_enhanced_id: true # fix_null_type: true # default_type: m-type # default_index: m-index # index_rename: # &amp;quot;*&amp;quot;: index-new # index1: index-new # index2: index-new # index3: index3-new # index4: index3-new # medcl-dr3: index3-new # type_rename: # &amp;quot;*&amp;quot;: type-new # type1: type-new # type2: type-new # doc: type-new # doc1: type-new .</description>
     </item>
     
     <item>
@@ -45,9 +45,9 @@ flow:- name: bulk_request_mutatefilter:- bulk_request_mutate:fix_null_id: tr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/bulk_reshuffle/</guid>
-      <description>bulk_reshuffle#描述#bulk_reshuffle 可以分析 Elasticsearch 的批次请求，并按照文档进行解析，可以根据需要将文档分门别类，归档存储在队列中，通过先落地存储，业务端请求可以快速返回，从而解耦前端写入和后端 Elasticsearch 集群。bulk_reshuffle 需要离线管道消费任务来配合使用。
+      <description>bulk_reshuffle #  描述 #  bulk_reshuffle 可以分析 Elasticsearch 的批次请求，并按照文档进行解析，可以根据需要将文档分门别类，归档存储在队列中，通过先落地存储，业务端请求可以快速返回，从而解耦前端写入和后端 Elasticsearch 集群。bulk_reshuffle 需要离线管道消费任务来配合使用。
 通过 bulk_reshuffle 过滤器生成的队列，元数据会默认带上 &amp;quot;type&amp;quot;: &amp;quot;bulk_reshuffle&amp;quot; 以及 Elasticsearch 的集群信息，如：&amp;quot;elasticsearch&amp;quot;: &amp;quot;dev&amp;quot;，通过网关查看队列的 API 也可以查看，如下：
-curl http://localhost:2900/queue/stats{&amp;quot;queue&amp;quot;: {&amp;quot;disk&amp;quot;: {&amp;quot;async_bulk-cluster##dev&amp;quot;: {&amp;quot;depth&amp;quot;: 0,&amp;quot;metadata&amp;quot;: {&amp;quot;source&amp;quot;: &amp;quot;dynamic&amp;quot;,&amp;quot;id&amp;quot;: &amp;quot;c71f7pqi4h92kki4qrvg&amp;quot;,&amp;quot;name&amp;quot;: &amp;quot;async_bulk-cluster##dev&amp;quot;,&amp;quot;label&amp;quot;: {&amp;quot;elasticsearch&amp;quot;: &amp;quot;dev&amp;quot;,&amp;quot;level&amp;quot;: &amp;quot;cluster&amp;quot;,&amp;quot;type&amp;quot;: &amp;quot;bulk_reshuffle&amp;quot;}}}}}}节点级别的异步提交#极限网关可以本地计算每个索引文档对应后端 Elasticsearch 集群的目标存放位置，从而能够精准的进行请求定位，在一批 bulk 请求中，可能存在多个后端节点的数据，bulk_reshuffle 过滤器用来将正常的 bulk 请求打散，按照目标节点或者分片进行拆分重新组装，避免 Elasticsearch 节点收到请求之后再次进行请求分发， 从而降低 Elasticsearch 集群间的流量和负载，也能避免单个节点成为热点瓶颈，确保各个数据节点的处理均衡，从而提升集群总体的索引吞吐能力。</description>
+curl http://localhost:2900/queue/stats { &amp;quot;queue&amp;quot;: { &amp;quot;disk&amp;quot;: { &amp;quot;async_bulk-cluster##dev&amp;quot;: { &amp;quot;depth&amp;quot;: 0, &amp;quot;metadata&amp;quot;: { &amp;quot;source&amp;quot;: &amp;quot;dynamic&amp;quot;, &amp;quot;id&amp;quot;: &amp;quot;c71f7pqi4h92kki4qrvg&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;async_bulk-cluster##dev&amp;quot;, &amp;quot;label&amp;quot;: { &amp;quot;elasticsearch&amp;quot;: &amp;quot;dev&amp;quot;, &amp;quot;level&amp;quot;: &amp;quot;cluster&amp;quot;, &amp;quot;type&amp;quot;: &amp;quot;bulk_reshuffle&amp;quot; } } } } } } 节点级别的异步提交 #  极限网关可以本地计算每个索引文档对应后端 Elasticsearch 集群的目标存放位置，从而能够精准的进行请求定位，在一批 bulk 请求中，可能存在多个后端节点的数据，bulk_reshuffle 过滤器用来将正常的 bulk 请求打散，按照目标节点或者分片进行拆分重新组装，避免 Elasticsearch 节点收到请求之后再次进行请求分发， 从而降低 Elasticsearch 集群间的流量和负载，也能避免单个节点成为热点瓶颈，确保各个数据节点的处理均衡，从而提升集群总体的索引吞吐能力。</description>
     </item>
     
     <item>
@@ -56,9 +56,9 @@ curl http://localhost:2900/queue/stats{&amp;quot;queue&amp;quot;: {&amp;quot;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/bulk_response_process/</guid>
-      <description>bulk_response_process#描述#bulk_response_process 过滤器用来处理 Elasticsearch 的 Bulk 请求。
-配置示例#一个简单的示例如下：
-flow:- name: bulk_response_processfilter:- bulk_response_process:success_queue: &amp;quot;success_queue&amp;quot;tag_on_success: [&amp;quot;commit_message_allowed&amp;quot;]参数说明#   名称 类型 说明     invalid_queue string 保存非法请求的队列名称，必填。   failure_queue string 保存失败请求的队列名称，必填。   save_partial_success_requests bool 是否保存 bulk 请求里面部分执行成功的请求，默认 false。   success_queue string 保存 bulk 请求里面部分执行成功的请求的队列。   doc_buffer_size int 处理单个文档的 buffer 大小，默认 25kb，即 262144   continue_on_error bool bulk 请求出错之后是否继续执行后面的 filter，默认 false   message_truncate_size int bulk 请求出错日志截断长度，默认 1024   safety_parse bool 是否采用安全的 bulk 元数据解析方法，默认 true   doc_buffer_size int 当采用不安全的 bulk 元数据解析方法时，使用的 buffer 大小，默认 256 * 1024   tag_on_success array 将所有 bulk 请求处理完成之后，请求上下文打上指定标记   tag_on_error array 请求出现错误的情况下，请求上下文打上指定标记   tag_on_partial array 部分请求执行成功的情况下，请求上下文打上指定标记   tag_on_failure array 部分请求出现失败（可重试）的情况下，请求上下文打上指定标记   tag_on_invalid array 出现不合法请求错误的情况下，请求上下文打上指定标记    </description>
+      <description>bulk_response_process #  描述 #  bulk_response_process 过滤器用来处理 Elasticsearch 的 Bulk 请求。
+配置示例 #  一个简单的示例如下：
+flow: - name: bulk_response_process filter: - bulk_response_process: success_queue: &amp;quot;success_queue&amp;quot; tag_on_success: [&amp;quot;commit_message_allowed&amp;quot;] 参数说明 #     名称 类型 说明     invalid_queue string 保存非法请求的队列名称，必填。   failure_queue string 保存失败请求的队列名称，必填。   save_partial_success_requests bool 是否保存 bulk 请求里面部分执行成功的请求，默认 false。   success_queue string 保存 bulk 请求里面部分执行成功的请求的队列。   doc_buffer_size int 处理单个文档的 buffer 大小，默认 25kb，即 262144   continue_on_error bool bulk 请求出错之后是否继续执行后面的 filter，默认 false   message_truncate_size int bulk 请求出错日志截断长度，默认 1024   safety_parse bool 是否采用安全的 bulk 元数据解析方法，默认 true   doc_buffer_size int 当采用不安全的 bulk 元数据解析方法时，使用的 buffer 大小，默认 256 * 1024   tag_on_success array 将所有 bulk 请求处理完成之后，请求上下文打上指定标记   tag_on_error array 请求出现错误的情况下，请求上下文打上指定标记   tag_on_partial array 部分请求执行成功的情况下，请求上下文打上指定标记   tag_on_failure array 部分请求出现失败（可重试）的情况下，请求上下文打上指定标记   tag_on_invalid array 出现不合法请求错误的情况下，请求上下文打上指定标记    </description>
     </item>
     
     <item>
@@ -67,12 +67,12 @@ flow:- name: bulk_response_processfilter:- bulk_response_process:success_que
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/cache/</guid>
-      <description>cache#描述#cache 过滤器由 get_cache 和 set_cache 两组过滤器组成，一般需要组合使用，可用于缓存加速查询，抵挡重复请求，降低后端集群查询压力。
-get_cache 过滤器#过滤器 get_cache 用来从缓存里面获取之前出现的消息，直接返回给客户端，避免访问后端 Elasticsearch，用于缓存热点数据。
+      <description>cache #  描述 #  cache 过滤器由 get_cache 和 set_cache 两组过滤器组成，一般需要组合使用，可用于缓存加速查询，抵挡重复请求，降低后端集群查询压力。
+get_cache 过滤器 #  过滤器 get_cache 用来从缓存里面获取之前出现的消息，直接返回给客户端，避免访问后端 Elasticsearch，用于缓存热点数据。
 配置示例如下：
-flow:- name: get_cachefilter:- get_cache:pass_patterns: [&amp;quot;_cat&amp;quot;,&amp;quot;scroll&amp;quot;, &amp;quot;scroll_id&amp;quot;,&amp;quot;_refresh&amp;quot;,&amp;quot;_cluster&amp;quot;,&amp;quot;_ccr&amp;quot;,&amp;quot;_count&amp;quot;,&amp;quot;_flush&amp;quot;,&amp;quot;_ilm&amp;quot;,&amp;quot;_ingest&amp;quot;,&amp;quot;_license&amp;quot;,&amp;quot;_migration&amp;quot;,&amp;quot;_ml&amp;quot;,&amp;quot;_rollup&amp;quot;,&amp;quot;_data_stream&amp;quot;,&amp;quot;_open&amp;quot;, &amp;quot;_close&amp;quot;]参数说明#   名称 类型 说明     pass_patterns string 设置忽略缓存的请求规则，URL 包含其中的任意关键字将跳过缓存    set_cache 过滤器#过滤器 set_cache 用来将后端查询拿到的返回结果存到缓存里面，可以设置过期时间。
+flow: - name: get_cache filter: - get_cache: pass_patterns: [&amp;quot;_cat&amp;quot;,&amp;quot;scroll&amp;quot;, &amp;quot;scroll_id&amp;quot;,&amp;quot;_refresh&amp;quot;,&amp;quot;_cluster&amp;quot;,&amp;quot;_ccr&amp;quot;,&amp;quot;_count&amp;quot;,&amp;quot;_flush&amp;quot;,&amp;quot;_ilm&amp;quot;,&amp;quot;_ingest&amp;quot;,&amp;quot;_license&amp;quot;,&amp;quot;_migration&amp;quot;,&amp;quot;_ml&amp;quot;,&amp;quot;_rollup&amp;quot;,&amp;quot;_data_stream&amp;quot;,&amp;quot;_open&amp;quot;, &amp;quot;_close&amp;quot;] 参数说明 #     名称 类型 说明     pass_patterns string 设置忽略缓存的请求规则，URL 包含其中的任意关键字将跳过缓存    set_cache 过滤器 #  过滤器 set_cache 用来将后端查询拿到的返回结果存到缓存里面，可以设置过期时间。
 配置示例如下：
-flow:- name: get_cachefilter:- set_cache:min_response_size: 100max_response_size: 1024000cache_ttl: 30smax_cache_items: 100000参数说明#   名称 类型 说明     cache_type string 缓存类型，支持 ristretto，ccache 和 redis，默认 ristretto   cache_ttl string 缓存的过期时间，默认 10s   async_search_cache_ttl string 异步请求结果的缓存过期时间，默认 10m   min_response_size int 最小符合缓存要求的消息体大小，默认 -1 表示不限制   max_response_size int 最大符合缓存要求的消息体大小，默认为 int 的最大值   max_cached_item int 最大的缓存消息总数，默认 1000000，当类型为 ccache有效   max_cached_size int 最大的缓存内存开销，默认 1000000000 即 1GB，当类型为 ristretto 有效   validated_status_code array 允许被缓存的请求状态码，默认 200,201,404,403,413,400,301    其它参数#如果希望主动忽略缓存，可以在 URL 的参数里面传递一个 no_cache 来让网关忽略缓存。如：</description>
+flow: - name: get_cache filter: - set_cache: min_response_size: 100 max_response_size: 1024000 cache_ttl: 30s max_cache_items: 100000 参数说明 #     名称 类型 说明     cache_type string 缓存类型，支持 ristretto，ccache 和 redis，默认 ristretto   cache_ttl string 缓存的过期时间，默认 10s   async_search_cache_ttl string 异步请求结果的缓存过期时间，默认 10m   min_response_size int 最小符合缓存要求的消息体大小，默认 -1 表示不限制   max_response_size int 最大符合缓存要求的消息体大小，默认为 int 的最大值   max_cached_item int 最大的缓存消息总数，默认 1000000，当类型为 ccache有效   max_cached_size int 最大的缓存内存开销，默认 1000000000 即 1GB，当类型为 ristretto 有效   validated_status_code array 允许被缓存的请求状态码，默认 200,201,404,403,413,400,301    其它参数 #  如果希望主动忽略缓存，可以在 URL 的参数里面传递一个 no_cache 来让网关忽略缓存。如：</description>
     </item>
     
     <item>
@@ -81,10 +81,10 @@ flow:- name: get_cachefilter:- set_cache:min_response_size: 100max_response
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/clone/</guid>
-      <description>clone#描述#clone 过滤器用来将流量克隆转发到另外的一个处理流程，可以实现双写、多写、多数据中心同步、集群升级、版本切换等需求。
-配置示例#一个简单的示例如下：
-flow:- name: double_writefilter:- clone:flows:- write_to_region_a- write_to_region_b #last one&#39;s response will be output to client- name: write_to_region_afilter:- elasticsearch:elasticsearch: es1- name: write_to_region_bfilter:- elasticsearch:elasticsearch: es2上面的例子可以将 Elasticsearch 的请求复制到两个不同的异地集群。
-参数说明#   名称 类型 说明     flows array 指定多个流量处理的流程，依次同步执行，将最后一个流程处理的结果输出给客户端   continue bool 流量迁移出去之后，是否还继续执行之前的既定流程，设置成 false 则立即返回，默认 false。    </description>
+      <description>clone #  描述 #  clone 过滤器用来将流量克隆转发到另外的一个处理流程，可以实现双写、多写、多数据中心同步、集群升级、版本切换等需求。
+配置示例 #  一个简单的示例如下：
+flow: - name: double_write filter: - clone: flows: - write_to_region_a - write_to_region_b #last one&#39;s response will be output to client - name: write_to_region_a filter: - elasticsearch: elasticsearch: es1 - name: write_to_region_b filter: - elasticsearch: elasticsearch: es2 上面的例子可以将 Elasticsearch 的请求复制到两个不同的异地集群。
+参数说明 #     名称 类型 说明     flows array 指定多个流量处理的流程，依次同步执行，将最后一个流程处理的结果输出给客户端   continue bool 流量迁移出去之后，是否还继续执行之前的既定流程，设置成 false 则立即返回，默认 false。    </description>
     </item>
     
     <item>
@@ -93,9 +93,9 @@ flow:- name: double_writefilter:- clone:flows:- write_to_region_a- write_t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/context_filter/</guid>
-      <description>context_filter#描述#context_filter 过滤器用来按请求上下文来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- context_filter:context: _ctx.request.pathmessage: &amp;quot;request not allowed.&amp;quot;status: 403 must: #must match all rules to continueprefix:- /medclcontain:- _searchsuffix:- _count- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dclmust_not: # any match will be filteredprefix:- /.kibana- /_security- /_security- /gateway_requests*- /.reporting- /_monitoring/bulkcontain:- _searchsuffix:- _count- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dclshould:prefix:- /medclcontain:- _search- _async_searchsuffix:- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dcl参数说明#   名称 类型 说明     context string 上下文变量   exclude array 拒绝通过的请求的变量列表   include array 允许通过的请求的变量列表   must.</description>
+      <description>context_filter #  描述 #  context_filter 过滤器用来按请求上下文来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - context_filter: context: _ctx.request.path message: &amp;quot;request not allowed.&amp;quot; status: 403 must: #must match all rules to continue prefix: - /medcl contain: - _search suffix: - _count - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl must_not: # any match will be filtered prefix: - /.kibana - /_security - /_security - /gateway_requests* - /.reporting - /_monitoring/bulk contain: - _search suffix: - _count - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl should: prefix: - /medcl contain: - _search - _async_search suffix: - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl 参数说明 #     名称 类型 说明     context string 上下文变量   exclude array 拒绝通过的请求的变量列表   include array 允许通过的请求的变量列表   must.</description>
     </item>
     
     <item>
@@ -104,10 +104,10 @@ flow:- name: testfilter:- context_filter:context: _ctx.request.pathmessage:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/context_limiter/</guid>
-      <description>context_limiter#描述#context_limiter 过滤器用来按照请求上下文来进行限速。
-配置示例#配置示例如下：
-flow:- name: default_flowfilter:- context_limiter:max_requests: 1action: dropcontext:- _ctx.request.path- _ctx.request.header.Host- _ctx.request.header.Env上面的配置中，对 _ctx.request.path 、 _ctx.request.header.Host 和 _ctx.request.header.Env 这三个上下文变量来组成一个 bucket 进行限速。 允许的最大 qps 为 1每秒，达到限速直接拒绝范围外的后续请求。
-参数说明#   名称 类型 说明     context array 设置上下文变量，依次组合成一个 bucket key   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
+      <description>context_limiter #  描述 #  context_limiter 过滤器用来按照请求上下文来进行限速。
+配置示例 #  配置示例如下：
+flow: - name: default_flow filter: - context_limiter: max_requests: 1 action: drop context: - _ctx.request.path - _ctx.request.header.Host - _ctx.request.header.Env 上面的配置中，对 _ctx.request.path 、 _ctx.request.header.Host 和 _ctx.request.header.Env 这三个上下文变量来组成一个 bucket 进行限速。 允许的最大 qps 为 1每秒，达到限速直接拒绝范围外的后续请求。
+参数说明 #     名称 类型 说明     context array 设置上下文变量，依次组合成一个 bucket key   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
     </item>
     
     <item>
@@ -116,10 +116,10 @@ flow:- name: default_flowfilter:- context_limiter:max_requests: 1action: dr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/context_regex_replace/</guid>
-      <description>context_regex_replace#描述#context_regex_replace 过滤器用来通过正则表达式来替换修改请求上下文的相关信息。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- context_regex_replace:context: &amp;quot;_ctx.request.path&amp;quot;pattern: &amp;quot;^/&amp;quot;to: &amp;quot;/cluster:&amp;quot;when:contains:_ctx.request.path: /_search- dump:request: true这个例子可以将请求 curl localhost:8000/abc/_search 替换为 curl localhost:8000/cluster:abc/_search
-参数说明#   名称 类型 说明     context string 请求的上下文及对应的 Key   pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    支持修改的上下文变量列表如下：</description>
+      <description>context_regex_replace #  描述 #  context_regex_replace 过滤器用来通过正则表达式来替换修改请求上下文的相关信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - context_regex_replace: context: &amp;quot;_ctx.request.path&amp;quot; pattern: &amp;quot;^/&amp;quot; to: &amp;quot;/cluster:&amp;quot; when: contains: _ctx.request.path: /_search - dump: request: true 这个例子可以将请求 curl localhost:8000/abc/_search 替换为 curl localhost:8000/cluster:abc/_search
+参数说明 #     名称 类型 说明     context string 请求的上下文及对应的 Key   pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    支持修改的上下文变量列表如下：</description>
     </item>
     
     <item>
@@ -128,10 +128,10 @@ flow:- name: testfilter:- context_regex_replace:context: &amp;quot;_ctx.requ
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/date_range_precision_tuning/</guid>
-      <description>date_range_precision_tuning#描述#date_range_precision_tuning 过滤器用来重设时间范围查询的时间精度，通过调整精度，可以让短时间内邻近的重复请求更容易被缓存，对于有一些对于时间精度不那么高但是数据量非常大的场景，比如使用 Kibana 来做报表分析，通过缩减精度来缓存重复的查询请求，从而降低后端服务器压力，前端报表展现的提速非常明显。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- date_range_precision_tuning:time_precision: 4- get_cache:- elasticsearch:elasticsearch: dev- set_cache:精度说明#Kibana 默认发往 Elasticsearch 的查询，使用的是当前时间 Now，精度到毫秒，通过设置不同的精度来改写查询，以下面的查询为例：
-{&amp;quot;range&amp;quot;:{&amp;quot;@timestamp&amp;quot;:{&amp;quot;gte&amp;quot;:&amp;quot;2019-09-26T08:21:12.152Z&amp;quot;,&amp;quot;lte&amp;quot;:&amp;quot;2020-09-26T08:21:12.152Z&amp;quot;,&amp;quot;format&amp;quot;:&amp;quot;strict_date_optional_time&amp;quot;}分别设置不同的精度，改写之后的查询结果如下：
+      <description>date_range_precision_tuning #  描述 #  date_range_precision_tuning 过滤器用来重设时间范围查询的时间精度，通过调整精度，可以让短时间内邻近的重复请求更容易被缓存，对于有一些对于时间精度不那么高但是数据量非常大的场景，比如使用 Kibana 来做报表分析，通过缩减精度来缓存重复的查询请求，从而降低后端服务器压力，前端报表展现的提速非常明显。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - date_range_precision_tuning: time_precision: 4 - get_cache: - elasticsearch: elasticsearch: dev - set_cache: 精度说明 #  Kibana 默认发往 Elasticsearch 的查询，使用的是当前时间 Now，精度到毫秒，通过设置不同的精度来改写查询，以下面的查询为例：
+{&amp;quot;range&amp;quot;:{&amp;quot;@timestamp&amp;quot;:{&amp;quot;gte&amp;quot;:&amp;quot;2019-09-26T08:21:12.152Z&amp;quot;,&amp;quot;lte&amp;quot;:&amp;quot;2020-09-26T08:21:12.152Z&amp;quot;,&amp;quot;format&amp;quot;:&amp;quot;strict_date_optional_time&amp;quot;} 分别设置不同的精度，改写之后的查询结果如下：
    精度 新的查询     0 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T00:00:00.000Z&amp;rdquo;,&amp;ldquo;lte&amp;rdquo;:&amp;ldquo;2020-09-26T23:59:59.999Z&amp;rdquo;,&amp;ldquo;format&amp;rdquo;:&amp;ldquo;strict_date_optional_time&amp;rdquo;}   1 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T00:00:00.000Z&amp;rdquo;,&amp;ldquo;lte&amp;rdquo;:&amp;ldquo;2020-09-26T09:59:59.999Z&amp;rdquo;,&amp;ldquo;format&amp;rdquo;:&amp;ldquo;strict_date_optional_time&amp;rdquo;}   2 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T08:00:00.000Z&amp;rdquo;,&amp;ldquo;lte&amp;rdquo;:&amp;ldquo;2020-09-26T08:59:59.999Z&amp;rdquo;,&amp;ldquo;format&amp;rdquo;:&amp;ldquo;strict_date_optional_time&amp;rdquo;}   3 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T08:20:00.000Z&amp;rdquo;,&amp;ldquo;lte&amp;rdquo;:&amp;ldquo;2020-09-26T08:29:59.999Z&amp;rdquo;,&amp;ldquo;format&amp;rdquo;:&amp;ldquo;strict_date_optional_time&amp;rdquo;}   4 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T08:21:00.000Z&amp;rdquo;,&amp;ldquo;lte&amp;rdquo;:&amp;ldquo;2020-09-26T08:21:59.999Z&amp;rdquo;,&amp;ldquo;format&amp;rdquo;:&amp;ldquo;strict_date_optional_time&amp;rdquo;}   5 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T08:21:10.</description>
     </item>
     
@@ -141,9 +141,9 @@ flow:- name: testfilter:- date_range_precision_tuning:time_precision: 4- ge
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/drop/</guid>
-      <description>drop#描述#drop 过滤器用来丢弃某个消息，提前结束请求的处理。
-配置示例#一个简单的示例如下：
-flow:- name: dropfilter:- drop:</description>
+      <description>drop #  描述 #  drop 过滤器用来丢弃某个消息，提前结束请求的处理。
+配置示例 #  一个简单的示例如下：
+flow: - name: drop filter: - drop: </description>
     </item>
     
     <item>
@@ -152,10 +152,10 @@ flow:- name: dropfilter:- drop:</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/dump/</guid>
-      <description>dump#描述#dump 过滤器是一个用于在终端打印 Dump 输出相关请求信息的过滤器，主要用于调试。
-配置示例#一个简单的示例如下：
-flow:- name: hello_worldfilter:- dump:uri: truerequest_header: truerequest_body: trueresponse_body: truestatus_code: true参数说明#dump 过滤器比较简单，在需要的流程处理阶段插入 dump 过滤器，即可在终端输出相应阶段的请求信息，方便调试。
-   名称 类型 说明     request bool 是否输出全部完整的请求信息   response bool 是否输出全部完整的返回信息   uri bool 是否输出请求的 URI 信息   query_args bool 是否输出请求的参数信息   user bool 是否输出请求的用户信息   api_key bool 是否输出请求的 APIKey 信息   request_header bool 是否输出请求的头信息   response_header bool 是否输出响应的头信息   status_code bool 是否输出响应的状态码   context array 输出自定义的上下文信息    输出上下文#可以使用 context 参数来调试请求上下文信息，示例配置文件：</description>
+      <description>dump #  描述 #  dump 过滤器是一个用于在终端打印 Dump 输出相关请求信息的过滤器，主要用于调试。
+配置示例 #  一个简单的示例如下：
+flow: - name: hello_world filter: - dump: uri: true request_header: true request_body: true response_body: true status_code: true 参数说明 #  dump 过滤器比较简单，在需要的流程处理阶段插入 dump 过滤器，即可在终端输出相应阶段的请求信息，方便调试。
+   名称 类型 说明     request bool 是否输出全部完整的请求信息   response bool 是否输出全部完整的返回信息   uri bool 是否输出请求的 URI 信息   query_args bool 是否输出请求的参数信息   user bool 是否输出请求的用户信息   api_key bool 是否输出请求的 APIKey 信息   request_header bool 是否输出请求的头信息   response_header bool 是否输出响应的头信息   status_code bool 是否输出响应的状态码   context array 输出自定义的上下文信息    输出上下文 #  可以使用 context 参数来调试请求上下文信息，示例配置文件：</description>
     </item>
     
     <item>
@@ -164,13 +164,13 @@ flow:- name: hello_worldfilter:- dump:uri: truerequest_header: truerequest
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/elasticsearch/</guid>
-      <description>elasticsearch#描述#elasticsearch 过滤器是一个用于请求转发给后端 Elasticsearch 集群的过滤器。
-配置示例#使用 elasticsearch 过滤器之前，需要提前定义一个 Elasticsearch 的集群配置节点，如下：
-elasticsearch:- name: prodenabled: trueendpoint: http://192.168.3.201:9200流程的配置示例如下：
-flow:- name: cache_firstfilter:- elasticsearch:elasticsearch: prod 上面的例子即将请求转发给 prod 集群。
-自动更新#对于一个大规模的集群，可能存在很多的节点，不可能一一配置后端的所有节点，只需要先指定 Elasticsearch 模块允许自动发现后端节点，如下：
-elasticsearch:- name: prodenabled: trueendpoint: http://192.168.3.201:9200discovery:enabled: truerefresh:enabled: truebasic_auth:username: elasticpassword: pass然后过滤器这边的配置也开启刷新，即可访问后端所有节点，且节点上下线也会自动更新，示例如下：
-flow:- name: cache_firstfilter:- elasticsearch:elasticsearch: prod refresh: enabled: trueinterval: 30s设置权重#如果后端集群很多，极限网关支持对不同的节点设置不同的访问权重，配置示例如下：</description>
+      <description>elasticsearch #  描述 #  elasticsearch 过滤器是一个用于请求转发给后端 Elasticsearch 集群的过滤器。
+配置示例 #  使用 elasticsearch 过滤器之前，需要提前定义一个 Elasticsearch 的集群配置节点，如下：
+elasticsearch: - name: prod enabled: true endpoint: http://192.168.3.201:9200 流程的配置示例如下：
+flow: - name: cache_first filter: - elasticsearch: elasticsearch: prod 上面的例子即将请求转发给 prod 集群。
+自动更新 #  对于一个大规模的集群，可能存在很多的节点，不可能一一配置后端的所有节点，只需要先指定 Elasticsearch 模块允许自动发现后端节点，如下：
+elasticsearch: - name: prod enabled: true endpoint: http://192.168.3.201:9200 discovery: enabled: true refresh: enabled: true basic_auth: username: elastic password: pass 然后过滤器这边的配置也开启刷新，即可访问后端所有节点，且节点上下线也会自动更新，示例如下：
+flow: - name: cache_first filter: - elasticsearch: elasticsearch: prod refresh: enabled: true interval: 30s 设置权重 #  如果后端集群很多，极限网关支持对不同的节点设置不同的访问权重，配置示例如下：</description>
     </item>
     
     <item>
@@ -179,9 +179,9 @@ flow:- name: cache_firstfilter:- elasticsearch:elasticsearch: prod refresh: 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/elasticsearch_health_check/</guid>
-      <description>elasticsearch_health_check#描述#elasticsearch_health_check 过滤器用来以限速模式下主动探测 Elasticsearch 的健康情况， 当出现后端故障的情况下，可以触发一次主动的集群健康检查，而不用等待 Elasticsearch 默认的轮询检查结果，限速设置为最多每秒发送一次检查请求给后端 Elasticsearch。
-配置示例#一个简单的示例如下：
-flow:- name: elasticsearch_health_checkfilter:- elasticsearch_health_check:elasticsearch: dev参数说明#   名称 类型 说明     elasticsearch string 集群 ID   interval int 设置最少执行请求的时间间隔，单位秒，默认 1    </description>
+      <description>elasticsearch_health_check #  描述 #  elasticsearch_health_check 过滤器用来以限速模式下主动探测 Elasticsearch 的健康情况， 当出现后端故障的情况下，可以触发一次主动的集群健康检查，而不用等待 Elasticsearch 默认的轮询检查结果，限速设置为最多每秒发送一次检查请求给后端 Elasticsearch。
+配置示例 #  一个简单的示例如下：
+flow: - name: elasticsearch_health_check filter: - elasticsearch_health_check: elasticsearch: dev 参数说明 #     名称 类型 说明     elasticsearch string 集群 ID   interval int 设置最少执行请求的时间间隔，单位秒，默认 1    </description>
     </item>
     
     <item>
@@ -190,11 +190,11 @@ flow:- name: elasticsearch_health_checkfilter:- elasticsearch_health_check:e
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/flow/</guid>
-      <description>flow#描述#flow 过滤器用来跳转或执行某个或一系列其他流程。
-配置示例#一个简单的示例如下：
-flow:- name: flowfilter:- flow:flows: - request_logging使用上下文的动态 Flow:
-flow:- name: dns-flowfilter:- flow:ignore_undefined_flow: truecontext_flow:context: _ctx.request.hostcontext_parse_pattern: (?P&amp;lt;uuid&amp;gt;^[0-9a-z_\-]+)\.flow_id_template: flow_$[[uuid]]- set_response:status: 503content_type: application/jsonbody: &#39;{&amp;quot;message&amp;quot;:&amp;quot;invalid HOST&amp;quot;}&#39;支持的上下文变量，请访问 上下文 .
-参数说明#   名称 类型 说明     flow string 流程 ID，支持指定单个 flow 执行   flows array 流程 ID，数组格式，可以指定多个，依次执行   ignore_undefined_flow bool 是否忽略未知的 flow，继续执行   context_flow.</description>
+      <description>flow #  描述 #  flow 过滤器用来跳转或执行某个或一系列其他流程。
+配置示例 #  一个简单的示例如下：
+flow: - name: flow filter: - flow: flows: - request_logging 使用上下文的动态 Flow:
+flow: - name: dns-flow filter: - flow: ignore_undefined_flow: true context_flow: context: _ctx.request.host context_parse_pattern: (?P&amp;lt;uuid&amp;gt;^[0-9a-z_\-]+)\. flow_id_template: flow_$[[uuid]] - set_response: status: 503 content_type: application/json body: &#39;{&amp;quot;message&amp;quot;:&amp;quot;invalid HOST&amp;quot;}&#39; 支持的上下文变量，请访问 上下文 .
+参数说明 #     名称 类型 说明     flow string 流程 ID，支持指定单个 flow 执行   flows array 流程 ID，数组格式，可以指定多个，依次执行   ignore_undefined_flow bool 是否忽略未知的 flow，继续执行   context_flow.</description>
     </item>
     
     <item>
@@ -203,9 +203,9 @@ flow:- name: dns-flowfilter:- flow:ignore_undefined_flow: truecontext_flow:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/http/</guid>
-      <description>http#描述#http 过滤器用来将请求代理转发到指定的 http 服务器。
-配置示例#一个简单的示例如下：
-flow:- name: default_flowfilter:- basic_auth:valid_users:medcl: passwd- http:schema: &amp;quot;http&amp;quot; #https or http#host: &amp;quot;192.168.3.98:5601&amp;quot;hosts: - &amp;quot;192.168.3.98:5601&amp;quot;- &amp;quot;192.168.3.98:5602&amp;quot;参数说明#   名称 类型 说明     schema string http 或是 https   host string 目标主机地址，带端口，如 localhost:9200   hosts array 主机地址列表，遇到故障，依次尝试   skip_failure_host bool 是否跳过不可以的主机，默认 true   max_connection_per_node int 主机的最大连接数，默认 5000   max_response_size int 支持的最大响应体大小   max_retry_times int 出错的最大重试次数，默认 0   retry_delay_in_ms int 重试的延迟，默认 1000   skip_cleanup_hop_headers bool 是否移除不兼容的 Hop-by-hop 头信息   max_conn_wait_timeout duration 建立连接的超时时间，默认 30s   max_idle_conn_duration duration 空闲连接的超时时间，默认 30s   max_conn_duration duration 长连接的超时时间，默认 0s   timeout duration 请求的超时时间，默认 30s   read_timeout duration 读请求的超时时间，默认 0s   write_timeout duration 写请求的超时时间，默认 0s   read_buffer_size int 读请求的缓冲区大小，默认 16384   write_buffer_size int 写请求的缓冲区大小，默认 16384   tls_insecure_skip_verify bool 是否忽略 TLS 的校验，默认 true    </description>
+      <description>http #  描述 #  http 过滤器用来将请求代理转发到指定的 http 服务器。
+配置示例 #  一个简单的示例如下：
+flow: - name: default_flow filter: - basic_auth: valid_users: medcl: passwd - http: schema: &amp;quot;http&amp;quot; #https or http #host: &amp;quot;192.168.3.98:5601&amp;quot; hosts: - &amp;quot;192.168.3.98:5601&amp;quot; - &amp;quot;192.168.3.98:5602&amp;quot; 参数说明 #     名称 类型 说明     schema string http 或是 https   host string 目标主机地址，带端口，如 localhost:9200   hosts array 主机地址列表，遇到故障，依次尝试   skip_failure_host bool 是否跳过不可以的主机，默认 true   max_connection_per_node int 主机的最大连接数，默认 5000   max_response_size int 支持的最大响应体大小   max_retry_times int 出错的最大重试次数，默认 0   retry_delay_in_ms int 重试的延迟，默认 1000   skip_cleanup_hop_headers bool 是否移除不兼容的 Hop-by-hop 头信息   max_conn_wait_timeout duration 建立连接的超时时间，默认 30s   max_idle_conn_duration duration 空闲连接的超时时间，默认 30s   max_conn_duration duration 长连接的超时时间，默认 0s   timeout duration 请求的超时时间，默认 30s   read_timeout duration 读请求的超时时间，默认 0s   write_timeout duration 写请求的超时时间，默认 0s   read_buffer_size int 读请求的缓冲区大小，默认 16384   write_buffer_size int 写请求的缓冲区大小，默认 16384   tls_insecure_skip_verify bool 是否忽略 TLS 的校验，默认 true    </description>
     </item>
     
     <item>
@@ -214,12 +214,12 @@ flow:- name: default_flowfilter:- basic_auth:valid_users:medcl: passwd- ht
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/javascript/</guid>
-      <description>javascript#描述#javascript 过滤器可用于通过用 javascript 编写脚本来执行您自己的处理逻辑，从而提供最大的灵活性。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- javascript:source: &amp;gt;function process(ctx) {var console = require(&#39;console&#39;);console.log(&amp;quot;hello from javascript&amp;quot;);}这个脚本里面的 process 是一个内置的函数，用来处理传进来的上下文信息，函数里面可以自定义业务逻辑。
+      <description>javascript #  描述 #  javascript 过滤器可用于通过用 javascript 编写脚本来执行您自己的处理逻辑，从而提供最大的灵活性。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - javascript: source: &amp;gt; function process(ctx) { var console = require(&#39;console&#39;); console.log(&amp;quot;hello from javascript&amp;quot;); } 这个脚本里面的 process 是一个内置的函数，用来处理传进来的上下文信息，函数里面可以自定义业务逻辑。
 如果脚本比较复杂，也支持通过文件的方式从加载：
-flow:- name: testfilter:- javascript:file: example.js这里的 example.js 是文件的保存路径。
-参数说明#   名称 类型 描述     source string 要执行的 Javascript 代码。   file string 要加载的脚本文件的路径。相对路径被解释为相对于网关实例数据目录的 scripts 子目录。   params map 一个参数字典，传递给脚本的 register 方法。    上下文 API#传递给处理方法的上下文对象具有以下 API 可以被使用。有关上下文的更多信息，请查看 Request Context。</description>
+flow: - name: test filter: - javascript: file: example.js 这里的 example.js 是文件的保存路径。
+参数说明 #     名称 类型 描述     source string 要执行的 Javascript 代码。   file string 要加载的脚本文件的路径。相对路径被解释为相对于网关实例数据目录的 scripts 子目录。   params map 一个参数字典，传递给脚本的 register 方法。    上下文 API #  传递给处理方法的上下文对象具有以下 API 可以被使用。有关上下文的更多信息，请查看 Request Context。</description>
     </item>
     
     <item>
@@ -228,10 +228,10 @@ flow:- name: testfilter:- javascript:file: example.js这里的 example.js �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/ldap_auth/</guid>
-      <description>ldap_auth#描述#ldap_auth 过滤器用来设置基于 LDAP 的身份认证。
-配置示例#一个简单的示例如下：
-flow:- name: ldap_authfilter:- ldap_auth:host: &amp;quot;ldap.forumsys.com&amp;quot;port: 389bind_dn: &amp;quot;cn=read-only-admin,dc=example,dc=com&amp;quot;bind_password: &amp;quot;password&amp;quot;base_dn: &amp;quot;dc=example,dc=com&amp;quot;user_filter: &amp;quot;(uid=%s)&amp;quot;上面的配置使用的是在线的免费 LDAP 测试服务器，测试用户 tesla，密码 password。
-➜ curl http://127.0.0.1:8000/ -u tesla:password {&amp;quot;name&amp;quot; : &amp;quot;192.168.3.7&amp;quot;,&amp;quot;cluster_name&amp;quot; : &amp;quot;elasticsearch&amp;quot;,&amp;quot;cluster_uuid&amp;quot; : &amp;quot;ZGTwWtBfSLWRpsS1VKQDiQ&amp;quot;,&amp;quot;version&amp;quot; : {&amp;quot;number&amp;quot; : &amp;quot;7.8.0&amp;quot;,&amp;quot;build_flavor&amp;quot; : &amp;quot;default&amp;quot;,&amp;quot;build_type&amp;quot; : &amp;quot;tar&amp;quot;,&amp;quot;build_hash&amp;quot; : &amp;quot;757314695644ea9a1dc2fecd26d1a43856725e65&amp;quot;,&amp;quot;build_date&amp;quot; : &amp;quot;2020-06-14T19:35:50.</description>
+      <description>ldap_auth #  描述 #  ldap_auth 过滤器用来设置基于 LDAP 的身份认证。
+配置示例 #  一个简单的示例如下：
+flow: - name: ldap_auth filter: - ldap_auth: host: &amp;quot;ldap.forumsys.com&amp;quot; port: 389 bind_dn: &amp;quot;cn=read-only-admin,dc=example,dc=com&amp;quot; bind_password: &amp;quot;password&amp;quot; base_dn: &amp;quot;dc=example,dc=com&amp;quot; user_filter: &amp;quot;(uid=%s)&amp;quot; 上面的配置使用的是在线的免费 LDAP 测试服务器，测试用户 tesla，密码 password。
+➜ curl http://127.0.0.1:8000/ -u tesla:password { &amp;quot;name&amp;quot; : &amp;quot;192.168.3.7&amp;quot;, &amp;quot;cluster_name&amp;quot; : &amp;quot;elasticsearch&amp;quot;, &amp;quot;cluster_uuid&amp;quot; : &amp;quot;ZGTwWtBfSLWRpsS1VKQDiQ&amp;quot;, &amp;quot;version&amp;quot; : { &amp;quot;number&amp;quot; : &amp;quot;7.8.0&amp;quot;, &amp;quot;build_flavor&amp;quot; : &amp;quot;default&amp;quot;, &amp;quot;build_type&amp;quot; : &amp;quot;tar&amp;quot;, &amp;quot;build_hash&amp;quot; : &amp;quot;757314695644ea9a1dc2fecd26d1a43856725e65&amp;quot;, &amp;quot;build_date&amp;quot; : &amp;quot;2020-06-14T19:35:50.</description>
     </item>
     
     <item>
@@ -240,10 +240,10 @@ flow:- name: ldap_authfilter:- ldap_auth:host: &amp;quot;ldap.forumsys.com&a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/logging/</guid>
-      <description>logging#描述#logging 过滤器用来按请求记录下来，通过异步记录到本地磁盘的方式，尽可能降低对请求的延迟影响，对于流量很大的场景，建议配合其它请求过滤器来降低日志的总量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- logging:queue_name: request_logging记录的请求日志样例如下：
- {&amp;quot;_index&amp;quot; : &amp;quot;gateway_requests&amp;quot;,&amp;quot;_type&amp;quot; : &amp;quot;doc&amp;quot;,&amp;quot;_id&amp;quot; : &amp;quot;EH5bG3gBsbC2s3iWFzCF&amp;quot;,&amp;quot;_score&amp;quot; : 1.0,&amp;quot;_source&amp;quot; : {&amp;quot;tls&amp;quot; : false,&amp;quot;@timestamp&amp;quot; : &amp;quot;2021-03-10T08:57:30.645Z&amp;quot;,&amp;quot;conn_time&amp;quot; : &amp;quot;2021-03-10T08:57:30.635Z&amp;quot;,&amp;quot;flow&amp;quot; : {&amp;quot;from&amp;quot; : &amp;quot;127.0.0.1&amp;quot;,&amp;quot;process&amp;quot; : [&amp;quot;request_body_regex_replace&amp;quot;,&amp;quot;get_cache&amp;quot;,&amp;quot;date_range_precision_tuning&amp;quot;,&amp;quot;get_cache&amp;quot;,&amp;quot;elasticsearch&amp;quot;,&amp;quot;set_cache&amp;quot;,&amp;quot;||&amp;quot;,&amp;quot;request_logging&amp;quot;],&amp;quot;relay&amp;quot; : &amp;quot;192.168.43.101-Quartz&amp;quot;,&amp;quot;to&amp;quot; : [&amp;quot;localhost:9200&amp;quot;]},&amp;quot;id&amp;quot; : 3,&amp;quot;local_ip&amp;quot; : &amp;quot;127.</description>
+      <description>logging #  描述 #  logging 过滤器用来按请求记录下来，通过异步记录到本地磁盘的方式，尽可能降低对请求的延迟影响，对于流量很大的场景，建议配合其它请求过滤器来降低日志的总量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - logging: queue_name: request_logging 记录的请求日志样例如下：
+ { &amp;quot;_index&amp;quot; : &amp;quot;gateway_requests&amp;quot;, &amp;quot;_type&amp;quot; : &amp;quot;doc&amp;quot;, &amp;quot;_id&amp;quot; : &amp;quot;EH5bG3gBsbC2s3iWFzCF&amp;quot;, &amp;quot;_score&amp;quot; : 1.0, &amp;quot;_source&amp;quot; : { &amp;quot;tls&amp;quot; : false, &amp;quot;@timestamp&amp;quot; : &amp;quot;2021-03-10T08:57:30.645Z&amp;quot;, &amp;quot;conn_time&amp;quot; : &amp;quot;2021-03-10T08:57:30.635Z&amp;quot;, &amp;quot;flow&amp;quot; : { &amp;quot;from&amp;quot; : &amp;quot;127.0.0.1&amp;quot;, &amp;quot;process&amp;quot; : [ &amp;quot;request_body_regex_replace&amp;quot;, &amp;quot;get_cache&amp;quot;, &amp;quot;date_range_precision_tuning&amp;quot;, &amp;quot;get_cache&amp;quot;, &amp;quot;elasticsearch&amp;quot;, &amp;quot;set_cache&amp;quot;, &amp;quot;||&amp;quot;, &amp;quot;request_logging&amp;quot; ], &amp;quot;relay&amp;quot; : &amp;quot;192.168.43.101-Quartz&amp;quot;, &amp;quot;to&amp;quot; : [ &amp;quot;localhost:9200&amp;quot; ] }, &amp;quot;id&amp;quot; : 3, &amp;quot;local_ip&amp;quot; : &amp;quot;127.</description>
     </item>
     
     <item>
@@ -252,9 +252,9 @@ flow:- name: testfilter:- logging:queue_name: request_logging记录的请�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/queue/</guid>
-      <description>queue#描述#queue 过滤器用来保存请求到消息队列。
-配置示例#一个简单的示例如下：
-flow:- name: queuefilter:- queue:queue_name: queue_name参数说明#   名称 类型 说明     depth_threshold int 大于队列指定深度才能存入队列，默认为 0   queue_name string 消息队列名称    </description>
+      <description>queue #  描述 #  queue 过滤器用来保存请求到消息队列。
+配置示例 #  一个简单的示例如下：
+flow: - name: queue filter: - queue: queue_name: queue_name 参数说明 #     名称 类型 说明     depth_threshold int 大于队列指定深度才能存入队列，默认为 0   queue_name string 消息队列名称    </description>
     </item>
     
     <item>
@@ -263,9 +263,9 @@ flow:- name: queuefilter:- queue:queue_name: queue_name参数说明#   �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/ratio/</guid>
-      <description>ratio#描述#ratio 过滤器用来将正常的流量按照比例迁移转发到另外的一个处理流程，可以实现灰度发布、流量迁移导出，或者将部分流量切换到不同版本集群用于测试的能力。
-配置示例#一个简单的示例如下：
-flow:- name: ratio_traffic_forwardfilter:- ratio:ratio: 0.1flow: hello_worldcontinue: true参数说明#   名称 类型 说明     ratio float 需要迁移的流量比例   flow string 指定新的流量处理流程   continue bool 流量迁移出去之后，是否还继续执行之前的既定流程，设置成 false 则立即返回，默认 false。    </description>
+      <description>ratio #  描述 #  ratio 过滤器用来将正常的流量按照比例迁移转发到另外的一个处理流程，可以实现灰度发布、流量迁移导出，或者将部分流量切换到不同版本集群用于测试的能力。
+配置示例 #  一个简单的示例如下：
+flow: - name: ratio_traffic_forward filter: - ratio: ratio: 0.1 flow: hello_world continue: true 参数说明 #     名称 类型 说明     ratio float 需要迁移的流量比例   flow string 指定新的流量处理流程   continue bool 流量迁移出去之后，是否还继续执行之前的既定流程，设置成 false 则立即返回，默认 false。    </description>
     </item>
     
     <item>
@@ -274,10 +274,10 @@ flow:- name: ratio_traffic_forwardfilter:- ratio:ratio: 0.1flow: hello_worl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/record/</guid>
-      <description>record#描述#record 过滤器是一个记录请求的过滤器，输出的请求可以直接复制到 Kibana 的 Console 中用于调试。
-配置示例#一个简单的示例如下：
-flow:- name: request_loggingfilter:- record:stdout: truefilename: requests.txtrecord 过滤器输出的请求日志，格式示例如下：
-GET /_cluster/state/version,master_node,routing_table,metadata/*GET /_aliasGET /_cluster/healthGET /_cluster/statsGET /_nodes/0NSvaoOGRs2VIeLv3lLpmA/stats参数说明#   名称 类型 说明     filename string 录制请求日志在 data 目录下保存的文件名   stdout bool 是否在终端也打印输出，默认为 false    </description>
+      <description>record #  描述 #  record 过滤器是一个记录请求的过滤器，输出的请求可以直接复制到 Kibana 的 Console 中用于调试。
+配置示例 #  一个简单的示例如下：
+flow: - name: request_logging filter: - record: stdout: true filename: requests.txt record 过滤器输出的请求日志，格式示例如下：
+GET /_cluster/state/version,master_node,routing_table,metadata/* GET /_alias GET /_cluster/health GET /_cluster/stats GET /_nodes/0NSvaoOGRs2VIeLv3lLpmA/stats 参数说明 #     名称 类型 说明     filename string 录制请求日志在 data 目录下保存的文件名   stdout bool 是否在终端也打印输出，默认为 false    </description>
     </item>
     
     <item>
@@ -286,9 +286,9 @@ GET /_cluster/state/version,master_node,routing_table,metadata/*GET /_aliasGET
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/redirect/</guid>
-      <description>redirect#描述#redirect 过滤器用来跳转到一个指定的 URL。
-配置示例#一个简单的示例如下：
-flow:- name: redirectfilter:- redirect:uri: https://infinilabs.com参数说明#   名称 类型 说明     uri string 需要跳转的完整目标 URI 地址   code int 状态码设置，默认 302    </description>
+      <description>redirect #  描述 #  redirect 过滤器用来跳转到一个指定的 URL。
+配置示例 #  一个简单的示例如下：
+flow: - name: redirect filter: - redirect: uri: https://infinilabs.com 参数说明 #     名称 类型 说明     uri string 需要跳转的完整目标 URI 地址   code int 状态码设置，默认 302    </description>
     </item>
     
     <item>
@@ -297,9 +297,9 @@ flow:- name: redirectfilter:- redirect:uri: https://infinilabs.com参数说
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/redis_pubsub/</guid>
-      <description>redis_pubsub#描述#reids 过滤器用来将收到的请求和响应结果保存到 Redis 消息队列中。
-配置示例#一个简单的示例如下：
-flow:- name: redis_pubsubfilter:- redis_pubsub:host: 127.0.0.1port: 6379channel: gatewayresponse: true参数说明#   名称 类型 说明     host string Reids 主机名，默认 localhost   port int Reids 端口号，默认为 6379   password string Redis 密码   db int Redis 默认选择的数据库，默认为 0   channel string Redis 消息队列名称，必填，没有默认值   response bool 是否包含响应结果，默认为 true    </description>
+      <description>redis_pubsub #  描述 #  reids 过滤器用来将收到的请求和响应结果保存到 Redis 消息队列中。
+配置示例 #  一个简单的示例如下：
+flow: - name: redis_pubsub filter: - redis_pubsub: host: 127.0.0.1 port: 6379 channel: gateway response: true 参数说明 #     名称 类型 说明     host string Reids 主机名，默认 localhost   port int Reids 端口号，默认为 6379   password string Redis 密码   db int Redis 默认选择的数据库，默认为 0   channel string Redis 消息队列名称，必填，没有默认值   response bool 是否包含响应结果，默认为 true    </description>
     </item>
     
     <item>
@@ -308,10 +308,10 @@ flow:- name: redis_pubsubfilter:- redis_pubsub:host: 127.0.0.1port: 6379ch
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_api_key_filter/</guid>
-      <description>request_api_key_filter#描述#当 Elasticsearch 是通过 API Key 方式来进行身份认证的时候，request_api_key_filter 过滤器可用来按请求的 API ID 来进行过滤。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_api_key_filter:message: &amp;quot;Request filtered!&amp;quot;exclude:- VuaCfGcBCdbkQm-e5aOx上面的例子表示，来自 VuaCfGcBCdbkQm-e5aOx 的请求会被拒绝，如下。
-➜ ~ curl localhost:8000 -H &amp;quot;Authorization: ApiKey VnVhQ2ZHY0JDZGJrUW0tZTVhT3g6dWkybHAyYXhUTm1zeWFrdzl0dk5udw==&amp;quot; -v* Rebuilt URL to: localhost:8000/* Trying 127.0.0.1...* TCP_NODELAY set* Connected to localhost (127.0.0.1) port 8000 (#0)&amp;gt; GET / HTTP/1.1&amp;gt; Host: localhost:8000&amp;gt; User-Agent: curl/7.</description>
+      <description>request_api_key_filter #  描述 #  当 Elasticsearch 是通过 API Key 方式来进行身份认证的时候，request_api_key_filter 过滤器可用来按请求的 API ID 来进行过滤。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_api_key_filter: message: &amp;quot;Request filtered!&amp;quot; exclude: - VuaCfGcBCdbkQm-e5aOx 上面的例子表示，来自 VuaCfGcBCdbkQm-e5aOx 的请求会被拒绝，如下。
+➜ ~ curl localhost:8000 -H &amp;quot;Authorization: ApiKey VnVhQ2ZHY0JDZGJrUW0tZTVhT3g6dWkybHAyYXhUTm1zeWFrdzl0dk5udw==&amp;quot; -v * Rebuilt URL to: localhost:8000/ * Trying 127.0.0.1... * TCP_NODELAY set * Connected to localhost (127.0.0.1) port 8000 (#0) &amp;gt; GET / HTTP/1.1 &amp;gt; Host: localhost:8000 &amp;gt; User-Agent: curl/7.</description>
     </item>
     
     <item>
@@ -320,10 +320,10 @@ flow:- name: testfilter:- request_api_key_filter:message: &amp;quot;Request 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_api_key_limiter/</guid>
-      <description>request_api_key_limiter#描述#request_api_key_limiter 过滤器用来按照 API Key 来进行限速。
-配置示例#配置示例如下：
-flow:- name: rate_limit_flowfilter:- request_api_key_limiter:id:- VuaCfGcBCdbkQm-e5aOxmax_requests: 1action: drop # retry or dropmessage: &amp;quot;your api_key reached our limit&amp;quot;上面的配置中，对 VuaCfGcBCdbkQm-e5aOx 这个 API ID 进行限速，允许的最大 qps 为 1 每秒。
-➜ ~ curl localhost:8000 -H &amp;quot;Authorization: ApiKey VnVhQ2ZHY0JDZGJrUW0tZTVhT3g6dWkybHAyYXhUTm1zeWFrdzl0dk5udw==&amp;quot; -v* Rebuilt URL to: localhost:8000/* Trying 127.0.0.1...* TCP_NODELAY set* Connected to localhost (127.</description>
+      <description>request_api_key_limiter #  描述 #  request_api_key_limiter 过滤器用来按照 API Key 来进行限速。
+配置示例 #  配置示例如下：
+flow: - name: rate_limit_flow filter: - request_api_key_limiter: id: - VuaCfGcBCdbkQm-e5aOx max_requests: 1 action: drop # retry or drop message: &amp;quot;your api_key reached our limit&amp;quot; 上面的配置中，对 VuaCfGcBCdbkQm-e5aOx 这个 API ID 进行限速，允许的最大 qps 为 1 每秒。
+➜ ~ curl localhost:8000 -H &amp;quot;Authorization: ApiKey VnVhQ2ZHY0JDZGJrUW0tZTVhT3g6dWkybHAyYXhUTm1zeWFrdzl0dk5udw==&amp;quot; -v * Rebuilt URL to: localhost:8000/ * Trying 127.0.0.1... * TCP_NODELAY set * Connected to localhost (127.</description>
     </item>
     
     <item>
@@ -332,9 +332,9 @@ flow:- name: rate_limit_flowfilter:- request_api_key_limiter:id:- VuaCfGcBC
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_body_json_del/</guid>
-      <description>request_body_json_del#描述#request_body_json_del 过滤器用来删除 JSON 格式的请求体里面的部分字段。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_body_json_del:path:- query.bool.should.[0]- query.bool.must参数说明#   名称 类型 说明     path array 需要删除的 JSON PATH 键值   ignore_missing bool 如果这个 JSON Path 不存在，是否忽略处理，默认 false    </description>
+      <description>request_body_json_del #  描述 #  request_body_json_del 过滤器用来删除 JSON 格式的请求体里面的部分字段。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_body_json_del: path: - query.bool.should.[0] - query.bool.must 参数说明 #     名称 类型 说明     path array 需要删除的 JSON PATH 键值   ignore_missing bool 如果这个 JSON Path 不存在，是否忽略处理，默认 false    </description>
     </item>
     
     <item>
@@ -343,9 +343,9 @@ flow:- name: testfilter:- request_body_json_del:path:- query.bool.should.[0
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_body_json_set/</guid>
-      <description>request_body_json_set#描述#request_body_json_set 过滤器用来修改 JSON 格式的请求体。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_body_json_set:path:- aggs.total_num.terms.field -&amp;gt; &amp;quot;name&amp;quot;- aggs.total_num.terms.size -&amp;gt; 3- size -&amp;gt; 0参数说明#   名称 类型 说明     path map 使用 -&amp;gt; 作为标识符的键值对， JSON PATH 和需要替换的值   ignore_missing bool 如果这个 JSON Path 不存在，是否忽略处理，默认 false    </description>
+      <description>request_body_json_set #  描述 #  request_body_json_set 过滤器用来修改 JSON 格式的请求体。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_body_json_set: path: - aggs.total_num.terms.field -&amp;gt; &amp;quot;name&amp;quot; - aggs.total_num.terms.size -&amp;gt; 3 - size -&amp;gt; 0 参数说明 #     名称 类型 说明     path map 使用 -&amp;gt; 作为标识符的键值对， JSON PATH 和需要替换的值   ignore_missing bool 如果这个 JSON Path 不存在，是否忽略处理，默认 false    </description>
     </item>
     
     <item>
@@ -354,12 +354,12 @@ flow:- name: testfilter:- request_body_json_set:path:- aggs.total_num.terms
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_body_regex_replace/</guid>
-      <description>request_body_regex_replace#描述#request_body_regex_replace 过滤器使用正则表达式来替换请求体正文的字符串内容。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_body_regex_replace:pattern: &#39;&amp;quot;size&amp;quot;: 10000&#39;to: &#39;&amp;quot;size&amp;quot;: 100&#39;- elasticsearch:elasticsearch: prod - dump:request_body: true上面的示例将会替换发送给 Elasticsearch 请求体里面，size 设置为 10000 的部分修改为 100，可以用来动态修复错误或者不合理的查询。
+      <description>request_body_regex_replace #  描述 #  request_body_regex_replace 过滤器使用正则表达式来替换请求体正文的字符串内容。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_body_regex_replace: pattern: &#39;&amp;quot;size&amp;quot;: 10000&#39; to: &#39;&amp;quot;size&amp;quot;: 100&#39; - elasticsearch: elasticsearch: prod - dump: request_body: true 上面的示例将会替换发送给 Elasticsearch 请求体里面，size 设置为 10000 的部分修改为 100，可以用来动态修复错误或者不合理的查询。
 测试如下：
-curl -XPOST &amp;quot;http://localhost:8000/myindex/_search&amp;quot; -H &#39;Content-Type: application/json&#39; -d&#39;{&amp;quot;query&amp;quot;: {&amp;quot;match_all&amp;quot;: {}},&amp;quot;size&amp;quot;: 10000}&#39;实际发生的查询：
- {&amp;quot;_index&amp;quot; : &amp;quot;gateway_requests&amp;quot;,&amp;quot;_type&amp;quot; : &amp;quot;doc&amp;quot;,&amp;quot;_id&amp;quot; : &amp;quot;EH5bG3gBsbC2s3iWFzCF&amp;quot;,&amp;quot;_score&amp;quot; : 1.</description>
+curl -XPOST &amp;quot;http://localhost:8000/myindex/_search&amp;quot; -H &#39;Content-Type: application/json&#39; -d&#39; { &amp;quot;query&amp;quot;: { &amp;quot;match_all&amp;quot;: {} },&amp;quot;size&amp;quot;: 10000 }&#39; 实际发生的查询：
+ { &amp;quot;_index&amp;quot; : &amp;quot;gateway_requests&amp;quot;, &amp;quot;_type&amp;quot; : &amp;quot;doc&amp;quot;, &amp;quot;_id&amp;quot; : &amp;quot;EH5bG3gBsbC2s3iWFzCF&amp;quot;, &amp;quot;_score&amp;quot; : 1.</description>
     </item>
     
     <item>
@@ -368,12 +368,12 @@ curl -XPOST &amp;quot;http://localhost:8000/myindex/_search&amp;quot; -H &#39;Co
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_client_ip_filter/</guid>
-      <description>request_client_ip_filter#描述#request_client_ip_filter 过滤器用来按请求的来源用户 IP 信息来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_client_ip_filter:exclude:- 192.168.3.67上面的例子表示，来自 192.168.3.67 的请求不允许通过。
+      <description>request_client_ip_filter #  描述 #  request_client_ip_filter 过滤器用来按请求的来源用户 IP 信息来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_client_ip_filter: exclude: - 192.168.3.67 上面的例子表示，来自 192.168.3.67 的请求不允许通过。
 路由跳转的例子:
-flow:- name: echofilter:- echo:message: hello stanger- name: default_flowfilter:- request_client_ip_filter:action: redirect_flowflow: echoexclude:- 192.168.3.67来自 192.168.3.67 会跳转到另外的 echo 流程。
-参数说明#   名称 类型 说明     exclude array 拒绝通过的请求 IP 数组列表   include array 允许通过的请求 IP 数组列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+flow: - name: echo filter: - echo: message: hello stanger - name: default_flow filter: - request_client_ip_filter: action: redirect_flow flow: echo exclude: - 192.168.3.67 来自 192.168.3.67 会跳转到另外的 echo 流程。
+参数说明 #     名称 类型 说明     exclude array 拒绝通过的请求 IP 数组列表   include array 允许通过的请求 IP 数组列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -382,10 +382,10 @@ flow:- name: echofilter:- echo:message: hello stanger- name: default_flowf
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_client_ip_limiter/</guid>
-      <description>request_client_ip_limiter#描述#request_client_ip_limiter 过滤器用来按照请求客户端 IP 来进行限速。
-配置示例#配置示例如下：
-flow:- name: rate_limit_flowfilter:- request_client_ip_limiter:ip: #only limit for specify ips- 127.0.0.1max_requests: 256# max_bytes: 102400 #100kaction: retry # retry or drop# max_retry_times: 1000# retry_interval: 500 #100msmessage: &amp;quot;your ip reached our limit&amp;quot;上面的配置中，对 127.0.0.1 这个 IP 进行限速，允许的最大 qps 为 256。
-参数说明#   名称 类型 说明     ip array 设置哪些客户端 IP 会参与限速，不设置表示所有 IP 参与   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
+      <description>request_client_ip_limiter #  描述 #  request_client_ip_limiter 过滤器用来按照请求客户端 IP 来进行限速。
+配置示例 #  配置示例如下：
+flow: - name: rate_limit_flow filter: - request_client_ip_limiter: ip: #only limit for specify ips - 127.0.0.1 max_requests: 256 # max_bytes: 102400 #100k action: retry # retry or drop # max_retry_times: 1000 # retry_interval: 500 #100ms message: &amp;quot;your ip reached our limit&amp;quot; 上面的配置中，对 127.0.0.1 这个 IP 进行限速，允许的最大 qps 为 256。
+参数说明 #     名称 类型 说明     ip array 设置哪些客户端 IP 会参与限速，不设置表示所有 IP 参与   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
     </item>
     
     <item>
@@ -394,10 +394,10 @@ flow:- name: rate_limit_flowfilter:- request_client_ip_limiter:ip: #only lim
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_header_filter/</guid>
-      <description>request_header_filter#描述#request_header_filter 过滤器用来按请求的 Header 信息来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_header_filter:include:- TRACE: true上面的例子表示，当 Header 里面包含 TRACE: true 的请求才被允许通过。
-curl 192.168.3.4:8000 -v -H &#39;TRACE: true&#39;参数说明#   名称 类型 说明     exclude array 拒绝通过的请求 Header 信息   include array 允许通过的请求 Header 信息   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+      <description>request_header_filter #  描述 #  request_header_filter 过滤器用来按请求的 Header 信息来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_header_filter: include: - TRACE: true 上面的例子表示，当 Header 里面包含 TRACE: true 的请求才被允许通过。
+curl 192.168.3.4:8000 -v -H &#39;TRACE: true&#39; 参数说明 #     名称 类型 说明     exclude array 拒绝通过的请求 Header 信息   include array 允许通过的请求 Header 信息   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -406,10 +406,10 @@ curl 192.168.3.4:8000 -v -H &#39;TRACE: true&#39;参数说明#   名称 类�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_host_filter/</guid>
-      <description>request_host_filter#描述#request_host_filter 过滤器主要用来按照指定的域名或者主机名来进行请求过滤，适合只有一个 IP 多个域名需要进行域名访问控制的场景。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_host_filter:include:- domain-test2.com:8000上面的例子表示，只有访问的是这个域名 domain-test2.com:8000 的请求才被允许通过。
-示例如下：#✗ curl -k -u user:passwd http://domain-test4.com:8000/ -v* Trying 192.168.3.67...* TCP_NODELAY set* Connected to domain-test4.com (192.168.3.67) port 8000 (#0)* Server auth using Basic with user &#39;medcl&#39;&amp;gt; GET / HTTP/1.1&amp;gt; Host: domain-test4.com:8000&amp;gt; Authorization: Basic 123=&amp;gt; User-Agent: curl/7.</description>
+      <description>request_host_filter #  描述 #  request_host_filter 过滤器主要用来按照指定的域名或者主机名来进行请求过滤，适合只有一个 IP 多个域名需要进行域名访问控制的场景。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_host_filter: include: - domain-test2.com:8000 上面的例子表示，只有访问的是这个域名 domain-test2.com:8000 的请求才被允许通过。
+示例如下： #  ✗ curl -k -u user:passwd http://domain-test4.com:8000/ -v * Trying 192.168.3.67... * TCP_NODELAY set * Connected to domain-test4.com (192.168.3.67) port 8000 (#0) * Server auth using Basic with user &#39;medcl&#39; &amp;gt; GET / HTTP/1.1 &amp;gt; Host: domain-test4.com:8000 &amp;gt; Authorization: Basic 123= &amp;gt; User-Agent: curl/7.</description>
     </item>
     
     <item>
@@ -418,10 +418,10 @@ flow:- name: testfilter:- request_host_filter:include:- domain-test2.com:80
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_host_limiter/</guid>
-      <description>request_host_limiter#描述#request_host_limiter 过滤器用来按照请求主机（域名）来进行限速。
-配置示例#配置示例如下：
-flow:- name: rate_limit_flowfilter:- request_host_limiter:host:- api.elasticsearch.cn:8000- logging.elasticsearch.cn:8000max_requests: 256# max_bytes: 102400 #100kaction: retry # retry or drop# max_retry_times: 1000# retry_interval: 500 #100msmessage: &amp;quot;you reached our limit&amp;quot;上面的配置中，对 api.elasticsearch.cn 和 logging.elasticsearch.cn 这两个访问域名进行限速，允许的最大 qps 为 256 每秒。
-参数说明#   名称 类型 说明     host array 设置哪些主机域名会参与限速，不设置表示都参与，注意，如果访问的域名带端口号，这里也需包含端口号，如 localhost:8080   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
+      <description>request_host_limiter #  描述 #  request_host_limiter 过滤器用来按照请求主机（域名）来进行限速。
+配置示例 #  配置示例如下：
+flow: - name: rate_limit_flow filter: - request_host_limiter: host: - api.elasticsearch.cn:8000 - logging.elasticsearch.cn:8000 max_requests: 256 # max_bytes: 102400 #100k action: retry # retry or drop # max_retry_times: 1000 # retry_interval: 500 #100ms message: &amp;quot;you reached our limit&amp;quot; 上面的配置中，对 api.elasticsearch.cn 和 logging.elasticsearch.cn 这两个访问域名进行限速，允许的最大 qps 为 256 每秒。
+参数说明 #     名称 类型 说明     host array 设置哪些主机域名会参与限速，不设置表示都参与，注意，如果访问的域名带端口号，这里也需包含端口号，如 localhost:8080   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
     </item>
     
     <item>
@@ -430,9 +430,9 @@ flow:- name: rate_limit_flowfilter:- request_host_limiter:host:- api.elasti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_method_filter/</guid>
-      <description>request_method_filter#描述#request_method_filter 过滤器用来按请求 Method 来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_method_filter:exclude:- PUT- POSTinclude:- GET- HEAD- DELETE参数说明#   名称 类型 说明     exclude array 拒绝通过的请求 Method   include array 允许通过的请求 Method   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+      <description>request_method_filter #  描述 #  request_method_filter 过滤器用来按请求 Method 来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_method_filter: exclude: - PUT - POST include: - GET - HEAD - DELETE 参数说明 #     名称 类型 说明     exclude array 拒绝通过的请求 Method   include array 允许通过的请求 Method   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -441,9 +441,9 @@ flow:- name: testfilter:- request_method_filter:exclude:- PUT- POSTinclud
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_path_filter/</guid>
-      <description>request_path_filter#描述#request_path_filter 过滤器用来按请求的 Path 路径来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_path_filter:must: #must match all rules to continueprefix:- /medclcontain:- _searchsuffix:- _count- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dclmust_not: # any match will be filteredprefix:- /.kibana- /_security- /_security- /gateway_requests*- /.reporting- /_monitoring/bulkcontain:- _searchsuffix:- _count- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dclshould:prefix:- /medclcontain:- _search- _async_searchsuffix:- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dcl参数说明#   名称 类型 说明     must.</description>
+      <description>request_path_filter #  描述 #  request_path_filter 过滤器用来按请求的 Path 路径来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_path_filter: must: #must match all rules to continue prefix: - /medcl contain: - _search suffix: - _count - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl must_not: # any match will be filtered prefix: - /.kibana - /_security - /_security - /gateway_requests* - /.reporting - /_monitoring/bulk contain: - _search suffix: - _count - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl should: prefix: - /medcl contain: - _search - _async_search suffix: - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl 参数说明 #     名称 类型 说明     must.</description>
     </item>
     
     <item>
@@ -452,10 +452,10 @@ flow:- name: testfilter:- request_path_filter:must: #must match all rules to
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_path_limiter/</guid>
-      <description>request_path_limiter#描述#request_path_limiter 过滤器用来定义请求的限速规则，可以实现索引级别的限速。
-配置示例#配置示例如下：
-flow:- name: rate_limit_flowfilter:- request_path_limiter:message: &amp;quot;Hey, You just reached our request limit!&amp;quot;rules: - pattern: &amp;quot;/(?P&amp;lt;index_name&amp;gt;medcl)/_search&amp;quot; max_qps: 3 group: index_name - pattern: &amp;quot;/(?P&amp;lt;index_name&amp;gt;.*?)/_search&amp;quot; max_qps: 100group: index_name上面的配置中，对 medcl 这个索引执行查询，允许的最大 qps 为 3，而对其它的索引执行查询的 qps 为 100。
-参数说明#   名称 类型 说明     message string 设置达到限速条件的请求的返回消息   rules array 设置限速的策略，支持多种规则，按照配置的先后顺序处理，先匹配的先执行   rules.</description>
+      <description>request_path_limiter #  描述 #  request_path_limiter 过滤器用来定义请求的限速规则，可以实现索引级别的限速。
+配置示例 #  配置示例如下：
+flow: - name: rate_limit_flow filter: - request_path_limiter: message: &amp;quot;Hey, You just reached our request limit!&amp;quot; rules: - pattern: &amp;quot;/(?P&amp;lt;index_name&amp;gt;medcl)/_search&amp;quot; max_qps: 3 group: index_name - pattern: &amp;quot;/(?P&amp;lt;index_name&amp;gt;.*?)/_search&amp;quot; max_qps: 100 group: index_name 上面的配置中，对 medcl 这个索引执行查询，允许的最大 qps 为 3，而对其它的索引执行查询的 qps 为 100。
+参数说明 #     名称 类型 说明     message string 设置达到限速条件的请求的返回消息   rules array 设置限速的策略，支持多种规则，按照配置的先后顺序处理，先匹配的先执行   rules.</description>
     </item>
     
     <item>
@@ -464,10 +464,10 @@ flow:- name: rate_limit_flowfilter:- request_path_limiter:message: &amp;quot
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_user_filter/</guid>
-      <description>request_user_filter#描述#当 Elasticsearch 是通过 Basic Auth 方式来进行身份认证的时候，request_user_filter 过滤器可用来按请求的用户名信息来进行过滤。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_user_filter:include:- &amp;quot;elastic&amp;quot;上面的例子表示，只有来自 elastic 的请求才被允许通过。
-参数说明#   名称 类型 说明     exclude array 拒绝通过的请求的用户名列表   include array 允许通过的请求的用户名列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+      <description>request_user_filter #  描述 #  当 Elasticsearch 是通过 Basic Auth 方式来进行身份认证的时候，request_user_filter 过滤器可用来按请求的用户名信息来进行过滤。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_user_filter: include: - &amp;quot;elastic&amp;quot; 上面的例子表示，只有来自 elastic 的请求才被允许通过。
+参数说明 #     名称 类型 说明     exclude array 拒绝通过的请求的用户名列表   include array 允许通过的请求的用户名列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -476,10 +476,10 @@ flow:- name: testfilter:- request_user_filter:include:- &amp;quot;elastic&a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_user_limiter/</guid>
-      <description>request_user_limiter#描述#request_user_limiter 过滤器用来按照用户名来进行限速。
-配置示例#配置示例如下：
-flow:- name: rate_limit_flowfilter:- request_user_limiter:user:- elastic- medclmax_requests: 256# max_bytes: 102400 #100kaction: retry # retry or drop# max_retry_times: 1000# retry_interval: 500 #100msmessage: &amp;quot;you reached our limit&amp;quot;上面的配置中，对 medcl 和 elastic 这两个用户进行限速，允许的最大 qps 为 256 每秒。
-参数说明#   名称 类型 说明     user array 设置哪些用户会参与限速，不设置表示所有用户参与   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000    </description>
+      <description>request_user_limiter #  描述 #  request_user_limiter 过滤器用来按照用户名来进行限速。
+配置示例 #  配置示例如下：
+flow: - name: rate_limit_flow filter: - request_user_limiter: user: - elastic - medcl max_requests: 256 # max_bytes: 102400 #100k action: retry # retry or drop # max_retry_times: 1000 # retry_interval: 500 #100ms message: &amp;quot;you reached our limit&amp;quot; 上面的配置中，对 medcl 和 elastic 这两个用户进行限速，允许的最大 qps 为 256 每秒。
+参数说明 #     名称 类型 说明     user array 设置哪些用户会参与限速，不设置表示所有用户参与   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000    </description>
     </item>
     
     <item>
@@ -488,10 +488,10 @@ flow:- name: rate_limit_flowfilter:- request_user_limiter:user:- elastic- 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/response_body_regex_replace/</guid>
-      <description>response_body_regex_replace#描述#response_body_regex_replace 过滤器使用正则表达式来替换请求响应内容的字符串。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- echo:message: &amp;quot;hello infini\n&amp;quot;- response_body_regex_replace:pattern: infinito: world上面的结果输出为 hello world。
-参数说明#   名称 类型 说明     pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    </description>
+      <description>response_body_regex_replace #  描述 #  response_body_regex_replace 过滤器使用正则表达式来替换请求响应内容的字符串。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - echo: message: &amp;quot;hello infini\n&amp;quot; - response_body_regex_replace: pattern: infini to: world 上面的结果输出为 hello world。
+参数说明 #     名称 类型 说明     pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    </description>
     </item>
     
     <item>
@@ -500,10 +500,10 @@ flow:- name: testfilter:- echo:message: &amp;quot;hello infini\n&amp;quot;-
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/response_header_filter/</guid>
-      <description>response_header_filter#描述#response_header_filter 过滤器用来按请求响应的 Header 信息来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:...- response_header_filter:exclude:- INFINI-CACHE: CACHED上面的例子表示，当 Header 信息里面出现 INFINI-CACHE: CACHED 的请求不允许通过。
-参数说明#   名称 类型 说明     exclude array 拒绝通过的响应 Header 信息   include array 允许通过的响应 Header 信息   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+      <description>response_header_filter #  描述 #  response_header_filter 过滤器用来按请求响应的 Header 信息来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: ... - response_header_filter: exclude: - INFINI-CACHE: CACHED 上面的例子表示，当 Header 信息里面出现 INFINI-CACHE: CACHED 的请求不允许通过。
+参数说明 #     名称 类型 说明     exclude array 拒绝通过的响应 Header 信息   include array 允许通过的响应 Header 信息   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -512,9 +512,9 @@ flow:- name: testfilter:...- response_header_filter:exclude:- INFINI-CACHE
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/response_header_format/</guid>
-      <description>response_header_format#描述#response_header_format 过滤器用来将请求响应的 Header 信息里面的 Key 都转换成小写。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- response_header_format:</description>
+      <description>response_header_format #  描述 #  response_header_format 过滤器用来将请求响应的 Header 信息里面的 Key 都转换成小写。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - response_header_format: </description>
     </item>
     
     <item>
@@ -523,9 +523,9 @@ flow:- name: testfilter:- response_header_format:</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/response_status_filter/</guid>
-      <description>response_status_filter#描述#response_status_filter 过滤器用来按后端服务响应的状态码来进行过滤。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- response_status_filter:message: &amp;quot;Request filtered!&amp;quot;exclude:- 404include:- 200- 201- 500参数说明#   名称 类型 说明     exclude array 拒绝通过的响应码   include array 允许通过的响应码   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+      <description>response_status_filter #  描述 #  response_status_filter 过滤器用来按后端服务响应的状态码来进行过滤。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - response_status_filter: message: &amp;quot;Request filtered!&amp;quot; exclude: - 404 include: - 200 - 201 - 500 参数说明 #     名称 类型 说明     exclude array 拒绝通过的响应码   include array 允许通过的响应码   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -534,9 +534,9 @@ flow:- name: testfilter:- response_status_filter:message: &amp;quot;Request 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/retry_limiter/</guid>
-      <description>retry_limiter#描述#retry_limiter 过滤器用来判断一个请求是否达到最大重试次数，避免一个请求的无限重试。
-配置示例#一个简单的示例如下：
-flow:- name: retry_limiterfilter:- retry_limiter:queue_name: &amp;quot;deadlock_messages&amp;quot;max_retry_times: 3参数说明#   名称 类型 说明     max_retry_times int 最大重试次数，默认为 3   queue_name string 达到重试最大次数后，输出消息到指定消息队列的名称   tag_on_success array 触发重试条件之后，请求上下文打上指定标记    </description>
+      <description>retry_limiter #  描述 #  retry_limiter 过滤器用来判断一个请求是否达到最大重试次数，避免一个请求的无限重试。
+配置示例 #  一个简单的示例如下：
+flow: - name: retry_limiter filter: - retry_limiter: queue_name: &amp;quot;deadlock_messages&amp;quot; max_retry_times: 3 参数说明 #     名称 类型 说明     max_retry_times int 最大重试次数，默认为 3   queue_name string 达到重试最大次数后，输出消息到指定消息队列的名称   tag_on_success array 触发重试条件之后，请求上下文打上指定标记    </description>
     </item>
     
     <item>
@@ -545,9 +545,9 @@ flow:- name: retry_limiterfilter:- retry_limiter:queue_name: &amp;quot;deadl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/sample/</guid>
-      <description>sample#描述#sample 过滤器用来将正常的流量按照比例采样，对于海量查询的场景，全流量收集日志需要耗费大量的资源，可以考虑进行抽样统计，对查询日志进行采样分析。
-配置示例#一个简单的示例如下：
-flow:- name: samplefilter:- sample:ratio: 0.2参数说明#   名称 类型 说明     ratio float 采样比例    </description>
+      <description>sample #  描述 #  sample 过滤器用来将正常的流量按照比例采样，对于海量查询的场景，全流量收集日志需要耗费大量的资源，可以考虑进行抽样统计，对查询日志进行采样分析。
+配置示例 #  一个简单的示例如下：
+flow: - name: sample filter: - sample: ratio: 0.2 参数说明 #     名称 类型 说明     ratio float 采样比例    </description>
     </item>
     
     <item>
@@ -556,9 +556,9 @@ flow:- name: samplefilter:- sample:ratio: 0.2参数说明#   名称 类�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_basic_auth/</guid>
-      <description>set_basic_auth#描述#set_basic_auth 过滤器用来设置请求的身份认证信息，可以用于重置请求的身份信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_basic_authfilter:- set_basic_auth:username: adminpassword: password参数说明#   名称 类型 说明     username string 用户名   password string 密码    </description>
+      <description>set_basic_auth #  描述 #  set_basic_auth 过滤器用来设置请求的身份认证信息，可以用于重置请求的身份信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_basic_auth filter: - set_basic_auth: username: admin password: password 参数说明 #     名称 类型 说明     username string 用户名   password string 密码    </description>
     </item>
     
     <item>
@@ -567,9 +567,9 @@ flow:- name: set_basic_authfilter:- set_basic_auth:username: adminpassword:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_context/</guid>
-      <description>set_context#描述#set_context 过滤器用来设置请求上下文的相关信息。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- set_response:body: &#39;{&amp;quot;message&amp;quot;:&amp;quot;hello world&amp;quot;}&#39;- set_context:context:# _ctx.request.uri: http://baidu.com# _ctx.request.path: new_request_path# _ctx.request.host: api.infinilabs.com# _ctx.request.method: DELETE# _ctx.request.body: &amp;quot;hello world&amp;quot;# _ctx.request.body_json.explain: true# _ctx.request.query_args.from: 100# _ctx.request.header.ENV: dev# _ctx.response.content_type: &amp;quot;application/json&amp;quot;# _ctx.response.header.TIMES: 100# _ctx.response.status: 419# _ctx.response.body: &amp;quot;new_body&amp;quot;_ctx.response.body_json.success: true- dump:request: true参数说明#   名称 类型 说明     context map 请求的上下文及对应的新值    支持的上下文变量列表如下：</description>
+      <description>set_context #  描述 #  set_context 过滤器用来设置请求上下文的相关信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - set_response: body: &#39;{&amp;quot;message&amp;quot;:&amp;quot;hello world&amp;quot;}&#39; - set_context: context: # _ctx.request.uri: http://baidu.com # _ctx.request.path: new_request_path # _ctx.request.host: api.infinilabs.com # _ctx.request.method: DELETE # _ctx.request.body: &amp;quot;hello world&amp;quot; # _ctx.request.body_json.explain: true # _ctx.request.query_args.from: 100 # _ctx.request.header.ENV: dev # _ctx.response.content_type: &amp;quot;application/json&amp;quot; # _ctx.response.header.TIMES: 100 # _ctx.response.status: 419 # _ctx.response.body: &amp;quot;new_body&amp;quot; _ctx.response.body_json.success: true - dump: request: true 参数说明 #     名称 类型 说明     context map 请求的上下文及对应的新值    支持的上下文变量列表如下：</description>
     </item>
     
     <item>
@@ -578,10 +578,10 @@ flow:- name: testfilter:- set_response:body: &#39;{&amp;quot;message&amp;quo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_hostname/</guid>
-      <description>set_hostname#描述#set_hostname 过滤器用来设置请求 Header 关于要访问的主机或域名信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_hostnamefilter:- set_hostname:hostname: api.infini.sh为避免
-参数说明#   名称 类型 说明     hostname string 主机信息    </description>
+      <description>set_hostname #  描述 #  set_hostname 过滤器用来设置请求 Header 关于要访问的主机或域名信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_hostname filter: - set_hostname: hostname: api.infini.sh 为避免
+参数说明 #     名称 类型 说明     hostname string 主机信息    </description>
     </item>
     
     <item>
@@ -590,10 +590,10 @@ flow:- name: set_hostnamefilter:- set_hostname:hostname: api.infini.sh为�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_request_header/</guid>
-      <description>set_request_header#描述#set_request_header 过滤器用来设置请求的 Header 头信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_request_headerfilter:- set_request_header:headers:- Trial -&amp;gt; true- Department -&amp;gt; Engineering为避免
-参数说明#   名称 类型 说明     headers map 使用 -&amp;gt; 作为标识符的键值对，用于设置 Header 信息    </description>
+      <description>set_request_header #  描述 #  set_request_header 过滤器用来设置请求的 Header 头信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_request_header filter: - set_request_header: headers: - Trial -&amp;gt; true - Department -&amp;gt; Engineering 为避免
+参数说明 #     名称 类型 说明     headers map 使用 -&amp;gt; 作为标识符的键值对，用于设置 Header 信息    </description>
     </item>
     
     <item>
@@ -602,10 +602,10 @@ flow:- name: set_request_headerfilter:- set_request_header:headers:- Trial 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_request_query_args/</guid>
-      <description>set_request_query_args#描述#set_request_query_args 过滤器用来设置请求的 QueryString 参数信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_request_query_argsfilter:- set_request_query_args:args:- size -&amp;gt; 10为避免
-参数说明#   名称 类型 说明     args map 使用 -&amp;gt; 作为标识符的键值对，用于设置 QueryString 参数信息    </description>
+      <description>set_request_query_args #  描述 #  set_request_query_args 过滤器用来设置请求的 QueryString 参数信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_request_query_args filter: - set_request_query_args: args: - size -&amp;gt; 10 为避免
+参数说明 #     名称 类型 说明     args map 使用 -&amp;gt; 作为标识符的键值对，用于设置 QueryString 参数信息    </description>
     </item>
     
     <item>
@@ -614,9 +614,9 @@ flow:- name: set_request_query_argsfilter:- set_request_query_args:args:- s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_response/</guid>
-      <description>set_response#描述#set_response 过滤器用来设置请求响应返回信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_responsefilter:- set_response:status: 200content_type: application/jsonbody: &#39;{&amp;quot;message&amp;quot;:&amp;quot;hello world&amp;quot;}&#39;参数说明#   名称 类型 说明     status int 请求状态码，默认 200   content_type string 设置请求返回的内容类型   body string 设置请求返回的结构体    </description>
+      <description>set_response #  描述 #  set_response 过滤器用来设置请求响应返回信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_response filter: - set_response: status: 200 content_type: application/json body: &#39;{&amp;quot;message&amp;quot;:&amp;quot;hello world&amp;quot;}&#39; 参数说明 #     名称 类型 说明     status int 请求状态码，默认 200   content_type string 设置请求返回的内容类型   body string 设置请求返回的结构体    </description>
     </item>
     
     <item>
@@ -625,9 +625,9 @@ flow:- name: set_responsefilter:- set_response:status: 200content_type: app
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_response_header/</guid>
-      <description>set_response_header#描述#set_response_header 过滤器用来设置请求响应的 Header 头信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_response_headerfilter:- set_response_header:headers:- Trial -&amp;gt; true- Department -&amp;gt; Engineering参数说明#   名称 类型 说明     headers map 使用 -&amp;gt; 作为标识符的键值对，用于设置 Header 信息    </description>
+      <description>set_response_header #  描述 #  set_response_header 过滤器用来设置请求响应的 Header 头信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_response_header filter: - set_response_header: headers: - Trial -&amp;gt; true - Department -&amp;gt; Engineering 参数说明 #     名称 类型 说明     headers map 使用 -&amp;gt; 作为标识符的键值对，用于设置 Header 信息    </description>
     </item>
     
     <item>
@@ -636,9 +636,9 @@ flow:- name: set_response_headerfilter:- set_response_header:headers:- Tria
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/sleep/</guid>
-      <description>sleep#描述#sleep 过滤器用来添加一个固定的延迟到请求，可以人为降速。
-配置示例#一个简单的示例如下：
-flow:- name: slow_query_logging_testfilter:- sleep:sleep_in_million_seconds: 1024参数说明#   名称 类型 说明     sleep_in_million_seconds int64 需要添加的延迟长度，单位为毫秒    </description>
+      <description>sleep #  描述 #  sleep 过滤器用来添加一个固定的延迟到请求，可以人为降速。
+配置示例 #  一个简单的示例如下：
+flow: - name: slow_query_logging_test filter: - sleep: sleep_in_million_seconds: 1024 参数说明 #     名称 类型 说明     sleep_in_million_seconds int64 需要添加的延迟长度，单位为毫秒    </description>
     </item>
     
     <item>
@@ -647,9 +647,9 @@ flow:- name: slow_query_logging_testfilter:- sleep:sleep_in_million_seconds:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/switch/</guid>
-      <description>switch#描述#switch 过滤器用来将流量按照请求路径转发到另外的一个处理流程，可以方便的实现跨集群操作，且 Elasticsearch 集群不需要做任何修改，且各个集群内所有的 API 都可以访问，包括索引的读写和集群操作。
-配置示例#一个简单的示例如下：
-flow:- name: es1-flowfilter:- elasticsearch:elasticsearch: es1- name: es2-flowfilter:- elasticsearch:elasticsearch: es2- name: cross_cluste_searchfilter:- switch:path_rules:- prefix: &amp;quot;es1:&amp;quot;flow: es1-flow- prefix: &amp;quot;es2:&amp;quot;flow: es2-flow- elasticsearch:elasticsearch: dev #elasticsearch configure reference name上面的例子中，以 es1: 开头的索引将转发给集群 es1 集群，以 es2: 开头的索引转发给 es2 集群，不匹配的转发给 dev 集群，在一个 Kibana 里面可以直接操作不同版本的集群了，如下：</description>
+      <description>switch #  描述 #  switch 过滤器用来将流量按照请求路径转发到另外的一个处理流程，可以方便的实现跨集群操作，且 Elasticsearch 集群不需要做任何修改，且各个集群内所有的 API 都可以访问，包括索引的读写和集群操作。
+配置示例 #  一个简单的示例如下：
+flow: - name: es1-flow filter: - elasticsearch: elasticsearch: es1 - name: es2-flow filter: - elasticsearch: elasticsearch: es2 - name: cross_cluste_search filter: - switch: path_rules: - prefix: &amp;quot;es1:&amp;quot; flow: es1-flow - prefix: &amp;quot;es2:&amp;quot; flow: es2-flow - elasticsearch: elasticsearch: dev #elasticsearch configure reference name 上面的例子中，以 es1: 开头的索引将转发给集群 es1 集群，以 es2: 开头的索引转发给 es2 集群，不匹配的转发给 dev 集群，在一个 Kibana 里面可以直接操作不同版本的集群了，如下：</description>
     </item>
     
     <item>
@@ -658,9 +658,9 @@ flow:- name: es1-flowfilter:- elasticsearch:elasticsearch: es1- name: es2-f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/translog/</guid>
-      <description>translog#描述#translog 过滤器用来将收到的请求保存到本地文件，并压缩存放，可记录部分或完整的请求日志，用于归档和请求重放。
-配置示例#一个简单的示例如下：
-flow:- name: translogfilter:- translog:max_file_age: 7max_file_count: 10参数说明#   名称 类型 说明     path string 日志存放根目录，默认为网关数据目录下的 translog 子目录   category string 区分不同日志的二级分类子目录，默认为 default   filename string 设置日志的文件名，默认为 translog.log   compress bool 文件滚动之后是否压缩归档，默认为 true   max_file_age int 最多保留的归档文件天数，默认为 30 天   max_file_count int 最多保留的归档文件个数，默认为 100 天   max_file_size_in_mb int 单个归档文件的最大字节数，默认为 1024 MB    </description>
+      <description>translog #  描述 #  translog 过滤器用来将收到的请求保存到本地文件，并压缩存放，可记录部分或完整的请求日志，用于归档和请求重放。
+配置示例 #  一个简单的示例如下：
+flow: - name: translog filter: - translog: max_file_age: 7 max_file_count: 10 参数说明 #     名称 类型 说明     path string 日志存放根目录，默认为网关数据目录下的 translog 子目录   category string 区分不同日志的二级分类子目录，默认为 default   filename string 设置日志的文件名，默认为 translog.log   compress bool 文件滚动之后是否压缩归档，默认为 true   max_file_age int 最多保留的归档文件天数，默认为 30 天   max_file_count int 最多保留的归档文件个数，默认为 100 天   max_file_size_in_mb int 单个归档文件的最大字节数，默认为 1024 MB    </description>
     </item>
     
   </channel>

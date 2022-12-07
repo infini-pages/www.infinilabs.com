@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quick Start on INFINI Labs</title>
+    <link>/en/docs/latest/gateway/getting-started/</link>
+    <description>Recent content in Quick Start on INFINI Labs</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/en/docs/latest/gateway/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing the Gateway</title>
+      <link>/en/docs/latest/gateway/getting-started/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/gateway/getting-started/install/</guid>
+      <description>Installing the Gateway #  INFINI Gateway supports mainstream operating systems and platforms. The program package is small, with no extra external dependency. So, the gateway can be installed very rapidly.
+Installation Demo #    Downloading #  Select a package for downloading in the following URL based on your operating system and platform:
+ https://release.infinilabs.com/
+Container Deployment #  INFINI Gateway also supports Docker container deployment.
+Learn More  Verifying the Installation #  After downloading and decompressing INFINI Gateway installation package, run the following command to check whether the installation package is effective:</description>
+    </item>
+    
+    <item>
+      <title>Configuring the Gateway</title>
+      <link>/en/docs/latest/gateway/getting-started/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/gateway/getting-started/configuration/</guid>
+      <description>Configuration #  The configuration of INFINI Gateway can be modified in multiple ways.
+CLI Parameters #  INFINI Gateway provides the following CLI parameters:
+✗ ./bin/gateway --help Usage of ./bin/gateway: -config string the location of config file, default: gateway.yml (default &amp;quot;gateway.yml&amp;quot;) -debug run in debug mode, gateway will quit with panic error -log string the log level,options:trace,debug,info,warn,error (default &amp;quot;info&amp;quot;) -v version The parameters are described as follows:
+ config: Specifies the name of a configuration file.</description>
+    </item>
+    
+    <item>
+      <title>Container Deployment</title>
+      <link>/en/docs/latest/gateway/getting-started/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/gateway/getting-started/docker/</guid>
+      <description>Container Deployment #  INFINI Gateway supports container deployment.
+Installation Demo #    Downloading an Image #  The images of INFINI Gateway are published at the official repository of Docker. The URL is as follows:
+ https://hub.docker.com/r/infinilabs/gateway
+Use the following command to obtain the latest container image:
+docker pull infinilabs/gateway:latest Verifying the Image #  After downloading the image locally, you will notice that the container image of INFINI Gateway is very small, with a size less than 25 MB.</description>
+    </item>
+    
+    <item>
+      <title>System Optimization</title>
+      <link>/en/docs/latest/gateway/getting-started/optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/gateway/getting-started/optimization/</guid>
+      <description>System Optimization #  The operating system of the server where INFINI Gateway is installed needs to be optimized to ensure that INFINI Gateway runs in the best possible state. The following uses Linux as an example.
+System Parameters #  sudo tee /etc/security/limits.d/21-infini.conf &amp;lt;&amp;lt;-&#39;EOF&#39; * soft nofile 1048576 * hard nofile 1048576 * soft memlock unlimited * hard memlock unlimited root soft nofile 1048576 root hard nofile 1048576 root soft memlock unlimited root hard memlock unlimited EOF Kernel Optimization #  cat &amp;lt;&amp;lt; SETTINGS | sudo tee /etc/sysctl.</description>
+    </item>
+    
+    <item>
+      <title>Benchmark Testing</title>
+      <link>/en/docs/latest/gateway/getting-started/benchmark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/gateway/getting-started/benchmark/</guid>
+      <description>Benchmark Testing #  You are advised to use the Elasticsearch-dedicated benchmark tool Loadgen to test the gateway performance.
+Highlights of Loadgen:
+ Robust performance Lightweight and dependency-free Random selection of template-based parameters High concurrency Balanced traffic control at the benchmark end   Download URL: http://release.infinilabs.com/loadgen/
+ Loadgen #  Loadgen is easy to use. After the tool is downloaded and decompressed, two files are obtained: one executable program and one configuration file loadgen.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Agent on INFINI Labs</title>
+    <link>/en/docs/latest/console/reference/agent/</link>
+    <description>Recent content in Agent on INFINI Labs</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/en/docs/latest/console/reference/agent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Overview</title>
+      <link>/en/docs/latest/console/reference/agent/manage/manage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/console/reference/agent/manage/manage/</guid>
+      <description>Agent Overview #  Overview #  Agent Manage includes functions such as auditing, viewing status, tasks setting, etc. It is the place to manage Agent.
+Add Agent #  Agent &amp;gt; Instance click Discover Agent。 Select the correct Agent and click Add Agents.
+Delete Agent #  Agent &amp;gt; Instance，click Delete, delete after confirmation。
+Task Settings #  Agent &amp;gt; Instance，click Task Setting，configure the task, then click Save</description>
+    </item>
+    
+    <item>
+      <title>Installing Agent</title>
+      <link>/en/docs/latest/console/reference/agent/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/console/reference/agent/install/</guid>
+      <description>Installing The Agent #   INFINI Agent is a submodule of INFINI Console, charge of data scraping and Elasticsearch instance manage. it&amp;rsquo;s manage by INFINI Console INFINI Agent supports mainstream operating systems and platforms. The program package is small, with no extra external dependency. So, the agent can be installed very rapidly.  Before You Begin #  Install and keep INFINI Console running.
+Download #  Download the current INFINI Agent package for your platform.</description>
+    </item>
+    
+    <item>
+      <title>Container Deployment</title>
+      <link>/en/docs/latest/console/reference/agent/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/console/reference/agent/docker/</guid>
+      <description>Container Deployment #  INFINI Agent supports container deployment.
+Download Image #  The images of INFINI Agent are published at the official repository of Docker. The URL is as follows: https://hub.docker.com/r/infinilabs/agent
+Run the following command:
+docker pull infinilabs/agent:latest Verifying the Image #  After downloading the image locally, you will notice that the container image of INFINI Agent is very small, with a size less than 25 MB. So, the downloading is very fast.</description>
+    </item>
+    
+  </channel>
+</rss>

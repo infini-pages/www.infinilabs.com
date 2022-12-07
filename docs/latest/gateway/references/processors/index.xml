@@ -11,9 +11,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/bulk_indexing/</guid>
-      <description>bulk_indexing#描述#bulk_indexing 处理器用来异步消费队列里面的 bulk 请求。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- bulk_indexing:bulk_size_in_mb: 1queue_selector.labels:type: bulk_reshufflelevel: cluster参数说明#   名称 类型 说明     elasticsearch string 默认的 Elasticsearch 集群 ID,如果队列 Labels 里面没有指定 elasticsearch 的话会使用这个参数   idle_timeout_in_seconds int 消费队列的超时时间，默认 1, 即 1s   max_connection_per_node int 目标节点允许的最大连接数，默认 1   max_worker_size int 最大允许同时运行的 worker 大小,默认 10   bulk.</description>
+      <description>bulk_indexing #  描述 #  bulk_indexing 处理器用来异步消费队列里面的 bulk 请求。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - bulk_indexing: bulk_size_in_mb: 1 queue_selector.labels: type: bulk_reshuffle level: cluster 参数说明 #     名称 类型 说明     elasticsearch string 默认的 Elasticsearch 集群 ID,如果队列 Labels 里面没有指定 elasticsearch 的话会使用这个参数   idle_timeout_in_seconds int 消费队列的超时时间，默认 1, 即 1s   max_connection_per_node int 目标节点允许的最大连接数，默认 1   max_worker_size int 最大允许同时运行的 worker 大小,默认 10   bulk.</description>
     </item>
     
     <item>
@@ -22,9 +22,9 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/dag/</guid>
-      <description>dag#描述#dag 处理器用来管理任务的并行调度。
-配置示例#下面的这个例子，定义了一个名为 racing_example 的服务，auto_start 设置为自动启动，processor 设置依次执行的每个处理单元，其中 dag 处理器支持多个任务并行执行，支持 wait_all 和 first_win 两种聚合模式，如下：
-pipeline:- name: racing_exampleauto_start: trueprocessor:- echo: #ready, set, gomessage: read,set,go- dag:mode: wait_all #first_win, wait_allparallel:- echo: #player1message: player1- echo: #player2message: player2- echo: #player3message: player3end:- echo: #checking scoremessage: checking score- echo: #announce championmessage: &#39;announce champion&#39;- echo: #donemessage: racing finished上面的 echo 处理器非常简单，用来输出一个指定的消息，这个管道模拟的是一个赛跑的场景，palyer1、2、3 并行赛跑，全部跑完之后再进行算分和宣布比赛冠军，最后输出结束信息，程序运行输出如下：</description>
+      <description>dag #  描述 #  dag 处理器用来管理任务的并行调度。
+配置示例 #  下面的这个例子，定义了一个名为 racing_example 的服务，auto_start 设置为自动启动，processor 设置依次执行的每个处理单元，其中 dag 处理器支持多个任务并行执行，支持 wait_all 和 first_win 两种聚合模式，如下：
+pipeline: - name: racing_example auto_start: true processor: - echo: #ready, set, go message: read,set,go - dag: mode: wait_all #first_win, wait_all parallel: - echo: #player1 message: player1 - echo: #player2 message: player2 - echo: #player3 message: player3 end: - echo: #checking score message: checking score - echo: #announce champion message: &#39;announce champion&#39; - echo: #done message: racing finished 上面的 echo 处理器非常简单，用来输出一个指定的消息，这个管道模拟的是一个赛跑的场景，palyer1、2、3 并行赛跑，全部跑完之后再进行算分和宣布比赛冠军，最后输出结束信息，程序运行输出如下：</description>
     </item>
     
     <item>
@@ -33,9 +33,9 @@ pipeline:- name: racing_exampleauto_start: trueprocessor:- echo: #ready, set
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/dump_hash/</guid>
-      <description>dump_hash#描述#dump_hash 处理器用来导出集群的索引文档并计算 Hash。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- dump_hash: #dump es1&#39;s docindices: &amp;quot;medcl-dr3&amp;quot;scroll_time: &amp;quot;10m&amp;quot;elasticsearch: &amp;quot;source&amp;quot;query: &amp;quot;field1:elastic&amp;quot;fields: &amp;quot;doc_hash&amp;quot;output_queue: &amp;quot;source_docs&amp;quot;batch_size: 10000slice_size: 5参数说明#   名称 类型 说明     elasticsearch string 目标集群的名称   scroll_time string Scroll 回话超时时间   batch_size int Scroll 批次大小，默认 5000   slice_size int Slice 大小，默认 1   sort_type string 文档排序类型，默认 asc   sort_field string 文档排序字段   indices string 索引   level string 请求处理级别，可以设置为 cluster 则表示请求不进行节点和分片级别的拆分，适用于 Elasticsearch 前有代理的情况   query string 查询过滤条件   fields string 要返回的字段列表   sort_document_fields bool hash 计算之前是否对 _source 里面的字段进行排序，默认 false   hash_func string hash 函数，可选 xxhash32、xxhash64、fnv1a，默认 xxhash32   output_queue string 输出结果的队列名称    </description>
+      <description>dump_hash #  描述 #  dump_hash 处理器用来导出集群的索引文档并计算 Hash。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - dump_hash: #dump es1&#39;s doc indices: &amp;quot;medcl-dr3&amp;quot; scroll_time: &amp;quot;10m&amp;quot; elasticsearch: &amp;quot;source&amp;quot; query: &amp;quot;field1:elastic&amp;quot; fields: &amp;quot;doc_hash&amp;quot; output_queue: &amp;quot;source_docs&amp;quot; batch_size: 10000 slice_size: 5 参数说明 #     名称 类型 说明     elasticsearch string 目标集群的名称   scroll_time string Scroll 回话超时时间   batch_size int Scroll 批次大小，默认 5000   slice_size int Slice 大小，默认 1   sort_type string 文档排序类型，默认 asc   sort_field string 文档排序字段   indices string 索引   level string 请求处理级别，可以设置为 cluster 则表示请求不进行节点和分片级别的拆分，适用于 Elasticsearch 前有代理的情况   query string 查询过滤条件   fields string 要返回的字段列表   sort_document_fields bool hash 计算之前是否对 _source 里面的字段进行排序，默认 false   hash_func string hash 函数，可选 xxhash32、xxhash64、fnv1a，默认 xxhash32   output_queue string 输出结果的队列名称    </description>
     </item>
     
     <item>
@@ -44,9 +44,9 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/flow_runner/</guid>
-      <description>flow_runner#描述#flow_runner 处理器用来异步消费队列里面的请求并使用异步用于在线请求的处理流程来进行消费处理。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- flow_runner:input_queue: &amp;quot;primary_deadletter_requests&amp;quot;flow: primary-flow-post-processingwhen:cluster_available: [ &amp;quot;primary&amp;quot; ]参数说明#   名称 类型 说明     input_queue string 订阅的队列名称   flow string 以什么样的流程来消费队列里面的请求消息   commit_on_tag string 只有当前请求的上下文里面出现指定 tag 才会 commit 消息，默认为空表示执行完就 commit    </description>
+      <description>flow_runner #  描述 #  flow_runner 处理器用来异步消费队列里面的请求并使用异步用于在线请求的处理流程来进行消费处理。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - flow_runner: input_queue: &amp;quot;primary_deadletter_requests&amp;quot; flow: primary-flow-post-processing when: cluster_available: [ &amp;quot;primary&amp;quot; ] 参数说明 #     名称 类型 说明     input_queue string 订阅的队列名称   flow string 以什么样的流程来消费队列里面的请求消息   commit_on_tag string 只有当前请求的上下文里面出现指定 tag 才会 commit 消息，默认为空表示执行完就 commit    </description>
     </item>
     
     <item>
@@ -55,9 +55,9 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/index_diff/</guid>
-      <description>index_diff#描述#index_diff 处理器用来对两个结果集进行差异对比。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- index_diff:diff_queue: &amp;quot;diff_result&amp;quot;buffer_size: 1text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务source_queue: &#39;source_docs&#39;target_queue: &#39;target_docs&#39;参数说明#   名称 类型 说明     source_queue string 来源数据的名称   target_queue string 目标数据的名称   diff_queue string 存放 diff 结果的队列   buffer_size int 内存 buffer 大小   keep_source bool diff 结果里面是否包含文档 source 信息   text_report bool 是否输出文本格式的结果    </description>
+      <description>index_diff #  描述 #  index_diff 处理器用来对两个结果集进行差异对比。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - index_diff: diff_queue: &amp;quot;diff_result&amp;quot; buffer_size: 1 text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务 source_queue: &#39;source_docs&#39; target_queue: &#39;target_docs&#39; 参数说明 #     名称 类型 说明     source_queue string 来源数据的名称   target_queue string 目标数据的名称   diff_queue string 存放 diff 结果的队列   buffer_size int 内存 buffer 大小   keep_source bool diff 结果里面是否包含文档 source 信息   text_report bool 是否输出文本格式的结果    </description>
     </item>
     
     <item>
@@ -66,9 +66,9 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/indexing_merge/</guid>
-      <description>indexing_merge#描述#indexing_merge 处理器用来消费队列里面的纯 JSON 文档，并合并成 Bulk 请求保存到指定的队列里面，需要配合 bulk_indexing 处理器进行消费，用批量写入代替单次请求来提高写入吞吐。
-配置示例#一个简单的示例如下：
-pipeline:- name: indexing_mergeauto_start: truekeep_running: trueprocessor:- indexing_merge:input_queue: &amp;quot;request_logging&amp;quot;elasticsearch: &amp;quot;logging-server&amp;quot;index_name: &amp;quot;infini_gateway_requests&amp;quot;output_queue:name: &amp;quot;gateway_requests&amp;quot;label:tag: &amp;quot;request_logging&amp;quot;worker_size: 1bulk_size_in_mb: 10- name: logging_requestsauto_start: truekeep_running: trueprocessor:- bulk_indexing:bulk:compress: truebatch_size_in_mb: 10batch_size_in_docs: 5000consumer:fetch_max_messages: 100queues:type: indexing_mergewhen:cluster_available: [ &amp;quot;logging-server&amp;quot; ]参数说明#   名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 5，单位秒   bulk_size_in_kb int 批次请求的单位大小，单位 KB   bulk_size_in_mb int 批次请求的单位大小，单位 MB，默认 10   elasticsearch string 保存到目标集群的名称   index_name string 保存到目标集群的索引名称   type_name string 保存到目标集群的索引类型名称，默认根据集群版本来设置，v7 以前为 doc，之后为 _doc   output_queue.</description>
+      <description>indexing_merge #  描述 #  indexing_merge 处理器用来消费队列里面的纯 JSON 文档，并合并成 Bulk 请求保存到指定的队列里面，需要配合 bulk_indexing 处理器进行消费，用批量写入代替单次请求来提高写入吞吐。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: indexing_merge auto_start: true keep_running: true processor: - indexing_merge: input_queue: &amp;quot;request_logging&amp;quot; elasticsearch: &amp;quot;logging-server&amp;quot; index_name: &amp;quot;infini_gateway_requests&amp;quot; output_queue: name: &amp;quot;gateway_requests&amp;quot; label: tag: &amp;quot;request_logging&amp;quot; worker_size: 1 bulk_size_in_mb: 10 - name: logging_requests auto_start: true keep_running: true processor: - bulk_indexing: bulk: compress: true batch_size_in_mb: 10 batch_size_in_docs: 5000 consumer: fetch_max_messages: 100 queues: type: indexing_merge when: cluster_available: [ &amp;quot;logging-server&amp;quot; ] 参数说明 #     名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 5，单位秒   bulk_size_in_kb int 批次请求的单位大小，单位 KB   bulk_size_in_mb int 批次请求的单位大小，单位 MB，默认 10   elasticsearch string 保存到目标集群的名称   index_name string 保存到目标集群的索引名称   type_name string 保存到目标集群的索引类型名称，默认根据集群版本来设置，v7 以前为 doc，之后为 _doc   output_queue.</description>
     </item>
     
     <item>
@@ -77,9 +77,9 @@ pipeline:- name: indexing_mergeauto_start: truekeep_running: trueprocessor:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/json_indexing/</guid>
-      <description>json_indexing#描述#json_indexing 处理器用来消费队列里面的纯 JSON 文档，并保存到指定的 Elasticsearch 服务器里面。
-配置示例#一个简单的示例如下：
-pipeline:- name: request_logging_indexauto_start: truekeep_running: trueprocessor:- json_indexing:index_name: &amp;quot;gateway_requests&amp;quot;elasticsearch: &amp;quot;dev&amp;quot;input_queue: &amp;quot;request_logging&amp;quot;idle_timeout_in_seconds: 1worker_size: 1bulk_size_in_mb: 10参数说明#   名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 5，单位秒   bulk_size_in_kb int 批次请求的单位大小，单位 KB   bulk_size_in_mb int 批次请求的单位大小，单位 MB   elasticsearch string 保存到目标集群的名称   index_name string 保存到目标集群的索引名称   type_name string 保存到目标集群的索引类型名称，默认根据集群版本来设置，v7 以前为 doc，之后为 _doc    </description>
+      <description>json_indexing #  描述 #  json_indexing 处理器用来消费队列里面的纯 JSON 文档，并保存到指定的 Elasticsearch 服务器里面。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: request_logging_index auto_start: true keep_running: true processor: - json_indexing: index_name: &amp;quot;gateway_requests&amp;quot; elasticsearch: &amp;quot;dev&amp;quot; input_queue: &amp;quot;request_logging&amp;quot; idle_timeout_in_seconds: 1 worker_size: 1 bulk_size_in_mb: 10 参数说明 #     名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 5，单位秒   bulk_size_in_kb int 批次请求的单位大小，单位 KB   bulk_size_in_mb int 批次请求的单位大小，单位 MB   elasticsearch string 保存到目标集群的名称   index_name string 保存到目标集群的索引名称   type_name string 保存到目标集群的索引类型名称，默认根据集群版本来设置，v7 以前为 doc，之后为 _doc    </description>
     </item>
     
     <item>
@@ -88,9 +88,9 @@ pipeline:- name: request_logging_indexauto_start: truekeep_running: trueproc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/queue_consumer/</guid>
-      <description>queue_consumer#描述#queue_consumer 处理器用来异步消费队列里面的请求到 Elasticsearch。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- queue_consumer:input_queue: &amp;quot;backup&amp;quot;elasticsearch: &amp;quot;backup&amp;quot;waiting_after: [ &amp;quot;backup_failure_requests&amp;quot;]worker_size: 20when:cluster_available: [ &amp;quot;backup&amp;quot; ]参数说明#   名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 1   elasticsearch string 保存到目标集群的名称   waiting_after array 需要先等将这些指定队列消费完才能开始消费主队列里面的数据   failure_queue string 因为后端故障执行失败的请求，默认为 %input_queue%-failure   invalid_queue string 状态码返回为 4xx 的请求，默认为 %input_queue%-invalid   compress bool 是否压缩请求，默认 false   safety_parse bool 是否启用安全解析，即不采用 buffer 的方式，占用内存更高一点，默认为 true   doc_buffer_size bool 单次请求处理的最大文档 buff size，建议设置超过单个文档的最大大小，默认 256*1024    </description>
+      <description>queue_consumer #  描述 #  queue_consumer 处理器用来异步消费队列里面的请求到 Elasticsearch。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - queue_consumer: input_queue: &amp;quot;backup&amp;quot; elasticsearch: &amp;quot;backup&amp;quot; waiting_after: [ &amp;quot;backup_failure_requests&amp;quot;] worker_size: 20 when: cluster_available: [ &amp;quot;backup&amp;quot; ] 参数说明 #     名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 1   elasticsearch string 保存到目标集群的名称   waiting_after array 需要先等将这些指定队列消费完才能开始消费主队列里面的数据   failure_queue string 因为后端故障执行失败的请求，默认为 %input_queue%-failure   invalid_queue string 状态码返回为 4xx 的请求，默认为 %input_queue%-invalid   compress bool 是否压缩请求，默认 false   safety_parse bool 是否启用安全解析，即不采用 buffer 的方式，占用内存更高一点，默认为 true   doc_buffer_size bool 单次请求处理的最大文档 buff size，建议设置超过单个文档的最大大小，默认 256*1024    </description>
     </item>
     
     <item>
@@ -99,9 +99,9 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/replay/</guid>
-      <description>replay#描述#replay 处理器用来重放 record 过滤器记录的请求。
-配置示例#一个简单的示例如下：
-pipeline:- name: play_requestsauto_start: truekeep_running: falseprocessor:- replay:filename: requests.txtschema: &amp;quot;http&amp;quot;host: &amp;quot;localhost:8000&amp;quot;参数说明#   名称 类型 说明     filename string 包含重放消息的文件名称   schema string 请求协议类型，http 或 https   host string 接受请求的目标服务器，格式 host:port    </description>
+      <description>replay #  描述 #  replay 处理器用来重放 record 过滤器记录的请求。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: play_requests auto_start: true keep_running: false processor: - replay: filename: requests.txt schema: &amp;quot;http&amp;quot; host: &amp;quot;localhost:8000&amp;quot; 参数说明 #     名称 类型 说明     filename string 包含重放消息的文件名称   schema string 请求协议类型，http 或 https   host string 接受请求的目标服务器，格式 host:port    </description>
     </item>
     
   </channel>

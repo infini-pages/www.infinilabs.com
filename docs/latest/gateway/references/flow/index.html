@@ -5,24 +5,26 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="处理流程#流程定义#每一个网关接收到的请求都会通过一系列的流程处理，最后才返回给客户端，流程的定义在极限网关里面叫做 flow，以下面的这个例子为例：
-flow:- name: hello_worldfilter:- echo:message: &quot;hello gateway\n&quot;repeat: 1- name: not_foundfilter:- echo:message: &#39;404 not found\n&#39;repeat: 1上面的例子定义了两个 flow hello_world 和 not_found， 每个 flow 都使用了一个名为 echo 的过滤器，用来输出一段字符串，每个 flow 下面可以定义一系列 filter，他们按照定义的顺序依次执行。
-语法说明#极限网关采用约定的格式来定义流程，并且支持灵活的条件参数来进行逻辑判断，具体的格式定义如下：
-flow:- name: &lt;flow_name&gt;filter:- &lt;filter_name&gt;:when:&lt;condition&gt;&lt;parameters&gt; - &lt;filter_name&gt;:when:&lt;condition&gt;&lt;parameters&gt;...上面的 filter_name 代表具体的某个过滤器名称，用来执行特定的任务，when 下面的 condition 用来定义特定的满足执行该任务的条件参数，不满足条件的情况下会跳过该过滤器任务的执行，parameters 里面设置的该过滤器相关的参数，如果多个参数依次换行即可。">
+<meta name="description" content="处理流程 #  流程定义 #  每一个网关接收到的请求都会通过一系列的流程处理，最后才返回给客户端，流程的定义在极限网关里面叫做 flow，以下面的这个例子为例：
+flow: - name: hello_world filter: - echo: message: &quot;hello gateway\n&quot; repeat: 1 - name: not_found filter: - echo: message: &#39;404 not found\n&#39; repeat: 1 上面的例子定义了两个 flow hello_world 和 not_found， 每个 flow 都使用了一个名为 echo 的过滤器，用来输出一段字符串，每个 flow 下面可以定义一系列 filter，他们按照定义的顺序依次执行。
+语法说明 #  极限网关采用约定的格式来定义流程，并且支持灵活的条件参数来进行逻辑判断，具体的格式定义如下：
+flow: - name: &lt;flow_name&gt; filter: - &lt;filter_name&gt;: when: &lt;condition&gt; &lt;parameters&gt; - &lt;filter_name&gt;: when: &lt;condition&gt; &lt;parameters&gt; ... 上面的 filter_name 代表具体的某个过滤器名称，用来执行特定的任务，when 下面的 condition 用来定义特定的满足执行该任务的条件参数，不满足条件的情况下会跳过该过滤器任务的执行，parameters 里面设置的该过滤器相关的参数，如果多个参数依次换行即可。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="处理流程" />
-<meta property="og:description" content="处理流程#流程定义#每一个网关接收到的请求都会通过一系列的流程处理，最后才返回给客户端，流程的定义在极限网关里面叫做 flow，以下面的这个例子为例：
-flow:- name: hello_worldfilter:- echo:message: &quot;hello gateway\n&quot;repeat: 1- name: not_foundfilter:- echo:message: &#39;404 not found\n&#39;repeat: 1上面的例子定义了两个 flow hello_world 和 not_found， 每个 flow 都使用了一个名为 echo 的过滤器，用来输出一段字符串，每个 flow 下面可以定义一系列 filter，他们按照定义的顺序依次执行。
-语法说明#极限网关采用约定的格式来定义流程，并且支持灵活的条件参数来进行逻辑判断，具体的格式定义如下：
-flow:- name: &lt;flow_name&gt;filter:- &lt;filter_name&gt;:when:&lt;condition&gt;&lt;parameters&gt; - &lt;filter_name&gt;:when:&lt;condition&gt;&lt;parameters&gt;...上面的 filter_name 代表具体的某个过滤器名称，用来执行特定的任务，when 下面的 condition 用来定义特定的满足执行该任务的条件参数，不满足条件的情况下会跳过该过滤器任务的执行，parameters 里面设置的该过滤器相关的参数，如果多个参数依次换行即可。" />
+<meta property="og:description" content="处理流程 #  流程定义 #  每一个网关接收到的请求都会通过一系列的流程处理，最后才返回给客户端，流程的定义在极限网关里面叫做 flow，以下面的这个例子为例：
+flow: - name: hello_world filter: - echo: message: &quot;hello gateway\n&quot; repeat: 1 - name: not_found filter: - echo: message: &#39;404 not found\n&#39; repeat: 1 上面的例子定义了两个 flow hello_world 和 not_found， 每个 flow 都使用了一个名为 echo 的过滤器，用来输出一段字符串，每个 flow 下面可以定义一系列 filter，他们按照定义的顺序依次执行。
+语法说明 #  极限网关采用约定的格式来定义流程，并且支持灵活的条件参数来进行逻辑判断，具体的格式定义如下：
+flow: - name: &lt;flow_name&gt; filter: - &lt;filter_name&gt;: when: &lt;condition&gt; &lt;parameters&gt; - &lt;filter_name&gt;: when: &lt;condition&gt; &lt;parameters&gt; ... 上面的 filter_name 代表具体的某个过滤器名称，用来执行特定的任务，when 下面的 condition 用来定义特定的满足执行该任务的条件参数，不满足条件的情况下会跳过该过滤器任务的执行，parameters 里面设置的该过滤器相关的参数，如果多个参数依次换行即可。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/gateway/references/flow/" />
 
 <title>处理流程 | INFINI Labs</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="/en/docs/latest/gateway/references/flow/" title="Handling Flow">
+
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 
@@ -3419,6 +3421,8 @@ flow:- name: &lt;flow_name&gt;filter:- &lt;filter_name&gt;:when:&lt;conditi
   
 
 
+  
+
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
   <ul>
@@ -3438,7 +3442,7 @@ flow:- name: &lt;flow_name&gt;filter:- &lt;filter_name&gt;:when:&lt;conditi
     </li>
     
     <li class="">
-      <a href="/en/" class="flex align-center">
+      <a href="/en/docs/latest/gateway/references/flow/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>

@@ -11,13 +11,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/getting-started/install/</guid>
-      <description>安装 INFINI Console#INFINI Console 支持主流的操作系统和平台，程序包很小，没有任何额外的外部依赖，安装起来应该是很快的 ：）
-安装前准备#准备一个可以存储数据的 Elasticsearch 集群，要求为 7.3 及以上版本，用于 INFINI Console 存储相关数据。
-下载安装#根据您所在的操作系统和平台选择下面相应的下载地址：
-https://release.infinilabs.com/console/
-容器部署#INFINI Console 也支持 Docker 容器方式部署。
-了解更多配置#下载 INFINI Console 安装包解压之后，打开console.yml配置文件，我们可以看到 以下配置节：
-#存储 INFINI Console 相关数据的 Elasticsearch 集群信息，版本 v7.3+elasticsearch:- name: defaultenabled: truemonitored: trueendpoint: http://192.168.3.188:9299basic_auth:username: elasticpassword: ZBdkVQUUdF1Sir4X4BGB一般情况下，我们只需要修改配置里面的 endpoint 配置，若 Elasticsearch 开启了安全验证，则需要修改 username 和 password 配置。</description>
+      <description>安装 INFINI Console #  INFINI Console 支持主流的操作系统和平台，程序包很小，没有任何额外的外部依赖，安装起来应该是很快的 ：）
+安装前准备 #  准备一个可以存储数据的 Elasticsearch 集群，要求为 7.3 及以上版本，用于 INFINI Console 存储相关数据。
+下载安装 #  根据您所在的操作系统和平台选择下面相应的下载地址：
+ https://release.infinilabs.com/console/
+容器部署 #  INFINI Console 也支持 Docker 容器方式部署。
+了解更多  配置 #  下载 INFINI Console 安装包解压之后，打开console.yml配置文件，我们可以看到 以下配置节：
+#存储 INFINI Console 相关数据的 Elasticsearch 集群信息，版本 v7.3+ elasticsearch: - name: default enabled: true monitored: true endpoint: http://192.168.3.188:9299 basic_auth: username: elastic password: ZBdkVQUUdF1Sir4X4BGB 一般情况下，我们只需要修改配置里面的 endpoint 配置，若 Elasticsearch 开启了安全验证，则需要修改 username 和 password 配置。</description>
     </item>
     
     <item>
@@ -26,9 +26,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/getting-started/ilm/</guid>
-      <description>索引设置#INFINI Console 的所有监控指标都保存在 Elasticsearch 索引里面，随着时间的推移数据会越来越多，我们可以配置索引的生命周期来适配我们的监控存储需求。
-配置默认索引模板#然后就可以配置 Elasticsearch 集群的索引模板了，在 系统监控 集群上执行下面的命令创建索引的模板。
-展开查看 Elasticsearch 的模板定义...PUT _template/.infini{&amp;quot;order&amp;quot;: 0,&amp;quot;index_patterns&amp;quot;: [&amp;quot;.infini_*&amp;quot;],&amp;quot;settings&amp;quot;: {&amp;quot;index&amp;quot;: {&amp;quot;max_result_window&amp;quot;: &amp;quot;10000000&amp;quot;,&amp;quot;mapping&amp;quot;: {&amp;quot;total_fields&amp;quot;: {&amp;quot;limit&amp;quot;: &amp;quot;20000&amp;quot;}},&amp;quot;analysis&amp;quot;: {&amp;quot;analyzer&amp;quot;: {&amp;quot;suggest_text_search&amp;quot;: {&amp;quot;filter&amp;quot;: [&amp;quot;word_delimiter&amp;quot;],&amp;quot;tokenizer&amp;quot;: &amp;quot;classic&amp;quot;}}},&amp;quot;number_of_shards&amp;quot;: &amp;quot;1&amp;quot;}},&amp;quot;mappings&amp;quot;: {&amp;quot;dynamic_templates&amp;quot;: [{&amp;quot;strings&amp;quot;: {&amp;quot;mapping&amp;quot;: {&amp;quot;ignore_above&amp;quot;: 256,&amp;quot;type&amp;quot;: &amp;quot;keyword&amp;quot;},&amp;quot;match_mapping_type&amp;quot;: &amp;quot;string&amp;quot;}}]},&amp;quot;aliases&amp;quot;: {}}给索引 .</description>
+      <description>索引设置 #  INFINI Console 的所有监控指标都保存在 Elasticsearch 索引里面，随着时间的推移数据会越来越多，我们可以配置索引的生命周期来适配我们的监控存储需求。
+配置默认索引模板 #  然后就可以配置 Elasticsearch 集群的索引模板了，在 系统监控 集群上执行下面的命令创建索引的模板。
+ 展开查看 Elasticsearch 的模板定义 ...  PUT _template/.infini { &amp;quot;order&amp;quot;: 0, &amp;quot;index_patterns&amp;quot;: [ &amp;quot;.infini_*&amp;quot; ], &amp;quot;settings&amp;quot;: { &amp;quot;index&amp;quot;: { &amp;quot;max_result_window&amp;quot;: &amp;quot;10000000&amp;quot;, &amp;quot;mapping&amp;quot;: { &amp;quot;total_fields&amp;quot;: { &amp;quot;limit&amp;quot;: &amp;quot;20000&amp;quot; } }, &amp;quot;analysis&amp;quot;: { &amp;quot;analyzer&amp;quot;: { &amp;quot;suggest_text_search&amp;quot;: { &amp;quot;filter&amp;quot;: [ &amp;quot;word_delimiter&amp;quot; ], &amp;quot;tokenizer&amp;quot;: &amp;quot;classic&amp;quot; } } }, &amp;quot;number_of_shards&amp;quot;: &amp;quot;1&amp;quot; } }, &amp;quot;mappings&amp;quot;: { &amp;quot;dynamic_templates&amp;quot;: [ { &amp;quot;strings&amp;quot;: { &amp;quot;mapping&amp;quot;: { &amp;quot;ignore_above&amp;quot;: 256, &amp;quot;type&amp;quot;: &amp;quot;keyword&amp;quot; }, &amp;quot;match_mapping_type&amp;quot;: &amp;quot;string&amp;quot; } } ] }, &amp;quot;aliases&amp;quot;: {} }     给索引 .</description>
     </item>
     
     <item>
@@ -37,13 +37,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/getting-started/docker/</guid>
-      <description>容器部署#INFINI Console 支持容器方式部署。
-下载镜像#INFINI Console 的镜像发布在 Docker 的官方仓库，地址如下：
-https://hub.docker.com/r/infinilabs/console
+      <description>容器部署 #  INFINI Console 支持容器方式部署。
+下载镜像 #  INFINI Console 的镜像发布在 Docker 的官方仓库，地址如下：
+ https://hub.docker.com/r/infinilabs/console
 使用下面的命令即可获取最新的容器镜像：
-docker pull infinilabs/console:latest验证镜像#将镜像下载到本地之后，可以看到 INFINI Console 平台的容器镜像非常小，只有不到 30MB，所以下载的速度应该是非常快的。
-✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZEinfinilabs/console latest 8c27cd334e4c 47 minutes ago 26.4MB创建配置#现在需要创建一个配置文件 console.yml，来进行基本的配置，如下：
-# for this System Cluster, please use Elasticsearch v7.3+elasticsearch:- name: defaultenabled: truemonitored: falseendpoint: http://192.168.3.188:9299basic_auth:username: elasticpassword: ZBdkVQUUdF1Sir4X4BGBdiscovery:enabled: trueweb:enabled: trueembedding_api: trueauth:enabled: trueui:enabled: truepath: .</description>
+docker pull infinilabs/console:latest 验证镜像 #  将镜像下载到本地之后，可以看到 INFINI Console 平台的容器镜像非常小，只有不到 30MB，所以下载的速度应该是非常快的。
+✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZE infinilabs/console latest 8c27cd334e4c 47 minutes ago 26.4MB 创建配置 #  现在需要创建一个配置文件 console.yml，来进行基本的配置，如下：
+# for this System Cluster, please use Elasticsearch v7.3+ elasticsearch: - name: default enabled: true monitored: false endpoint: http://192.168.3.188:9299 basic_auth: username: elastic password: ZBdkVQUUdF1Sir4X4BGB discovery: enabled: true web: enabled: true embedding_api: true auth: enabled: true ui: enabled: true path: .</description>
     </item>
     
   </channel>

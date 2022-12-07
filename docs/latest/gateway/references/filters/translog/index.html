@@ -5,22 +5,24 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="translog#描述#translog 过滤器用来将收到的请求保存到本地文件，并压缩存放，可记录部分或完整的请求日志，用于归档和请求重放。
-配置示例#一个简单的示例如下：
-flow:- name: translogfilter:- translog:max_file_age: 7max_file_count: 10参数说明#   名称 类型 说明     path string 日志存放根目录，默认为网关数据目录下的 translog 子目录   category string 区分不同日志的二级分类子目录，默认为 default   filename string 设置日志的文件名，默认为 translog.log   compress bool 文件滚动之后是否压缩归档，默认为 true   max_file_age int 最多保留的归档文件天数，默认为 30 天   max_file_count int 最多保留的归档文件个数，默认为 100 天   max_file_size_in_mb int 单个归档文件的最大字节数，默认为 1024 MB    ">
+<meta name="description" content="translog #  描述 #  translog 过滤器用来将收到的请求保存到本地文件，并压缩存放，可记录部分或完整的请求日志，用于归档和请求重放。
+配置示例 #  一个简单的示例如下：
+flow: - name: translog filter: - translog: max_file_age: 7 max_file_count: 10 参数说明 #     名称 类型 说明     path string 日志存放根目录，默认为网关数据目录下的 translog 子目录   category string 区分不同日志的二级分类子目录，默认为 default   filename string 设置日志的文件名，默认为 translog.log   compress bool 文件滚动之后是否压缩归档，默认为 true   max_file_age int 最多保留的归档文件天数，默认为 30 天   max_file_count int 最多保留的归档文件个数，默认为 100 天   max_file_size_in_mb int 单个归档文件的最大字节数，默认为 1024 MB    ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="translog" />
-<meta property="og:description" content="translog#描述#translog 过滤器用来将收到的请求保存到本地文件，并压缩存放，可记录部分或完整的请求日志，用于归档和请求重放。
-配置示例#一个简单的示例如下：
-flow:- name: translogfilter:- translog:max_file_age: 7max_file_count: 10参数说明#   名称 类型 说明     path string 日志存放根目录，默认为网关数据目录下的 translog 子目录   category string 区分不同日志的二级分类子目录，默认为 default   filename string 设置日志的文件名，默认为 translog.log   compress bool 文件滚动之后是否压缩归档，默认为 true   max_file_age int 最多保留的归档文件天数，默认为 30 天   max_file_count int 最多保留的归档文件个数，默认为 100 天   max_file_size_in_mb int 单个归档文件的最大字节数，默认为 1024 MB    " />
+<meta property="og:description" content="translog #  描述 #  translog 过滤器用来将收到的请求保存到本地文件，并压缩存放，可记录部分或完整的请求日志，用于归档和请求重放。
+配置示例 #  一个简单的示例如下：
+flow: - name: translog filter: - translog: max_file_age: 7 max_file_count: 10 参数说明 #     名称 类型 说明     path string 日志存放根目录，默认为网关数据目录下的 translog 子目录   category string 区分不同日志的二级分类子目录，默认为 default   filename string 设置日志的文件名，默认为 translog.log   compress bool 文件滚动之后是否压缩归档，默认为 true   max_file_age int 最多保留的归档文件天数，默认为 30 天   max_file_count int 最多保留的归档文件个数，默认为 100 天   max_file_size_in_mb int 单个归档文件的最大字节数，默认为 1024 MB    " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/gateway/references/filters/translog/" />
 
 <title>translog | INFINI Labs</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="/en/docs/latest/gateway/references/filters/translog/" title="translog">
+
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 
@@ -3417,6 +3419,8 @@ flow:- name: translogfilter:- translog:max_file_age: 7max_file_count: 10�
   
 
 
+  
+
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
   <ul>
@@ -3436,7 +3440,7 @@ flow:- name: translogfilter:- translog:max_file_age: 7max_file_count: 10�
     </li>
     
     <li class="">
-      <a href="/en/" class="flex align-center">
+      <a href="/en/docs/latest/gateway/references/filters/translog/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>

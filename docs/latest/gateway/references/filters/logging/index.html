@@ -5,24 +5,26 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="logging#描述#logging 过滤器用来按请求记录下来，通过异步记录到本地磁盘的方式，尽可能降低对请求的延迟影响，对于流量很大的场景，建议配合其它请求过滤器来降低日志的总量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- logging:queue_name: request_logging记录的请求日志样例如下：
- {&quot;_index&quot; : &quot;gateway_requests&quot;,&quot;_type&quot; : &quot;doc&quot;,&quot;_id&quot; : &quot;EH5bG3gBsbC2s3iWFzCF&quot;,&quot;_score&quot; : 1.0,&quot;_source&quot; : {&quot;tls&quot; : false,&quot;@timestamp&quot; : &quot;2021-03-10T08:57:30.645Z&quot;,&quot;conn_time&quot; : &quot;2021-03-10T08:57:30.635Z&quot;,&quot;flow&quot; : {&quot;from&quot; : &quot;127.0.0.1&quot;,&quot;process&quot; : [&quot;request_body_regex_replace&quot;,&quot;get_cache&quot;,&quot;date_range_precision_tuning&quot;,&quot;get_cache&quot;,&quot;elasticsearch&quot;,&quot;set_cache&quot;,&quot;||&quot;,&quot;request_logging&quot;],&quot;relay&quot; : &quot;192.168.43.101-Quartz&quot;,&quot;to&quot; : [&quot;localhost:9200&quot;]},&quot;id&quot; : 3,&quot;local_ip&quot; : &quot;127.">
+<meta name="description" content="logging #  描述 #  logging 过滤器用来按请求记录下来，通过异步记录到本地磁盘的方式，尽可能降低对请求的延迟影响，对于流量很大的场景，建议配合其它请求过滤器来降低日志的总量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - logging: queue_name: request_logging 记录的请求日志样例如下：
+ { &quot;_index&quot; : &quot;gateway_requests&quot;, &quot;_type&quot; : &quot;doc&quot;, &quot;_id&quot; : &quot;EH5bG3gBsbC2s3iWFzCF&quot;, &quot;_score&quot; : 1.0, &quot;_source&quot; : { &quot;tls&quot; : false, &quot;@timestamp&quot; : &quot;2021-03-10T08:57:30.645Z&quot;, &quot;conn_time&quot; : &quot;2021-03-10T08:57:30.635Z&quot;, &quot;flow&quot; : { &quot;from&quot; : &quot;127.0.0.1&quot;, &quot;process&quot; : [ &quot;request_body_regex_replace&quot;, &quot;get_cache&quot;, &quot;date_range_precision_tuning&quot;, &quot;get_cache&quot;, &quot;elasticsearch&quot;, &quot;set_cache&quot;, &quot;||&quot;, &quot;request_logging&quot; ], &quot;relay&quot; : &quot;192.168.43.101-Quartz&quot;, &quot;to&quot; : [ &quot;localhost:9200&quot; ] }, &quot;id&quot; : 3, &quot;local_ip&quot; : &quot;127.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="logging" />
-<meta property="og:description" content="logging#描述#logging 过滤器用来按请求记录下来，通过异步记录到本地磁盘的方式，尽可能降低对请求的延迟影响，对于流量很大的场景，建议配合其它请求过滤器来降低日志的总量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- logging:queue_name: request_logging记录的请求日志样例如下：
- {&quot;_index&quot; : &quot;gateway_requests&quot;,&quot;_type&quot; : &quot;doc&quot;,&quot;_id&quot; : &quot;EH5bG3gBsbC2s3iWFzCF&quot;,&quot;_score&quot; : 1.0,&quot;_source&quot; : {&quot;tls&quot; : false,&quot;@timestamp&quot; : &quot;2021-03-10T08:57:30.645Z&quot;,&quot;conn_time&quot; : &quot;2021-03-10T08:57:30.635Z&quot;,&quot;flow&quot; : {&quot;from&quot; : &quot;127.0.0.1&quot;,&quot;process&quot; : [&quot;request_body_regex_replace&quot;,&quot;get_cache&quot;,&quot;date_range_precision_tuning&quot;,&quot;get_cache&quot;,&quot;elasticsearch&quot;,&quot;set_cache&quot;,&quot;||&quot;,&quot;request_logging&quot;],&quot;relay&quot; : &quot;192.168.43.101-Quartz&quot;,&quot;to&quot; : [&quot;localhost:9200&quot;]},&quot;id&quot; : 3,&quot;local_ip&quot; : &quot;127." />
+<meta property="og:description" content="logging #  描述 #  logging 过滤器用来按请求记录下来，通过异步记录到本地磁盘的方式，尽可能降低对请求的延迟影响，对于流量很大的场景，建议配合其它请求过滤器来降低日志的总量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - logging: queue_name: request_logging 记录的请求日志样例如下：
+ { &quot;_index&quot; : &quot;gateway_requests&quot;, &quot;_type&quot; : &quot;doc&quot;, &quot;_id&quot; : &quot;EH5bG3gBsbC2s3iWFzCF&quot;, &quot;_score&quot; : 1.0, &quot;_source&quot; : { &quot;tls&quot; : false, &quot;@timestamp&quot; : &quot;2021-03-10T08:57:30.645Z&quot;, &quot;conn_time&quot; : &quot;2021-03-10T08:57:30.635Z&quot;, &quot;flow&quot; : { &quot;from&quot; : &quot;127.0.0.1&quot;, &quot;process&quot; : [ &quot;request_body_regex_replace&quot;, &quot;get_cache&quot;, &quot;date_range_precision_tuning&quot;, &quot;get_cache&quot;, &quot;elasticsearch&quot;, &quot;set_cache&quot;, &quot;||&quot;, &quot;request_logging&quot; ], &quot;relay&quot; : &quot;192.168.43.101-Quartz&quot;, &quot;to&quot; : [ &quot;localhost:9200&quot; ] }, &quot;id&quot; : 3, &quot;local_ip&quot; : &quot;127." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/gateway/references/filters/logging/" />
 
 <title>logging | INFINI Labs</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="/en/docs/latest/gateway/references/filters/logging/" title="logging">
+
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 
@@ -3421,6 +3423,8 @@ flow:- name: testfilter:- logging:queue_name: request_logging记录的请�
   
 
 
+  
+
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
   <ul>
@@ -3440,7 +3444,7 @@ flow:- name: testfilter:- logging:queue_name: request_logging记录的请�
     </li>
     
     <li class="">
-      <a href="/en/" class="flex align-center">
+      <a href="/en/docs/latest/gateway/references/filters/logging/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>

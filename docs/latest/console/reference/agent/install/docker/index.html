@@ -5,21 +5,21 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="容器部署#探针(INFINI Agent) 支持容器方式部署。
-下载镜像#探针(INFINI Agent) 的镜像发布在 Docker 的官方仓库，地址如下：
-https://hub.docker.com/r/infinilabs/agent
+<meta name="description" content="容器部署 #  探针(INFINI Agent) 支持容器方式部署。
+下载镜像 #  探针(INFINI Agent) 的镜像发布在 Docker 的官方仓库，地址如下：
+ https://hub.docker.com/r/infinilabs/agent
 使用下面的命令即可获取最新的容器镜像：
-docker pull infinilabs/agent:latest验证镜像#将镜像下载到本地之后，可以看到 探针(INFINI Agent) 的容器镜像非常小，只有不到 20MB，所以下载是非常快的。
-✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZEinfinilabs/agent latest c7bd9ad063d9 4 days ago 13.8MB创建配置#现在需要创建一个配置文件 agent.yml，来进行基本的配置，如下：
-api:enabled: truenetwork:binding: 0.0.0.0:8080metrics:enabled: truequeue: metricsnetwork:enabled: truesummary: truedetails: truememory:metrics:- swap- memorydisk:metrics:- ioqs- usagecpu:metrics:- idle- system- user- iowait- loadelasticsearch:enabled: trueagent_mode: truenode_stats: trueindex_stats: truecluster_stats: trueelasticsearch:- name: defaultenabled: trueendpoint: http://192.">
+docker pull infinilabs/agent:latest 验证镜像 #  将镜像下载到本地之后，可以看到 探针(INFINI Agent) 的容器镜像非常小，只有不到 20MB，所以下载是非常快的。
+✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZE infinilabs/agent latest c7bd9ad063d9 4 days ago 13.8MB 创建配置 #  现在需要创建一个配置文件 agent.yml，来进行基本的配置，如下：
+api: enabled: true network: binding: 0.0.0.0:8080 metrics: enabled: true queue: metrics network: enabled: true summary: true details: true memory: metrics: - swap - memory disk: metrics: - ioqs - usage cpu: metrics: - idle - system - user - iowait - load elasticsearch: enabled: true agent_mode: true node_stats: true index_stats: true cluster_stats: true elasticsearch: - name: default enabled: true endpoint: http://192.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="容器部署" />
-<meta property="og:description" content="容器部署#探针(INFINI Agent) 支持容器方式部署。
-下载镜像#探针(INFINI Agent) 的镜像发布在 Docker 的官方仓库，地址如下：
-https://hub.docker.com/r/infinilabs/agent
+<meta property="og:description" content="容器部署 #  探针(INFINI Agent) 支持容器方式部署。
+下载镜像 #  探针(INFINI Agent) 的镜像发布在 Docker 的官方仓库，地址如下：
+ https://hub.docker.com/r/infinilabs/agent
 使用下面的命令即可获取最新的容器镜像：
-docker pull infinilabs/agent:latest验证镜像#将镜像下载到本地之后，可以看到 探针(INFINI Agent) 的容器镜像非常小，只有不到 20MB，所以下载是非常快的。
-✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZEinfinilabs/agent latest c7bd9ad063d9 4 days ago 13.8MB创建配置#现在需要创建一个配置文件 agent.yml，来进行基本的配置，如下：
-api:enabled: truenetwork:binding: 0.0.0.0:8080metrics:enabled: truequeue: metricsnetwork:enabled: truesummary: truedetails: truememory:metrics:- swap- memorydisk:metrics:- ioqs- usagecpu:metrics:- idle- system- user- iowait- loadelasticsearch:enabled: trueagent_mode: truenode_stats: trueindex_stats: truecluster_stats: trueelasticsearch:- name: defaultenabled: trueendpoint: http://192." />
+docker pull infinilabs/agent:latest 验证镜像 #  将镜像下载到本地之后，可以看到 探针(INFINI Agent) 的容器镜像非常小，只有不到 20MB，所以下载是非常快的。
+✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZE infinilabs/agent latest c7bd9ad063d9 4 days ago 13.8MB 创建配置 #  现在需要创建一个配置文件 agent.yml，来进行基本的配置，如下：
+api: enabled: true network: binding: 0.0.0.0:8080 metrics: enabled: true queue: metrics network: enabled: true summary: true details: true memory: metrics: - swap - memory disk: metrics: - ioqs - usage cpu: metrics: - idle - system - user - iowait - load elasticsearch: enabled: true agent_mode: true node_stats: true index_stats: true cluster_stats: true elasticsearch: - name: default enabled: true endpoint: http://192." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/console/reference/agent/install/docker/" />
 
@@ -28,7 +28,7 @@ api:enabled: truenetwork:binding: 0.0.0.0:8080metrics:enabled: truequeue: 
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 

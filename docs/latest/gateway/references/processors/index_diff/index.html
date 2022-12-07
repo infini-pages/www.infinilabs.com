@@ -5,22 +5,24 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="index_diff#描述#index_diff 处理器用来对两个结果集进行差异对比。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- index_diff:diff_queue: &quot;diff_result&quot;buffer_size: 1text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务source_queue: &#39;source_docs&#39;target_queue: &#39;target_docs&#39;参数说明#   名称 类型 说明     source_queue string 来源数据的名称   target_queue string 目标数据的名称   diff_queue string 存放 diff 结果的队列   buffer_size int 内存 buffer 大小   keep_source bool diff 结果里面是否包含文档 source 信息   text_report bool 是否输出文本格式的结果    ">
+<meta name="description" content="index_diff #  描述 #  index_diff 处理器用来对两个结果集进行差异对比。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - index_diff: diff_queue: &quot;diff_result&quot; buffer_size: 1 text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务 source_queue: &#39;source_docs&#39; target_queue: &#39;target_docs&#39; 参数说明 #     名称 类型 说明     source_queue string 来源数据的名称   target_queue string 目标数据的名称   diff_queue string 存放 diff 结果的队列   buffer_size int 内存 buffer 大小   keep_source bool diff 结果里面是否包含文档 source 信息   text_report bool 是否输出文本格式的结果    ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="index_diff" />
-<meta property="og:description" content="index_diff#描述#index_diff 处理器用来对两个结果集进行差异对比。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- index_diff:diff_queue: &quot;diff_result&quot;buffer_size: 1text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务source_queue: &#39;source_docs&#39;target_queue: &#39;target_docs&#39;参数说明#   名称 类型 说明     source_queue string 来源数据的名称   target_queue string 目标数据的名称   diff_queue string 存放 diff 结果的队列   buffer_size int 内存 buffer 大小   keep_source bool diff 结果里面是否包含文档 source 信息   text_report bool 是否输出文本格式的结果    " />
+<meta property="og:description" content="index_diff #  描述 #  index_diff 处理器用来对两个结果集进行差异对比。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - index_diff: diff_queue: &quot;diff_result&quot; buffer_size: 1 text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务 source_queue: &#39;source_docs&#39; target_queue: &#39;target_docs&#39; 参数说明 #     名称 类型 说明     source_queue string 来源数据的名称   target_queue string 目标数据的名称   diff_queue string 存放 diff 结果的队列   buffer_size int 内存 buffer 大小   keep_source bool diff 结果里面是否包含文档 source 信息   text_report bool 是否输出文本格式的结果    " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/gateway/references/processors/index_diff/" />
 
 <title>index_diff | INFINI Labs</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="/en/docs/latest/gateway/references/processors/index_diff/" title="index_diff">
+
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 
@@ -3417,6 +3419,8 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
   
 
 
+  
+
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
   <ul>
@@ -3436,7 +3440,7 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
     </li>
     
     <li class="">
-      <a href="/en/" class="flex align-center">
+      <a href="/en/docs/latest/gateway/references/processors/index_diff/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>

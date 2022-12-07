@@ -11,8 +11,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/log4j2_filtering/</guid>
-      <description>Apache Log4j 漏洞处置#【CVE 地址】
-https://github.com/advisories/GHSA-jfh8-c2jp-5v3q
+      <description>Apache Log4j 漏洞处置 #  【CVE 地址】
+ https://github.com/advisories/GHSA-jfh8-c2jp-5v3q
 【漏洞描述】
 Apache Log4j 是一款非常流行的开源的用于 Java 运行环境的日志记录工具包，大量的 Java 框架包括 Elasticsearch 的最新版本都使用了该组件，故影响范围非常之大。
 近日, 随着 Apache Log4j 的远程代码执行最新漏洞细节被公开，攻击者可通过构造恶意请求利用该漏洞实现在目标服务器上执行任意代码。可导致服务器被黑客控制，从而进行页面篡改、数据窃取、挖矿、勒索等行为。建议使用该组件的用户第一时间启动应急响应进行修复。
@@ -22,8 +22,8 @@ Apache Log4j 是一款非常流行的开源的用于 Java 运行环境的日志�
 【影响范围】：Java 类产品：Apache Log4j 2.x &amp;lt; 2.15.0-rc2
 【攻击检测】
 可以通过检查日志中是否存在 jndi:ldap://、jndi:rmi 等字符来发现可能的攻击行为。
-处理办法#如果 Elasticsearch 不能修改配置、或者替换 Log4j 的 jar 包和重启集群的，可以使用极限网关来进行拦截或者参数替换甚至是直接阻断请求。 通过在网关层对发往 Elasticsearch 的请求统一进行参数检测，将包含的敏感关键词 ${ 进行替换或者直接拒绝， 可以防止带攻击的请求到达 Elasticsearch 服务端而被 Log4j 打印相关日志的时候执行恶意攻击命令，从而避免被攻击。
-参考配置#下载最新的 1.</description>
+处理办法 #  如果 Elasticsearch 不能修改配置、或者替换 Log4j 的 jar 包和重启集群的，可以使用极限网关来进行拦截或者参数替换甚至是直接阻断请求。 通过在网关层对发往 Elasticsearch 的请求统一进行参数检测，将包含的敏感关键词 ${ 进行替换或者直接拒绝， 可以防止带攻击的请求到达 Elasticsearch 服务端而被 Log4j 打印相关日志的时候执行恶意攻击命令，从而避免被攻击。
+参考配置 #  下载最新的 1.</description>
     </item>
     
     <item>
@@ -32,13 +32,13 @@ Apache Log4j 是一款非常流行的开源的用于 Java 运行环境的日志�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/online_query_rewrite/</guid>
-      <description>在线查询修复的实现#在某些情况下，您可能会碰到业务代码生成的 QueryDSL 存在不合理的情况，一般做法是需要修改业务代码并发布上线， 如果上线新版本需要很长的时间，比如没有到投产窗口，或者封网，又或者需要和其他的代码提交一起上线，往往意味着需要大量的测试， 而生产环境的故障要立马解决，客户不能等啊，怎么办？
+      <description>在线查询修复的实现 #  在某些情况下，您可能会碰到业务代码生成的 QueryDSL 存在不合理的情况，一般做法是需要修改业务代码并发布上线， 如果上线新版本需要很长的时间，比如没有到投产窗口，或者封网，又或者需要和其他的代码提交一起上线，往往意味着需要大量的测试， 而生产环境的故障要立马解决，客户不能等啊，怎么办？
 别着急，您可以使用极限网关来对查询进行动态修复。
-举个例子#比如下面的这个查询：
-GET _search{&amp;quot;size&amp;quot;: 1000000, &amp;quot;explain&amp;quot;: true}参数 size 设置的太大了，刚开始没有发现问题，随着数据越来越多，返回的数据太多势必会造成性能的急剧下降， 另外参数 explain 的开启也会造成不必要的性能开销，一般只在开发调试的时候才会用到这个功能。
+举个例子 #  比如下面的这个查询：
+GET _search { &amp;quot;size&amp;quot;: 1000000 , &amp;quot;explain&amp;quot;: true } 参数 size 设置的太大了，刚开始没有发现问题，随着数据越来越多，返回的数据太多势必会造成性能的急剧下降， 另外参数 explain 的开启也会造成不必要的性能开销，一般只在开发调试的时候才会用到这个功能。
 通过在网关里面增加一个 request_body_json_set 过滤器，可以动态替换指定请求体 JSON PATH 的值，上面的例子对应的配置如下：
-flow:- name: rewrite_queryfilter:- request_body_json_set:path:- explain -&amp;gt; false- size -&amp;gt; 10- dump_request_body:- elasticsearch:elasticsearch: dev通过重新设置 explain 和 size 参数，现在我们查询发给 Elasticsearch 前会被改写成如下格式：
-{&amp;quot;size&amp;quot;: 10, &amp;quot;explain&amp;quot;: false}成功修复线上问题。</description>
+flow: - name: rewrite_query filter: - request_body_json_set: path: - explain -&amp;gt; false - size -&amp;gt; 10 - dump_request_body: - elasticsearch: elasticsearch: dev 通过重新设置 explain 和 size 参数，现在我们查询发给 Elasticsearch 前会被改写成如下格式：
+{ &amp;quot;size&amp;quot;: 10, &amp;quot;explain&amp;quot;: false } 成功修复线上问题。</description>
     </item>
     
     <item>
@@ -47,11 +47,11 @@ flow:- name: rewrite_queryfilter:- request_body_json_set:path:- explain -&a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/request-logging/</guid>
-      <description>查询请求流量日志分析#极限网关能够跟踪记录经过网关的所有请求，可用来分析发送给 Elasticsearch 的请求情况，用于分析请求性能和了解业务运行情况。
-设置网关路由#如果需要开启极限网关的查询日志分析，需要在路由上面配置 tracing_flow 参数，设置一个流程来记录请求日志。
-router:- name: defaulttracing_flow: request_loggingdefault_flow: cache_first上面的配置定义了一个名为 default 的路由，默认的请求流程为 cache_first，用于日志记录的流程为 request_logging。
-定义日志流程#日志处理流程配置 request_logging 的定义如下：
-flow:- name: request_loggingfilter:- request_path_filter:must_not: # any match will be filteredprefix:- /favicon.ico- request_header_filter:exclude:- app: kibana # in order to filter kibana&#39;s access log, config `elasticsearch.customHeaders: { &amp;quot;app&amp;quot;: &amp;quot;kibana&amp;quot; }` to your kibana&#39;s config `/config/kibana.</description>
+      <description>查询请求流量日志分析 #  极限网关能够跟踪记录经过网关的所有请求，可用来分析发送给 Elasticsearch 的请求情况，用于分析请求性能和了解业务运行情况。
+设置网关路由 #  如果需要开启极限网关的查询日志分析，需要在路由上面配置 tracing_flow 参数，设置一个流程来记录请求日志。
+router: - name: default tracing_flow: request_logging default_flow: cache_first 上面的配置定义了一个名为 default 的路由，默认的请求流程为 cache_first，用于日志记录的流程为 request_logging。
+定义日志流程 #  日志处理流程配置 request_logging 的定义如下：
+flow: - name: request_logging filter: - request_path_filter: must_not: # any match will be filtered prefix: - /favicon.ico - request_header_filter: exclude: - app: kibana # in order to filter kibana&#39;s access log, config `elasticsearch.customHeaders: { &amp;quot;app&amp;quot;: &amp;quot;kibana&amp;quot; }` to your kibana&#39;s config `/config/kibana.</description>
     </item>
     
     <item>
@@ -60,10 +60,10 @@ flow:- name: request_loggingfilter:- request_path_filter:must_not: # any mat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/index_diff/</guid>
-      <description>索引差异对比#通过极限网关可以进行索引的文档差异对比，可以对同集群或者跨集群的两个不同的索引进行 diff 比较，对于使用应用双写、CCR 或者其他数据复制方案的场景，可以进行定期 diff 比较来确保数据是否真的一致。
-功能演示#如何配置#设置目标集群#修改配置文件 gateway.yml，设置两个集群资源 source 和 target，增加如下配置：
-elasticsearch:- name: sourceenabled: trueendpoint: http://localhost:9200basic_auth:username: testpassword: testtest- name: targetenabled: trueendpoint: http://localhost:9201basic_auth: #used to discovery full cluster nodes, or check elasticsearch&#39;s health and versionsusername: testpassword: testtest配置对比任务#增加一个服务管道配置，用来处理两个集群的索引文档拉取和对比，如下：
-pipeline:- name: index_diff_serviceauto_start: truekeep_running: trueprocessor:- dag:parallel:- dump_hash: #dump es1&#39;s docindices: &amp;quot;medcl-test&amp;quot;scroll_time: &amp;quot;10m&amp;quot;elasticsearch: &amp;quot;source&amp;quot;output_queue: &amp;quot;source_docs&amp;quot;batch_size: 10000slice_size: 5- dump_hash: #dump es2&#39;s docindices: &amp;quot;medcl-test&amp;quot;scroll_time: &amp;quot;10m&amp;quot;batch_size: 10000slice_size: 5elasticsearch: &amp;quot;target&amp;quot;output_queue: &amp;quot;target_docs&amp;quot;end:- index_diff:diff_queue: &amp;quot;diff_result&amp;quot;buffer_size: 1text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务source_queue: &#39;source_docs&#39;target_queue: &#39;target_docs&#39;上面的配置中，并行使用了 dump_hash 来拉取集群 source 的 medcl-a 索引和取集群 target 的 medcl-b 索引，并以文本结果的方式输出到终端。</description>
+      <description>索引差异对比 #  通过极限网关可以进行索引的文档差异对比，可以对同集群或者跨集群的两个不同的索引进行 diff 比较，对于使用应用双写、CCR 或者其他数据复制方案的场景，可以进行定期 diff 比较来确保数据是否真的一致。
+功能演示 #    如何配置 #  设置目标集群 #  修改配置文件 gateway.yml，设置两个集群资源 source 和 target，增加如下配置：
+elasticsearch: - name: source enabled: true endpoint: http://localhost:9200 basic_auth: username: test password: testtest - name: target enabled: true endpoint: http://localhost:9201 basic_auth: #used to discovery full cluster nodes, or check elasticsearch&#39;s health and versions username: test password: testtest 配置对比任务 #  增加一个服务管道配置，用来处理两个集群的索引文档拉取和对比，如下：
+pipeline: - name: index_diff_service auto_start: true keep_running: true processor: - dag: parallel: - dump_hash: #dump es1&#39;s doc indices: &amp;quot;medcl-test&amp;quot; scroll_time: &amp;quot;10m&amp;quot; elasticsearch: &amp;quot;source&amp;quot; output_queue: &amp;quot;source_docs&amp;quot; batch_size: 10000 slice_size: 5 - dump_hash: #dump es2&#39;s doc indices: &amp;quot;medcl-test&amp;quot; scroll_time: &amp;quot;10m&amp;quot; batch_size: 10000 slice_size: 5 elasticsearch: &amp;quot;target&amp;quot; output_queue: &amp;quot;target_docs&amp;quot; end: - index_diff: diff_queue: &amp;quot;diff_result&amp;quot; buffer_size: 1 text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务 source_queue: &#39;source_docs&#39; target_queue: &#39;target_docs&#39; 上面的配置中，并行使用了 dump_hash 来拉取集群 source 的 medcl-a 索引和取集群 target 的 medcl-b 索引，并以文本结果的方式输出到终端。</description>
     </item>
     
     <item>
@@ -72,9 +72,9 @@ pipeline:- name: index_diff_serviceauto_start: truekeep_running: trueprocess
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/es-hadoop_integration/</guid>
-      <description>与 Elasticsearch-Hadoop 集成#Elasticsearch-Hadoop 默认会通过某个种子节点拿到后端的所有 Elasticsearch 节点，可能存在热点和请求分配不合理的情况， 为了提高后端 Elasticsearch 节点的资源利用率，可以通过极限网关来实现后端 Elasticsearch 节点访问的精准路由。
-写入加速#如果是通过 Elasticsearch-Hadoop 来进行数据导入，可以通过修改 Elasticsearch-Hadoop 程序的以下参数来访问极限网关来提升写入吞吐，如下：
-   名称 类型 说明     es.nodes string 设置访问网关的地址列表，如：localhost:8000,localhost:8001   es.nodes.discovery bool 设置为 false，不采用 sniff 模式，只访问配置的后端节点列表   es.nodes.wan.only bool 设置为 true，代理模式，强制走网关地址   es.batch.size.entries int 适当调大批次文档数，提升吞吐，如 5000   es.batch.size.bytes string 适当调大批次传输大小，提升吞吐，如 20mb   es.batch.write.refresh bool 设置为 false，避免主动刷新，提升吞吐    相关链接# Elasticsearch-Hadoop 配置参数文档  </description>
+      <description>与 Elasticsearch-Hadoop 集成 #  Elasticsearch-Hadoop 默认会通过某个种子节点拿到后端的所有 Elasticsearch 节点，可能存在热点和请求分配不合理的情况， 为了提高后端 Elasticsearch 节点的资源利用率，可以通过极限网关来实现后端 Elasticsearch 节点访问的精准路由。
+写入加速 #  如果是通过 Elasticsearch-Hadoop 来进行数据导入，可以通过修改 Elasticsearch-Hadoop 程序的以下参数来访问极限网关来提升写入吞吐，如下：
+   名称 类型 说明     es.nodes string 设置访问网关的地址列表，如：localhost:8000,localhost:8001   es.nodes.discovery bool 设置为 false，不采用 sniff 模式，只访问配置的后端节点列表   es.nodes.wan.only bool 设置为 true，代理模式，强制走网关地址   es.batch.size.entries int 适当调大批次文档数，提升吞吐，如 5000   es.batch.size.bytes string 适当调大批次传输大小，提升吞吐，如 20mb   es.batch.write.refresh bool 设置为 false，避免主动刷新，提升吞吐    相关链接 #    Elasticsearch-Hadoop 配置参数文档  </description>
     </item>
     
     <item>
@@ -83,10 +83,10 @@ pipeline:- name: index_diff_serviceauto_start: truekeep_running: trueprocess
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/prometheus_integration/</guid>
-      <description>与 Prometheus 集成#极限网关支持将运行指标输出为 Prometheus 格式, 方便与 Prometheus 进行集成, 具体操作如下:
-统计信息接口#访问网关的 2900 接口,如下:
-http://localhost:2900/stats?format=prometheus➜ ~ curl http://localhost:2900/stats\?format\=prometheusbuffer_fasthttp_resbody_buffer_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 1buffer_stats_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 7buffer_stats_max_count{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0system_cpu{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0buffer_bulk_request_docs_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 1buffer_fasthttp_resbody_buffer_inuse{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0stats_gateway_request_bytes{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0system_mem{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 31473664...通过增加额外的参数 format=prometheus 即可返回 Prometheus 所需数据格式.
-配置 Prometheus 进行采集#修改配置文件: prometheus.</description>
+      <description>与 Prometheus 集成 #  极限网关支持将运行指标输出为 Prometheus 格式, 方便与 Prometheus 进行集成, 具体操作如下:
+统计信息接口 #  访问网关的 2900 接口,如下:
+http://localhost:2900/stats?format=prometheus ➜ ~ curl http://localhost:2900/stats\?format\=prometheus buffer_fasthttp_resbody_buffer_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 1 buffer_stats_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 7 buffer_stats_max_count{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0 system_cpu{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0 buffer_bulk_request_docs_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 1 buffer_fasthttp_resbody_buffer_inuse{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0 stats_gateway_request_bytes{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0 system_mem{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 31473664 ... 通过增加额外的参数 format=prometheus 即可返回 Prometheus 所需数据格式.
+配置 Prometheus 进行采集 #  修改配置文件: prometheus.</description>
     </item>
     
     <item>
@@ -95,13 +95,13 @@ http://localhost:2900/stats?format=prometheus➜ ~ curl http://localhost:2900/s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/proxy_elasticsearch/</guid>
-      <description>为 Elasticsearch 无缝添加代理和基础安全#如果你的 Elasticsearch 版本比较多或者比较旧，或者没有设置 TLS 和身份信息，那么任何人都有可能直接访问 Elasticsearch，而使用极限网关可以快速的进行修复。
-使用 Elasticsearch 过滤器来转发请求#首先定义一个 Elasticsearch 的资源，如下：
-elasticsearch:- name: prodenabled: trueendpoint: http://192.168.3.201:9200然后可以使用如下的过滤器来转发请求到上面定义的 Elasticsearch 资源，名称为 prod：
- - elasticsearch:elasticsearch: prod 有关该过滤器的更多详情，请参考文档：elasticsearch filter
-添加一个简单的身份验证#我们进行添加一个基础的身份验证，来限制目标集群的访问
- - basic_auth:valid_users:medcl: passwd开启 TLS#如果设置了身份，但是没有设置 TLS 也是不行的，因为 HTTP 是明文传输协议，可以非常容易泄露密码，配置如下：
- - name: my_es_entryenabled: truerouter: my_routermax_concurrency: 10000network:binding: 0.</description>
+      <description>为 Elasticsearch 无缝添加代理和基础安全 #  如果你的 Elasticsearch 版本比较多或者比较旧，或者没有设置 TLS 和身份信息，那么任何人都有可能直接访问 Elasticsearch，而使用极限网关可以快速的进行修复。
+使用 Elasticsearch 过滤器来转发请求 #  首先定义一个 Elasticsearch 的资源，如下：
+elasticsearch: - name: prod enabled: true endpoint: http://192.168.3.201:9200 然后可以使用如下的过滤器来转发请求到上面定义的 Elasticsearch 资源，名称为 prod：
+ - elasticsearch: elasticsearch: prod 有关该过滤器的更多详情，请参考文档： elasticsearch filter
+添加一个简单的身份验证 #  我们进行添加一个基础的身份验证，来限制目标集群的访问
+ - basic_auth: valid_users: medcl: passwd 开启 TLS #  如果设置了身份，但是没有设置 TLS 也是不行的，因为 HTTP 是明文传输协议，可以非常容易泄露密码，配置如下：
+ - name: my_es_entry enabled: true router: my_router max_concurrency: 10000 network: binding: 0.</description>
     </item>
     
     <item>
@@ -110,8 +110,8 @@ elasticsearch:- name: prodenabled: trueendpoint: http://192.168.3.201:9200�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/proxy_kibana/</guid>
-      <description>为 Kibana 添加代理和基础安全#如果你的 Kibana 版本比较多或者比较旧，或者没有设置 TLS 和身份信息，那么任何人都有可能直接访问 Kibana，而使用极限网关可以快速的进行修复。
-使用 HTTP 过滤器来转发请求# - http:schema: &amp;quot;http&amp;quot; #https or httphost: &amp;quot;192.168.3.188:5602&amp;quot;添加身份验证# - basic_auth:valid_users:medcl: passwd在路由里面可以替换静态资源# - method:- GETpattern:- &amp;quot;/plugins/kibanaReact/assets/illustration_integrations_lightmode.svg&amp;quot;flow:- replace_logo_flow开启 TLS# - name: my_es_entryenabled: truerouter: my_routermax_concurrency: 10000network:binding: 0.0.0.0:8000tls:enabled: true完整配置如下#entry:- name: my_es_entryenabled: truerouter: my_routermax_concurrency: 10000network:binding: 0.</description>
+      <description>为 Kibana 添加代理和基础安全 #  如果你的 Kibana 版本比较多或者比较旧，或者没有设置 TLS 和身份信息，那么任何人都有可能直接访问 Kibana，而使用极限网关可以快速的进行修复。
+使用 HTTP 过滤器来转发请求 #   - http: schema: &amp;quot;http&amp;quot; #https or http host: &amp;quot;192.168.3.188:5602&amp;quot; 添加身份验证 #   - basic_auth: valid_users: medcl: passwd 在路由里面可以替换静态资源 #   - method: - GET pattern: - &amp;quot;/plugins/kibanaReact/assets/illustration_integrations_lightmode.svg&amp;quot; flow: - replace_logo_flow 开启 TLS #   - name: my_es_entry enabled: true router: my_router max_concurrency: 10000 network: binding: 0.0.0.0:8000 tls: enabled: true 完整配置如下 #  entry: - name: my_es_entry enabled: true router: my_router max_concurrency: 10000 network: binding: 0.</description>
     </item>
     
     <item>
@@ -120,15 +120,15 @@ elasticsearch:- name: prodenabled: trueendpoint: http://192.168.3.201:9200�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/path_rewrite_by_javascript/</guid>
-      <description>使用 JavaScript 脚本来进行复杂的查询改写#有这么一个需求：
+      <description>使用 JavaScript 脚本来进行复杂的查询改写 #  有这么一个需求：
  网关里怎样对跨集群搜索进行支持的呢？我想实现: 输入的搜索请求是 lp:9200/index1/_search 这个索引在3个集群上，需要跨集群检索，也就是网关能否改成 lp:9200/cluster01:index1,cluster02,index1,cluster03:index1/_search 呢？ 索引有一百多个，名称不一定是 app, 还可能多个索引一起的。
  极限网关自带的过滤器 content_regex_replace 虽然可以实现字符正则替换，但是这个需求是带参数的变量替换，稍微复杂一点，没有办法直接用这个正则替换实现，有什么其他办法实现么？
-使用脚本过滤器#当然有的，上面的这个需求，理论上我们只需要将其中的索引 index1 匹配之后，替换为 cluster01:index1,cluster02,index1,cluster03:index1 就行了。
+使用脚本过滤器 #  当然有的，上面的这个需求，理论上我们只需要将其中的索引 index1 匹配之后，替换为 cluster01:index1,cluster02,index1,cluster03:index1 就行了。
 答案就是使用自定义脚本来做，再复杂的业务逻辑都不是问题，都能通过自定义脚本来实现，一行脚本不行，那就两行。
 使用极限网关提供的 JavaScript 过滤器可以很灵活的实现这个功能，具体继续看。
-定义脚本#首先创建一个脚本文件，放在网关数据目录的 scripts 子目录下面，如下：
-➜ gateway ✗ tree data data└── gateway└── nodes└── c9bpg0ai4h931o4ngs3g├── kvdb├── queue├── scripts│ └── index_path_rewrite.js└── stats这个脚本的内容如下：
-function process(context) {var originalPath = context.Get(&amp;quot;_ctx.request.path&amp;quot;);var matches = originalPath.</description>
+定义脚本 #  首先创建一个脚本文件，放在网关数据目录的 scripts 子目录下面，如下：
+➜ gateway ✗ tree data data └── gateway └── nodes └── c9bpg0ai4h931o4ngs3g ├── kvdb ├── queue ├── scripts │ └── index_path_rewrite.js └── stats 这个脚本的内容如下：
+function process(context) { var originalPath = context.Get(&amp;quot;_ctx.request.path&amp;quot;); var matches = originalPath.</description>
     </item>
     
     <item>
@@ -137,11 +137,11 @@ function process(context) {var originalPath = context.Get(&amp;quot;_ctx.reques
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/fix_count_in_search_response/</guid>
-      <description>兼容不同版本的查询响应结果的 Count 结构#Elasticsearch 在 7.0 之后的版本中，为了优化性能，搜索结果的命中数默认不进行精确的计数统计，同时对搜索结果的响应体进行了调整， 这样势必会造成已有代码的不兼容，如何快速修复呢？
-结构对比#首先来对比下前后差异：
+      <description>兼容不同版本的查询响应结果的 Count 结构 #  Elasticsearch 在 7.0 之后的版本中，为了优化性能，搜索结果的命中数默认不进行精确的计数统计，同时对搜索结果的响应体进行了调整， 这样势必会造成已有代码的不兼容，如何快速修复呢？
+结构对比 #  首先来对比下前后差异：
 7 之前的搜索结构如下，total 显示的具体的数值：
-{&amp;quot;took&amp;quot;: 53,&amp;quot;timed_out&amp;quot;: false,&amp;quot;_shards&amp;quot;: {&amp;quot;total&amp;quot;: 1,&amp;quot;successful&amp;quot;: 1,&amp;quot;skipped&amp;quot;: 0,&amp;quot;failed&amp;quot;: 0},&amp;quot;hits&amp;quot;: {&amp;quot;total&amp;quot;: 0,&amp;quot;max_score&amp;quot;: null,&amp;quot;hits&amp;quot;: []}}7 之后的搜索结构如下，total 变成了一组描述范围的对象：
-{&amp;quot;took&amp;quot;: 3,&amp;quot;timed_out&amp;quot;: false,&amp;quot;_shards&amp;quot;: {&amp;quot;total&amp;quot;: 1,&amp;quot;successful&amp;quot;: 1,&amp;quot;skipped&amp;quot;: 0,&amp;quot;failed&amp;quot;: 0},&amp;quot;hits&amp;quot;: {&amp;quot;total&amp;quot;: {&amp;quot;value&amp;quot;: 10000,&amp;quot;relation&amp;quot;: &amp;quot;gte&amp;quot;},&amp;quot;max_score&amp;quot;: 1,&amp;quot;hits&amp;quot;: []}}Elasticsearch 提供的参数#不过在 7 里面，Elasticsearch 也提供了一个参数来控制是否进行精确计数，通过在查询请求的 url 参数里面加上 rest_total_hits_as_int=true 即可使用旧的行为方式，默认未开启。</description>
+{ &amp;quot;took&amp;quot;: 53, &amp;quot;timed_out&amp;quot;: false, &amp;quot;_shards&amp;quot;: { &amp;quot;total&amp;quot;: 1, &amp;quot;successful&amp;quot;: 1, &amp;quot;skipped&amp;quot;: 0, &amp;quot;failed&amp;quot;: 0 }, &amp;quot;hits&amp;quot;: { &amp;quot;total&amp;quot;: 0, &amp;quot;max_score&amp;quot;: null, &amp;quot;hits&amp;quot;: [] } } 7 之后的搜索结构如下，total 变成了一组描述范围的对象：
+{ &amp;quot;took&amp;quot;: 3, &amp;quot;timed_out&amp;quot;: false, &amp;quot;_shards&amp;quot;: { &amp;quot;total&amp;quot;: 1, &amp;quot;successful&amp;quot;: 1, &amp;quot;skipped&amp;quot;: 0, &amp;quot;failed&amp;quot;: 0 }, &amp;quot;hits&amp;quot;: { &amp;quot;total&amp;quot;: { &amp;quot;value&amp;quot;: 10000, &amp;quot;relation&amp;quot;: &amp;quot;gte&amp;quot; }, &amp;quot;max_score&amp;quot;: 1, &amp;quot;hits&amp;quot;: [] } } Elasticsearch 提供的参数 #  不过在 7 里面，Elasticsearch 也提供了一个参数来控制是否进行精确计数，通过在查询请求的 url 参数里面加上 rest_total_hits_as_int=true 即可使用旧的行为方式，默认未开启。</description>
     </item>
     
     <item>
@@ -150,13 +150,13 @@ function process(context) {var originalPath = context.Get(&amp;quot;_ctx.reques
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/routing_to_cluser_by_index/</guid>
-      <description>在 Kibana 里统一访问来自不同集群的索引#现在有这么一个需求，客户根据需要将数据按照业务维度划分，将索引分别存放在了不同的三个集群， 将一个大集群拆分成多个小集群有很多好处，比如降低了耦合，带来了集群可用性和稳定性方面的好处，也避免了单个业务的热点访问造成其他业务的影响， 尽管拆分集群是很常见的玩法，但是管理起来不是那么方便了，尤其是在查询的时候，可能要分别访问三套集群各自的 API，甚至要切换三套不同的 Kibana 来访问集群的数据， 那么有没有办法将他们无缝的联合在一起呢？
-极限网关!#答案自然是有的，通过将 Kibana 访问 Elasticsearch 的地址切换为极限网关的地址，我们可以将请求按照索引来进行智能的路由， 也就是当访问不同的业务索引时会智能的路由到不同的集群，如下图：
+      <description>在 Kibana 里统一访问来自不同集群的索引 #  现在有这么一个需求，客户根据需要将数据按照业务维度划分，将索引分别存放在了不同的三个集群， 将一个大集群拆分成多个小集群有很多好处，比如降低了耦合，带来了集群可用性和稳定性方面的好处，也避免了单个业务的热点访问造成其他业务的影响， 尽管拆分集群是很常见的玩法，但是管理起来不是那么方便了，尤其是在查询的时候，可能要分别访问三套集群各自的 API，甚至要切换三套不同的 Kibana 来访问集群的数据， 那么有没有办法将他们无缝的联合在一起呢？
+极限网关! #  答案自然是有的，通过将 Kibana 访问 Elasticsearch 的地址切换为极限网关的地址，我们可以将请求按照索引来进行智能的路由， 也就是当访问不同的业务索引时会智能的路由到不同的集群，如下图：
 上图，我们分别有 3 个不同的索引：
  apm-* erp-* mall-*  分别对应不同的三套 Elasticsearch 集群:
  ES1-APM ES2-ERP ES3-MALL  接下来我们来看如何在极限网关里面进行相应的配置来满足这个业务需求。
-配置集群信息#首先配置 3 个集群的连接信息。
-elasticsearch:- name: es1-apmenabled: trueendpoints:- http://192.168.3.188:9206- name: es2-erpenabled: trueendpoints:- http://192.168.3.188:9207- name: es3-mallenabled: trueendpoints:- http://192.168.3.188:9208配置服务 Flow#然后，我们定义 3 个 Flow，分别对应用来访问 3 个不同的 Elasticsearch 集群，如下：</description>
+配置集群信息 #  首先配置 3 个集群的连接信息。
+elasticsearch: - name: es1-apm enabled: true endpoints: - http://192.168.3.188:9206 - name: es2-erp enabled: true endpoints: - http://192.168.3.188:9207 - name: es3-mall enabled: true endpoints: - http://192.168.3.188:9208 配置服务 Flow #  然后，我们定义 3 个 Flow，分别对应用来访问 3 个不同的 Elasticsearch 集群，如下：</description>
     </item>
     
   </channel>

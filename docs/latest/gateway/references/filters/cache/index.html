@@ -5,28 +5,30 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="cache#描述#cache 过滤器由 get_cache 和 set_cache 两组过滤器组成，一般需要组合使用，可用于缓存加速查询，抵挡重复请求，降低后端集群查询压力。
-get_cache 过滤器#过滤器 get_cache 用来从缓存里面获取之前出现的消息，直接返回给客户端，避免访问后端 Elasticsearch，用于缓存热点数据。
+<meta name="description" content="cache #  描述 #  cache 过滤器由 get_cache 和 set_cache 两组过滤器组成，一般需要组合使用，可用于缓存加速查询，抵挡重复请求，降低后端集群查询压力。
+get_cache 过滤器 #  过滤器 get_cache 用来从缓存里面获取之前出现的消息，直接返回给客户端，避免访问后端 Elasticsearch，用于缓存热点数据。
 配置示例如下：
-flow:- name: get_cachefilter:- get_cache:pass_patterns: [&quot;_cat&quot;,&quot;scroll&quot;, &quot;scroll_id&quot;,&quot;_refresh&quot;,&quot;_cluster&quot;,&quot;_ccr&quot;,&quot;_count&quot;,&quot;_flush&quot;,&quot;_ilm&quot;,&quot;_ingest&quot;,&quot;_license&quot;,&quot;_migration&quot;,&quot;_ml&quot;,&quot;_rollup&quot;,&quot;_data_stream&quot;,&quot;_open&quot;, &quot;_close&quot;]参数说明#   名称 类型 说明     pass_patterns string 设置忽略缓存的请求规则，URL 包含其中的任意关键字将跳过缓存    set_cache 过滤器#过滤器 set_cache 用来将后端查询拿到的返回结果存到缓存里面，可以设置过期时间。
+flow: - name: get_cache filter: - get_cache: pass_patterns: [&quot;_cat&quot;,&quot;scroll&quot;, &quot;scroll_id&quot;,&quot;_refresh&quot;,&quot;_cluster&quot;,&quot;_ccr&quot;,&quot;_count&quot;,&quot;_flush&quot;,&quot;_ilm&quot;,&quot;_ingest&quot;,&quot;_license&quot;,&quot;_migration&quot;,&quot;_ml&quot;,&quot;_rollup&quot;,&quot;_data_stream&quot;,&quot;_open&quot;, &quot;_close&quot;] 参数说明 #     名称 类型 说明     pass_patterns string 设置忽略缓存的请求规则，URL 包含其中的任意关键字将跳过缓存    set_cache 过滤器 #  过滤器 set_cache 用来将后端查询拿到的返回结果存到缓存里面，可以设置过期时间。
 配置示例如下：
-flow:- name: get_cachefilter:- set_cache:min_response_size: 100max_response_size: 1024000cache_ttl: 30smax_cache_items: 100000参数说明#   名称 类型 说明     cache_type string 缓存类型，支持 ristretto，ccache 和 redis，默认 ristretto   cache_ttl string 缓存的过期时间，默认 10s   async_search_cache_ttl string 异步请求结果的缓存过期时间，默认 10m   min_response_size int 最小符合缓存要求的消息体大小，默认 -1 表示不限制   max_response_size int 最大符合缓存要求的消息体大小，默认为 int 的最大值   max_cached_item int 最大的缓存消息总数，默认 1000000，当类型为 ccache有效   max_cached_size int 最大的缓存内存开销，默认 1000000000 即 1GB，当类型为 ristretto 有效   validated_status_code array 允许被缓存的请求状态码，默认 200,201,404,403,413,400,301    其它参数#如果希望主动忽略缓存，可以在 URL 的参数里面传递一个 no_cache 来让网关忽略缓存。如：">
+flow: - name: get_cache filter: - set_cache: min_response_size: 100 max_response_size: 1024000 cache_ttl: 30s max_cache_items: 100000 参数说明 #     名称 类型 说明     cache_type string 缓存类型，支持 ristretto，ccache 和 redis，默认 ristretto   cache_ttl string 缓存的过期时间，默认 10s   async_search_cache_ttl string 异步请求结果的缓存过期时间，默认 10m   min_response_size int 最小符合缓存要求的消息体大小，默认 -1 表示不限制   max_response_size int 最大符合缓存要求的消息体大小，默认为 int 的最大值   max_cached_item int 最大的缓存消息总数，默认 1000000，当类型为 ccache有效   max_cached_size int 最大的缓存内存开销，默认 1000000000 即 1GB，当类型为 ristretto 有效   validated_status_code array 允许被缓存的请求状态码，默认 200,201,404,403,413,400,301    其它参数 #  如果希望主动忽略缓存，可以在 URL 的参数里面传递一个 no_cache 来让网关忽略缓存。如：">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="cache" />
-<meta property="og:description" content="cache#描述#cache 过滤器由 get_cache 和 set_cache 两组过滤器组成，一般需要组合使用，可用于缓存加速查询，抵挡重复请求，降低后端集群查询压力。
-get_cache 过滤器#过滤器 get_cache 用来从缓存里面获取之前出现的消息，直接返回给客户端，避免访问后端 Elasticsearch，用于缓存热点数据。
+<meta property="og:description" content="cache #  描述 #  cache 过滤器由 get_cache 和 set_cache 两组过滤器组成，一般需要组合使用，可用于缓存加速查询，抵挡重复请求，降低后端集群查询压力。
+get_cache 过滤器 #  过滤器 get_cache 用来从缓存里面获取之前出现的消息，直接返回给客户端，避免访问后端 Elasticsearch，用于缓存热点数据。
 配置示例如下：
-flow:- name: get_cachefilter:- get_cache:pass_patterns: [&quot;_cat&quot;,&quot;scroll&quot;, &quot;scroll_id&quot;,&quot;_refresh&quot;,&quot;_cluster&quot;,&quot;_ccr&quot;,&quot;_count&quot;,&quot;_flush&quot;,&quot;_ilm&quot;,&quot;_ingest&quot;,&quot;_license&quot;,&quot;_migration&quot;,&quot;_ml&quot;,&quot;_rollup&quot;,&quot;_data_stream&quot;,&quot;_open&quot;, &quot;_close&quot;]参数说明#   名称 类型 说明     pass_patterns string 设置忽略缓存的请求规则，URL 包含其中的任意关键字将跳过缓存    set_cache 过滤器#过滤器 set_cache 用来将后端查询拿到的返回结果存到缓存里面，可以设置过期时间。
+flow: - name: get_cache filter: - get_cache: pass_patterns: [&quot;_cat&quot;,&quot;scroll&quot;, &quot;scroll_id&quot;,&quot;_refresh&quot;,&quot;_cluster&quot;,&quot;_ccr&quot;,&quot;_count&quot;,&quot;_flush&quot;,&quot;_ilm&quot;,&quot;_ingest&quot;,&quot;_license&quot;,&quot;_migration&quot;,&quot;_ml&quot;,&quot;_rollup&quot;,&quot;_data_stream&quot;,&quot;_open&quot;, &quot;_close&quot;] 参数说明 #     名称 类型 说明     pass_patterns string 设置忽略缓存的请求规则，URL 包含其中的任意关键字将跳过缓存    set_cache 过滤器 #  过滤器 set_cache 用来将后端查询拿到的返回结果存到缓存里面，可以设置过期时间。
 配置示例如下：
-flow:- name: get_cachefilter:- set_cache:min_response_size: 100max_response_size: 1024000cache_ttl: 30smax_cache_items: 100000参数说明#   名称 类型 说明     cache_type string 缓存类型，支持 ristretto，ccache 和 redis，默认 ristretto   cache_ttl string 缓存的过期时间，默认 10s   async_search_cache_ttl string 异步请求结果的缓存过期时间，默认 10m   min_response_size int 最小符合缓存要求的消息体大小，默认 -1 表示不限制   max_response_size int 最大符合缓存要求的消息体大小，默认为 int 的最大值   max_cached_item int 最大的缓存消息总数，默认 1000000，当类型为 ccache有效   max_cached_size int 最大的缓存内存开销，默认 1000000000 即 1GB，当类型为 ristretto 有效   validated_status_code array 允许被缓存的请求状态码，默认 200,201,404,403,413,400,301    其它参数#如果希望主动忽略缓存，可以在 URL 的参数里面传递一个 no_cache 来让网关忽略缓存。如：" />
+flow: - name: get_cache filter: - set_cache: min_response_size: 100 max_response_size: 1024000 cache_ttl: 30s max_cache_items: 100000 参数说明 #     名称 类型 说明     cache_type string 缓存类型，支持 ristretto，ccache 和 redis，默认 ristretto   cache_ttl string 缓存的过期时间，默认 10s   async_search_cache_ttl string 异步请求结果的缓存过期时间，默认 10m   min_response_size int 最小符合缓存要求的消息体大小，默认 -1 表示不限制   max_response_size int 最大符合缓存要求的消息体大小，默认为 int 的最大值   max_cached_item int 最大的缓存消息总数，默认 1000000，当类型为 ccache有效   max_cached_size int 最大的缓存内存开销，默认 1000000000 即 1GB，当类型为 ristretto 有效   validated_status_code array 允许被缓存的请求状态码，默认 200,201,404,403,413,400,301    其它参数 #  如果希望主动忽略缓存，可以在 URL 的参数里面传递一个 no_cache 来让网关忽略缓存。如：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/gateway/references/filters/cache/" />
 
 <title>cache | INFINI Labs</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="/en/docs/latest/gateway/references/filters/cache/" title="cache">
+
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 
@@ -3425,6 +3427,8 @@ flow:- name: get_cachefilter:- set_cache:min_response_size: 100max_response
   
 
 
+  
+
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
   <ul>
@@ -3444,7 +3448,7 @@ flow:- name: get_cachefilter:- set_cache:min_response_size: 100max_response
     </li>
     
     <li class="">
-      <a href="/en/" class="flex align-center">
+      <a href="/en/docs/latest/gateway/references/filters/cache/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>

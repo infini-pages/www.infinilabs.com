@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quick Start on INFINI Labs</title>
+    <link>/en/docs/latest/console/getting-started/</link>
+    <description>Recent content in Quick Start on INFINI Labs</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/en/docs/latest/console/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installation</title>
+      <link>/en/docs/latest/console/getting-started/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/console/getting-started/install/</guid>
+      <description>Installing the Console #  INFINI Console supports mainstream operating systems and platforms, the package is small, without any additional external dependencies, it should be very fast to install :)
+Preparation before Installation #  Prepare an Elasticsearch cluster that can store data. The required version is 7.3 or above, which is used for INFINI Console to store related data.
+Downloading #  Select a package for downloading in the following URL based on your operating system and platform:</description>
+    </item>
+    
+    <item>
+      <title>Index Settings</title>
+      <link>/en/docs/latest/console/getting-started/ilm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/console/getting-started/ilm/</guid>
+      <description>Index Settings #  All monitoring metrics of INFINI Console are stored in the Elasticsearch index. As time goes by, the data will increase. We can configure the life cycle of the index to adapt to our monitoring storage requirements.
+Configure the Default Index Template #  Then you can configure the index template of the Elasticsearch cluster, and execute the following command on the system monitoring cluster to create the index template.</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/en/docs/latest/console/getting-started/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/docs/latest/console/getting-started/docker/</guid>
+      <description>Container Deployment #  INFINI Console supports container deployment.
+Downloading an Image #  The images of INFINI Console are published at the official repository of Docker. The URL is as follows:
+ https://hub.docker.com/r/infinilabs/console
+Use the following command to obtain the latest container image:
+docker pull infinilabs/console:latest Verifying the Image #  After downloading the image locally, you will notice that the container image of INFINI Console is very small, with a size less than 30 MB.</description>
+    </item>
+    
+  </channel>
+</rss>

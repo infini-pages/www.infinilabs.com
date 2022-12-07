@@ -5,24 +5,26 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="context_regex_replace#描述#context_regex_replace 过滤器用来通过正则表达式来替换修改请求上下文的相关信息。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- context_regex_replace:context: &quot;_ctx.request.path&quot;pattern: &quot;^/&quot;to: &quot;/cluster:&quot;when:contains:_ctx.request.path: /_search- dump:request: true这个例子可以将请求 curl localhost:8000/abc/_search 替换为 curl localhost:8000/cluster:abc/_search
-参数说明#   名称 类型 说明     context string 请求的上下文及对应的 Key   pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    支持修改的上下文变量列表如下：">
+<meta name="description" content="context_regex_replace #  描述 #  context_regex_replace 过滤器用来通过正则表达式来替换修改请求上下文的相关信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - context_regex_replace: context: &quot;_ctx.request.path&quot; pattern: &quot;^/&quot; to: &quot;/cluster:&quot; when: contains: _ctx.request.path: /_search - dump: request: true 这个例子可以将请求 curl localhost:8000/abc/_search 替换为 curl localhost:8000/cluster:abc/_search
+参数说明 #     名称 类型 说明     context string 请求的上下文及对应的 Key   pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    支持修改的上下文变量列表如下：">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="context_regex_replace" />
-<meta property="og:description" content="context_regex_replace#描述#context_regex_replace 过滤器用来通过正则表达式来替换修改请求上下文的相关信息。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- context_regex_replace:context: &quot;_ctx.request.path&quot;pattern: &quot;^/&quot;to: &quot;/cluster:&quot;when:contains:_ctx.request.path: /_search- dump:request: true这个例子可以将请求 curl localhost:8000/abc/_search 替换为 curl localhost:8000/cluster:abc/_search
-参数说明#   名称 类型 说明     context string 请求的上下文及对应的 Key   pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    支持修改的上下文变量列表如下：" />
+<meta property="og:description" content="context_regex_replace #  描述 #  context_regex_replace 过滤器用来通过正则表达式来替换修改请求上下文的相关信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - context_regex_replace: context: &quot;_ctx.request.path&quot; pattern: &quot;^/&quot; to: &quot;/cluster:&quot; when: contains: _ctx.request.path: /_search - dump: request: true 这个例子可以将请求 curl localhost:8000/abc/_search 替换为 curl localhost:8000/cluster:abc/_search
+参数说明 #     名称 类型 说明     context string 请求的上下文及对应的 Key   pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    支持修改的上下文变量列表如下：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/gateway/references/filters/context_regex_replace/" />
 
 <title>context_regex_replace | INFINI Labs</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="/en/docs/latest/gateway/references/filters/context_regex_replace/" title="context_regex_replace">
+
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 
@@ -3419,6 +3421,8 @@ flow:- name: testfilter:- context_regex_replace:context: &quot;_ctx.request.
   
 
 
+  
+
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
   <ul>
@@ -3438,7 +3442,7 @@ flow:- name: testfilter:- context_regex_replace:context: &quot;_ctx.request.
     </li>
     
     <li class="">
-      <a href="/en/" class="flex align-center">
+      <a href="/en/docs/latest/gateway/references/filters/context_regex_replace/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>

@@ -5,28 +5,30 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="request_client_ip_filter#描述#request_client_ip_filter 过滤器用来按请求的来源用户 IP 信息来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_client_ip_filter:exclude:- 192.168.3.67上面的例子表示，来自 192.168.3.67 的请求不允许通过。
+<meta name="description" content="request_client_ip_filter #  描述 #  request_client_ip_filter 过滤器用来按请求的来源用户 IP 信息来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_client_ip_filter: exclude: - 192.168.3.67 上面的例子表示，来自 192.168.3.67 的请求不允许通过。
 路由跳转的例子:
-flow:- name: echofilter:- echo:message: hello stanger- name: default_flowfilter:- request_client_ip_filter:action: redirect_flowflow: echoexclude:- 192.168.3.67来自 192.168.3.67 会跳转到另外的 echo 流程。
-参数说明#   名称 类型 说明     exclude array 拒绝通过的请求 IP 数组列表   include array 允许通过的请求 IP 数组列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。">
+flow: - name: echo filter: - echo: message: hello stanger - name: default_flow filter: - request_client_ip_filter: action: redirect_flow flow: echo exclude: - 192.168.3.67 来自 192.168.3.67 会跳转到另外的 echo 流程。
+参数说明 #     名称 类型 说明     exclude array 拒绝通过的请求 IP 数组列表   include array 允许通过的请求 IP 数组列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="request_client_ip_filter" />
-<meta property="og:description" content="request_client_ip_filter#描述#request_client_ip_filter 过滤器用来按请求的来源用户 IP 信息来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_client_ip_filter:exclude:- 192.168.3.67上面的例子表示，来自 192.168.3.67 的请求不允许通过。
+<meta property="og:description" content="request_client_ip_filter #  描述 #  request_client_ip_filter 过滤器用来按请求的来源用户 IP 信息来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_client_ip_filter: exclude: - 192.168.3.67 上面的例子表示，来自 192.168.3.67 的请求不允许通过。
 路由跳转的例子:
-flow:- name: echofilter:- echo:message: hello stanger- name: default_flowfilter:- request_client_ip_filter:action: redirect_flowflow: echoexclude:- 192.168.3.67来自 192.168.3.67 会跳转到另外的 echo 流程。
-参数说明#   名称 类型 说明     exclude array 拒绝通过的请求 IP 数组列表   include array 允许通过的请求 IP 数组列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。" />
+flow: - name: echo filter: - echo: message: hello stanger - name: default_flow filter: - request_client_ip_filter: action: redirect_flow flow: echo exclude: - 192.168.3.67 来自 192.168.3.67 会跳转到另外的 echo 流程。
+参数说明 #     名称 类型 说明     exclude array 拒绝通过的请求 IP 数组列表   include array 允许通过的请求 IP 数组列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/gateway/references/filters/request_client_ip_filter/" />
 
 <title>request_client_ip_filter | INFINI Labs</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="/en/docs/latest/gateway/references/filters/request_client_ip_filter/" title="request_client_ip_filter">
+
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 
@@ -3423,6 +3425,8 @@ flow:- name: echofilter:- echo:message: hello stanger- name: default_flowf
   
 
 
+  
+
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
   <ul>
@@ -3442,7 +3446,7 @@ flow:- name: echofilter:- echo:message: hello stanger- name: default_flowf
     </li>
     
     <li class="">
-      <a href="/en/" class="flex align-center">
+      <a href="/en/docs/latest/gateway/references/filters/request_client_ip_filter/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>
@@ -3651,7 +3655,7 @@ flow:- name: echofilter:- echo:message: hello stanger- name: default_flowf
 </tbody>
 </table>
 <blockquote class="book-hint info">
-  注意: 当设置了 <code>include</code> 条件的情况下，必须至少满足 <code>include</code> 设置的其中一种响应码才能被允许通过。 
+  注意: 当设置了 <code>include</code> 条件的情况下，必须至少满足 <code>include</code> 设置的其中一种响应码才能被允许通过。
 当仅设置了 <code>exclude</code> 条件的情况下，不符合 <code>exclude</code> 的任意请求都允许通过。
 </blockquote>
 

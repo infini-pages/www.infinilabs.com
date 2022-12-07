@@ -11,10 +11,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/agent/manage/manage/</guid>
-      <description>功能介绍#简介#探针管理包括审核探针(INFINI Agent)、查看运行状态、分配任务等功能，是集中管理探针(INFINI Agent)的地方。去安装探针
-审核探针#进入菜单探针管理 &amp;gt; 实例管理 点击按钮 Discover Agent。 可以看到待审核列表。选中对应 Agent 并点击 Add Agents 完成审核。
-删除探针#进入菜单探针管理 &amp;gt; 实例管理，在列表中点击对应列的删除，确认之后，探针即被删除。
-任务设置#任务设置，是指下发/取消采集数据的任务给探针。探针在收到任务前，会一直处于等待状态。进入菜单探针管理 &amp;gt; 实例管理，在对应Agent列，点击Task Setting，配置任务然后点击保存。</description>
+      <description>功能介绍 #  简介 #  探针管理包括审核探针(INFINI Agent)、查看运行状态、分配任务等功能，是集中管理探针(INFINI Agent)的地方。 去安装探针
+审核探针 #  进入菜单探针管理 &amp;gt; 实例管理 点击按钮 Discover Agent。 可以看到待审核列表。选中对应 Agent 并点击 Add Agents 完成审核。
+删除探针 #  进入菜单探针管理 &amp;gt; 实例管理，在列表中点击对应列的删除，确认之后，探针即被删除。
+任务设置 #  任务设置，是指下发/取消采集数据的任务给探针。探针在收到任务前，会一直处于等待状态。进入菜单探针管理 &amp;gt; 实例管理，在对应Agent列，点击Task Setting，配置任务然后点击保存。</description>
     </item>
     
     <item>
@@ -23,12 +23,12 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/agent/install/install/</guid>
-      <description>安装探针(INFINI Agent)# 探针(INFINI Agent) 是 INFINI Console 的子模块，负责数据抓取和 Elasticsearch 实例管理等任务，接受 Console 权限控制和统一的任务调度。 支持主流的操作系统和平台，程序包很小，没有任何额外的外部依赖。  安装前准备#安装并运行INFINI Console
-下载安装#根据您所在的操作系统和平台选择下面相应的下载地址：
-https://release.infinilabs.com/agent/
-容器部署#探针(INFINI Agent) 也支持 Docker 容器方式部署。
-了解更多配置#下载 探针(INFINI Agent) 安装包解压之后，打开agent.yml配置文件，我们可以看到以下配置：
-#存储 INFINI Agent 相关数据的 Elasticsearch 集群信息，版本 v7.3+#此处的 endpoint 需和 INFINI Console 的一致elasticsearch:- name: defaultenabled: truemonitored: falseendpoint: http://192.168.3.4:9200basic_auth:username: elasticpassword: ZBdkVQUUdF1Sir4X4BGB.</description>
+      <description>安装探针(INFINI Agent) #   探针(INFINI Agent) 是 INFINI Console 的子模块，负责数据抓取和 Elasticsearch 实例管理等任务，接受 Console 权限控制和统一的任务调度。 支持主流的操作系统和平台，程序包很小，没有任何额外的外部依赖。  安装前准备 #  安装并运行 INFINI Console
+下载安装 #  根据您所在的操作系统和平台选择下面相应的下载地址：
+ https://release.infinilabs.com/agent/
+容器部署 #  探针(INFINI Agent) 也支持 Docker 容器方式部署。
+了解更多  配置 #  下载 探针(INFINI Agent) 安装包解压之后，打开agent.yml配置文件，我们可以看到以下配置：
+#存储 INFINI Agent 相关数据的 Elasticsearch 集群信息，版本 v7.3+ #此处的 endpoint 需和 INFINI Console 的一致 elasticsearch: - name: default enabled: true monitored: false endpoint: http://192.168.3.4:9200 basic_auth: username: elastic password: ZBdkVQUUdF1Sir4X4BGB .</description>
     </item>
     
     <item>
@@ -37,13 +37,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/agent/install/docker/</guid>
-      <description>容器部署#探针(INFINI Agent) 支持容器方式部署。
-下载镜像#探针(INFINI Agent) 的镜像发布在 Docker 的官方仓库，地址如下：
-https://hub.docker.com/r/infinilabs/agent
+      <description>容器部署 #  探针(INFINI Agent) 支持容器方式部署。
+下载镜像 #  探针(INFINI Agent) 的镜像发布在 Docker 的官方仓库，地址如下：
+ https://hub.docker.com/r/infinilabs/agent
 使用下面的命令即可获取最新的容器镜像：
-docker pull infinilabs/agent:latest验证镜像#将镜像下载到本地之后，可以看到 探针(INFINI Agent) 的容器镜像非常小，只有不到 20MB，所以下载是非常快的。
-✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZEinfinilabs/agent latest c7bd9ad063d9 4 days ago 13.8MB创建配置#现在需要创建一个配置文件 agent.yml，来进行基本的配置，如下：
-api:enabled: truenetwork:binding: 0.0.0.0:8080metrics:enabled: truequeue: metricsnetwork:enabled: truesummary: truedetails: truememory:metrics:- swap- memorydisk:metrics:- ioqs- usagecpu:metrics:- idle- system- user- iowait- loadelasticsearch:enabled: trueagent_mode: truenode_stats: trueindex_stats: truecluster_stats: trueelasticsearch:- name: defaultenabled: trueendpoint: http://192.</description>
+docker pull infinilabs/agent:latest 验证镜像 #  将镜像下载到本地之后，可以看到 探针(INFINI Agent) 的容器镜像非常小，只有不到 20MB，所以下载是非常快的。
+✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZE infinilabs/agent latest c7bd9ad063d9 4 days ago 13.8MB 创建配置 #  现在需要创建一个配置文件 agent.yml，来进行基本的配置，如下：
+api: enabled: true network: binding: 0.0.0.0:8080 metrics: enabled: true queue: metrics network: enabled: true summary: true details: true memory: metrics: - swap - memory disk: metrics: - ioqs - usage cpu: metrics: - idle - system - user - iowait - load elasticsearch: enabled: true agent_mode: true node_stats: true index_stats: true cluster_stats: true elasticsearch: - name: default enabled: true endpoint: http://192.</description>
     </item>
     
   </channel>

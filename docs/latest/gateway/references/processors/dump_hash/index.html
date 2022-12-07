@@ -5,22 +5,24 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="dump_hash#描述#dump_hash 处理器用来导出集群的索引文档并计算 Hash。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- dump_hash: #dump es1&#39;s docindices: &quot;medcl-dr3&quot;scroll_time: &quot;10m&quot;elasticsearch: &quot;source&quot;query: &quot;field1:elastic&quot;fields: &quot;doc_hash&quot;output_queue: &quot;source_docs&quot;batch_size: 10000slice_size: 5参数说明#   名称 类型 说明     elasticsearch string 目标集群的名称   scroll_time string Scroll 回话超时时间   batch_size int Scroll 批次大小，默认 5000   slice_size int Slice 大小，默认 1   sort_type string 文档排序类型，默认 asc   sort_field string 文档排序字段   indices string 索引   level string 请求处理级别，可以设置为 cluster 则表示请求不进行节点和分片级别的拆分，适用于 Elasticsearch 前有代理的情况   query string 查询过滤条件   fields string 要返回的字段列表   sort_document_fields bool hash 计算之前是否对 _source 里面的字段进行排序，默认 false   hash_func string hash 函数，可选 xxhash32、xxhash64、fnv1a，默认 xxhash32   output_queue string 输出结果的队列名称    ">
+<meta name="description" content="dump_hash #  描述 #  dump_hash 处理器用来导出集群的索引文档并计算 Hash。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - dump_hash: #dump es1&#39;s doc indices: &quot;medcl-dr3&quot; scroll_time: &quot;10m&quot; elasticsearch: &quot;source&quot; query: &quot;field1:elastic&quot; fields: &quot;doc_hash&quot; output_queue: &quot;source_docs&quot; batch_size: 10000 slice_size: 5 参数说明 #     名称 类型 说明     elasticsearch string 目标集群的名称   scroll_time string Scroll 回话超时时间   batch_size int Scroll 批次大小，默认 5000   slice_size int Slice 大小，默认 1   sort_type string 文档排序类型，默认 asc   sort_field string 文档排序字段   indices string 索引   level string 请求处理级别，可以设置为 cluster 则表示请求不进行节点和分片级别的拆分，适用于 Elasticsearch 前有代理的情况   query string 查询过滤条件   fields string 要返回的字段列表   sort_document_fields bool hash 计算之前是否对 _source 里面的字段进行排序，默认 false   hash_func string hash 函数，可选 xxhash32、xxhash64、fnv1a，默认 xxhash32   output_queue string 输出结果的队列名称    ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="dump_hash" />
-<meta property="og:description" content="dump_hash#描述#dump_hash 处理器用来导出集群的索引文档并计算 Hash。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- dump_hash: #dump es1&#39;s docindices: &quot;medcl-dr3&quot;scroll_time: &quot;10m&quot;elasticsearch: &quot;source&quot;query: &quot;field1:elastic&quot;fields: &quot;doc_hash&quot;output_queue: &quot;source_docs&quot;batch_size: 10000slice_size: 5参数说明#   名称 类型 说明     elasticsearch string 目标集群的名称   scroll_time string Scroll 回话超时时间   batch_size int Scroll 批次大小，默认 5000   slice_size int Slice 大小，默认 1   sort_type string 文档排序类型，默认 asc   sort_field string 文档排序字段   indices string 索引   level string 请求处理级别，可以设置为 cluster 则表示请求不进行节点和分片级别的拆分，适用于 Elasticsearch 前有代理的情况   query string 查询过滤条件   fields string 要返回的字段列表   sort_document_fields bool hash 计算之前是否对 _source 里面的字段进行排序，默认 false   hash_func string hash 函数，可选 xxhash32、xxhash64、fnv1a，默认 xxhash32   output_queue string 输出结果的队列名称    " />
+<meta property="og:description" content="dump_hash #  描述 #  dump_hash 处理器用来导出集群的索引文档并计算 Hash。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - dump_hash: #dump es1&#39;s doc indices: &quot;medcl-dr3&quot; scroll_time: &quot;10m&quot; elasticsearch: &quot;source&quot; query: &quot;field1:elastic&quot; fields: &quot;doc_hash&quot; output_queue: &quot;source_docs&quot; batch_size: 10000 slice_size: 5 参数说明 #     名称 类型 说明     elasticsearch string 目标集群的名称   scroll_time string Scroll 回话超时时间   batch_size int Scroll 批次大小，默认 5000   slice_size int Slice 大小，默认 1   sort_type string 文档排序类型，默认 asc   sort_field string 文档排序字段   indices string 索引   level string 请求处理级别，可以设置为 cluster 则表示请求不进行节点和分片级别的拆分，适用于 Elasticsearch 前有代理的情况   query string 查询过滤条件   fields string 要返回的字段列表   sort_document_fields bool hash 计算之前是否对 _source 里面的字段进行排序，默认 false   hash_func string hash 函数，可选 xxhash32、xxhash64、fnv1a，默认 xxhash32   output_queue string 输出结果的队列名称    " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/gateway/references/processors/dump_hash/" />
 
 <title>dump_hash | INFINI Labs</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="/en/docs/latest/gateway/references/processors/dump_hash/" title="dump_hash">
+
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 
@@ -3417,6 +3419,8 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
   
 
 
+  
+
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
   <ul>
@@ -3436,7 +3440,7 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
     </li>
     
     <li class="">
-      <a href="/en/" class="flex align-center">
+      <a href="/en/docs/latest/gateway/references/processors/dump_hash/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>

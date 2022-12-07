@@ -5,24 +5,26 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-<meta name="description" content="浮动 IP#极限网关内置浮动 IP 功能，可以实现双机热备、故障转移的能力，极限网关天然提供四层网络流量的高可用，无需再额外考虑增加额外的软件和设备来保障因为停机、网络故障等造成的代理服务中断。
+<meta name="description" content="浮动 IP #  极限网关内置浮动 IP 功能，可以实现双机热备、故障转移的能力，极限网关天然提供四层网络流量的高可用，无需再额外考虑增加额外的软件和设备来保障因为停机、网络故障等造成的代理服务中断。
 注意:
- 该特性目前仅支持 Mac OS、Linux 操作系统。且需要网关以 root 身份运行。 此特性依赖目标系统的 ping 和 ifconfig 命令，请确保相关包默认已安装。 一组启用浮动 IP 的网关所在网卡地址应该在一个子网，且内网广播互通（网关实际 IP 和浮动 IP 要求只最后一位地址不一样，如：192.168.3.x）。  功能演示# Youtube Bilibili  什么是浮动 IP#极限网关基于浮动 IP 来实现高可用，浮动 IP 也叫虚拟 IP 或者动态 IP，我们知道每台服务器之间都必须要有 IP 才能进行通信，一台服务器的 IP 一般是固定的并且一般要提前分配好， 如果这台服务器因为故障挂了的话，这个 IP 以及上面部署的业务也就不能访问了。 而一个浮动 IP 通常是一个公开的、可以路由到的 IP 地址，并且不会自动分配给实体设备。项目管理者临时分配这个动态IP到一个或者多个实体设备。 这个实体设备有自动分配的静态 IP 用于内部网间设备的通讯。这个内部网使用私有地址，这些私有地址不能被路由到。通过浮动 IP 内网实体的服务才能被外网识别和访问。
-为什么需要浮动 IP#在一个配置好浮动 IP 的典型切换场景是，当出现当前绑定浮动 IP 的机器出现故障的时候，浮动 IP 地址会飘到网络中的另一台设备。新设备无延迟的接替当掉的设备，并对外提供服务。 从而实现网络服务的高可用，对应业务的消费方来说，只需要指定浮动 IP 就可以了。 浮动 IP 非常有用，在某些特定的场景，比如客户端或者 SDK 只允许配置一个服务 IP 地址，所以这个 IP 一定要是高可用的，而极限网关正好解决了这个问题。 使用两个独立的极限网关服务器，最好部署在独立的物理服务器上，两台极限网关构成一组双机热备的状态，任意网关出现故障都能保障前端业务的正常访问。">
+ 该特性目前仅支持 Mac OS、Linux 操作系统。且需要网关以 root 身份运行。 此特性依赖目标系统的 ping 和 ifconfig 命令，请确保相关包默认已安装。 一组启用浮动 IP 的网关所在网卡地址应该在一个子网，且内网广播互通（网关实际 IP 和浮动 IP 要求只最后一位地址不一样，如：192.168.3.x）。   功能演示 #    Youtube  Bilibili  什么是浮动 IP #  极限网关基于浮动 IP 来实现高可用，浮动 IP 也叫虚拟 IP 或者动态 IP，我们知道每台服务器之间都必须要有 IP 才能进行通信，一台服务器的 IP 一般是固定的并且一般要提前分配好， 如果这台服务器因为故障挂了的话，这个 IP 以及上面部署的业务也就不能访问了。 而一个浮动 IP 通常是一个公开的、可以路由到的 IP 地址，并且不会自动分配给实体设备。项目管理者临时分配这个动态IP到一个或者多个实体设备。 这个实体设备有自动分配的静态 IP 用于内部网间设备的通讯。这个内部网使用私有地址，这些私有地址不能被路由到。通过浮动 IP 内网实体的服务才能被外网识别和访问。
+为什么需要浮动 IP #  在一个配置好浮动 IP 的典型切换场景是，当出现当前绑定浮动 IP 的机器出现故障的时候，浮动 IP 地址会飘到网络中的另一台设备。新设备无延迟的接替当掉的设备，并对外提供服务。 从而实现网络服务的高可用，对应业务的消费方来说，只需要指定浮动 IP 就可以了。 浮动 IP 非常有用，在某些特定的场景，比如客户端或者 SDK 只允许配置一个服务 IP 地址，所以这个 IP 一定要是高可用的，而极限网关正好解决了这个问题。 使用两个独立的极限网关服务器，最好部署在独立的物理服务器上，两台极限网关构成一组双机热备的状态，任意网关出现故障都能保障前端业务的正常访问。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="浮动 IP" />
-<meta property="og:description" content="浮动 IP#极限网关内置浮动 IP 功能，可以实现双机热备、故障转移的能力，极限网关天然提供四层网络流量的高可用，无需再额外考虑增加额外的软件和设备来保障因为停机、网络故障等造成的代理服务中断。
+<meta property="og:description" content="浮动 IP #  极限网关内置浮动 IP 功能，可以实现双机热备、故障转移的能力，极限网关天然提供四层网络流量的高可用，无需再额外考虑增加额外的软件和设备来保障因为停机、网络故障等造成的代理服务中断。
 注意:
- 该特性目前仅支持 Mac OS、Linux 操作系统。且需要网关以 root 身份运行。 此特性依赖目标系统的 ping 和 ifconfig 命令，请确保相关包默认已安装。 一组启用浮动 IP 的网关所在网卡地址应该在一个子网，且内网广播互通（网关实际 IP 和浮动 IP 要求只最后一位地址不一样，如：192.168.3.x）。  功能演示# Youtube Bilibili  什么是浮动 IP#极限网关基于浮动 IP 来实现高可用，浮动 IP 也叫虚拟 IP 或者动态 IP，我们知道每台服务器之间都必须要有 IP 才能进行通信，一台服务器的 IP 一般是固定的并且一般要提前分配好， 如果这台服务器因为故障挂了的话，这个 IP 以及上面部署的业务也就不能访问了。 而一个浮动 IP 通常是一个公开的、可以路由到的 IP 地址，并且不会自动分配给实体设备。项目管理者临时分配这个动态IP到一个或者多个实体设备。 这个实体设备有自动分配的静态 IP 用于内部网间设备的通讯。这个内部网使用私有地址，这些私有地址不能被路由到。通过浮动 IP 内网实体的服务才能被外网识别和访问。
-为什么需要浮动 IP#在一个配置好浮动 IP 的典型切换场景是，当出现当前绑定浮动 IP 的机器出现故障的时候，浮动 IP 地址会飘到网络中的另一台设备。新设备无延迟的接替当掉的设备，并对外提供服务。 从而实现网络服务的高可用，对应业务的消费方来说，只需要指定浮动 IP 就可以了。 浮动 IP 非常有用，在某些特定的场景，比如客户端或者 SDK 只允许配置一个服务 IP 地址，所以这个 IP 一定要是高可用的，而极限网关正好解决了这个问题。 使用两个独立的极限网关服务器，最好部署在独立的物理服务器上，两台极限网关构成一组双机热备的状态，任意网关出现故障都能保障前端业务的正常访问。" />
+ 该特性目前仅支持 Mac OS、Linux 操作系统。且需要网关以 root 身份运行。 此特性依赖目标系统的 ping 和 ifconfig 命令，请确保相关包默认已安装。 一组启用浮动 IP 的网关所在网卡地址应该在一个子网，且内网广播互通（网关实际 IP 和浮动 IP 要求只最后一位地址不一样，如：192.168.3.x）。   功能演示 #    Youtube  Bilibili  什么是浮动 IP #  极限网关基于浮动 IP 来实现高可用，浮动 IP 也叫虚拟 IP 或者动态 IP，我们知道每台服务器之间都必须要有 IP 才能进行通信，一台服务器的 IP 一般是固定的并且一般要提前分配好， 如果这台服务器因为故障挂了的话，这个 IP 以及上面部署的业务也就不能访问了。 而一个浮动 IP 通常是一个公开的、可以路由到的 IP 地址，并且不会自动分配给实体设备。项目管理者临时分配这个动态IP到一个或者多个实体设备。 这个实体设备有自动分配的静态 IP 用于内部网间设备的通讯。这个内部网使用私有地址，这些私有地址不能被路由到。通过浮动 IP 内网实体的服务才能被外网识别和访问。
+为什么需要浮动 IP #  在一个配置好浮动 IP 的典型切换场景是，当出现当前绑定浮动 IP 的机器出现故障的时候，浮动 IP 地址会飘到网络中的另一台设备。新设备无延迟的接替当掉的设备，并对外提供服务。 从而实现网络服务的高可用，对应业务的消费方来说，只需要指定浮动 IP 就可以了。 浮动 IP 非常有用，在某些特定的场景，比如客户端或者 SDK 只允许配置一个服务 IP 地址，所以这个 IP 一定要是高可用的，而极限网关正好解决了这个问题。 使用两个独立的极限网关服务器，最好部署在独立的物理服务器上，两台极限网关构成一组双机热备的状态，任意网关出现故障都能保障前端业务的正常访问。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/latest/gateway/references/modules/floating_ip/" />
 
 <title>浮动 IP | INFINI Labs</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="en" href="/en/docs/latest/gateway/references/modules/floating_ip/" title="Floating IP">
+
 <link rel="stylesheet" href="/book.min.bcadf4033b2252dab4049fde8573c3463e8a6e7631793c2a9caa2f0f7a609c4e.css" integrity="sha256-vK30AzsiUtq0BJ/ehXPDRj6KbnYxeTwqnKovD3pgnE4=">
 <link rel="stylesheet" href="/infini.min.405c91a9e57eb21831efb090ad1ead44dfc1b6b5324bf7d9d23bbe808ff2b085.css" integrity="sha256-QFyRqeV&#43;shgx77CQrR6tRN/BtrUyS/fZ0ju&#43;gI/ysIU=">
-<script defer src="/zh.search.min.efe0dd58728188b77d87c2747f0613b6962aab31a1495a7689719fa9984e415a.js" integrity="sha256-7&#43;DdWHKBiLd9h8J0fwYTtpYqqzGhSVp2iXGfqZhOQVo="></script>
+<script defer src="/zh.search.min.69d13abb1c75aacccfdce0c35273af51606e98808741fbf0e996f44f712c1df1.js" integrity="sha256-adE6uxx1qszP3ODDUnOvUWBumICHQfvw6Zb0T3EsHfE="></script>
 
 
 
@@ -3419,6 +3421,8 @@
   
 
 
+  
+
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
   <ul>
@@ -3438,7 +3442,7 @@
     </li>
     
     <li class="">
-      <a href="/en/" class="flex align-center">
+      <a href="/en/docs/latest/gateway/references/modules/floating_ip/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>

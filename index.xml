@@ -11,10 +11,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/echo/</guid>
-      <description>echo#描述#echo 过滤器是一个用于在返回结果里面输出指定字符信息的过滤器，常用于调试。
-功能演示#配置示例#一个简单的示例如下：
-flow:- name: hello_worldfilter:- echo:message: &amp;quot;hello infini\n&amp;quot;echo 过滤器可以设置重复输出相同的字符的次数，示例如下：
-...- echo:message: &amp;quot;hello gateway\n&amp;quot;repeat: 3...参数说明#   名称 类型 说明     message string 需要输出的字符内容   repeat int 重复次数   stdout bool 是否在终端也打印输出，默认为 false    </description>
+      <description>echo #  描述 #  echo 过滤器是一个用于在返回结果里面输出指定字符信息的过滤器，常用于调试。
+功能演示 #    配置示例 #  一个简单的示例如下：
+flow: - name: hello_world filter: - echo: message: &amp;quot;hello infini\n&amp;quot; echo 过滤器可以设置重复输出相同的字符的次数，示例如下：
+... - echo: message: &amp;quot;hello gateway\n&amp;quot; repeat: 3 ... 参数说明 #     名称 类型 说明     message string 需要输出的字符内容   repeat int 重复次数   stdout bool 是否在终端也打印输出，默认为 false    </description>
     </item>
     
     <item>
@@ -23,9 +23,9 @@ flow:- name: hello_worldfilter:- echo:message: &amp;quot;hello infini\n&amp;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/platform/overview/</guid>
-      <description>平台概览#简介#在平台概览里，可以查看集群、节点、索引、主机层面的主要指标，了解各层面的运行状态。
-集群#节点#索引#主机#主机数据来源于 INFINI Agent 数据上报和 Elasticsearch 节点发现。
-发现主机#点击主机列表右侧的按钮&amp;quot;Discover host&amp;quot;，勾选后，点击按钮&amp;quot;add hosts&amp;quot;即可添加主机到主机列表。</description>
+      <description>平台概览 #  简介 #  在平台概览里，可以查看集群、节点、索引、主机层面的主要指标，了解各层面的运行状态。
+集群 #  节点 #  索引 #  主机 #  主机数据来源于 INFINI Agent 数据上报和 Elasticsearch 节点发现。
+发现主机 #  点击主机列表右侧的按钮&amp;quot;Discover host&amp;quot;，勾选后，点击按钮&amp;quot;add hosts&amp;quot;即可添加主机到主机列表。</description>
     </item>
     
     <item>
@@ -34,8 +34,8 @@ flow:- name: hello_worldfilter:- echo:message: &amp;quot;hello infini\n&amp;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/log4j2_filtering/</guid>
-      <description>Apache Log4j 漏洞处置#【CVE 地址】
-https://github.com/advisories/GHSA-jfh8-c2jp-5v3q
+      <description>Apache Log4j 漏洞处置 #  【CVE 地址】
+ https://github.com/advisories/GHSA-jfh8-c2jp-5v3q
 【漏洞描述】
 Apache Log4j 是一款非常流行的开源的用于 Java 运行环境的日志记录工具包，大量的 Java 框架包括 Elasticsearch 的最新版本都使用了该组件，故影响范围非常之大。
 近日, 随着 Apache Log4j 的远程代码执行最新漏洞细节被公开，攻击者可通过构造恶意请求利用该漏洞实现在目标服务器上执行任意代码。可导致服务器被黑客控制，从而进行页面篡改、数据窃取、挖矿、勒索等行为。建议使用该组件的用户第一时间启动应急响应进行修复。
@@ -45,8 +45,8 @@ Apache Log4j 是一款非常流行的开源的用于 Java 运行环境的日志�
 【影响范围】：Java 类产品：Apache Log4j 2.x &amp;lt; 2.15.0-rc2
 【攻击检测】
 可以通过检查日志中是否存在 jndi:ldap://、jndi:rmi 等字符来发现可能的攻击行为。
-处理办法#如果 Elasticsearch 不能修改配置、或者替换 Log4j 的 jar 包和重启集群的，可以使用极限网关来进行拦截或者参数替换甚至是直接阻断请求。 通过在网关层对发往 Elasticsearch 的请求统一进行参数检测，将包含的敏感关键词 ${ 进行替换或者直接拒绝， 可以防止带攻击的请求到达 Elasticsearch 服务端而被 Log4j 打印相关日志的时候执行恶意攻击命令，从而避免被攻击。
-参考配置#下载最新的 1.</description>
+处理办法 #  如果 Elasticsearch 不能修改配置、或者替换 Log4j 的 jar 包和重启集群的，可以使用极限网关来进行拦截或者参数替换甚至是直接阻断请求。 通过在网关层对发往 Elasticsearch 的请求统一进行参数检测，将包含的敏感关键词 ${ 进行替换或者直接拒绝， 可以防止带攻击的请求到达 Elasticsearch 服务端而被 Log4j 打印相关日志的时候执行恶意攻击命令，从而避免被攻击。
+参考配置 #  下载最新的 1.</description>
     </item>
     
     <item>
@@ -55,13 +55,13 @@ Apache Log4j 是一款非常流行的开源的用于 Java 运行环境的日志�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/getting-started/install/</guid>
-      <description>安装 INFINI Console#INFINI Console 支持主流的操作系统和平台，程序包很小，没有任何额外的外部依赖，安装起来应该是很快的 ：）
-安装前准备#准备一个可以存储数据的 Elasticsearch 集群，要求为 7.3 及以上版本，用于 INFINI Console 存储相关数据。
-下载安装#根据您所在的操作系统和平台选择下面相应的下载地址：
-https://release.infinilabs.com/console/
-容器部署#INFINI Console 也支持 Docker 容器方式部署。
-了解更多配置#下载 INFINI Console 安装包解压之后，打开console.yml配置文件，我们可以看到 以下配置节：
-#存储 INFINI Console 相关数据的 Elasticsearch 集群信息，版本 v7.3+elasticsearch:- name: defaultenabled: truemonitored: trueendpoint: http://192.168.3.188:9299basic_auth:username: elasticpassword: ZBdkVQUUdF1Sir4X4BGB一般情况下，我们只需要修改配置里面的 endpoint 配置，若 Elasticsearch 开启了安全验证，则需要修改 username 和 password 配置。</description>
+      <description>安装 INFINI Console #  INFINI Console 支持主流的操作系统和平台，程序包很小，没有任何额外的外部依赖，安装起来应该是很快的 ：）
+安装前准备 #  准备一个可以存储数据的 Elasticsearch 集群，要求为 7.3 及以上版本，用于 INFINI Console 存储相关数据。
+下载安装 #  根据您所在的操作系统和平台选择下面相应的下载地址：
+ https://release.infinilabs.com/console/
+容器部署 #  INFINI Console 也支持 Docker 容器方式部署。
+了解更多  配置 #  下载 INFINI Console 安装包解压之后，打开console.yml配置文件，我们可以看到 以下配置节：
+#存储 INFINI Console 相关数据的 Elasticsearch 集群信息，版本 v7.3+ elasticsearch: - name: default enabled: true monitored: true endpoint: http://192.168.3.188:9299 basic_auth: username: elastic password: ZBdkVQUUdF1Sir4X4BGB 一般情况下，我们只需要修改配置里面的 endpoint 配置，若 Elasticsearch 开启了安全验证，则需要修改 username 和 password 配置。</description>
     </item>
     
     <item>
@@ -70,10 +70,10 @@ Apache Log4j 是一款非常流行的开源的用于 Java 运行环境的日志�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/agent/manage/manage/</guid>
-      <description>功能介绍#简介#探针管理包括审核探针(INFINI Agent)、查看运行状态、分配任务等功能，是集中管理探针(INFINI Agent)的地方。去安装探针
-审核探针#进入菜单探针管理 &amp;gt; 实例管理 点击按钮 Discover Agent。 可以看到待审核列表。选中对应 Agent 并点击 Add Agents 完成审核。
-删除探针#进入菜单探针管理 &amp;gt; 实例管理，在列表中点击对应列的删除，确认之后，探针即被删除。
-任务设置#任务设置，是指下发/取消采集数据的任务给探针。探针在收到任务前，会一直处于等待状态。进入菜单探针管理 &amp;gt; 实例管理，在对应Agent列，点击Task Setting，配置任务然后点击保存。</description>
+      <description>功能介绍 #  简介 #  探针管理包括审核探针(INFINI Agent)、查看运行状态、分配任务等功能，是集中管理探针(INFINI Agent)的地方。 去安装探针
+审核探针 #  进入菜单探针管理 &amp;gt; 实例管理 点击按钮 Discover Agent。 可以看到待审核列表。选中对应 Agent 并点击 Add Agents 完成审核。
+删除探针 #  进入菜单探针管理 &amp;gt; 实例管理，在列表中点击对应列的删除，确认之后，探针即被删除。
+任务设置 #  任务设置，是指下发/取消采集数据的任务给探针。探针在收到任务前，会一直处于等待状态。进入菜单探针管理 &amp;gt; 实例管理，在对应Agent列，点击Task Setting，配置任务然后点击保存。</description>
     </item>
     
     <item>
@@ -82,13 +82,13 @@ Apache Log4j 是一款非常流行的开源的用于 Java 运行环境的日志�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/online_query_rewrite/</guid>
-      <description>在线查询修复的实现#在某些情况下，您可能会碰到业务代码生成的 QueryDSL 存在不合理的情况，一般做法是需要修改业务代码并发布上线， 如果上线新版本需要很长的时间，比如没有到投产窗口，或者封网，又或者需要和其他的代码提交一起上线，往往意味着需要大量的测试， 而生产环境的故障要立马解决，客户不能等啊，怎么办？
+      <description>在线查询修复的实现 #  在某些情况下，您可能会碰到业务代码生成的 QueryDSL 存在不合理的情况，一般做法是需要修改业务代码并发布上线， 如果上线新版本需要很长的时间，比如没有到投产窗口，或者封网，又或者需要和其他的代码提交一起上线，往往意味着需要大量的测试， 而生产环境的故障要立马解决，客户不能等啊，怎么办？
 别着急，您可以使用极限网关来对查询进行动态修复。
-举个例子#比如下面的这个查询：
-GET _search{&amp;quot;size&amp;quot;: 1000000, &amp;quot;explain&amp;quot;: true}参数 size 设置的太大了，刚开始没有发现问题，随着数据越来越多，返回的数据太多势必会造成性能的急剧下降， 另外参数 explain 的开启也会造成不必要的性能开销，一般只在开发调试的时候才会用到这个功能。
+举个例子 #  比如下面的这个查询：
+GET _search { &amp;quot;size&amp;quot;: 1000000 , &amp;quot;explain&amp;quot;: true } 参数 size 设置的太大了，刚开始没有发现问题，随着数据越来越多，返回的数据太多势必会造成性能的急剧下降， 另外参数 explain 的开启也会造成不必要的性能开销，一般只在开发调试的时候才会用到这个功能。
 通过在网关里面增加一个 request_body_json_set 过滤器，可以动态替换指定请求体 JSON PATH 的值，上面的例子对应的配置如下：
-flow:- name: rewrite_queryfilter:- request_body_json_set:path:- explain -&amp;gt; false- size -&amp;gt; 10- dump_request_body:- elasticsearch:elasticsearch: dev通过重新设置 explain 和 size 参数，现在我们查询发给 Elasticsearch 前会被改写成如下格式：
-{&amp;quot;size&amp;quot;: 10, &amp;quot;explain&amp;quot;: false}成功修复线上问题。</description>
+flow: - name: rewrite_query filter: - request_body_json_set: path: - explain -&amp;gt; false - size -&amp;gt; 10 - dump_request_body: - elasticsearch: elasticsearch: dev 通过重新设置 explain 和 size 参数，现在我们查询发给 Elasticsearch 前会被改写成如下格式：
+{ &amp;quot;size&amp;quot;: 10, &amp;quot;explain&amp;quot;: false } 成功修复线上问题。</description>
     </item>
     
     <item>
@@ -97,13 +97,13 @@ flow:- name: rewrite_queryfilter:- request_body_json_set:path:- explain -&a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/platform/monitoring/</guid>
-      <description>集群监控#简介#当注册的集群开启了监控之后，INFINI Console 会根据相应配置去目标集群定期采集数据， 包括集群、节点、索引层面的一些指标。然后在集群监控里面可以观测到这些指标，从而了解目标集群的运行状态。
-监控所需 Elasticsearch API 权限清单#_cluster/health，_cluster/stats，_cat/shards, /_nodes/&amp;lt;node_id&amp;gt;/stats _cat/indices, _stats, _cluster/state, _nodes, _alias, _cluster/settings
-开启集群监控#在集群注册或者修改集群配置的时候，可以看到如下界面
+      <description>集群监控 #  简介 #  当注册的集群开启了监控之后，INFINI Console 会根据相应配置去目标集群定期采集数据， 包括集群、节点、索引层面的一些指标。然后在集群监控里面可以观测到这些指标，从而了解目标集群的运行状态。
+监控所需 Elasticsearch API 权限清单 #  _cluster/health，_cluster/stats，_cat/shards, /_nodes/&amp;lt;node_id&amp;gt;/stats _cat/indices, _stats, _cluster/state, _nodes, _alias, _cluster/settings
+开启集群监控 #  在集群注册或者修改集群配置的时候，可以看到如下界面
 可以看到有一个 Monitored 的开关，当这个开关打开时，代表当前集群是开启监控的。 集群注册的时候，默认是开启监控的。监控配置里面包括集群健康指标、集群指标、节点指标和索引指标， 并且可以分别设置是否开启和采集时间间隔。
  以上是对单个集群的设置，在配置文件console.yaml中可以设置对所有集群的监控启停，默认情况下可以看到配置文件中有如下配置：
-metrics:enabled: truemajor_ip_pattern: &amp;quot;192.*&amp;quot;queue: metricselasticsearch:enabled: truecluster_stats: truenode_stats: trueindex_stats: true如果 metrics&amp;gt;enable 设置为 false, 那么所有的集群监控都是没有开启的； 如果 metrics&amp;gt;elasticsearch&amp;gt;cluster_stats&amp;gt;enabled 设置为 false，那么所有的 集群就不会采集集群层面的相关指标。
- 查看集群指标监控#开启监控之后，在 INFINI Console 左侧菜单平台管理下面的监控报表里可以查看集群的监控信息，如下：
+metrics: enabled: true major_ip_pattern: &amp;quot;192.*&amp;quot; queue: metrics elasticsearch: enabled: true cluster_stats: true node_stats: true index_stats: true 如果 metrics&amp;gt;enable 设置为 false, 那么所有的集群监控都是没有开启的； 如果 metrics&amp;gt;elasticsearch&amp;gt;cluster_stats&amp;gt;enabled 设置为 false，那么所有的 集群就不会采集集群层面的相关指标。
+ 查看集群指标监控 #  开启监控之后，在 INFINI Console 左侧菜单平台管理下面的监控报表里可以查看集群的监控信息，如下：
 点击高级 tab 页查看集群层面更多的指标；</description>
     </item>
     
@@ -113,10 +113,10 @@ metrics:enabled: truemajor_ip_pattern: &amp;quot;192.*&amp;quot;queue: metric
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/system/security/user/</guid>
-      <description>用户管理#简介#用户管理包括对用户的增删改查操作以及重置用户密码.
-创建用户# 用户名是必填的并且需要唯一，作为登录账号名. 昵称, 手机号, 邮箱都是可选的. 给用户分配一个或者多个角色. 用户标签是可选的，可用于给用户分组.  查询用户#输入关键字，点击搜索按钮查询用户
-更新用户#按需修改，点击保存按钮保存
-重置用户密码#输入新密码点击保存按钮重置密码</description>
+      <description>用户管理 #  简介 #  用户管理包括对用户的增删改查操作以及重置用户密码.
+创建用户 #   用户名是必填的并且需要唯一，作为登录账号名. 昵称, 手机号, 邮箱都是可选的. 给用户分配一个或者多个角色. 用户标签是可选的，可用于给用户分组.  查询用户 #  输入关键字，点击搜索按钮查询用户
+更新用户 #  按需修改，点击保存按钮保存
+重置用户密码 #  输入新密码点击保存按钮重置密码</description>
     </item>
     
     <item>
@@ -125,12 +125,12 @@ metrics:enabled: truemajor_ip_pattern: &amp;quot;192.*&amp;quot;queue: metric
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/agent/install/install/</guid>
-      <description>安装探针(INFINI Agent)# 探针(INFINI Agent) 是 INFINI Console 的子模块，负责数据抓取和 Elasticsearch 实例管理等任务，接受 Console 权限控制和统一的任务调度。 支持主流的操作系统和平台，程序包很小，没有任何额外的外部依赖。  安装前准备#安装并运行INFINI Console
-下载安装#根据您所在的操作系统和平台选择下面相应的下载地址：
-https://release.infinilabs.com/agent/
-容器部署#探针(INFINI Agent) 也支持 Docker 容器方式部署。
-了解更多配置#下载 探针(INFINI Agent) 安装包解压之后，打开agent.yml配置文件，我们可以看到以下配置：
-#存储 INFINI Agent 相关数据的 Elasticsearch 集群信息，版本 v7.3+#此处的 endpoint 需和 INFINI Console 的一致elasticsearch:- name: defaultenabled: truemonitored: falseendpoint: http://192.168.3.4:9200basic_auth:username: elasticpassword: ZBdkVQUUdF1Sir4X4BGB.</description>
+      <description>安装探针(INFINI Agent) #   探针(INFINI Agent) 是 INFINI Console 的子模块，负责数据抓取和 Elasticsearch 实例管理等任务，接受 Console 权限控制和统一的任务调度。 支持主流的操作系统和平台，程序包很小，没有任何额外的外部依赖。  安装前准备 #  安装并运行 INFINI Console
+下载安装 #  根据您所在的操作系统和平台选择下面相应的下载地址：
+ https://release.infinilabs.com/agent/
+容器部署 #  探针(INFINI Agent) 也支持 Docker 容器方式部署。
+了解更多  配置 #  下载 探针(INFINI Agent) 安装包解压之后，打开agent.yml配置文件，我们可以看到以下配置：
+#存储 INFINI Agent 相关数据的 Elasticsearch 集群信息，版本 v7.3+ #此处的 endpoint 需和 INFINI Console 的一致 elasticsearch: - name: default enabled: true monitored: false endpoint: http://192.168.3.4:9200 basic_auth: username: elastic password: ZBdkVQUUdF1Sir4X4BGB .</description>
     </item>
     
     <item>
@@ -139,13 +139,13 @@ metrics:enabled: truemajor_ip_pattern: &amp;quot;192.*&amp;quot;queue: metric
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/agent/install/docker/</guid>
-      <description>容器部署#探针(INFINI Agent) 支持容器方式部署。
-下载镜像#探针(INFINI Agent) 的镜像发布在 Docker 的官方仓库，地址如下：
-https://hub.docker.com/r/infinilabs/agent
+      <description>容器部署 #  探针(INFINI Agent) 支持容器方式部署。
+下载镜像 #  探针(INFINI Agent) 的镜像发布在 Docker 的官方仓库，地址如下：
+ https://hub.docker.com/r/infinilabs/agent
 使用下面的命令即可获取最新的容器镜像：
-docker pull infinilabs/agent:latest验证镜像#将镜像下载到本地之后，可以看到 探针(INFINI Agent) 的容器镜像非常小，只有不到 20MB，所以下载是非常快的。
-✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZEinfinilabs/agent latest c7bd9ad063d9 4 days ago 13.8MB创建配置#现在需要创建一个配置文件 agent.yml，来进行基本的配置，如下：
-api:enabled: truenetwork:binding: 0.0.0.0:8080metrics:enabled: truequeue: metricsnetwork:enabled: truesummary: truedetails: truememory:metrics:- swap- memorydisk:metrics:- ioqs- usagecpu:metrics:- idle- system- user- iowait- loadelasticsearch:enabled: trueagent_mode: truenode_stats: trueindex_stats: truecluster_stats: trueelasticsearch:- name: defaultenabled: trueendpoint: http://192.</description>
+docker pull infinilabs/agent:latest 验证镜像 #  将镜像下载到本地之后，可以看到 探针(INFINI Agent) 的容器镜像非常小，只有不到 20MB，所以下载是非常快的。
+✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZE infinilabs/agent latest c7bd9ad063d9 4 days ago 13.8MB 创建配置 #  现在需要创建一个配置文件 agent.yml，来进行基本的配置，如下：
+api: enabled: true network: binding: 0.0.0.0:8080 metrics: enabled: true queue: metrics network: enabled: true summary: true details: true memory: metrics: - swap - memory disk: metrics: - ioqs - usage cpu: metrics: - idle - system - user - iowait - load elasticsearch: enabled: true agent_mode: true node_stats: true index_stats: true cluster_stats: true elasticsearch: - name: default enabled: true endpoint: http://192.</description>
     </item>
     
     <item>
@@ -154,10 +154,10 @@ api:enabled: truenetwork:binding: 0.0.0.0:8080metrics:enabled: truequeue: 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/alerting/message/</guid>
-      <description>告警中心#简介#消息中心默认展示的是当前系统内正在发生的告警事件，方便管理人员快速预览系统的执行状态。
-事件消息列表#消息列表聚合了所有已触发的告警事件，如每个告警规则重复触发了多次告警消息，这里只会聚合显示一条，点击详情就可以去看更多的信息。
-消息详情#点击消息列表行列中的详情按钮可以查看当前告警事件消息的详细内容，包含事件消息的基本信息，事件触发周期内的时序曲线图，规则执行检测历史记录等，如下图所示：
-忽略告警消息#如认为告警事件不需要做处理或者不重要，可以进行忽略操作，忽略后告警消息将不默认展在消息列表中，不过可以通过状态筛选过滤进行查询。
+      <description>告警中心 #  简介 #  消息中心默认展示的是当前系统内正在发生的告警事件，方便管理人员快速预览系统的执行状态。
+事件消息列表 #  消息列表聚合了所有已触发的告警事件，如每个告警规则重复触发了多次告警消息，这里只会聚合显示一条，点击详情就可以去看更多的信息。
+消息详情 #  点击消息列表行列中的详情按钮可以查看当前告警事件消息的详细内容，包含事件消息的基本信息，事件触发周期内的时序曲线图，规则执行检测历史记录等，如下图所示：
+忽略告警消息 #  如认为告警事件不需要做处理或者不重要，可以进行忽略操作，忽略后告警消息将不默认展在消息列表中，不过可以通过状态筛选过滤进行查询。
 操作步骤：点击消息列表表格中的忽略按钮，进行二次确认，填写忽略原因，提交后执行忽略操作。</description>
     </item>
     
@@ -176,11 +176,11 @@ api:enabled: truenetwork:binding: 0.0.0.0:8080metrics:enabled: truequeue: 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/alerting/rule/</guid>
-      <description>告警规则#简介#告警规则包括数据源，指标定义，触发条件，消息通知四个部分的配置
-告警规则列表#在告警规则列表中可以查询已经添加的告警规则
-新建告警规则#在告警规则列表中点击新建按钮进入新建告警规则页面
-配置数据源# 选择集群（必选） 选择索引，支持输入索引 pattern （必填） 输入 elasticsearch query DSL 查询过滤条件（可选） 选择时间字段（必选） 选择统计周期（用于时间字段聚合，默认一分钟）  配置告警指标以及触发条件# 输入规则名称 按需添加分组的字段以及分组大小，可以添加多个，用于 terms 聚合 选择指标聚合字段以及统计类型，可以配置多个，当配置多个时必须配置公式用于计算最终的指标 配置告警触发条件 选择执行检查周期 输入告警事件标题（模版，被模版变量中的 title 引用，点击这里了解 模版语法 ） 输入告警事件消息（模版，被模版变量中的 message 引用，点击这里了解 模版语法 ）  配置消息通知# 配置通知渠道，可以重新配置，也可以通过添加按钮选择已经创建好的渠道作为模版快速填充，并支持添加多个 按需选择是否开启通知升级 选择沉默周期（通知消息发送频率） 配置通知发送时间段 点击保存按钮提交  更新告警规则#在告警规则列表中选择需要更新的告警规则点击编辑按钮进入更新告警规则页
-删除告警规则#点击告警规则列表表格中的删除按钮，进行二次确认，确认删除后执行删除操作。</description>
+      <description>告警规则 #  简介 #  告警规则包括数据源，指标定义，触发条件，消息通知四个部分的配置
+告警规则列表 #  在告警规则列表中可以查询已经添加的告警规则
+新建告警规则 #  在告警规则列表中点击新建按钮进入新建告警规则页面
+配置数据源 #   选择集群（必选） 选择索引，支持输入索引 pattern （必填） 输入 elasticsearch query DSL 查询过滤条件（可选） 选择时间字段（必选） 选择统计周期（用于时间字段聚合，默认一分钟）  配置告警指标以及触发条件 #   输入规则名称 按需添加分组的字段以及分组大小，可以添加多个，用于 terms 聚合 选择指标聚合字段以及统计类型，可以配置多个，当配置多个时必须配置公式用于计算最终的指标 配置告警触发条件 选择执行检查周期 输入告警事件标题（模版，被模版变量中的 title 引用，点击这里了解 模版语法 ） 输入告警事件消息（模版，被模版变量中的 message 引用，点击这里了解 模版语法 ）  配置消息通知 #   配置通知渠道，可以重新配置，也可以通过添加按钮选择已经创建好的渠道作为模版快速填充，并支持添加多个 按需选择是否开启通知升级 选择沉默周期（通知消息发送频率） 配置通知发送时间段 点击保存按钮提交  更新告警规则 #  在告警规则列表中选择需要更新的告警规则点击编辑按钮进入更新告警规则页
+删除告警规则 #  点击告警规则列表表格中的删除按钮，进行二次确认，确认删除后执行删除操作。</description>
     </item>
     
     <item>
@@ -189,13 +189,13 @@ api:enabled: truenetwork:binding: 0.0.0.0:8080metrics:enabled: truequeue: 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/tutorials/start_with_specify_user/</guid>
-      <description>如何指定内置账户名和密码启动 INFINI Console#准备# 下载并安装最新版 INFINI Console 开启 INFINI Console 安全功能  INFINI Console 内置账户#INFINI Console 在开启安全的情况下，内置了一个管理员账户。 在不指定账户名和密码的情况下，INFINI Console 默认情况下内置账户的用户名和密码都是 admin。
-指定账户名和密码启动 INFINI Console#INFINI Console 支持使用环境变量的方式指定账户名和密码启动，下面以 Macos 操作系统为例：
+      <description>如何指定内置账户名和密码启动 INFINI Console #  准备 #   下载并安装最新版 INFINI Console 开启 INFINI Console 安全功能  INFINI Console 内置账户 #  INFINI Console 在开启安全的情况下，内置了一个管理员账户。 在不指定账户名和密码的情况下，INFINI Console 默认情况下内置账户的用户名和密码都是 admin。
+指定账户名和密码启动 INFINI Console #  INFINI Console 支持使用环境变量的方式指定账户名和密码启动，下面以 Macos 操作系统为例：
 BOOTSTRAP_USERNAME=admin BOOTSTRAP_PASSWORD=123456 ./console-mac-amd64
-禁用内置账户#由于使用内置账户，可能存在安全隐患，例如密码设置太简单等。因此当我们使用内置账户 登录 INFINI Console 创建新的管理员账号之后，可以使用新管理员账号登录，然后在 系统管理&amp;gt;安全设置 里面禁用内置账户。禁用之后就无法使用内置账户登录 INFINI Console了。
-创建管理员账户#INFINI Console 内置了一个管理员角色 Administrator，创建新用户的时候赋予这个角色，新用户就拥有管理员权限了。
+禁用内置账户 #  由于使用内置账户，可能存在安全隐患，例如密码设置太简单等。因此当我们使用内置账户 登录 INFINI Console 创建新的管理员账号之后，可以使用新管理员账号登录，然后在 系统管理&amp;gt;安全设置 里面禁用内置账户。禁用之后就无法使用内置账户登录 INFINI Console了。
+创建管理员账户 #  INFINI Console 内置了一个管理员角色 Administrator，创建新用户的时候赋予这个角色，新用户就拥有管理员权限了。
 点击 INFINI Console 左侧菜单 系统管理》安全设置，选择用户 Tab 页进入账户管理页。然后点击新建按钮，进入创建用户页面
- 输入用户名 root 角色选择 Administrator 点击保存按钮提交 将保存成功后的初始密码保存下来备用  使用新建的管理员禁用内置用户#使用上一步创建好的 root 用户和密码登录 INFINI Console, 然后在 系统管理&amp;gt;安全设置 里面打开禁用内置账户开关，看到如下界面时表示操作成功。</description>
+ 输入用户名 root 角色选择 Administrator 点击保存按钮提交 将保存成功后的初始密码保存下来备用  使用新建的管理员禁用内置用户 #  使用上一步创建好的 root 用户和密码登录 INFINI Console, 然后在 系统管理&amp;gt;安全设置 里面打开禁用内置账户开关，看到如下界面时表示操作成功。</description>
     </item>
     
     <item>
@@ -204,14 +204,14 @@ BOOTSTRAP_USERNAME=admin BOOTSTRAP_PASSWORD=123456 ./console-mac-amd64
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/getting-started/install/</guid>
-      <description>安装网关#极限网关支持主流的操作系统和平台，程序包很小，没有任何额外的外部依赖，安装起来应该是很快的 ：）
-安装演示#下载安装#根据您所在的操作系统和平台选择下面相应的下载地址：
-https://release.infinilabs.com/
-容器部署#极限网关也支持 Docker 容器方式部署。
-了解更多验证安装#极限网关下载解压之后，我们可以执行这个命令来验证安装包是否有效，如下：
-✗ ./bin/gateway -vgateway 1.0.0_SNAPSHOT 2021-01-03 22:45:28 6a54bb2如果能够正常看到上面的版本信息，说明网关程序本身一切正常。
-启动网关#以管理员身份直接运行网关程序即可启动极限网关了，如下：
-➜ sudo ./bin/gateway___ _ _____ __ __ __ _ / _ \ /_\ /__ \/__\/ / /\ \ \/_\ /\_/\/ /_\///_\\ / /\/_\ \ \/ \/ //_\\\_ _// /_\\/ _ \/ / //__ \ /\ / _ \/ \ \____/\_/ \_/\/ \__/ \/ \/\_/ \_/\_/ [GATEWAY] A light-weight, powerful and high-performance elasticsearch gateway.</description>
+      <description>安装网关 #  极限网关支持主流的操作系统和平台，程序包很小，没有任何额外的外部依赖，安装起来应该是很快的 ：）
+安装演示 #    下载安装 #  根据您所在的操作系统和平台选择下面相应的下载地址：
+ https://release.infinilabs.com/
+容器部署 #  极限网关也支持 Docker 容器方式部署。
+了解更多  验证安装 #  极限网关下载解压之后，我们可以执行这个命令来验证安装包是否有效，如下：
+✗ ./bin/gateway -v gateway 1.0.0_SNAPSHOT 2021-01-03 22:45:28 6a54bb2 如果能够正常看到上面的版本信息，说明网关程序本身一切正常。
+启动网关 #  以管理员身份直接运行网关程序即可启动极限网关了，如下：
+➜ sudo ./bin/gateway ___ _ _____ __ __ __ _ / _ \ /_\ /__ \/__\/ / /\ \ \/_\ /\_/\ / /_\///_\\ / /\/_\ \ \/ \/ //_\\\_ _/ / /_\\/ _ \/ / //__ \ /\ / _ \/ \ \____/\_/ \_/\/ \__/ \/ \/\_/ \_/\_/ [GATEWAY] A light-weight, powerful and high-performance elasticsearch gateway.</description>
     </item>
     
     <item>
@@ -220,12 +220,12 @@ BOOTSTRAP_USERNAME=admin BOOTSTRAP_PASSWORD=123456 ./console-mac-amd64
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/entry/</guid>
-      <description>服务入口#定义入口#每一个网关都至少要对外暴露一个服务的入口，用来接收业务的操作请求，这个在极限网关里面叫做 entry，通过下面的参数即可定义：
-entry:- name: es_gatewayenabled: truerouter: defaultnetwork:binding: 0.0.0.0:8000reuse_port: truetls:enabled: false通过参数 network.binding 可以指定服务监听的 IP 和地址，极限网关支持端口重用，也就是多个极限网关共享一个相同的 IP 和端口，这样可以充分利用服务器的资源， 也能做到不同网关进程的动态配置修改（通过开启多个进程，修改配置之后，依次重启各个进程）而不会中断客户端的正常请求。
+      <description>服务入口 #  定义入口 #  每一个网关都至少要对外暴露一个服务的入口，用来接收业务的操作请求，这个在极限网关里面叫做 entry，通过下面的参数即可定义：
+entry: - name: es_gateway enabled: true router: default network: binding: 0.0.0.0:8000 reuse_port: true tls: enabled: false 通过参数 network.binding 可以指定服务监听的 IP 和地址，极限网关支持端口重用，也就是多个极限网关共享一个相同的 IP 和端口，这样可以充分利用服务器的资源， 也能做到不同网关进程的动态配置修改（通过开启多个进程，修改配置之后，依次重启各个进程）而不会中断客户端的正常请求。
 每个发送到 entry 的请求都会通过 router 来进行流量的路由处理，router 在单独的地方定义规则，以方便在不同的 entry 间复用，entry 只需要通过 router 参数指定要使用的 router 规则即可，这里定义的是 default。
-TLS 配置#极限网关支持无缝开启 TLS 传输加密，只需要将 tls.enabled 设置成 true，即可直接切换为 HTTPS 的通信模式，极限网关能自动生成自签证书。
+TLS 配置 #  极限网关支持无缝开启 TLS 传输加密，只需要将 tls.enabled 设置成 true，即可直接切换为 HTTPS 的通信模式，极限网关能自动生成自签证书。
 极限网关也支持自定义证书路径，配置方式如下：
-entry:- name: es_gatewayenabled: truerouter: defaultnetwork:binding: 0.0.0.0:8000reuse_port: truetls:enabled: truecert_file: /etc/ssl.</description>
+entry: - name: es_gateway enabled: true router: default network: binding: 0.0.0.0:8000 reuse_port: true tls: enabled: true cert_file: /etc/ssl.</description>
     </item>
     
     <item>
@@ -234,11 +234,11 @@ entry:- name: es_gatewayenabled: truerouter: defaultnetwork:binding: 0.0.0.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/request-logging/</guid>
-      <description>查询请求流量日志分析#极限网关能够跟踪记录经过网关的所有请求，可用来分析发送给 Elasticsearch 的请求情况，用于分析请求性能和了解业务运行情况。
-设置网关路由#如果需要开启极限网关的查询日志分析，需要在路由上面配置 tracing_flow 参数，设置一个流程来记录请求日志。
-router:- name: defaulttracing_flow: request_loggingdefault_flow: cache_first上面的配置定义了一个名为 default 的路由，默认的请求流程为 cache_first，用于日志记录的流程为 request_logging。
-定义日志流程#日志处理流程配置 request_logging 的定义如下：
-flow:- name: request_loggingfilter:- request_path_filter:must_not: # any match will be filteredprefix:- /favicon.ico- request_header_filter:exclude:- app: kibana # in order to filter kibana&#39;s access log, config `elasticsearch.customHeaders: { &amp;quot;app&amp;quot;: &amp;quot;kibana&amp;quot; }` to your kibana&#39;s config `/config/kibana.</description>
+      <description>查询请求流量日志分析 #  极限网关能够跟踪记录经过网关的所有请求，可用来分析发送给 Elasticsearch 的请求情况，用于分析请求性能和了解业务运行情况。
+设置网关路由 #  如果需要开启极限网关的查询日志分析，需要在路由上面配置 tracing_flow 参数，设置一个流程来记录请求日志。
+router: - name: default tracing_flow: request_logging default_flow: cache_first 上面的配置定义了一个名为 default 的路由，默认的请求流程为 cache_first，用于日志记录的流程为 request_logging。
+定义日志流程 #  日志处理流程配置 request_logging 的定义如下：
+flow: - name: request_logging filter: - request_path_filter: must_not: # any match will be filtered prefix: - /favicon.ico - request_header_filter: exclude: - app: kibana # in order to filter kibana&#39;s access log, config `elasticsearch.customHeaders: { &amp;quot;app&amp;quot;: &amp;quot;kibana&amp;quot; }` to your kibana&#39;s config `/config/kibana.</description>
     </item>
     
     <item>
@@ -247,10 +247,10 @@ flow:- name: request_loggingfilter:- request_path_filter:must_not: # any mat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/modules/floating_ip/</guid>
-      <description>浮动 IP#极限网关内置浮动 IP 功能，可以实现双机热备、故障转移的能力，极限网关天然提供四层网络流量的高可用，无需再额外考虑增加额外的软件和设备来保障因为停机、网络故障等造成的代理服务中断。
+      <description>浮动 IP #  极限网关内置浮动 IP 功能，可以实现双机热备、故障转移的能力，极限网关天然提供四层网络流量的高可用，无需再额外考虑增加额外的软件和设备来保障因为停机、网络故障等造成的代理服务中断。
 注意:
- 该特性目前仅支持 Mac OS、Linux 操作系统。且需要网关以 root 身份运行。 此特性依赖目标系统的 ping 和 ifconfig 命令，请确保相关包默认已安装。 一组启用浮动 IP 的网关所在网卡地址应该在一个子网，且内网广播互通（网关实际 IP 和浮动 IP 要求只最后一位地址不一样，如：192.168.3.x）。  功能演示# Youtube Bilibili  什么是浮动 IP#极限网关基于浮动 IP 来实现高可用，浮动 IP 也叫虚拟 IP 或者动态 IP，我们知道每台服务器之间都必须要有 IP 才能进行通信，一台服务器的 IP 一般是固定的并且一般要提前分配好， 如果这台服务器因为故障挂了的话，这个 IP 以及上面部署的业务也就不能访问了。 而一个浮动 IP 通常是一个公开的、可以路由到的 IP 地址，并且不会自动分配给实体设备。项目管理者临时分配这个动态IP到一个或者多个实体设备。 这个实体设备有自动分配的静态 IP 用于内部网间设备的通讯。这个内部网使用私有地址，这些私有地址不能被路由到。通过浮动 IP 内网实体的服务才能被外网识别和访问。
-为什么需要浮动 IP#在一个配置好浮动 IP 的典型切换场景是，当出现当前绑定浮动 IP 的机器出现故障的时候，浮动 IP 地址会飘到网络中的另一台设备。新设备无延迟的接替当掉的设备，并对外提供服务。 从而实现网络服务的高可用，对应业务的消费方来说，只需要指定浮动 IP 就可以了。 浮动 IP 非常有用，在某些特定的场景，比如客户端或者 SDK 只允许配置一个服务 IP 地址，所以这个 IP 一定要是高可用的，而极限网关正好解决了这个问题。 使用两个独立的极限网关服务器，最好部署在独立的物理服务器上，两台极限网关构成一组双机热备的状态，任意网关出现故障都能保障前端业务的正常访问。</description>
+ 该特性目前仅支持 Mac OS、Linux 操作系统。且需要网关以 root 身份运行。 此特性依赖目标系统的 ping 和 ifconfig 命令，请确保相关包默认已安装。 一组启用浮动 IP 的网关所在网卡地址应该在一个子网，且内网广播互通（网关实际 IP 和浮动 IP 要求只最后一位地址不一样，如：192.168.3.x）。   功能演示 #    Youtube  Bilibili  什么是浮动 IP #  极限网关基于浮动 IP 来实现高可用，浮动 IP 也叫虚拟 IP 或者动态 IP，我们知道每台服务器之间都必须要有 IP 才能进行通信，一台服务器的 IP 一般是固定的并且一般要提前分配好， 如果这台服务器因为故障挂了的话，这个 IP 以及上面部署的业务也就不能访问了。 而一个浮动 IP 通常是一个公开的、可以路由到的 IP 地址，并且不会自动分配给实体设备。项目管理者临时分配这个动态IP到一个或者多个实体设备。 这个实体设备有自动分配的静态 IP 用于内部网间设备的通讯。这个内部网使用私有地址，这些私有地址不能被路由到。通过浮动 IP 内网实体的服务才能被外网识别和访问。
+为什么需要浮动 IP #  在一个配置好浮动 IP 的典型切换场景是，当出现当前绑定浮动 IP 的机器出现故障的时候，浮动 IP 地址会飘到网络中的另一台设备。新设备无延迟的接替当掉的设备，并对外提供服务。 从而实现网络服务的高可用，对应业务的消费方来说，只需要指定浮动 IP 就可以了。 浮动 IP 非常有用，在某些特定的场景，比如客户端或者 SDK 只允许配置一个服务 IP 地址，所以这个 IP 一定要是高可用的，而极限网关正好解决了这个问题。 使用两个独立的极限网关服务器，最好部署在独立的物理服务器上，两台极限网关构成一组双机热备的状态，任意网关出现故障都能保障前端业务的正常访问。</description>
     </item>
     
     <item>
@@ -259,9 +259,9 @@ flow:- name: request_loggingfilter:- request_path_filter:must_not: # any mat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/data/indices/</guid>
-      <description>索引管理#索引列表#索引列表包括对索引的增删改查操作。
-新建索引#输入新索引名称及索引设置即可完成添加。
-索引详情#可以查看索引健康状态、分片数、文档数、存储大小等详情，以及Mappings、Edit settings的查看和修改。</description>
+      <description>索引管理 #  索引列表 #  索引列表包括对索引的增删改查操作。
+新建索引 #  输入新索引名称及索引设置即可完成添加。
+索引详情 #  可以查看索引健康状态、分片数、文档数、存储大小等详情，以及Mappings、Edit settings的查看和修改。</description>
     </item>
     
     <item>
@@ -270,9 +270,9 @@ flow:- name: request_loggingfilter:- request_path_filter:must_not: # any mat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/getting-started/ilm/</guid>
-      <description>索引设置#INFINI Console 的所有监控指标都保存在 Elasticsearch 索引里面，随着时间的推移数据会越来越多，我们可以配置索引的生命周期来适配我们的监控存储需求。
-配置默认索引模板#然后就可以配置 Elasticsearch 集群的索引模板了，在 系统监控 集群上执行下面的命令创建索引的模板。
-展开查看 Elasticsearch 的模板定义...PUT _template/.infini{&amp;quot;order&amp;quot;: 0,&amp;quot;index_patterns&amp;quot;: [&amp;quot;.infini_*&amp;quot;],&amp;quot;settings&amp;quot;: {&amp;quot;index&amp;quot;: {&amp;quot;max_result_window&amp;quot;: &amp;quot;10000000&amp;quot;,&amp;quot;mapping&amp;quot;: {&amp;quot;total_fields&amp;quot;: {&amp;quot;limit&amp;quot;: &amp;quot;20000&amp;quot;}},&amp;quot;analysis&amp;quot;: {&amp;quot;analyzer&amp;quot;: {&amp;quot;suggest_text_search&amp;quot;: {&amp;quot;filter&amp;quot;: [&amp;quot;word_delimiter&amp;quot;],&amp;quot;tokenizer&amp;quot;: &amp;quot;classic&amp;quot;}}},&amp;quot;number_of_shards&amp;quot;: &amp;quot;1&amp;quot;}},&amp;quot;mappings&amp;quot;: {&amp;quot;dynamic_templates&amp;quot;: [{&amp;quot;strings&amp;quot;: {&amp;quot;mapping&amp;quot;: {&amp;quot;ignore_above&amp;quot;: 256,&amp;quot;type&amp;quot;: &amp;quot;keyword&amp;quot;},&amp;quot;match_mapping_type&amp;quot;: &amp;quot;string&amp;quot;}}]},&amp;quot;aliases&amp;quot;: {}}给索引 .</description>
+      <description>索引设置 #  INFINI Console 的所有监控指标都保存在 Elasticsearch 索引里面，随着时间的推移数据会越来越多，我们可以配置索引的生命周期来适配我们的监控存储需求。
+配置默认索引模板 #  然后就可以配置 Elasticsearch 集群的索引模板了，在 系统监控 集群上执行下面的命令创建索引的模板。
+ 展开查看 Elasticsearch 的模板定义 ...  PUT _template/.infini { &amp;quot;order&amp;quot;: 0, &amp;quot;index_patterns&amp;quot;: [ &amp;quot;.infini_*&amp;quot; ], &amp;quot;settings&amp;quot;: { &amp;quot;index&amp;quot;: { &amp;quot;max_result_window&amp;quot;: &amp;quot;10000000&amp;quot;, &amp;quot;mapping&amp;quot;: { &amp;quot;total_fields&amp;quot;: { &amp;quot;limit&amp;quot;: &amp;quot;20000&amp;quot; } }, &amp;quot;analysis&amp;quot;: { &amp;quot;analyzer&amp;quot;: { &amp;quot;suggest_text_search&amp;quot;: { &amp;quot;filter&amp;quot;: [ &amp;quot;word_delimiter&amp;quot; ], &amp;quot;tokenizer&amp;quot;: &amp;quot;classic&amp;quot; } } }, &amp;quot;number_of_shards&amp;quot;: &amp;quot;1&amp;quot; } }, &amp;quot;mappings&amp;quot;: { &amp;quot;dynamic_templates&amp;quot;: [ { &amp;quot;strings&amp;quot;: { &amp;quot;mapping&amp;quot;: { &amp;quot;ignore_above&amp;quot;: 256, &amp;quot;type&amp;quot;: &amp;quot;keyword&amp;quot; }, &amp;quot;match_mapping_type&amp;quot;: &amp;quot;string&amp;quot; } } ] }, &amp;quot;aliases&amp;quot;: {} }     给索引 .</description>
     </item>
     
     <item>
@@ -281,8 +281,8 @@ flow:- name: request_loggingfilter:- request_path_filter:must_not: # any mat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/data/alias/</guid>
-      <description>别名管理#别名列表#别名列表包括对别名的增删改查操作。
-新建别名# 别名：输入别名名称 索引：选择别名对应的目标索引，支持使用 (*) 来绑定多个索引。 是否为写索引：指定选择的索引是否可写，如果别名只绑定一个索引，则默认该索引可写；如果是通过(*) 绑定多个索引，最需要指定其中一个索引为可写。  别名与索引关系列表#点开别名列表行首的+号按钮，会展开显示该别名对应绑定的索引列表，同时可以对索引进行关系绑定更新设置和删除。</description>
+      <description>别名管理 #  别名列表 #  别名列表包括对别名的增删改查操作。
+新建别名 #   别名：输入别名名称 索引：选择别名对应的目标索引，支持使用 (*) 来绑定多个索引。 是否为写索引：指定选择的索引是否可写，如果别名只绑定一个索引，则默认该索引可写；如果是通过(*) 绑定多个索引，最需要指定其中一个索引为可写。  别名与索引关系列表 #  点开别名列表行首的+号按钮，会展开显示该别名对应绑定的索引列表，同时可以对索引进行关系绑定更新设置和删除。</description>
     </item>
     
     <item>
@@ -291,12 +291,12 @@ flow:- name: request_loggingfilter:- request_path_filter:must_not: # any mat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/alerting/channel/</guid>
-      <description>告警渠道#简介#告警渠道用于当告警规则触发之后，发送通知消息的通道配置，目前支持 webhook。
-渠道列表#在渠道列表中可以查询已经添加的渠道
-新建告警渠道#在渠道列表页面中点击新建按钮进入新建告警渠道页面
- 输入渠道名称（必填） 选择渠道类型（当前仅支持 webhook ） 输入 webhook 地址 选择 HTTP 请求的方法，默认 POST 按需添加 HTTP 请求头 配置 webhook 请求体 点击保存按钮提交  更新渠道配置#在渠道列表中选择需要更新的渠道点击编辑按钮进入更新渠道配置页
+      <description>告警渠道 #  简介 #  告警渠道用于当告警规则触发之后，发送通知消息的通道配置，目前支持 webhook。
+渠道列表 #  在渠道列表中可以查询已经添加的渠道
+新建告警渠道 #  在渠道列表页面中点击新建按钮进入新建告警渠道页面
+ 输入渠道名称（必填） 选择渠道类型（当前仅支持 webhook ） 输入 webhook 地址 选择 HTTP 请求的方法，默认 POST 按需添加 HTTP 请求头 配置 webhook 请求体 点击保存按钮提交  更新渠道配置 #  在渠道列表中选择需要更新的渠道点击编辑按钮进入更新渠道配置页
 操作参考新建告警渠道
-删除告警渠道#点击告警渠道列表表格中的删除按钮，进行二次确认，确认删除后执行删除操作。</description>
+删除告警渠道 #  点击告警渠道列表表格中的删除按钮，进行二次确认，确认删除后执行删除操作。</description>
     </item>
     
     <item>
@@ -305,11 +305,11 @@ flow:- name: request_loggingfilter:- request_path_filter:must_not: # any mat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/tutorials/create_readonly_account/</guid>
-      <description>如何轻松创建一个 Elasticsearch “游客” 用户#简介#有些情况下，我们想给客户分享一下某些功能或者数据，但是又不希望数据被修改。 这个时候我们就需要创建一个“游客” 用户了。本文简单地介绍了如何使用 INFINI Console 创建&amp;quot;游客&amp;quot;用户。
-准备# 下载并安装最新版 INFINI Console 开启 INFINI Console 安全功能  创建角色#点击 INFINI Console 左侧菜单 系统管理》安全设置，选择角色 Tab 页进入角色管理页。
-新建平台角色 readonly#点击新建按钮，选择平台角色，新建一个平台角色 readonly，操作步骤如下：
+      <description>如何轻松创建一个 Elasticsearch “游客” 用户 #  简介 #  有些情况下，我们想给客户分享一下某些功能或者数据，但是又不希望数据被修改。 这个时候我们就需要创建一个“游客” 用户了。本文简单地介绍了如何使用 INFINI Console 创建&amp;quot;游客&amp;quot;用户。
+准备 #   下载并安装最新版 INFINI Console 开启 INFINI Console 安全功能  创建角色 #  点击 INFINI Console 左侧菜单 系统管理》安全设置，选择角色 Tab 页进入角色管理页。
+新建平台角色 readonly #  点击新建按钮，选择平台角色，新建一个平台角色 readonly，操作步骤如下：
  输入角色名称 readonly 展开所有的功能权限 除了系统设置下面的安全功能，其他所有的功能都选择 Read 权限。 系统设置下面的安全功能 设置为 None 权限。 点击保存按钮提交   选择某个功能的 All 权限代表拥有这个功能的读和写的操作权限， Read 代表只拥有读的权限， None 代表没有该功能权限（用户登录之后菜单中没有该功能）
- 新建数据角色 es-v7171#点击新建按钮，选择数据角色，新建一个数据角色 es-v7171，操作步骤如下：</description>
+ 新建数据角色 es-v7171 #  点击新建按钮，选择数据角色，新建一个数据角色 es-v7171，操作步骤如下：</description>
     </item>
     
     <item>
@@ -318,16 +318,16 @@ flow:- name: request_loggingfilter:- request_path_filter:must_not: # any mat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/migration/migration/</guid>
-      <description>数据迁移#创建迁移任务#点击 INFINI Console 中左侧菜单 容灾备份》数据迁移，然后点击新建按钮创建迁移任务，如下图所示：
-配置迁移集群#在源集群列表中选择集群 es-v5616, 在目标集群列表中选择集群 es-v7140
-配置迁移索引#点击选择迁移索引按钮, 如下图：
+      <description>数据迁移 #  创建迁移任务 #  点击 INFINI Console 中左侧菜单 容灾备份》数据迁移，然后点击新建按钮创建迁移任务，如下图所示：
+配置迁移集群 #  在源集群列表中选择集群 es-v5616, 在目标集群列表中选择集群 es-v7140
+配置迁移索引 #  点击选择迁移索引按钮, 如下图：
 这里我们选择了两个索引 test-10 和 test-15 ,然后点击确认
  选择索引的时候请确认目标集群相应索引是否创建好 mapping, setting 等元数据信息
  表格右方可以设置目标索引名称和文档 type，按需修改即可，这里我们将索引 test-10 重命名为 test-10-x, 将索引 test-15 重命名为 test-15-x，文档类型都重命名为 _doc。 选择完索引之后，点击下一步，进行迁移任务的数据范围设置和分区设置，如下图：
-配置数据范围#如果需要过滤数据迁移，可以进行数据范围的设置，这里我们进行全量的数据迁移，就不设置了
-配置数据分区#如果一个索引数据量特别大，可以进行数据分区的设置。数据分区根据设置的字段，以及分区步长将数据拆成多段，系统最终会将一个分段的数据作为一个子任务去运行，迁移数据， 这样的话即使，一个分段迁移过程出现异常，只需要重跑这个子任务。
+配置数据范围 #  如果需要过滤数据迁移，可以进行数据范围的设置，这里我们进行全量的数据迁移，就不设置了
+配置数据分区 #  如果一个索引数据量特别大，可以进行数据分区的设置。数据分区根据设置的字段，以及分区步长将数据拆成多段，系统最终会将一个分段的数据作为一个子任务去运行，迁移数据， 这样的话即使，一个分段迁移过程出现异常，只需要重跑这个子任务。
 数据分区设置目前支持按照日期类型字段（date）, 和数字类型 (number) 拆分分区，如上图所示，我们选择日期类型字段 now_widh_format 进行拆分分区，分区步长设置为 5分钟(5m), 然后点击预览按钮，可以看到根据设置拆分可以得到 8 个分区（文档数为0的分区最终不会生成子任务）。 根据预览信息确认分区设置无误之后，点击保存关闭分区设置并保存，然后点击下一步进行运行设置。
-运行设置#一般情况下使用默认设置，然后执行节点选择网关实例 Dynamo，然后点击创建任务。</description>
+运行设置 #  一般情况下使用默认设置，然后执行节点选择网关实例 Dynamo，然后点击创建任务。</description>
     </item>
     
     <item>
@@ -336,9 +336,9 @@ flow:- name: request_loggingfilter:- request_path_filter:must_not: # any mat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/tutorials/role_with_different_rights/</guid>
-      <description>如何给不同 INFINI Console 账户分配不同 Elasticsearch 集群访问权限#简介#本文将介绍使用 INFINI Console 给两个不同账户分配两个不同的 Elasticsearch 集群管理权限
-准备# 下载并安装最新版 INFINI Console 开启 INFINI Console 安全功能 注册至少两个 Elasticsearch 集群到 INFINI Console  创建角色#点击 INFINI Console 左侧菜单 系统管理》安全设置，选择角色 Tab 页进入角色管理页。
-新建平台角色 platform_role#点击新建按钮，选择平台角色，新建一个平台角色 platform_role，操作步骤如下：
+      <description>如何给不同 INFINI Console 账户分配不同 Elasticsearch 集群访问权限 #  简介 #  本文将介绍使用 INFINI Console 给两个不同账户分配两个不同的 Elasticsearch 集群管理权限
+准备 #   下载并安装最新版 INFINI Console 开启 INFINI Console 安全功能 注册至少两个 Elasticsearch 集群到 INFINI Console  创建角色 #  点击 INFINI Console 左侧菜单 系统管理》安全设置，选择角色 Tab 页进入角色管理页。
+新建平台角色 platform_role #  点击新建按钮，选择平台角色，新建一个平台角色 platform_role，操作步骤如下：
  输入角色名称 platform_role 展开所有的功能权限 除了系统设置下面的安全功能，其他所有的功能都选择 All 权限。 系统设置下面的安全功能 设置为 None 权限。 点击保存按钮提交   选择某个功能的 All 权限代表拥有这个功能的读和写的操作权限， Read 代表只拥有读的权限， None 代表没有该功能权限（用户登录之后菜单中没有该功能）</description>
     </item>
     
@@ -348,10 +348,10 @@ flow:- name: request_loggingfilter:- request_path_filter:must_not: # any mat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/tutorials/role_with_index_limit/</guid>
-      <description>如何给 INFINI Console 账户分配 Elasticsearch 索引级别权限#简介#本文将介绍使用 INFINI Console 限定某个账户只有 Elasticsearch 集群里面某些索引的管理权限
-准备# 下载并安装最新版 INFINI Console 开启 INFINI Console 安全功能 注册至少两个 Elasticsearch 集群到 INFINI Console  创建角色#点击 INFINI Console 左侧菜单 系统管理》安全设置，选择角色 Tab 页进入角色管理页。
-新建平台角色 platform_role#点击新建按钮，选择平台角色，新建一个平台角色 platform_role
-新建数据角色 test_index_only#点击新建按钮，选择数据角色，新建一个数据角色 test_index_only, 然后做如下配置：
+      <description>如何给 INFINI Console 账户分配 Elasticsearch 索引级别权限 #  简介 #  本文将介绍使用 INFINI Console 限定某个账户只有 Elasticsearch 集群里面某些索引的管理权限
+准备 #   下载并安装最新版 INFINI Console 开启 INFINI Console 安全功能 注册至少两个 Elasticsearch 集群到 INFINI Console  创建角色 #  点击 INFINI Console 左侧菜单 系统管理》安全设置，选择角色 Tab 页进入角色管理页。
+新建平台角色 platform_role #  点击新建按钮，选择平台角色，新建一个平台角色 platform_role
+新建数据角色 test_index_only #  点击新建按钮，选择数据角色，新建一个数据角色 test_index_only, 然后做如下配置：
  将集群只选择 es-v7140 （限制该角色只有 Elasticsearch 集群 es-v7140 的访问权限 ） 设置索引权限 索引只输入索引 pattern test* （限制该角色只有索引名称匹配 test* 的索引访问权限）  配置完成之后点击保存按钮提交。</description>
     </item>
     
@@ -361,15 +361,15 @@ flow:- name: request_loggingfilter:- request_path_filter:must_not: # any mat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/user-cases/stories/a_cross_region_cluster_access_locality/</guid>
-      <description>跨云集群的就近本地访问#业务需求#作业帮为了确保某个业务 Elasticsearch 集群的高可用，在百度云和华为云上面采取了双云部署，即将单个 Elasticsearch 集群跨云进行部署，并且要求业务请求优先访问本地云。
-Elasticsearch 单集群双云实现#Elasticsearch 集群采用 Master 与 Data 节点分离的架构。 目前主力云放 2 个 Master，另外一个云放一个 Master。 主要考虑就是基础设施故障中，专线故障问题是大多数，某个云厂商整体挂的情况基本没有。 所以设置了主力云，当专线故障时，主力云的 Elasticsearch 是可以读写的，业务把流量切到主力云就行了。
+      <description>跨云集群的就近本地访问 #  业务需求 #  作业帮为了确保某个业务 Elasticsearch 集群的高可用，在百度云和华为云上面采取了双云部署，即将单个 Elasticsearch 集群跨云进行部署，并且要求业务请求优先访问本地云。
+Elasticsearch 单集群双云实现 #  Elasticsearch 集群采用 Master 与 Data 节点分离的架构。 目前主力云放 2 个 Master，另外一个云放一个 Master。 主要考虑就是基础设施故障中，专线故障问题是大多数，某个云厂商整体挂的情况基本没有。 所以设置了主力云，当专线故障时，主力云的 Elasticsearch 是可以读写的，业务把流量切到主力云就行了。
 具体配置方式如下。
 首先，在 Master 节点上设置：
-cluster.routing.allocation.awareness.attributes: zone_idcluster.routing.allocation.awareness.force.zone_id.values: zone_baidu,zone_huawei然后分别在百度云上数据节点上设置：
-node.attr.zone_id: zone_baidu和华为云上数据节点上设置：
-node.attr.zone_id: zone_huawei创建索引采用 1 副本，可以保证百度云与华为云上都有一份相同的数据。
+cluster.routing.allocation.awareness.attributes: zone_id cluster.routing.allocation.awareness.force.zone_id.values: zone_baidu,zone_huawei 然后分别在百度云上数据节点上设置：
+node.attr.zone_id: zone_baidu 和华为云上数据节点上设置：
+node.attr.zone_id: zone_huawei 创建索引采用 1 副本，可以保证百度云与华为云上都有一份相同的数据。
 业务访问方式如下图：
- 百度云业务 -&amp;gt; 百度 lb -&amp;gt; INFINI Gateway (百度) -&amp;gt; Elasticsearch （百度云 data 节点） 华为云业务 -&amp;gt; 华为 lb -&amp;gt; INFINI Gateway (华为) -&amp;gt; Elasticsearch （华为云 data 节点）  极限网关配置#Elasticsearch 支持一个 Preference 参数来设置请求的优先访问，通过在两个云内部的极限网关分别设置各自请求默认的 Preference 参数，让各个云内部的请求优先发往本云内的数据节点，即可实现请求的就近访问。</description>
+ 百度云业务 -&amp;gt; 百度 lb -&amp;gt; INFINI Gateway (百度) -&amp;gt; Elasticsearch （百度云 data 节点） 华为云业务 -&amp;gt; 华为 lb -&amp;gt; INFINI Gateway (华为) -&amp;gt; Elasticsearch （华为云 data 节点）  极限网关配置 #  Elasticsearch 支持一个 Preference 参数来设置请求的优先访问，通过在两个云内部的极限网关分别设置各自请求默认的 Preference 参数，让各个云内部的请求优先发往本云内的数据节点，即可实现请求的就近访问。</description>
     </item>
     
     <item>
@@ -378,10 +378,10 @@ node.attr.zone_id: zone_huawei创建索引采用 1 副本，可以保证百度�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/data/view/</guid>
-      <description>数据视图#视图列表#创建和管理数据视图可以帮助您更好地从 Elasticsearch 获取数据。
-创建视图#步骤 1 定义数据视图# 输入数据视图名称 匹配规则：匹配相应索引，也可以使用 (*) 来匹配多个索引。  步骤 2 配置#  为数据视图索引选择时间字段作为时间过滤
+      <description>数据视图 #  视图列表 #  创建和管理数据视图可以帮助您更好地从 Elasticsearch 获取数据。
+创建视图 #  步骤 1 定义数据视图 #   输入数据视图名称 匹配规则：匹配相应索引，也可以使用 (*) 来匹配多个索引。  步骤 2 配置 #    为数据视图索引选择时间字段作为时间过滤
   创建完成
-  编辑数据视图#页面列出匹配索引的所有字段，可以对字段的Format、Popularity等做相关设置。</description>
+  编辑数据视图 #  页面列出匹配索引的所有字段，可以对字段的Format、Popularity等做相关设置。</description>
     </item>
     
     <item>
@@ -390,9 +390,9 @@ node.attr.zone_id: zone_huawei创建索引采用 1 副本，可以保证百度�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/router/</guid>
-      <description>服务路由#极限网关通过路由来判断流量的去向，一个典型的路由配置示例如下：
-router:- name: my_routerdefault_flow: default_flowtracing_flow: request_loggingrules:- method:- PUT- POSTpattern:- &amp;quot;/_bulk&amp;quot;- &amp;quot;/{index_name}/_bulk&amp;quot;flow:- bulk_process_flow路由有几个非常重要的概念：
- flow：请求的处理流程，一个路由里面有三个地方定义 flow default_flow: 默认的处理流，也就是业务处理的主流程，请求转发、过滤、缓存等操作都在这里面进行 tracing_flow：用于追踪请求状态的流，不受 default_flow 的影响，用于记录请求日志、统计等 rules：根据匹配规则将请求分发到特定的处理流中去，支持请求的 Method、Path 的正则匹配  参数说明#   名称 类型 说明     name string 路由名称   default_flow string 默认的请求的处理流程名称   tracing_flow string 用于追踪请求的处理流程名称   rules array 路由规则列表，按照数组的先后顺序依次应用   rules.</description>
+      <description>服务路由 #  极限网关通过路由来判断流量的去向，一个典型的路由配置示例如下：
+router: - name: my_router default_flow: default_flow tracing_flow: request_logging rules: - method: - PUT - POST pattern: - &amp;quot;/_bulk&amp;quot; - &amp;quot;/{index_name}/_bulk&amp;quot; flow: - bulk_process_flow 路由有几个非常重要的概念：
+ flow：请求的处理流程，一个路由里面有三个地方定义 flow default_flow: 默认的处理流，也就是业务处理的主流程，请求转发、过滤、缓存等操作都在这里面进行 tracing_flow：用于追踪请求状态的流，不受 default_flow 的影响，用于记录请求日志、统计等 rules：根据匹配规则将请求分发到特定的处理流中去，支持请求的 Method、Path 的正则匹配  参数说明 #     名称 类型 说明     name string 路由名称   default_flow string 默认的请求的处理流程名称   tracing_flow string 用于追踪请求的处理流程名称   rules array 路由规则列表，按照数组的先后顺序依次应用   rules.</description>
     </item>
     
     <item>
@@ -401,12 +401,12 @@ router:- name: my_routerdefault_flow: default_flowtracing_flow: request_loggi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/user-cases/stories/indexing_speedup_for_big_index_rebuild/</guid>
-      <description>某保险集团业务的索引速度百倍提升之旅#业务挑战#某大型保险集团的保单查询业务，通过将数据库的常用字段放到 Elasticsearch 里面，用来提升查询性能，集群部署在 14 台物理机上面，每个物理机上面部署了 4 个 Elasticsearch 实例， 整个集群约有 90 多亿条数据，索引主分片存储接近 5 TB，每天的增量更新数据大概在 6 亿条左右，由于业务上的特殊性，全国的所有的业务数据都存放在一个索引里面， 造成了单个索引达到了 210 个分片，批量重建的任务采用 Spark 任务来并行执行，平均的写入速度在 2000~3000 条/s 左右，一次增量重建时间可能需要 2~3 天， 业务数据的更新延迟较大，长时间的重建也会影响正常时间段的业务访问。该技术团队也尝试过直接对 Elasticsearch 层面和 Spark 写入端多轮的测试和调优，发现对整体的写入速度没有太大的提升。
-应用场景#通过分析，集群性能应该没有问题，不过由于单个批次写入请求到达 Elasticsearch 之后需要重新再次按照主分片所在节点进行封装转发，而某保的业务索引分片个数太多，每个数据节点最终拿到的请求文档数太小， 客户端一次批次写入要拆分成几百次的小批次请求，并且由于短板原理，最慢的节点处理速度会拖慢整个批次写入的速度，从而造成集群总体吞吐的低下。
+      <description>某保险集团业务的索引速度百倍提升之旅 #  业务挑战 #  某大型保险集团的保单查询业务，通过将数据库的常用字段放到 Elasticsearch 里面，用来提升查询性能，集群部署在 14 台物理机上面，每个物理机上面部署了 4 个 Elasticsearch 实例， 整个集群约有 90 多亿条数据，索引主分片存储接近 5 TB，每天的增量更新数据大概在 6 亿条左右，由于业务上的特殊性，全国的所有的业务数据都存放在一个索引里面， 造成了单个索引达到了 210 个分片，批量重建的任务采用 Spark 任务来并行执行，平均的写入速度在 2000~3000 条/s 左右，一次增量重建时间可能需要 2~3 天， 业务数据的更新延迟较大，长时间的重建也会影响正常时间段的业务访问。该技术团队也尝试过直接对 Elasticsearch 层面和 Spark 写入端多轮的测试和调优，发现对整体的写入速度没有太大的提升。
+应用场景 #  通过分析，集群性能应该没有问题，不过由于单个批次写入请求到达 Elasticsearch 之后需要重新再次按照主分片所在节点进行封装转发，而某保的业务索引分片个数太多，每个数据节点最终拿到的请求文档数太小， 客户端一次批次写入要拆分成几百次的小批次请求，并且由于短板原理，最慢的节点处理速度会拖慢整个批次写入的速度，从而造成集群总体吞吐的低下。
 通过评估极限网关，发现极限网关具备提前拆分请求和合并请求的能力，通过提前拆分合并请求到以节点为单位的本地队列，然后通过队列消费程序写入到目标 Elasticsearch 集群，将随机的批次请求转换为顺序的精准投放，如下图：
 极限网关在收到 Spark 请求之后先落地到本地磁盘确保数据不丢失，同时极限网关能够本地计算每个文档与目标数据节点的对应关系，新的数据写入架构如下图所示：
 通过采用极限网关来接收 Spark 的写入请求，整个集群的写入吞吐显著提升，Spark 写数据只花了不到 15 分钟即任务运行结束，网关从收到请求到写完 Elasticsearch 也只花了 20 分钟，服务器的 CPU 资源也充分利用起来了， 各个节点的 CPU 利用率均达到 100%。
-用户收益# 索引速度提升 20000%</description>
+用户收益 #   索引速度提升 20000%</description>
     </item>
     
     <item>
@@ -415,10 +415,10 @@ router:- name: my_routerdefault_flow: default_flowtracing_flow: request_loggi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/index_diff/</guid>
-      <description>索引差异对比#通过极限网关可以进行索引的文档差异对比，可以对同集群或者跨集群的两个不同的索引进行 diff 比较，对于使用应用双写、CCR 或者其他数据复制方案的场景，可以进行定期 diff 比较来确保数据是否真的一致。
-功能演示#如何配置#设置目标集群#修改配置文件 gateway.yml，设置两个集群资源 source 和 target，增加如下配置：
-elasticsearch:- name: sourceenabled: trueendpoint: http://localhost:9200basic_auth:username: testpassword: testtest- name: targetenabled: trueendpoint: http://localhost:9201basic_auth: #used to discovery full cluster nodes, or check elasticsearch&#39;s health and versionsusername: testpassword: testtest配置对比任务#增加一个服务管道配置，用来处理两个集群的索引文档拉取和对比，如下：
-pipeline:- name: index_diff_serviceauto_start: truekeep_running: trueprocessor:- dag:parallel:- dump_hash: #dump es1&#39;s docindices: &amp;quot;medcl-test&amp;quot;scroll_time: &amp;quot;10m&amp;quot;elasticsearch: &amp;quot;source&amp;quot;output_queue: &amp;quot;source_docs&amp;quot;batch_size: 10000slice_size: 5- dump_hash: #dump es2&#39;s docindices: &amp;quot;medcl-test&amp;quot;scroll_time: &amp;quot;10m&amp;quot;batch_size: 10000slice_size: 5elasticsearch: &amp;quot;target&amp;quot;output_queue: &amp;quot;target_docs&amp;quot;end:- index_diff:diff_queue: &amp;quot;diff_result&amp;quot;buffer_size: 1text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务source_queue: &#39;source_docs&#39;target_queue: &#39;target_docs&#39;上面的配置中，并行使用了 dump_hash 来拉取集群 source 的 medcl-a 索引和取集群 target 的 medcl-b 索引，并以文本结果的方式输出到终端。</description>
+      <description>索引差异对比 #  通过极限网关可以进行索引的文档差异对比，可以对同集群或者跨集群的两个不同的索引进行 diff 比较，对于使用应用双写、CCR 或者其他数据复制方案的场景，可以进行定期 diff 比较来确保数据是否真的一致。
+功能演示 #    如何配置 #  设置目标集群 #  修改配置文件 gateway.yml，设置两个集群资源 source 和 target，增加如下配置：
+elasticsearch: - name: source enabled: true endpoint: http://localhost:9200 basic_auth: username: test password: testtest - name: target enabled: true endpoint: http://localhost:9201 basic_auth: #used to discovery full cluster nodes, or check elasticsearch&#39;s health and versions username: test password: testtest 配置对比任务 #  增加一个服务管道配置，用来处理两个集群的索引文档拉取和对比，如下：
+pipeline: - name: index_diff_service auto_start: true keep_running: true processor: - dag: parallel: - dump_hash: #dump es1&#39;s doc indices: &amp;quot;medcl-test&amp;quot; scroll_time: &amp;quot;10m&amp;quot; elasticsearch: &amp;quot;source&amp;quot; output_queue: &amp;quot;source_docs&amp;quot; batch_size: 10000 slice_size: 5 - dump_hash: #dump es2&#39;s doc indices: &amp;quot;medcl-test&amp;quot; scroll_time: &amp;quot;10m&amp;quot; batch_size: 10000 slice_size: 5 elasticsearch: &amp;quot;target&amp;quot; output_queue: &amp;quot;target_docs&amp;quot; end: - index_diff: diff_queue: &amp;quot;diff_result&amp;quot; buffer_size: 1 text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务 source_queue: &#39;source_docs&#39; target_queue: &#39;target_docs&#39; 上面的配置中，并行使用了 dump_hash 来拉取集群 source 的 medcl-a 索引和取集群 target 的 medcl-b 索引，并以文本结果的方式输出到终端。</description>
     </item>
     
     <item>
@@ -427,9 +427,9 @@ pipeline:- name: index_diff_serviceauto_start: truekeep_running: trueprocess
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/modules/force_merge/</guid>
-      <description>主动合并索引分段#极限网关内置一个索引分段合并服务，可以主动对索引段文件进行合并，从而提升查询速度，段合并服务支持多个索引的依次顺序处理，并对合并任务状态进行了跟踪处理，避免大量段合并任务并行操作拖慢集群。
-如何开启#修改配置文件 gateway.yml，增加如下配置：
-force_merge:enabled: falseelasticsearch: devmin_num_segments: 20max_num_segments: 1indices:- index_name各参数说明如下：
+      <description>主动合并索引分段 #  极限网关内置一个索引分段合并服务，可以主动对索引段文件进行合并，从而提升查询速度，段合并服务支持多个索引的依次顺序处理，并对合并任务状态进行了跟踪处理，避免大量段合并任务并行操作拖慢集群。
+如何开启 #  修改配置文件 gateway.yml，增加如下配置：
+force_merge: enabled: false elasticsearch: dev min_num_segments: 20 max_num_segments: 1 indices: - index_name 各参数说明如下：
    名称 类型 说明     enabled bool 是否启用该模块，默认是 false   elasticsearch string 操作的 Elasticsearch 集群 ID   min_num_segments int 超过多少分片的索引才会执行主动分片合并，以索引为单位的统计数目   max_num_segments int 将分片下的段文件合并之后，最多生成的段文件个数   indices array 需要进行分片合并的索引列表   discovery object 自动发现索引的相关设置   discovery.min_idle_time string 满足段合并条件的最小时间跨度，默认 1d   discovery.</description>
     </item>
     
@@ -439,12 +439,12 @@ force_merge:enabled: falseelasticsearch: devmin_num_segments: 20max_num_segm
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/getting-started/configuration/</guid>
-      <description>配置#极限网关支持多种方式来修改配置。
-命令行参数#极限网关提供了命令行参数如下：
-✗ ./bin/gateway --helpUsage of ./bin/gateway:-config stringthe location of config file, default: gateway.yml (default &amp;quot;gateway.yml&amp;quot;)-debugrun in debug mode, gateway will quit with panic error-log stringthe log level,options:trace,debug,info,warn,error (default &amp;quot;info&amp;quot;)-v version常用的说明如下：
- config，指定配置文件名，默认的配置文件名为当前执行命令所在目录的 gateway.yml，如果你的配置文件放置在其他地方，可以通过指定参数来进行选择。 daemon，将网关切换到后台执行，一般还需要结合 pidfile 来保存进程号，方便后续的进程操作。  配置文件#极限网关的大部分配置都可以通过 gateway.yml 来进行配置，配置修改完成之后，需要重启网关程序才能生效。
-定义入口#每一个网关都至少要对外暴露一个服务的入口，用来接收业务的操作请求，这个在极限网关里面叫做 entry，通过下面的参数即可定义：
-entry:- name: es_gatewayenabled: truerouter: defaultnetwork:binding: 0.</description>
+      <description>配置 #  极限网关支持多种方式来修改配置。
+命令行参数 #  极限网关提供了命令行参数如下：
+✗ ./bin/gateway --help Usage of ./bin/gateway: -config string the location of config file, default: gateway.yml (default &amp;quot;gateway.yml&amp;quot;) -debug run in debug mode, gateway will quit with panic error -log string the log level,options:trace,debug,info,warn,error (default &amp;quot;info&amp;quot;) -v version 常用的说明如下：
+ config，指定配置文件名，默认的配置文件名为当前执行命令所在目录的 gateway.yml，如果你的配置文件放置在其他地方，可以通过指定参数来进行选择。 daemon，将网关切换到后台执行，一般还需要结合 pidfile 来保存进程号，方便后续的进程操作。  配置文件 #  极限网关的大部分配置都可以通过 gateway.yml 来进行配置，配置修改完成之后，需要重启网关程序才能生效。
+定义入口 #  每一个网关都至少要对外暴露一个服务的入口，用来接收业务的操作请求，这个在极限网关里面叫做 entry，通过下面的参数即可定义：
+entry: - name: es_gateway enabled: true router: default network: binding: 0.</description>
     </item>
     
     <item>
@@ -453,13 +453,13 @@ entry:- name: es_gatewayenabled: truerouter: defaultnetwork:binding: 0.</de
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/getting-started/docker/</guid>
-      <description>容器部署#INFINI Console 支持容器方式部署。
-下载镜像#INFINI Console 的镜像发布在 Docker 的官方仓库，地址如下：
-https://hub.docker.com/r/infinilabs/console
+      <description>容器部署 #  INFINI Console 支持容器方式部署。
+下载镜像 #  INFINI Console 的镜像发布在 Docker 的官方仓库，地址如下：
+ https://hub.docker.com/r/infinilabs/console
 使用下面的命令即可获取最新的容器镜像：
-docker pull infinilabs/console:latest验证镜像#将镜像下载到本地之后，可以看到 INFINI Console 平台的容器镜像非常小，只有不到 30MB，所以下载的速度应该是非常快的。
-✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZEinfinilabs/console latest 8c27cd334e4c 47 minutes ago 26.4MB创建配置#现在需要创建一个配置文件 console.yml，来进行基本的配置，如下：
-# for this System Cluster, please use Elasticsearch v7.3+elasticsearch:- name: defaultenabled: truemonitored: falseendpoint: http://192.168.3.188:9299basic_auth:username: elasticpassword: ZBdkVQUUdF1Sir4X4BGBdiscovery:enabled: trueweb:enabled: trueembedding_api: trueauth:enabled: trueui:enabled: truepath: .</description>
+docker pull infinilabs/console:latest 验证镜像 #  将镜像下载到本地之后，可以看到 INFINI Console 平台的容器镜像非常小，只有不到 30MB，所以下载的速度应该是非常快的。
+✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZE infinilabs/console latest 8c27cd334e4c 47 minutes ago 26.4MB 创建配置 #  现在需要创建一个配置文件 console.yml，来进行基本的配置，如下：
+# for this System Cluster, please use Elasticsearch v7.3+ elasticsearch: - name: default enabled: true monitored: false endpoint: http://192.168.3.188:9299 basic_auth: username: elastic password: ZBdkVQUUdF1Sir4X4BGB discovery: enabled: true web: enabled: true embedding_api: true auth: enabled: true ui: enabled: true path: .</description>
     </item>
     
     <item>
@@ -468,13 +468,13 @@ docker pull infinilabs/console:latest验证镜像#将镜像下载到本地�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/getting-started/docker/</guid>
-      <description>容器部署#极限网关支持容器方式部署。
-安装演示#下载镜像#极限网关的镜像发布在 Docker 的官方仓库，地址如下：
-https://hub.docker.com/r/infinilabs/gateway
+      <description>容器部署 #  极限网关支持容器方式部署。
+安装演示 #    下载镜像 #  极限网关的镜像发布在 Docker 的官方仓库，地址如下：
+ https://hub.docker.com/r/infinilabs/gateway
 使用下面的命令即可获取最新的容器镜像：
-docker pull infinilabs/gateway:latest验证镜像#将镜像下载到本地之后，可以看到极限网关的容器镜像非常小，只有不到 25MB，所以下载的速度应该是非常快的。
-✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZEinfinilabs/gateway latest fdae74b64e1a 47 minutes ago 23.5MB创建配置#现在需要创建一个配置文件 gateway.yml，来进行基本的配置，如下：
-path.data: datapath.logs: logentry:- name: my_es_entryenabled: truerouter: my_routermax_concurrency: 200000network:binding: 0.0.0.0:8000flow:- name: simple_flowfilter:- elasticsearch:elasticsearch: devrouter:- name: my_routerdefault_flow: simple_flowelasticsearch:- name: devenabled: trueendpoint: http://localhost:9200basic_auth:username: testpassword: testtestNote: 上面配置里面的 Elasticsearch 的相关配置，请改成实际的服务器连接地址和认证信息：</description>
+docker pull infinilabs/gateway:latest 验证镜像 #  将镜像下载到本地之后，可以看到极限网关的容器镜像非常小，只有不到 25MB，所以下载的速度应该是非常快的。
+✗ docker images REPOSITORY TAG IMAGE ID CREATED SIZE infinilabs/gateway latest fdae74b64e1a 47 minutes ago 23.5MB 创建配置 #  现在需要创建一个配置文件 gateway.yml，来进行基本的配置，如下：
+path.data: data path.logs: log entry: - name: my_es_entry enabled: true router: my_router max_concurrency: 200000 network: binding: 0.0.0.0:8000 flow: - name: simple_flow filter: - elasticsearch: elasticsearch: dev router: - name: my_router default_flow: simple_flow elasticsearch: - name: dev enabled: true endpoint: http://localhost:9200 basic_auth: username: test password: testtest Note: 上面配置里面的 Elasticsearch 的相关配置，请改成实际的服务器连接地址和认证信息：</description>
     </item>
     
     <item>
@@ -483,10 +483,10 @@ path.data: datapath.logs: logentry:- name: my_es_entryenabled: truerouter: 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/system/security/role/</guid>
-      <description>角色管理#简介#角色管理包括对角色的增删改查操作。 INFINI Console 内置了一个管理员角色，角色名为 Administrator, 该角色拥有所有的操作权限, 包括所有的平台权限和数据权限。 数据角色用于控制 elasticsearch 集群的访问权限, 包括 elasticsearch API 的访问权限， elasticsearch API 的列表可以在安装目录下的 config/permission.json 文件中配置。
-创建平台角色# 输入唯一的角色名. 选择平台权限，不能为空. 按需输入角色描述 点击保存按钮保存  All 权限代表同时拥有读和写的权限, Read 代表只读权限, None 代表没有权限。
-创建数据角色# 输入唯一的角色名. 选择一个或者多个集群， * 代表选择所有集群. 配置集群级别 API 权限, * 代表所有集群级别 API 权限. 配置索引级别 API 权限, * 代表所有索引级别 API 权限. 按需输入角色描述 点击保存按钮保存  查询角色#输入关键字点击搜索按钮查询角色。
-更新平台角色#按需修改角色，然后点击保存按钮保存。</description>
+      <description>角色管理 #  简介 #  角色管理包括对角色的增删改查操作。 INFINI Console 内置了一个管理员角色，角色名为 Administrator, 该角色拥有所有的操作权限, 包括所有的平台权限和数据权限。 数据角色用于控制 elasticsearch 集群的访问权限, 包括 elasticsearch API 的访问权限， elasticsearch API 的列表可以在安装目录下的 config/permission.json 文件中配置。
+创建平台角色 #   输入唯一的角色名. 选择平台权限，不能为空. 按需输入角色描述 点击保存按钮保存  All 权限代表同时拥有读和写的权限, Read 代表只读权限, None 代表没有权限。
+创建数据角色 #   输入唯一的角色名. 选择一个或者多个集群， * 代表选择所有集群. 配置集群级别 API 权限, * 代表所有集群级别 API 权限. 配置索引级别 API 权限, * 代表所有索引级别 API 权限. 按需输入角色描述 点击保存按钮保存  查询角色 #  输入关键字点击搜索按钮查询角色。
+更新平台角色 #  按需修改角色，然后点击保存按钮保存。</description>
     </item>
     
     <item>
@@ -495,10 +495,10 @@ path.data: datapath.logs: logentry:- name: my_es_entryenabled: truerouter: 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/data/discover/</guid>
-      <description>数据探索#简介#在数据探索里，可以根据时间、字段等条件对索引或者视图下的数据进行搜索查询，数据展示方式有常规模式和Insight模式。
-搜索工具栏#索引(视图)#搜索语句#时间范围#字段过滤#保存搜索#保存的搜索列表#Insight模式#Insight配置#常规模式#常规模式下用多功能图表灵活地添加字段来展示数据
+      <description>数据探索 #  简介 #  在数据探索里，可以根据时间、字段等条件对索引或者视图下的数据进行搜索查询，数据展示方式有常规模式和Insight模式。
+搜索工具栏 #  索引(视图) #  搜索语句 #  时间范围 #  字段过滤 #  保存搜索 #  保存的搜索列表 #  Insight模式 #  Insight配置 #  常规模式 #  常规模式下用多功能图表灵活地添加字段来展示数据
 可对文档数据进行编辑、删除等操作
-Insight模式#Insight模式下会根据数据特征推送可视化图表来展示数据
+Insight模式 #  Insight模式下会根据数据特征推送可视化图表来展示数据
 可通过推送列表添加图表
 可对图表进行编辑、删除</description>
     </item>
@@ -518,8 +518,8 @@ Insight模式#Insight模式下会根据数据特征推送可视化图表来�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/getting-started/optimization/</guid>
-      <description>系统调优#要保证极限网关运行在最佳状态，其所在服务器的操作系统也需要进行相应的调优，以 Linux 为例。
-系统参数#sudo tee /etc/security/limits.d/21-infini.conf &amp;lt;&amp;lt;-&#39;EOF&#39;* soft nofile 1048576* hard nofile 1048576* soft memlock unlimited* hard memlock unlimitedroot soft nofile 1048576root hard nofile 1048576root soft memlock unlimitedroot hard memlock unlimitedEOF内核调优#cat &amp;lt;&amp;lt; SETTINGS | sudo tee /etc/sysctl.d/70-infini.conffs.file-max=10485760fs.nr_open=10485760vm.max_map_count=262144net.core.somaxconn=65535net.core.netdev_max_backlog=65535net.core.rmem_default = 262144net.core.wmem_default = 262144net.core.rmem_max=4194304net.core.wmem_max=4194304net.ipv4.ip_forward = 1net.</description>
+      <description>系统调优 #  要保证极限网关运行在最佳状态，其所在服务器的操作系统也需要进行相应的调优，以 Linux 为例。
+系统参数 #  sudo tee /etc/security/limits.d/21-infini.conf &amp;lt;&amp;lt;-&#39;EOF&#39; * soft nofile 1048576 * hard nofile 1048576 * soft memlock unlimited * hard memlock unlimited root soft nofile 1048576 root hard nofile 1048576 root soft memlock unlimited root hard memlock unlimited EOF 内核调优 #  cat &amp;lt;&amp;lt; SETTINGS | sudo tee /etc/sysctl.d/70-infini.conf fs.file-max=10485760 fs.nr_open=10485760 vm.max_map_count=262144 net.core.somaxconn=65535 net.core.netdev_max_backlog=65535 net.core.rmem_default = 262144 net.core.wmem_default = 262144 net.core.rmem_max=4194304 net.core.wmem_max=4194304 net.ipv4.ip_forward = 1 net.</description>
     </item>
     
     <item>
@@ -528,10 +528,10 @@ Insight模式#Insight模式下会根据数据特征推送可视化图表来�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/flow/</guid>
-      <description>处理流程#流程定义#每一个网关接收到的请求都会通过一系列的流程处理，最后才返回给客户端，流程的定义在极限网关里面叫做 flow，以下面的这个例子为例：
-flow:- name: hello_worldfilter:- echo:message: &amp;quot;hello gateway\n&amp;quot;repeat: 1- name: not_foundfilter:- echo:message: &#39;404 not found\n&#39;repeat: 1上面的例子定义了两个 flow hello_world 和 not_found， 每个 flow 都使用了一个名为 echo 的过滤器，用来输出一段字符串，每个 flow 下面可以定义一系列 filter，他们按照定义的顺序依次执行。
-语法说明#极限网关采用约定的格式来定义流程，并且支持灵活的条件参数来进行逻辑判断，具体的格式定义如下：
-flow:- name: &amp;lt;flow_name&amp;gt;filter:- &amp;lt;filter_name&amp;gt;:when:&amp;lt;condition&amp;gt;&amp;lt;parameters&amp;gt; - &amp;lt;filter_name&amp;gt;:when:&amp;lt;condition&amp;gt;&amp;lt;parameters&amp;gt;...上面的 filter_name 代表具体的某个过滤器名称，用来执行特定的任务，when 下面的 condition 用来定义特定的满足执行该任务的条件参数，不满足条件的情况下会跳过该过滤器任务的执行，parameters 里面设置的该过滤器相关的参数，如果多个参数依次换行即可。</description>
+      <description>处理流程 #  流程定义 #  每一个网关接收到的请求都会通过一系列的流程处理，最后才返回给客户端，流程的定义在极限网关里面叫做 flow，以下面的这个例子为例：
+flow: - name: hello_world filter: - echo: message: &amp;quot;hello gateway\n&amp;quot; repeat: 1 - name: not_found filter: - echo: message: &#39;404 not found\n&#39; repeat: 1 上面的例子定义了两个 flow hello_world 和 not_found， 每个 flow 都使用了一个名为 echo 的过滤器，用来输出一段字符串，每个 flow 下面可以定义一系列 filter，他们按照定义的顺序依次执行。
+语法说明 #  极限网关采用约定的格式来定义流程，并且支持灵活的条件参数来进行逻辑判断，具体的格式定义如下：
+flow: - name: &amp;lt;flow_name&amp;gt; filter: - &amp;lt;filter_name&amp;gt;: when: &amp;lt;condition&amp;gt; &amp;lt;parameters&amp;gt; - &amp;lt;filter_name&amp;gt;: when: &amp;lt;condition&amp;gt; &amp;lt;parameters&amp;gt; ... 上面的 filter_name 代表具体的某个过滤器名称，用来执行特定的任务，when 下面的 condition 用来定义特定的满足执行该任务的条件参数，不满足条件的情况下会跳过该过滤器任务的执行，parameters 里面设置的该过滤器相关的参数，如果多个参数依次换行即可。</description>
     </item>
     
     <item>
@@ -540,7 +540,7 @@ flow:- name: &amp;lt;flow_name&amp;gt;filter:- &amp;lt;filter_name&amp;gt;:w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/system/security/settings/</guid>
-      <description>安全设置#禁用内置用户#当开启安全的之后，在没有指定用户和密码的情况下启动 console ，系统会有一个 默认的内置用户 admin。当添加新的拥有管理员权限的用户之后，可以将内置用户禁用。
+      <description>安全设置 #  禁用内置用户 #  当开启安全的之后，在没有指定用户和密码的情况下启动 console ，系统会有一个 默认的内置用户 admin。当添加新的拥有管理员权限的用户之后，可以将内置用户禁用。
  不能使用内置用户禁用自己  </description>
     </item>
     
@@ -550,9 +550,9 @@ flow:- name: &amp;lt;flow_name&amp;gt;filter:- &amp;lt;filter_name&amp;gt;:w
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/elasticsearch/</guid>
-      <description>Elasticsearch#定义资源#极限网关支持多集群的访问，支持不同的版本，每个集群作为一个 Elasticsearch 后端资源，可以后续被极限网关的多个地方使用，以下面的这个例子为例：
-elasticsearch:- name: localenabled: trueendpoint: https://127.0.0.1:9200- name: devenabled: trueendpoint: https://192.168.3.98:9200basic_auth:username: elasticpassword: pass- name: prodenabled: trueendpoint: http://192.168.3.201:9200 discovery:enabled: truerefresh:enabled: trueinterval: 10sbasic_auth:username: elasticpassword: pass上面的例子定义了一个名为 local 的本地开发测试集群，和一个名为 dev 的开发集群。开发集群开启了身份验证，这里也定义了相应的用户名和密码。 最后还定义了一个名为 prod 的生产集群，并且通过参数 discovery 开启了集群的节点拓扑自动发现和更新。
-参数说明#   名称 类型 说明     name string Elasticsearch 集群名称   project string 项目名称   location.</description>
+      <description>Elasticsearch #  定义资源 #  极限网关支持多集群的访问，支持不同的版本，每个集群作为一个 Elasticsearch 后端资源，可以后续被极限网关的多个地方使用，以下面的这个例子为例：
+elasticsearch: - name: local enabled: true endpoint: https://127.0.0.1:9200 - name: dev enabled: true endpoint: https://192.168.3.98:9200 basic_auth: username: elastic password: pass - name: prod enabled: true endpoint: http://192.168.3.201:9200 discovery: enabled: true refresh: enabled: true interval: 10s basic_auth: username: elastic password: pass 上面的例子定义了一个名为 local 的本地开发测试集群，和一个名为 dev 的开发集群。开发集群开启了身份验证，这里也定义了相应的用户名和密码。 最后还定义了一个名为 prod 的生产集群，并且通过参数 discovery 开启了集群的节点拓扑自动发现和更新。
+参数说明 #     名称 类型 说明     name string Elasticsearch 集群名称   project string 项目名称   location.</description>
     </item>
     
     <item>
@@ -561,8 +561,8 @@ elasticsearch:- name: localenabled: trueendpoint: https://127.0.0.1:9200- na
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/context/</guid>
-      <description>请求上下文#什么是上下文#上下文是极限网关用来访问当前运行环境下相关信息的入口，如请求的来源和配置信息等等，使用关键字 _ctx 即可访问相应的字段，如：_ctx.request.uri 表示请求的 URL 地址。
-内置请求上下文#HTTP 请求内置的 _ctx 上下文对象主要包括如下：
+      <description>请求上下文 #  什么是上下文 #  上下文是极限网关用来访问当前运行环境下相关信息的入口，如请求的来源和配置信息等等，使用关键字 _ctx 即可访问相应的字段，如：_ctx.request.uri 表示请求的 URL 地址。
+内置请求上下文 #  HTTP 请求内置的 _ctx 上下文对象主要包括如下：
    名称 类型 说明     id uint64 请求的唯一 ID   tls bool 表示请求是否 TLS   remote_ip string 客户端来源 IP   remote_addr string 客户端来源地址，包含端口   local_ip string 网关本地 IP   local_addr string 网关本地地址，包含端口   elapsed int64 请求已执行时间（毫秒）   request.* object 描述请求信息   response.</description>
     </item>
     
@@ -572,9 +572,9 @@ elasticsearch:- name: localenabled: trueendpoint: https://127.0.0.1:9200- na
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/tutorials/cluster_slow_request/</guid>
-      <description>如何监控 Elasticsearch 里面的慢查询请求#简介#很多时候，Elasticsearch 集群会出现数据写入或者查询流量高峰期的情况，这个时候 Elasticsearch 集群压力会很大，通过对 Elasticsearch 索引查询的延迟的监控告警。 可以让我们定位 Elasticsearch 集群的压力主要集中在哪些索引。本文将介绍如何使用 INFINI Console 告警功能监控 Elasticsearch 里面的慢查询请求索引。
-准备# 下载并安装最新版 INFINI Console 使用INFINI Console 注册 Elasticsearch 集群  创建告警规则#在浏览器中打开 INFINI Console, 点击左侧菜单 告警管理》规则管理 进入告警管理页，然后点击 新建按钮进入创建告警规则页。按以下步骤创建告警规则：
- 选择集群（这里需要选择 INFINI Console 存储数据的 Elasticsearch 集群，也就是在配置文件 console.yml 配置的 Elasticsearch 集群，如果没有注册到 INFINI Console , 请先注册） 输入告警对象 .infini_metrics*（选择 Elasticsearch 集群下的索引，或者输入索引 pattern, 这里因为 INFINI Console 采集的监控数据存放在索引 .infini_metrics 里面） 输入筛选条件（ Elasticsearch 查询 DSL ） 这里我们需要过滤监控指标类别为 index_stats，并且索引名称不能为 _all, DSL 如下：  {&amp;quot;bool&amp;quot;: {&amp;quot;must&amp;quot;: [{&amp;quot;term&amp;quot;: {&amp;quot;metadata.</description>
+      <description>如何监控 Elasticsearch 里面的慢查询请求 #  简介 #  很多时候，Elasticsearch 集群会出现数据写入或者查询流量高峰期的情况，这个时候 Elasticsearch 集群压力会很大，通过对 Elasticsearch 索引查询的延迟的监控告警。 可以让我们定位 Elasticsearch 集群的压力主要集中在哪些索引。本文将介绍如何使用 INFINI Console 告警功能监控 Elasticsearch 里面的慢查询请求索引。
+准备 #   下载并安装最新版 INFINI Console 使用INFINI Console 注册 Elasticsearch 集群  创建告警规则 #  在浏览器中打开 INFINI Console, 点击左侧菜单 告警管理》规则管理 进入告警管理页，然后点击 新建按钮进入创建告警规则页。按以下步骤创建告警规则：
+ 选择集群（这里需要选择 INFINI Console 存储数据的 Elasticsearch 集群，也就是在配置文件 console.yml 配置的 Elasticsearch 集群，如果没有注册到 INFINI Console , 请先注册） 输入告警对象 .infini_metrics*（选择 Elasticsearch 集群下的索引，或者输入索引 pattern, 这里因为 INFINI Console 采集的监控数据存放在索引 .infini_metrics 里面） 输入筛选条件（ Elasticsearch 查询 DSL ） 这里我们需要过滤监控指标类别为 index_stats，并且索引名称不能为 _all, DSL 如下：  { &amp;quot;bool&amp;quot;: { &amp;quot;must&amp;quot;: [ { &amp;quot;term&amp;quot;: { &amp;quot;metadata.</description>
     </item>
     
     <item>
@@ -583,9 +583,9 @@ elasticsearch:- name: localenabled: trueendpoint: https://127.0.0.1:9200- na
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/tutorials/cluster_health_change/</guid>
-      <description>如何监控 Elasticsearch 集群健康状态#简介#很多时候 Elasticsearch 集群会因为某些原因，集群健康状态会变为红色，这个时候 Elasticsearch 集群至少存在一个主分片未分配或者丢失。所以监控 Elasticsearch 集群 健康状态是很有必要的。本文将介绍如何使用 INFINI Console 告警功能监控 Elasticsearch 集群 健康状态。
-准备# 下载并安装最新版 INFINI Console 使用INFINI Console 注册 Elasticsearch 集群  创建告警规则#在浏览器中打开 INFINI Console, 点击左侧菜单 告警管理》规则管理 进入告警管理页，然后点击 新建按钮进入创建告警规则页。按以下步骤创建告警规则：
- 选择集群（这里需要选择 INFINI Console 存储数据的 Elasticsearch 集群，也就是在配置文件 console.yml 配置的 Elasticsearch 集群，如果没有注册到 INFINI Console , 请先注册） 选择告警对象 .infini_metrics（选择 Elasticsearch 集群下的索引，或者输入索引 pattern, 这里因为 INFINI Console 采集的监控数据存放在索引 .infini_metrics 里面） 输入筛选条件（ Elasticsearch 查询 DSL ） 这里我们需要过滤监控指标类别为 cluster_health，并且健康状态为红色的数据，DSL 如下：  {&amp;quot;bool&amp;quot;: {&amp;quot;must&amp;quot;: [{&amp;quot;match&amp;quot;: {&amp;quot;payload.</description>
+      <description>如何监控 Elasticsearch 集群健康状态 #  简介 #  很多时候 Elasticsearch 集群会因为某些原因，集群健康状态会变为红色，这个时候 Elasticsearch 集群至少存在一个主分片未分配或者丢失。所以监控 Elasticsearch 集群 健康状态是很有必要的。本文将介绍如何使用 INFINI Console 告警功能监控 Elasticsearch 集群 健康状态。
+准备 #   下载并安装最新版 INFINI Console 使用INFINI Console 注册 Elasticsearch 集群  创建告警规则 #  在浏览器中打开 INFINI Console, 点击左侧菜单 告警管理》规则管理 进入告警管理页，然后点击 新建按钮进入创建告警规则页。按以下步骤创建告警规则：
+ 选择集群（这里需要选择 INFINI Console 存储数据的 Elasticsearch 集群，也就是在配置文件 console.yml 配置的 Elasticsearch 集群，如果没有注册到 INFINI Console , 请先注册） 选择告警对象 .infini_metrics（选择 Elasticsearch 集群下的索引，或者输入索引 pattern, 这里因为 INFINI Console 采集的监控数据存放在索引 .infini_metrics 里面） 输入筛选条件（ Elasticsearch 查询 DSL ） 这里我们需要过滤监控指标类别为 cluster_health，并且健康状态为红色的数据，DSL 如下：  { &amp;quot;bool&amp;quot;: { &amp;quot;must&amp;quot;: [ { &amp;quot;match&amp;quot;: { &amp;quot;payload.</description>
     </item>
     
     <item>
@@ -594,9 +594,9 @@ elasticsearch:- name: localenabled: trueendpoint: https://127.0.0.1:9200- na
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/tutorials/cluster_node_disk_usage/</guid>
-      <description>如何监控 Elasticsearch 集群节点磁盘使用率#简介#当系统磁盘使用率过高时，Elasticsearch 集群会出现数据写入不进去的情况，这样很可能导致数据丢失，所以监控 Elasticsearch 集群 节点磁盘使用率是很有必要的。本文将介绍如何使用 INFINI Console 告警功能监控 Elasticsearch 集群 节点磁盘的使用率。
-准备# 下载并安装最新版 INFINI Console 使用INFINI Console 注册 Elasticsearch 集群  创建告警规则#在浏览器中打开 INFINI Console, 点击左侧菜单 告警管理》规则管理 进入告警管理页，然后点击 新建按钮进入创建告警规则页。按以下步骤创建告警规则：
- 选择集群（这里需要选择 INFINI Console 存储数据的 Elasticsearch 集群，也就是在配置文件 console.yml 配置的 Elasticsearch 集群，如果没有注册到 INFINI Console , 请先注册） 输入告警对象 .infini_metrics*（选择 Elasticsearch 集群下的索引，或者输入索引 pattern, 这里因为 INFINI Console 采集的监控数据存放在索引 .infini_metrics 里面） 输入筛选条件（ Elasticsearch 查询 DSL ） 这里我们需要过滤监控指标类别为 node_stats，DSL 如下：  {&amp;quot;bool&amp;quot;: {&amp;quot;must&amp;quot;: [{&amp;quot;term&amp;quot;: {&amp;quot;metadata.</description>
+      <description>如何监控 Elasticsearch 集群节点磁盘使用率 #  简介 #  当系统磁盘使用率过高时，Elasticsearch 集群会出现数据写入不进去的情况，这样很可能导致数据丢失，所以监控 Elasticsearch 集群 节点磁盘使用率是很有必要的。本文将介绍如何使用 INFINI Console 告警功能监控 Elasticsearch 集群 节点磁盘的使用率。
+准备 #   下载并安装最新版 INFINI Console 使用INFINI Console 注册 Elasticsearch 集群  创建告警规则 #  在浏览器中打开 INFINI Console, 点击左侧菜单 告警管理》规则管理 进入告警管理页，然后点击 新建按钮进入创建告警规则页。按以下步骤创建告警规则：
+ 选择集群（这里需要选择 INFINI Console 存储数据的 Elasticsearch 集群，也就是在配置文件 console.yml 配置的 Elasticsearch 集群，如果没有注册到 INFINI Console , 请先注册） 输入告警对象 .infini_metrics*（选择 Elasticsearch 集群下的索引，或者输入索引 pattern, 这里因为 INFINI Console 采集的监控数据存放在索引 .infini_metrics 里面） 输入筛选条件（ Elasticsearch 查询 DSL ） 这里我们需要过滤监控指标类别为 node_stats，DSL 如下：  { &amp;quot;bool&amp;quot;: { &amp;quot;must&amp;quot;: [ { &amp;quot;term&amp;quot;: { &amp;quot;metadata.</description>
     </item>
     
     <item>
@@ -605,11 +605,11 @@ elasticsearch:- name: localenabled: trueendpoint: https://127.0.0.1:9200- na
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/getting-started/benchmark/</guid>
-      <description>性能测试#推荐使用 Elasticsearch 专属压测工具 Loadgen 来对网关进行性能压测。
+      <description>性能测试 #  推荐使用 Elasticsearch 专属压测工具 Loadgen 来对网关进行性能压测。
 Loadgen 的特点：
- 性能强劲 轻量级无依赖 支持模板化参数随机 支持高并发 支持压测端均衡流量控制   下载地址：http://release.infinilabs.com/loadgen/
- Loadgen#Loadgen 使用非常简单，下载解压之后会得到两个文件，一个可执行程序和一个配置文件 loadgen.yml，配置文件样例如下：
-variables:- name: iptype: filepath: test/ip.txt- name: usertype: filepath: test/user.txt- name: idtype: sequence- name: uuidtype: uuid- name: now_localtype: now_local- name: now_utctype: now_utc- name: now_unixtype: now_unixrequests:- request:method: GETbasic_auth:username: elasticpassword: passurl: http://localhost:8000/medcl/_searchbody: &#39;{ &amp;quot;query&amp;quot;: {&amp;quot;match&amp;quot;: { &amp;quot;name&amp;quot;: &amp;quot;$[[user]]&amp;quot; }}}&#39;变量的使用#上面的配置中，variables 用来定义变量参数，根据 name 来设置变量标识，在构造请求的使用 $[[变量名]] 即可访问该变量的值，变量目前支持的类型有：</description>
+ 性能强劲 轻量级无依赖 支持模板化参数随机 支持高并发 支持压测端均衡流量控制   下载地址： http://release.infinilabs.com/loadgen/
+ Loadgen #  Loadgen 使用非常简单，下载解压之后会得到两个文件，一个可执行程序和一个配置文件 loadgen.yml，配置文件样例如下：
+variables: - name: ip type: file path: test/ip.txt - name: user type: file path: test/user.txt - name: id type: sequence - name: uuid type: uuid - name: now_local type: now_local - name: now_utc type: now_utc - name: now_unix type: now_unix requests: - request: method: GET basic_auth: username: elastic password: pass url: http://localhost:8000/medcl/_search body: &#39;{ &amp;quot;query&amp;quot;: {&amp;quot;match&amp;quot;: { &amp;quot;name&amp;quot;: &amp;quot;$[[user]]&amp;quot; }}}&#39; 变量的使用 #  上面的配置中，variables 用来定义变量参数，根据 name 来设置变量标识，在构造请求的使用 $[[变量名]] 即可访问该变量的值，变量目前支持的类型有：</description>
     </item>
     
     <item>
@@ -618,9 +618,9 @@ variables:- name: iptype: filepath: test/ip.txt- name: usertype: filepath:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/tutorials/cluster_node_cpu_usage/</guid>
-      <description>如何监控 Elasticsearch 集群节点的 CPU 使用率#简介#本文将介绍如何使用 INFINI Console 监控 Elasticsearch 集群节点磁盘的使用率，并进行告警。
-准备# 下载并安装最新版 INFINI Console 使用INFINI Console 注册 Elasticsearch 集群  创建告警规则#在浏览器中打开 INFINI Console, 点击左侧菜单 告警管理》规则管理 进入告警管理页，然后点击 新建按钮进入创建告警规则页。按以下步骤创建告警规则：
- 选择集群（这里需要选择 INFINI Console 存储数据的 Elasticsearch 集群，也就是在配置文件 console.yml 配置的 Elasticsearch 集群，如果没有注册到 INFINI Console , 请先注册） 输入告警对象 .infini_metrics*（选择 Elasticsearch 集群下的索引，或者输入索引 pattern, 这里因为 INFINI Console 采集的监控数据存放在索引 .infini_metrics 里面） 输入筛选条件（ Elasticsearch 查询 DSL ） 这里我们需要过滤监控指标类别为 node_stats 及元数据分类为 elasticsearch，DSL 如下：  {&amp;quot;bool&amp;quot;: {&amp;quot;must&amp;quot;: [{&amp;quot;term&amp;quot;: {&amp;quot;metadata.</description>
+      <description>如何监控 Elasticsearch 集群节点的 CPU 使用率 #  简介 #  本文将介绍如何使用 INFINI Console 监控 Elasticsearch 集群节点磁盘的使用率，并进行告警。
+准备 #   下载并安装最新版 INFINI Console 使用INFINI Console 注册 Elasticsearch 集群  创建告警规则 #  在浏览器中打开 INFINI Console, 点击左侧菜单 告警管理》规则管理 进入告警管理页，然后点击 新建按钮进入创建告警规则页。按以下步骤创建告警规则：
+ 选择集群（这里需要选择 INFINI Console 存储数据的 Elasticsearch 集群，也就是在配置文件 console.yml 配置的 Elasticsearch 集群，如果没有注册到 INFINI Console , 请先注册） 输入告警对象 .infini_metrics*（选择 Elasticsearch 集群下的索引，或者输入索引 pattern, 这里因为 INFINI Console 采集的监控数据存放在索引 .infini_metrics 里面） 输入筛选条件（ Elasticsearch 查询 DSL ） 这里我们需要过滤监控指标类别为 node_stats 及元数据分类为 elasticsearch，DSL 如下：  { &amp;quot;bool&amp;quot;: { &amp;quot;must&amp;quot;: [ { &amp;quot;term&amp;quot;: { &amp;quot;metadata.</description>
     </item>
     
     <item>
@@ -629,9 +629,9 @@ variables:- name: iptype: filepath: test/ip.txt- name: usertype: filepath:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/tutorials/cluster_node_jvm_usage/</guid>
-      <description>如何监控 Elasticsearch 集群节点的 JVM 使用率#简介#本文将介绍如何使用 INFINI Console 监控 Elasticsearch 集群节点 JVM 的使用率，并进行告警。
-准备# 下载并安装最新版 INFINI Console 使用INFINI Console 注册 Elasticsearch 集群  创建告警规则#在浏览器中打开 INFINI Console, 点击左侧菜单 告警管理》规则管理 进入告警管理页，然后点击 新建按钮进入创建告警规则页。按以下步骤创建告警规则：
- 选择集群（这里需要选择 INFINI Console 存储数据的 Elasticsearch 集群，也就是在配置文件 console.yml 配置的 Elasticsearch 集群，如果没有注册到 INFINI Console , 请先注册） 输入告警对象 .infini_metrics*（选择 Elasticsearch 集群下的索引，或者输入索引 pattern, 这里因为 INFINI Console 采集的监控数据存放在索引 .infini_metrics 里面） 输入筛选条件（ Elasticsearch 查询 DSL ） 这里我们需要过滤监控指标类别为 node_stats 及元数据分类为 elasticsearch，DSL 如下：  {&amp;quot;bool&amp;quot;: {&amp;quot;must&amp;quot;: [{&amp;quot;term&amp;quot;: {&amp;quot;metadata.</description>
+      <description>如何监控 Elasticsearch 集群节点的 JVM 使用率 #  简介 #  本文将介绍如何使用 INFINI Console 监控 Elasticsearch 集群节点 JVM 的使用率，并进行告警。
+准备 #   下载并安装最新版 INFINI Console 使用INFINI Console 注册 Elasticsearch 集群  创建告警规则 #  在浏览器中打开 INFINI Console, 点击左侧菜单 告警管理》规则管理 进入告警管理页，然后点击 新建按钮进入创建告警规则页。按以下步骤创建告警规则：
+ 选择集群（这里需要选择 INFINI Console 存储数据的 Elasticsearch 集群，也就是在配置文件 console.yml 配置的 Elasticsearch 集群，如果没有注册到 INFINI Console , 请先注册） 输入告警对象 .infini_metrics*（选择 Elasticsearch 集群下的索引，或者输入索引 pattern, 这里因为 INFINI Console 采集的监控数据存放在索引 .infini_metrics 里面） 输入筛选条件（ Elasticsearch 查询 DSL ） 这里我们需要过滤监控指标类别为 node_stats 及元数据分类为 elasticsearch，DSL 如下：  { &amp;quot;bool&amp;quot;: { &amp;quot;must&amp;quot;: [ { &amp;quot;term&amp;quot;: { &amp;quot;metadata.</description>
     </item>
     
     <item>
@@ -640,9 +640,9 @@ variables:- name: iptype: filepath: test/ip.txt- name: usertype: filepath:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/tutorials/data_migration/</guid>
-      <description>如何使用 INFINI 迁移功能#简介#本文将介绍如何使用 INFINI Console 和 INFINI Gateway 来迁移 Elasticsearch 索引数据。
-准备# 下载并安装最新版 INFINI Console (版本要求 0.7 及以上) 下载并安装最新版的 INFINI Gateway (版本要求 1.9 及以上) 两个 Elasticsearch 集群  Gateway 迁移配置#配置文件名为 migration.yml
-path.data: datapath.logs: logprogress_bar.enabled: falsestats.no_buffer: trueelasticsearch:- name: task_fromenabled: trueschema: httphosts:- 192.168.3.6:9200traffic_control: #global traffic controlmax_bps_per_node: 209715200 #max total bytes send to es per node, 200MB/smax_qps_per_node: 20000 #max total requests send to es per node, 20k/sdiscovery: # auto discovery elasticsearch cluster nodesenabled: truerefresh:enabled: trueinterval: 60spipeline:- name: target_indexingauto_start: truekeep_running: trueprocessor:- disorder_bulk_indexing:max_worker_size: 10detect_interval: 100bulk:compress: truebatch_size_in_mb: 20batch_size_in_docs: 5000invalid_queue: bulk_indexing_400queues:type: scroll_docsconsumer:fetch_max_messages: 1000- name: task_statsauto_start: truekeep_running: trueprocessor:- dynamic_task_stats:detect_interval: 10000pipeline.</description>
+      <description>如何使用 INFINI 迁移功能 #  简介 #  本文将介绍如何使用 INFINI Console 和 INFINI Gateway 来迁移 Elasticsearch 索引数据。
+准备 #   下载并安装最新版 INFINI Console (版本要求 0.7 及以上) 下载并安装最新版的 INFINI Gateway (版本要求 1.9 及以上) 两个 Elasticsearch 集群  Gateway 迁移配置 #  配置文件名为 migration.yml
+path.data: data path.logs: log progress_bar.enabled: false stats.no_buffer: true elasticsearch: - name: task_from enabled: true schema: http hosts: - 192.168.3.6:9200 traffic_control: #global traffic control max_bps_per_node: 209715200 #max total bytes send to es per node, 200MB/s max_qps_per_node: 20000 #max total requests send to es per node, 20k/s discovery: # auto discovery elasticsearch cluster nodes enabled: true refresh: enabled: true interval: 60s pipeline: - name: target_indexing auto_start: true keep_running: true processor: - disorder_bulk_indexing: max_worker_size: 10 detect_interval: 100 bulk: compress: true batch_size_in_mb: 20 batch_size_in_docs: 5000 invalid_queue: bulk_indexing_400 queues: type: scroll_docs consumer: fetch_max_messages: 1000 - name: task_stats auto_start: true keep_running: true processor: - dynamic_task_stats: detect_interval: 10000 pipeline.</description>
     </item>
     
     <item>
@@ -651,8 +651,8 @@ path.data: datapath.logs: logprogress_bar.enabled: falsestats.no_buffer: true
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/console/reference/alerting/variables/</guid>
-      <description>模板变量#简介#自定义告警触发事件内容时，除了自己撰写的固定文案外，事件标题、事件内容等也支持模板语法。可以使用事件中的字段实现文案的渲染。
-模板变量#用于渲染字段的语法为{{ .字段名 }}，可用于模板内容渲染的变量字段如下：
+      <description>模板变量 #  简介 #  自定义告警触发事件内容时，除了自己撰写的固定文案外，事件标题、事件内容等也支持模板语法。可以使用事件中的字段实现文案的渲染。
+模板变量 #  用于渲染字段的语法为{{ .字段名 }}，可用于模板内容渲染的变量字段如下：
    变量字段名 字段类型 说明 示例     rule_id string rule uuid c9f663tath2e5a0vksjg   rule_name string rule name High CPU usage   resource_id string resource uuid c9f663tath2e5a0vksjg   resource_name string resource name es-v716   event_id string identifier for check details c9f663tath2e5a0vksjx   timestamp number Millisecond timestamp 1654595042399   first_group_value string The first value of group_values in results c9aikmhpdamkiurn1vq0   first_threshold string The first value of threshold in results 90   priority string The highest priority in results critical   title string event title Node ({{.</description>
     </item>
     
@@ -662,9 +662,9 @@ path.data: datapath.logs: logprogress_bar.enabled: falsestats.no_buffer: true
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/es-hadoop_integration/</guid>
-      <description>与 Elasticsearch-Hadoop 集成#Elasticsearch-Hadoop 默认会通过某个种子节点拿到后端的所有 Elasticsearch 节点，可能存在热点和请求分配不合理的情况， 为了提高后端 Elasticsearch 节点的资源利用率，可以通过极限网关来实现后端 Elasticsearch 节点访问的精准路由。
-写入加速#如果是通过 Elasticsearch-Hadoop 来进行数据导入，可以通过修改 Elasticsearch-Hadoop 程序的以下参数来访问极限网关来提升写入吞吐，如下：
-   名称 类型 说明     es.nodes string 设置访问网关的地址列表，如：localhost:8000,localhost:8001   es.nodes.discovery bool 设置为 false，不采用 sniff 模式，只访问配置的后端节点列表   es.nodes.wan.only bool 设置为 true，代理模式，强制走网关地址   es.batch.size.entries int 适当调大批次文档数，提升吞吐，如 5000   es.batch.size.bytes string 适当调大批次传输大小，提升吞吐，如 20mb   es.batch.write.refresh bool 设置为 false，避免主动刷新，提升吞吐    相关链接# Elasticsearch-Hadoop 配置参数文档  </description>
+      <description>与 Elasticsearch-Hadoop 集成 #  Elasticsearch-Hadoop 默认会通过某个种子节点拿到后端的所有 Elasticsearch 节点，可能存在热点和请求分配不合理的情况， 为了提高后端 Elasticsearch 节点的资源利用率，可以通过极限网关来实现后端 Elasticsearch 节点访问的精准路由。
+写入加速 #  如果是通过 Elasticsearch-Hadoop 来进行数据导入，可以通过修改 Elasticsearch-Hadoop 程序的以下参数来访问极限网关来提升写入吞吐，如下：
+   名称 类型 说明     es.nodes string 设置访问网关的地址列表，如：localhost:8000,localhost:8001   es.nodes.discovery bool 设置为 false，不采用 sniff 模式，只访问配置的后端节点列表   es.nodes.wan.only bool 设置为 true，代理模式，强制走网关地址   es.batch.size.entries int 适当调大批次文档数，提升吞吐，如 5000   es.batch.size.bytes string 适当调大批次传输大小，提升吞吐，如 20mb   es.batch.write.refresh bool 设置为 false，避免主动刷新，提升吞吐    相关链接 #    Elasticsearch-Hadoop 配置参数文档  </description>
     </item>
     
     <item>
@@ -673,10 +673,10 @@ path.data: datapath.logs: logprogress_bar.enabled: falsestats.no_buffer: true
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/prometheus_integration/</guid>
-      <description>与 Prometheus 集成#极限网关支持将运行指标输出为 Prometheus 格式, 方便与 Prometheus 进行集成, 具体操作如下:
-统计信息接口#访问网关的 2900 接口,如下:
-http://localhost:2900/stats?format=prometheus➜ ~ curl http://localhost:2900/stats\?format\=prometheusbuffer_fasthttp_resbody_buffer_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 1buffer_stats_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 7buffer_stats_max_count{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0system_cpu{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0buffer_bulk_request_docs_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 1buffer_fasthttp_resbody_buffer_inuse{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0stats_gateway_request_bytes{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0system_mem{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 31473664...通过增加额外的参数 format=prometheus 即可返回 Prometheus 所需数据格式.
-配置 Prometheus 进行采集#修改配置文件: prometheus.</description>
+      <description>与 Prometheus 集成 #  极限网关支持将运行指标输出为 Prometheus 格式, 方便与 Prometheus 进行集成, 具体操作如下:
+统计信息接口 #  访问网关的 2900 接口,如下:
+http://localhost:2900/stats?format=prometheus ➜ ~ curl http://localhost:2900/stats\?format\=prometheus buffer_fasthttp_resbody_buffer_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 1 buffer_stats_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 7 buffer_stats_max_count{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0 system_cpu{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0 buffer_bulk_request_docs_acquired{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 1 buffer_fasthttp_resbody_buffer_inuse{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0 stats_gateway_request_bytes{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 0 system_mem{type=&amp;quot;gateway&amp;quot;, ip=&amp;quot;192.168.3.23&amp;quot;, name=&amp;quot;Orchid&amp;quot;, id=&amp;quot;cbvjphrq50kcnsu2a8v0&amp;quot;} 31473664 ... 通过增加额外的参数 format=prometheus 即可返回 Prometheus 所需数据格式.
+配置 Prometheus 进行采集 #  修改配置文件: prometheus.</description>
     </item>
     
     <item>
@@ -685,13 +685,13 @@ http://localhost:2900/stats?format=prometheus➜ ~ curl http://localhost:2900/s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/proxy_elasticsearch/</guid>
-      <description>为 Elasticsearch 无缝添加代理和基础安全#如果你的 Elasticsearch 版本比较多或者比较旧，或者没有设置 TLS 和身份信息，那么任何人都有可能直接访问 Elasticsearch，而使用极限网关可以快速的进行修复。
-使用 Elasticsearch 过滤器来转发请求#首先定义一个 Elasticsearch 的资源，如下：
-elasticsearch:- name: prodenabled: trueendpoint: http://192.168.3.201:9200然后可以使用如下的过滤器来转发请求到上面定义的 Elasticsearch 资源，名称为 prod：
- - elasticsearch:elasticsearch: prod 有关该过滤器的更多详情，请参考文档：elasticsearch filter
-添加一个简单的身份验证#我们进行添加一个基础的身份验证，来限制目标集群的访问
- - basic_auth:valid_users:medcl: passwd开启 TLS#如果设置了身份，但是没有设置 TLS 也是不行的，因为 HTTP 是明文传输协议，可以非常容易泄露密码，配置如下：
- - name: my_es_entryenabled: truerouter: my_routermax_concurrency: 10000network:binding: 0.</description>
+      <description>为 Elasticsearch 无缝添加代理和基础安全 #  如果你的 Elasticsearch 版本比较多或者比较旧，或者没有设置 TLS 和身份信息，那么任何人都有可能直接访问 Elasticsearch，而使用极限网关可以快速的进行修复。
+使用 Elasticsearch 过滤器来转发请求 #  首先定义一个 Elasticsearch 的资源，如下：
+elasticsearch: - name: prod enabled: true endpoint: http://192.168.3.201:9200 然后可以使用如下的过滤器来转发请求到上面定义的 Elasticsearch 资源，名称为 prod：
+ - elasticsearch: elasticsearch: prod 有关该过滤器的更多详情，请参考文档： elasticsearch filter
+添加一个简单的身份验证 #  我们进行添加一个基础的身份验证，来限制目标集群的访问
+ - basic_auth: valid_users: medcl: passwd 开启 TLS #  如果设置了身份，但是没有设置 TLS 也是不行的，因为 HTTP 是明文传输协议，可以非常容易泄露密码，配置如下：
+ - name: my_es_entry enabled: true router: my_router max_concurrency: 10000 network: binding: 0.</description>
     </item>
     
     <item>
@@ -700,8 +700,8 @@ elasticsearch:- name: prodenabled: trueendpoint: http://192.168.3.201:9200�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/proxy_kibana/</guid>
-      <description>为 Kibana 添加代理和基础安全#如果你的 Kibana 版本比较多或者比较旧，或者没有设置 TLS 和身份信息，那么任何人都有可能直接访问 Kibana，而使用极限网关可以快速的进行修复。
-使用 HTTP 过滤器来转发请求# - http:schema: &amp;quot;http&amp;quot; #https or httphost: &amp;quot;192.168.3.188:5602&amp;quot;添加身份验证# - basic_auth:valid_users:medcl: passwd在路由里面可以替换静态资源# - method:- GETpattern:- &amp;quot;/plugins/kibanaReact/assets/illustration_integrations_lightmode.svg&amp;quot;flow:- replace_logo_flow开启 TLS# - name: my_es_entryenabled: truerouter: my_routermax_concurrency: 10000network:binding: 0.0.0.0:8000tls:enabled: true完整配置如下#entry:- name: my_es_entryenabled: truerouter: my_routermax_concurrency: 10000network:binding: 0.</description>
+      <description>为 Kibana 添加代理和基础安全 #  如果你的 Kibana 版本比较多或者比较旧，或者没有设置 TLS 和身份信息，那么任何人都有可能直接访问 Kibana，而使用极限网关可以快速的进行修复。
+使用 HTTP 过滤器来转发请求 #   - http: schema: &amp;quot;http&amp;quot; #https or http host: &amp;quot;192.168.3.188:5602&amp;quot; 添加身份验证 #   - basic_auth: valid_users: medcl: passwd 在路由里面可以替换静态资源 #   - method: - GET pattern: - &amp;quot;/plugins/kibanaReact/assets/illustration_integrations_lightmode.svg&amp;quot; flow: - replace_logo_flow 开启 TLS #   - name: my_es_entry enabled: true router: my_router max_concurrency: 10000 network: binding: 0.0.0.0:8000 tls: enabled: true 完整配置如下 #  entry: - name: my_es_entry enabled: true router: my_router max_concurrency: 10000 network: binding: 0.</description>
     </item>
     
     <item>
@@ -710,15 +710,15 @@ elasticsearch:- name: prodenabled: trueendpoint: http://192.168.3.201:9200�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/path_rewrite_by_javascript/</guid>
-      <description>使用 JavaScript 脚本来进行复杂的查询改写#有这么一个需求：
+      <description>使用 JavaScript 脚本来进行复杂的查询改写 #  有这么一个需求：
  网关里怎样对跨集群搜索进行支持的呢？我想实现: 输入的搜索请求是 lp:9200/index1/_search 这个索引在3个集群上，需要跨集群检索，也就是网关能否改成 lp:9200/cluster01:index1,cluster02,index1,cluster03:index1/_search 呢？ 索引有一百多个，名称不一定是 app, 还可能多个索引一起的。
  极限网关自带的过滤器 content_regex_replace 虽然可以实现字符正则替换，但是这个需求是带参数的变量替换，稍微复杂一点，没有办法直接用这个正则替换实现，有什么其他办法实现么？
-使用脚本过滤器#当然有的，上面的这个需求，理论上我们只需要将其中的索引 index1 匹配之后，替换为 cluster01:index1,cluster02,index1,cluster03:index1 就行了。
+使用脚本过滤器 #  当然有的，上面的这个需求，理论上我们只需要将其中的索引 index1 匹配之后，替换为 cluster01:index1,cluster02,index1,cluster03:index1 就行了。
 答案就是使用自定义脚本来做，再复杂的业务逻辑都不是问题，都能通过自定义脚本来实现，一行脚本不行，那就两行。
 使用极限网关提供的 JavaScript 过滤器可以很灵活的实现这个功能，具体继续看。
-定义脚本#首先创建一个脚本文件，放在网关数据目录的 scripts 子目录下面，如下：
-➜ gateway ✗ tree data data└── gateway└── nodes└── c9bpg0ai4h931o4ngs3g├── kvdb├── queue├── scripts│ └── index_path_rewrite.js└── stats这个脚本的内容如下：
-function process(context) {var originalPath = context.Get(&amp;quot;_ctx.request.path&amp;quot;);var matches = originalPath.</description>
+定义脚本 #  首先创建一个脚本文件，放在网关数据目录的 scripts 子目录下面，如下：
+➜ gateway ✗ tree data data └── gateway └── nodes └── c9bpg0ai4h931o4ngs3g ├── kvdb ├── queue ├── scripts │ └── index_path_rewrite.js └── stats 这个脚本的内容如下：
+function process(context) { var originalPath = context.Get(&amp;quot;_ctx.request.path&amp;quot;); var matches = originalPath.</description>
     </item>
     
     <item>
@@ -727,11 +727,11 @@ function process(context) {var originalPath = context.Get(&amp;quot;_ctx.reques
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/fix_count_in_search_response/</guid>
-      <description>兼容不同版本的查询响应结果的 Count 结构#Elasticsearch 在 7.0 之后的版本中，为了优化性能，搜索结果的命中数默认不进行精确的计数统计，同时对搜索结果的响应体进行了调整， 这样势必会造成已有代码的不兼容，如何快速修复呢？
-结构对比#首先来对比下前后差异：
+      <description>兼容不同版本的查询响应结果的 Count 结构 #  Elasticsearch 在 7.0 之后的版本中，为了优化性能，搜索结果的命中数默认不进行精确的计数统计，同时对搜索结果的响应体进行了调整， 这样势必会造成已有代码的不兼容，如何快速修复呢？
+结构对比 #  首先来对比下前后差异：
 7 之前的搜索结构如下，total 显示的具体的数值：
-{&amp;quot;took&amp;quot;: 53,&amp;quot;timed_out&amp;quot;: false,&amp;quot;_shards&amp;quot;: {&amp;quot;total&amp;quot;: 1,&amp;quot;successful&amp;quot;: 1,&amp;quot;skipped&amp;quot;: 0,&amp;quot;failed&amp;quot;: 0},&amp;quot;hits&amp;quot;: {&amp;quot;total&amp;quot;: 0,&amp;quot;max_score&amp;quot;: null,&amp;quot;hits&amp;quot;: []}}7 之后的搜索结构如下，total 变成了一组描述范围的对象：
-{&amp;quot;took&amp;quot;: 3,&amp;quot;timed_out&amp;quot;: false,&amp;quot;_shards&amp;quot;: {&amp;quot;total&amp;quot;: 1,&amp;quot;successful&amp;quot;: 1,&amp;quot;skipped&amp;quot;: 0,&amp;quot;failed&amp;quot;: 0},&amp;quot;hits&amp;quot;: {&amp;quot;total&amp;quot;: {&amp;quot;value&amp;quot;: 10000,&amp;quot;relation&amp;quot;: &amp;quot;gte&amp;quot;},&amp;quot;max_score&amp;quot;: 1,&amp;quot;hits&amp;quot;: []}}Elasticsearch 提供的参数#不过在 7 里面，Elasticsearch 也提供了一个参数来控制是否进行精确计数，通过在查询请求的 url 参数里面加上 rest_total_hits_as_int=true 即可使用旧的行为方式，默认未开启。</description>
+{ &amp;quot;took&amp;quot;: 53, &amp;quot;timed_out&amp;quot;: false, &amp;quot;_shards&amp;quot;: { &amp;quot;total&amp;quot;: 1, &amp;quot;successful&amp;quot;: 1, &amp;quot;skipped&amp;quot;: 0, &amp;quot;failed&amp;quot;: 0 }, &amp;quot;hits&amp;quot;: { &amp;quot;total&amp;quot;: 0, &amp;quot;max_score&amp;quot;: null, &amp;quot;hits&amp;quot;: [] } } 7 之后的搜索结构如下，total 变成了一组描述范围的对象：
+{ &amp;quot;took&amp;quot;: 3, &amp;quot;timed_out&amp;quot;: false, &amp;quot;_shards&amp;quot;: { &amp;quot;total&amp;quot;: 1, &amp;quot;successful&amp;quot;: 1, &amp;quot;skipped&amp;quot;: 0, &amp;quot;failed&amp;quot;: 0 }, &amp;quot;hits&amp;quot;: { &amp;quot;total&amp;quot;: { &amp;quot;value&amp;quot;: 10000, &amp;quot;relation&amp;quot;: &amp;quot;gte&amp;quot; }, &amp;quot;max_score&amp;quot;: 1, &amp;quot;hits&amp;quot;: [] } } Elasticsearch 提供的参数 #  不过在 7 里面，Elasticsearch 也提供了一个参数来控制是否进行精确计数，通过在查询请求的 url 参数里面加上 rest_total_hits_as_int=true 即可使用旧的行为方式，默认未开启。</description>
     </item>
     
     <item>
@@ -740,13 +740,13 @@ function process(context) {var originalPath = context.Get(&amp;quot;_ctx.reques
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/tutorial/routing_to_cluser_by_index/</guid>
-      <description>在 Kibana 里统一访问来自不同集群的索引#现在有这么一个需求，客户根据需要将数据按照业务维度划分，将索引分别存放在了不同的三个集群， 将一个大集群拆分成多个小集群有很多好处，比如降低了耦合，带来了集群可用性和稳定性方面的好处，也避免了单个业务的热点访问造成其他业务的影响， 尽管拆分集群是很常见的玩法，但是管理起来不是那么方便了，尤其是在查询的时候，可能要分别访问三套集群各自的 API，甚至要切换三套不同的 Kibana 来访问集群的数据， 那么有没有办法将他们无缝的联合在一起呢？
-极限网关!#答案自然是有的，通过将 Kibana 访问 Elasticsearch 的地址切换为极限网关的地址，我们可以将请求按照索引来进行智能的路由， 也就是当访问不同的业务索引时会智能的路由到不同的集群，如下图：
+      <description>在 Kibana 里统一访问来自不同集群的索引 #  现在有这么一个需求，客户根据需要将数据按照业务维度划分，将索引分别存放在了不同的三个集群， 将一个大集群拆分成多个小集群有很多好处，比如降低了耦合，带来了集群可用性和稳定性方面的好处，也避免了单个业务的热点访问造成其他业务的影响， 尽管拆分集群是很常见的玩法，但是管理起来不是那么方便了，尤其是在查询的时候，可能要分别访问三套集群各自的 API，甚至要切换三套不同的 Kibana 来访问集群的数据， 那么有没有办法将他们无缝的联合在一起呢？
+极限网关! #  答案自然是有的，通过将 Kibana 访问 Elasticsearch 的地址切换为极限网关的地址，我们可以将请求按照索引来进行智能的路由， 也就是当访问不同的业务索引时会智能的路由到不同的集群，如下图：
 上图，我们分别有 3 个不同的索引：
  apm-* erp-* mall-*  分别对应不同的三套 Elasticsearch 集群:
  ES1-APM ES2-ERP ES3-MALL  接下来我们来看如何在极限网关里面进行相应的配置来满足这个业务需求。
-配置集群信息#首先配置 3 个集群的连接信息。
-elasticsearch:- name: es1-apmenabled: trueendpoints:- http://192.168.3.188:9206- name: es2-erpenabled: trueendpoints:- http://192.168.3.188:9207- name: es3-mallenabled: trueendpoints:- http://192.168.3.188:9208配置服务 Flow#然后，我们定义 3 个 Flow，分别对应用来访问 3 个不同的 Elasticsearch 集群，如下：</description>
+配置集群信息 #  首先配置 3 个集群的连接信息。
+elasticsearch: - name: es1-apm enabled: true endpoints: - http://192.168.3.188:9206 - name: es2-erp enabled: true endpoints: - http://192.168.3.188:9207 - name: es3-mall enabled: true endpoints: - http://192.168.3.188:9208 配置服务 Flow #  然后，我们定义 3 个 Flow，分别对应用来访问 3 个不同的 Elasticsearch 集群，如下：</description>
     </item>
     
     <item>
@@ -755,7 +755,7 @@ elasticsearch:- name: es1-apmenabled: trueendpoints:- http://192.168.3.188:9
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/config/</guid>
-      <description>其它配置#系统配置#系统配置主要用来设置极限网关的基础属性：
+      <description>其它配置 #  系统配置 #  系统配置主要用来设置极限网关的基础属性：
    名称 类型 说明     path.data string 数据目录，默认为 data   path.logs string 日志目录，默认为 log   path.configs string 配置目录，默认为 config   log.level string 日志级别，默认为 info   log.debug bool 是否开启调试模式，当开启的时候，一旦出现异常程序直接退出，打印完整堆栈，仅用于调试定位故障点，默认为 false，生产环境不要开启，可能丢数据   log.disable_file_output bool 是否关闭本地文件的日志输出，默认为 false，容器环境不希望本地日志输出的可以开启本参数   allow_multi_instance bool 是否运行单个机器上面启动多个网关实例，默认为 false   skip_instance_detect bool 是否跳过网关的实例检测，默认为 false   max_num_of_instances int 网关实例的最大个数，默认为 5   configs.</description>
     </item>
     
@@ -765,9 +765,9 @@ elasticsearch:- name: es1-apmenabled: trueendpoints:- http://192.168.3.188:9
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/basic_auth/</guid>
-      <description>basic_auth#描述#basic_auth 过滤器用来验证请求的身份认证信息，适用于简单的身份认证。
-配置示例#一个简单的示例如下：
-flow:- name: basic_authfilter:- basic_auth:valid_users:medcl: passwdmedcl1: abc...参数说明#   名称 类型 说明     valid_users map 用户名和密码    </description>
+      <description>basic_auth #  描述 #  basic_auth 过滤器用来验证请求的身份认证信息，适用于简单的身份认证。
+配置示例 #  一个简单的示例如下：
+flow: - name: basic_auth filter: - basic_auth: valid_users: medcl: passwd medcl1: abc ... 参数说明 #     名称 类型 说明     valid_users map 用户名和密码    </description>
     </item>
     
     <item>
@@ -776,9 +776,9 @@ flow:- name: basic_authfilter:- basic_auth:valid_users:medcl: passwdmedcl1
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/bulk_indexing/</guid>
-      <description>bulk_indexing#描述#bulk_indexing 处理器用来异步消费队列里面的 bulk 请求。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- bulk_indexing:bulk_size_in_mb: 1queue_selector.labels:type: bulk_reshufflelevel: cluster参数说明#   名称 类型 说明     elasticsearch string 默认的 Elasticsearch 集群 ID,如果队列 Labels 里面没有指定 elasticsearch 的话会使用这个参数   idle_timeout_in_seconds int 消费队列的超时时间，默认 1, 即 1s   max_connection_per_node int 目标节点允许的最大连接数，默认 1   max_worker_size int 最大允许同时运行的 worker 大小,默认 10   bulk.</description>
+      <description>bulk_indexing #  描述 #  bulk_indexing 处理器用来异步消费队列里面的 bulk 请求。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - bulk_indexing: bulk_size_in_mb: 1 queue_selector.labels: type: bulk_reshuffle level: cluster 参数说明 #     名称 类型 说明     elasticsearch string 默认的 Elasticsearch 集群 ID,如果队列 Labels 里面没有指定 elasticsearch 的话会使用这个参数   idle_timeout_in_seconds int 消费队列的超时时间，默认 1, 即 1s   max_connection_per_node int 目标节点允许的最大连接数，默认 1   max_worker_size int 最大允许同时运行的 worker 大小,默认 10   bulk.</description>
     </item>
     
     <item>
@@ -787,9 +787,9 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/bulk_request_mutate/</guid>
-      <description>bulk_request_mutate#描述#bulk_request_mutate 过滤器用来干预 Elasticsearch 的 Bulk 请求。
-配置示例#一个简单的示例如下：
-flow:- name: bulk_request_mutatefilter:- bulk_request_mutate:fix_null_id: truegenerate_enhanced_id: true# fix_null_type: true# default_type: m-type# default_index: m-index# index_rename:# &amp;quot;*&amp;quot;: index-new# index1: index-new# index2: index-new# index3: index3-new# index4: index3-new# medcl-dr3: index3-new# type_rename:# &amp;quot;*&amp;quot;: type-new# type1: type-new# type2: type-new# doc: type-new# doc1: type-new.</description>
+      <description>bulk_request_mutate #  描述 #  bulk_request_mutate 过滤器用来干预 Elasticsearch 的 Bulk 请求。
+配置示例 #  一个简单的示例如下：
+flow: - name: bulk_request_mutate filter: - bulk_request_mutate: fix_null_id: true generate_enhanced_id: true # fix_null_type: true # default_type: m-type # default_index: m-index # index_rename: # &amp;quot;*&amp;quot;: index-new # index1: index-new # index2: index-new # index3: index3-new # index4: index3-new # medcl-dr3: index3-new # type_rename: # &amp;quot;*&amp;quot;: type-new # type1: type-new # type2: type-new # doc: type-new # doc1: type-new .</description>
     </item>
     
     <item>
@@ -798,9 +798,9 @@ flow:- name: bulk_request_mutatefilter:- bulk_request_mutate:fix_null_id: tr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/bulk_reshuffle/</guid>
-      <description>bulk_reshuffle#描述#bulk_reshuffle 可以分析 Elasticsearch 的批次请求，并按照文档进行解析，可以根据需要将文档分门别类，归档存储在队列中，通过先落地存储，业务端请求可以快速返回，从而解耦前端写入和后端 Elasticsearch 集群。bulk_reshuffle 需要离线管道消费任务来配合使用。
+      <description>bulk_reshuffle #  描述 #  bulk_reshuffle 可以分析 Elasticsearch 的批次请求，并按照文档进行解析，可以根据需要将文档分门别类，归档存储在队列中，通过先落地存储，业务端请求可以快速返回，从而解耦前端写入和后端 Elasticsearch 集群。bulk_reshuffle 需要离线管道消费任务来配合使用。
 通过 bulk_reshuffle 过滤器生成的队列，元数据会默认带上 &amp;quot;type&amp;quot;: &amp;quot;bulk_reshuffle&amp;quot; 以及 Elasticsearch 的集群信息，如：&amp;quot;elasticsearch&amp;quot;: &amp;quot;dev&amp;quot;，通过网关查看队列的 API 也可以查看，如下：
-curl http://localhost:2900/queue/stats{&amp;quot;queue&amp;quot;: {&amp;quot;disk&amp;quot;: {&amp;quot;async_bulk-cluster##dev&amp;quot;: {&amp;quot;depth&amp;quot;: 0,&amp;quot;metadata&amp;quot;: {&amp;quot;source&amp;quot;: &amp;quot;dynamic&amp;quot;,&amp;quot;id&amp;quot;: &amp;quot;c71f7pqi4h92kki4qrvg&amp;quot;,&amp;quot;name&amp;quot;: &amp;quot;async_bulk-cluster##dev&amp;quot;,&amp;quot;label&amp;quot;: {&amp;quot;elasticsearch&amp;quot;: &amp;quot;dev&amp;quot;,&amp;quot;level&amp;quot;: &amp;quot;cluster&amp;quot;,&amp;quot;type&amp;quot;: &amp;quot;bulk_reshuffle&amp;quot;}}}}}}节点级别的异步提交#极限网关可以本地计算每个索引文档对应后端 Elasticsearch 集群的目标存放位置，从而能够精准的进行请求定位，在一批 bulk 请求中，可能存在多个后端节点的数据，bulk_reshuffle 过滤器用来将正常的 bulk 请求打散，按照目标节点或者分片进行拆分重新组装，避免 Elasticsearch 节点收到请求之后再次进行请求分发， 从而降低 Elasticsearch 集群间的流量和负载，也能避免单个节点成为热点瓶颈，确保各个数据节点的处理均衡，从而提升集群总体的索引吞吐能力。</description>
+curl http://localhost:2900/queue/stats { &amp;quot;queue&amp;quot;: { &amp;quot;disk&amp;quot;: { &amp;quot;async_bulk-cluster##dev&amp;quot;: { &amp;quot;depth&amp;quot;: 0, &amp;quot;metadata&amp;quot;: { &amp;quot;source&amp;quot;: &amp;quot;dynamic&amp;quot;, &amp;quot;id&amp;quot;: &amp;quot;c71f7pqi4h92kki4qrvg&amp;quot;, &amp;quot;name&amp;quot;: &amp;quot;async_bulk-cluster##dev&amp;quot;, &amp;quot;label&amp;quot;: { &amp;quot;elasticsearch&amp;quot;: &amp;quot;dev&amp;quot;, &amp;quot;level&amp;quot;: &amp;quot;cluster&amp;quot;, &amp;quot;type&amp;quot;: &amp;quot;bulk_reshuffle&amp;quot; } } } } } } 节点级别的异步提交 #  极限网关可以本地计算每个索引文档对应后端 Elasticsearch 集群的目标存放位置，从而能够精准的进行请求定位，在一批 bulk 请求中，可能存在多个后端节点的数据，bulk_reshuffle 过滤器用来将正常的 bulk 请求打散，按照目标节点或者分片进行拆分重新组装，避免 Elasticsearch 节点收到请求之后再次进行请求分发， 从而降低 Elasticsearch 集群间的流量和负载，也能避免单个节点成为热点瓶颈，确保各个数据节点的处理均衡，从而提升集群总体的索引吞吐能力。</description>
     </item>
     
     <item>
@@ -809,9 +809,9 @@ curl http://localhost:2900/queue/stats{&amp;quot;queue&amp;quot;: {&amp;quot;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/bulk_response_process/</guid>
-      <description>bulk_response_process#描述#bulk_response_process 过滤器用来处理 Elasticsearch 的 Bulk 请求。
-配置示例#一个简单的示例如下：
-flow:- name: bulk_response_processfilter:- bulk_response_process:success_queue: &amp;quot;success_queue&amp;quot;tag_on_success: [&amp;quot;commit_message_allowed&amp;quot;]参数说明#   名称 类型 说明     invalid_queue string 保存非法请求的队列名称，必填。   failure_queue string 保存失败请求的队列名称，必填。   save_partial_success_requests bool 是否保存 bulk 请求里面部分执行成功的请求，默认 false。   success_queue string 保存 bulk 请求里面部分执行成功的请求的队列。   doc_buffer_size int 处理单个文档的 buffer 大小，默认 25kb，即 262144   continue_on_error bool bulk 请求出错之后是否继续执行后面的 filter，默认 false   message_truncate_size int bulk 请求出错日志截断长度，默认 1024   safety_parse bool 是否采用安全的 bulk 元数据解析方法，默认 true   doc_buffer_size int 当采用不安全的 bulk 元数据解析方法时，使用的 buffer 大小，默认 256 * 1024   tag_on_success array 将所有 bulk 请求处理完成之后，请求上下文打上指定标记   tag_on_error array 请求出现错误的情况下，请求上下文打上指定标记   tag_on_partial array 部分请求执行成功的情况下，请求上下文打上指定标记   tag_on_failure array 部分请求出现失败（可重试）的情况下，请求上下文打上指定标记   tag_on_invalid array 出现不合法请求错误的情况下，请求上下文打上指定标记    </description>
+      <description>bulk_response_process #  描述 #  bulk_response_process 过滤器用来处理 Elasticsearch 的 Bulk 请求。
+配置示例 #  一个简单的示例如下：
+flow: - name: bulk_response_process filter: - bulk_response_process: success_queue: &amp;quot;success_queue&amp;quot; tag_on_success: [&amp;quot;commit_message_allowed&amp;quot;] 参数说明 #     名称 类型 说明     invalid_queue string 保存非法请求的队列名称，必填。   failure_queue string 保存失败请求的队列名称，必填。   save_partial_success_requests bool 是否保存 bulk 请求里面部分执行成功的请求，默认 false。   success_queue string 保存 bulk 请求里面部分执行成功的请求的队列。   doc_buffer_size int 处理单个文档的 buffer 大小，默认 25kb，即 262144   continue_on_error bool bulk 请求出错之后是否继续执行后面的 filter，默认 false   message_truncate_size int bulk 请求出错日志截断长度，默认 1024   safety_parse bool 是否采用安全的 bulk 元数据解析方法，默认 true   doc_buffer_size int 当采用不安全的 bulk 元数据解析方法时，使用的 buffer 大小，默认 256 * 1024   tag_on_success array 将所有 bulk 请求处理完成之后，请求上下文打上指定标记   tag_on_error array 请求出现错误的情况下，请求上下文打上指定标记   tag_on_partial array 部分请求执行成功的情况下，请求上下文打上指定标记   tag_on_failure array 部分请求出现失败（可重试）的情况下，请求上下文打上指定标记   tag_on_invalid array 出现不合法请求错误的情况下，请求上下文打上指定标记    </description>
     </item>
     
     <item>
@@ -820,12 +820,12 @@ flow:- name: bulk_response_processfilter:- bulk_response_process:success_que
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/cache/</guid>
-      <description>cache#描述#cache 过滤器由 get_cache 和 set_cache 两组过滤器组成，一般需要组合使用，可用于缓存加速查询，抵挡重复请求，降低后端集群查询压力。
-get_cache 过滤器#过滤器 get_cache 用来从缓存里面获取之前出现的消息，直接返回给客户端，避免访问后端 Elasticsearch，用于缓存热点数据。
+      <description>cache #  描述 #  cache 过滤器由 get_cache 和 set_cache 两组过滤器组成，一般需要组合使用，可用于缓存加速查询，抵挡重复请求，降低后端集群查询压力。
+get_cache 过滤器 #  过滤器 get_cache 用来从缓存里面获取之前出现的消息，直接返回给客户端，避免访问后端 Elasticsearch，用于缓存热点数据。
 配置示例如下：
-flow:- name: get_cachefilter:- get_cache:pass_patterns: [&amp;quot;_cat&amp;quot;,&amp;quot;scroll&amp;quot;, &amp;quot;scroll_id&amp;quot;,&amp;quot;_refresh&amp;quot;,&amp;quot;_cluster&amp;quot;,&amp;quot;_ccr&amp;quot;,&amp;quot;_count&amp;quot;,&amp;quot;_flush&amp;quot;,&amp;quot;_ilm&amp;quot;,&amp;quot;_ingest&amp;quot;,&amp;quot;_license&amp;quot;,&amp;quot;_migration&amp;quot;,&amp;quot;_ml&amp;quot;,&amp;quot;_rollup&amp;quot;,&amp;quot;_data_stream&amp;quot;,&amp;quot;_open&amp;quot;, &amp;quot;_close&amp;quot;]参数说明#   名称 类型 说明     pass_patterns string 设置忽略缓存的请求规则，URL 包含其中的任意关键字将跳过缓存    set_cache 过滤器#过滤器 set_cache 用来将后端查询拿到的返回结果存到缓存里面，可以设置过期时间。
+flow: - name: get_cache filter: - get_cache: pass_patterns: [&amp;quot;_cat&amp;quot;,&amp;quot;scroll&amp;quot;, &amp;quot;scroll_id&amp;quot;,&amp;quot;_refresh&amp;quot;,&amp;quot;_cluster&amp;quot;,&amp;quot;_ccr&amp;quot;,&amp;quot;_count&amp;quot;,&amp;quot;_flush&amp;quot;,&amp;quot;_ilm&amp;quot;,&amp;quot;_ingest&amp;quot;,&amp;quot;_license&amp;quot;,&amp;quot;_migration&amp;quot;,&amp;quot;_ml&amp;quot;,&amp;quot;_rollup&amp;quot;,&amp;quot;_data_stream&amp;quot;,&amp;quot;_open&amp;quot;, &amp;quot;_close&amp;quot;] 参数说明 #     名称 类型 说明     pass_patterns string 设置忽略缓存的请求规则，URL 包含其中的任意关键字将跳过缓存    set_cache 过滤器 #  过滤器 set_cache 用来将后端查询拿到的返回结果存到缓存里面，可以设置过期时间。
 配置示例如下：
-flow:- name: get_cachefilter:- set_cache:min_response_size: 100max_response_size: 1024000cache_ttl: 30smax_cache_items: 100000参数说明#   名称 类型 说明     cache_type string 缓存类型，支持 ristretto，ccache 和 redis，默认 ristretto   cache_ttl string 缓存的过期时间，默认 10s   async_search_cache_ttl string 异步请求结果的缓存过期时间，默认 10m   min_response_size int 最小符合缓存要求的消息体大小，默认 -1 表示不限制   max_response_size int 最大符合缓存要求的消息体大小，默认为 int 的最大值   max_cached_item int 最大的缓存消息总数，默认 1000000，当类型为 ccache有效   max_cached_size int 最大的缓存内存开销，默认 1000000000 即 1GB，当类型为 ristretto 有效   validated_status_code array 允许被缓存的请求状态码，默认 200,201,404,403,413,400,301    其它参数#如果希望主动忽略缓存，可以在 URL 的参数里面传递一个 no_cache 来让网关忽略缓存。如：</description>
+flow: - name: get_cache filter: - set_cache: min_response_size: 100 max_response_size: 1024000 cache_ttl: 30s max_cache_items: 100000 参数说明 #     名称 类型 说明     cache_type string 缓存类型，支持 ristretto，ccache 和 redis，默认 ristretto   cache_ttl string 缓存的过期时间，默认 10s   async_search_cache_ttl string 异步请求结果的缓存过期时间，默认 10m   min_response_size int 最小符合缓存要求的消息体大小，默认 -1 表示不限制   max_response_size int 最大符合缓存要求的消息体大小，默认为 int 的最大值   max_cached_item int 最大的缓存消息总数，默认 1000000，当类型为 ccache有效   max_cached_size int 最大的缓存内存开销，默认 1000000000 即 1GB，当类型为 ristretto 有效   validated_status_code array 允许被缓存的请求状态码，默认 200,201,404,403,413,400,301    其它参数 #  如果希望主动忽略缓存，可以在 URL 的参数里面传递一个 no_cache 来让网关忽略缓存。如：</description>
     </item>
     
     <item>
@@ -834,10 +834,10 @@ flow:- name: get_cachefilter:- set_cache:min_response_size: 100max_response
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/clone/</guid>
-      <description>clone#描述#clone 过滤器用来将流量克隆转发到另外的一个处理流程，可以实现双写、多写、多数据中心同步、集群升级、版本切换等需求。
-配置示例#一个简单的示例如下：
-flow:- name: double_writefilter:- clone:flows:- write_to_region_a- write_to_region_b #last one&#39;s response will be output to client- name: write_to_region_afilter:- elasticsearch:elasticsearch: es1- name: write_to_region_bfilter:- elasticsearch:elasticsearch: es2上面的例子可以将 Elasticsearch 的请求复制到两个不同的异地集群。
-参数说明#   名称 类型 说明     flows array 指定多个流量处理的流程，依次同步执行，将最后一个流程处理的结果输出给客户端   continue bool 流量迁移出去之后，是否还继续执行之前的既定流程，设置成 false 则立即返回，默认 false。    </description>
+      <description>clone #  描述 #  clone 过滤器用来将流量克隆转发到另外的一个处理流程，可以实现双写、多写、多数据中心同步、集群升级、版本切换等需求。
+配置示例 #  一个简单的示例如下：
+flow: - name: double_write filter: - clone: flows: - write_to_region_a - write_to_region_b #last one&#39;s response will be output to client - name: write_to_region_a filter: - elasticsearch: elasticsearch: es1 - name: write_to_region_b filter: - elasticsearch: elasticsearch: es2 上面的例子可以将 Elasticsearch 的请求复制到两个不同的异地集群。
+参数说明 #     名称 类型 说明     flows array 指定多个流量处理的流程，依次同步执行，将最后一个流程处理的结果输出给客户端   continue bool 流量迁移出去之后，是否还继续执行之前的既定流程，设置成 false 则立即返回，默认 false。    </description>
     </item>
     
     <item>
@@ -846,9 +846,9 @@ flow:- name: double_writefilter:- clone:flows:- write_to_region_a- write_t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/context_filter/</guid>
-      <description>context_filter#描述#context_filter 过滤器用来按请求上下文来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- context_filter:context: _ctx.request.pathmessage: &amp;quot;request not allowed.&amp;quot;status: 403 must: #must match all rules to continueprefix:- /medclcontain:- _searchsuffix:- _count- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dclmust_not: # any match will be filteredprefix:- /.kibana- /_security- /_security- /gateway_requests*- /.reporting- /_monitoring/bulkcontain:- _searchsuffix:- _count- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dclshould:prefix:- /medclcontain:- _search- _async_searchsuffix:- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dcl参数说明#   名称 类型 说明     context string 上下文变量   exclude array 拒绝通过的请求的变量列表   include array 允许通过的请求的变量列表   must.</description>
+      <description>context_filter #  描述 #  context_filter 过滤器用来按请求上下文来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - context_filter: context: _ctx.request.path message: &amp;quot;request not allowed.&amp;quot; status: 403 must: #must match all rules to continue prefix: - /medcl contain: - _search suffix: - _count - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl must_not: # any match will be filtered prefix: - /.kibana - /_security - /_security - /gateway_requests* - /.reporting - /_monitoring/bulk contain: - _search suffix: - _count - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl should: prefix: - /medcl contain: - _search - _async_search suffix: - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl 参数说明 #     名称 类型 说明     context string 上下文变量   exclude array 拒绝通过的请求的变量列表   include array 允许通过的请求的变量列表   must.</description>
     </item>
     
     <item>
@@ -857,10 +857,10 @@ flow:- name: testfilter:- context_filter:context: _ctx.request.pathmessage:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/context_limiter/</guid>
-      <description>context_limiter#描述#context_limiter 过滤器用来按照请求上下文来进行限速。
-配置示例#配置示例如下：
-flow:- name: default_flowfilter:- context_limiter:max_requests: 1action: dropcontext:- _ctx.request.path- _ctx.request.header.Host- _ctx.request.header.Env上面的配置中，对 _ctx.request.path 、 _ctx.request.header.Host 和 _ctx.request.header.Env 这三个上下文变量来组成一个 bucket 进行限速。 允许的最大 qps 为 1每秒，达到限速直接拒绝范围外的后续请求。
-参数说明#   名称 类型 说明     context array 设置上下文变量，依次组合成一个 bucket key   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
+      <description>context_limiter #  描述 #  context_limiter 过滤器用来按照请求上下文来进行限速。
+配置示例 #  配置示例如下：
+flow: - name: default_flow filter: - context_limiter: max_requests: 1 action: drop context: - _ctx.request.path - _ctx.request.header.Host - _ctx.request.header.Env 上面的配置中，对 _ctx.request.path 、 _ctx.request.header.Host 和 _ctx.request.header.Env 这三个上下文变量来组成一个 bucket 进行限速。 允许的最大 qps 为 1每秒，达到限速直接拒绝范围外的后续请求。
+参数说明 #     名称 类型 说明     context array 设置上下文变量，依次组合成一个 bucket key   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
     </item>
     
     <item>
@@ -869,10 +869,10 @@ flow:- name: default_flowfilter:- context_limiter:max_requests: 1action: dr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/context_regex_replace/</guid>
-      <description>context_regex_replace#描述#context_regex_replace 过滤器用来通过正则表达式来替换修改请求上下文的相关信息。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- context_regex_replace:context: &amp;quot;_ctx.request.path&amp;quot;pattern: &amp;quot;^/&amp;quot;to: &amp;quot;/cluster:&amp;quot;when:contains:_ctx.request.path: /_search- dump:request: true这个例子可以将请求 curl localhost:8000/abc/_search 替换为 curl localhost:8000/cluster:abc/_search
-参数说明#   名称 类型 说明     context string 请求的上下文及对应的 Key   pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    支持修改的上下文变量列表如下：</description>
+      <description>context_regex_replace #  描述 #  context_regex_replace 过滤器用来通过正则表达式来替换修改请求上下文的相关信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - context_regex_replace: context: &amp;quot;_ctx.request.path&amp;quot; pattern: &amp;quot;^/&amp;quot; to: &amp;quot;/cluster:&amp;quot; when: contains: _ctx.request.path: /_search - dump: request: true 这个例子可以将请求 curl localhost:8000/abc/_search 替换为 curl localhost:8000/cluster:abc/_search
+参数说明 #     名称 类型 说明     context string 请求的上下文及对应的 Key   pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    支持修改的上下文变量列表如下：</description>
     </item>
     
     <item>
@@ -881,9 +881,9 @@ flow:- name: testfilter:- context_regex_replace:context: &amp;quot;_ctx.requ
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/dag/</guid>
-      <description>dag#描述#dag 处理器用来管理任务的并行调度。
-配置示例#下面的这个例子，定义了一个名为 racing_example 的服务，auto_start 设置为自动启动，processor 设置依次执行的每个处理单元，其中 dag 处理器支持多个任务并行执行，支持 wait_all 和 first_win 两种聚合模式，如下：
-pipeline:- name: racing_exampleauto_start: trueprocessor:- echo: #ready, set, gomessage: read,set,go- dag:mode: wait_all #first_win, wait_allparallel:- echo: #player1message: player1- echo: #player2message: player2- echo: #player3message: player3end:- echo: #checking scoremessage: checking score- echo: #announce championmessage: &#39;announce champion&#39;- echo: #donemessage: racing finished上面的 echo 处理器非常简单，用来输出一个指定的消息，这个管道模拟的是一个赛跑的场景，palyer1、2、3 并行赛跑，全部跑完之后再进行算分和宣布比赛冠军，最后输出结束信息，程序运行输出如下：</description>
+      <description>dag #  描述 #  dag 处理器用来管理任务的并行调度。
+配置示例 #  下面的这个例子，定义了一个名为 racing_example 的服务，auto_start 设置为自动启动，processor 设置依次执行的每个处理单元，其中 dag 处理器支持多个任务并行执行，支持 wait_all 和 first_win 两种聚合模式，如下：
+pipeline: - name: racing_example auto_start: true processor: - echo: #ready, set, go message: read,set,go - dag: mode: wait_all #first_win, wait_all parallel: - echo: #player1 message: player1 - echo: #player2 message: player2 - echo: #player3 message: player3 end: - echo: #checking score message: checking score - echo: #announce champion message: &#39;announce champion&#39; - echo: #done message: racing finished 上面的 echo 处理器非常简单，用来输出一个指定的消息，这个管道模拟的是一个赛跑的场景，palyer1、2、3 并行赛跑，全部跑完之后再进行算分和宣布比赛冠军，最后输出结束信息，程序运行输出如下：</description>
     </item>
     
     <item>
@@ -892,10 +892,10 @@ pipeline:- name: racing_exampleauto_start: trueprocessor:- echo: #ready, set
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/date_range_precision_tuning/</guid>
-      <description>date_range_precision_tuning#描述#date_range_precision_tuning 过滤器用来重设时间范围查询的时间精度，通过调整精度，可以让短时间内邻近的重复请求更容易被缓存，对于有一些对于时间精度不那么高但是数据量非常大的场景，比如使用 Kibana 来做报表分析，通过缩减精度来缓存重复的查询请求，从而降低后端服务器压力，前端报表展现的提速非常明显。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- date_range_precision_tuning:time_precision: 4- get_cache:- elasticsearch:elasticsearch: dev- set_cache:精度说明#Kibana 默认发往 Elasticsearch 的查询，使用的是当前时间 Now，精度到毫秒，通过设置不同的精度来改写查询，以下面的查询为例：
-{&amp;quot;range&amp;quot;:{&amp;quot;@timestamp&amp;quot;:{&amp;quot;gte&amp;quot;:&amp;quot;2019-09-26T08:21:12.152Z&amp;quot;,&amp;quot;lte&amp;quot;:&amp;quot;2020-09-26T08:21:12.152Z&amp;quot;,&amp;quot;format&amp;quot;:&amp;quot;strict_date_optional_time&amp;quot;}分别设置不同的精度，改写之后的查询结果如下：
+      <description>date_range_precision_tuning #  描述 #  date_range_precision_tuning 过滤器用来重设时间范围查询的时间精度，通过调整精度，可以让短时间内邻近的重复请求更容易被缓存，对于有一些对于时间精度不那么高但是数据量非常大的场景，比如使用 Kibana 来做报表分析，通过缩减精度来缓存重复的查询请求，从而降低后端服务器压力，前端报表展现的提速非常明显。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - date_range_precision_tuning: time_precision: 4 - get_cache: - elasticsearch: elasticsearch: dev - set_cache: 精度说明 #  Kibana 默认发往 Elasticsearch 的查询，使用的是当前时间 Now，精度到毫秒，通过设置不同的精度来改写查询，以下面的查询为例：
+{&amp;quot;range&amp;quot;:{&amp;quot;@timestamp&amp;quot;:{&amp;quot;gte&amp;quot;:&amp;quot;2019-09-26T08:21:12.152Z&amp;quot;,&amp;quot;lte&amp;quot;:&amp;quot;2020-09-26T08:21:12.152Z&amp;quot;,&amp;quot;format&amp;quot;:&amp;quot;strict_date_optional_time&amp;quot;} 分别设置不同的精度，改写之后的查询结果如下：
    精度 新的查询     0 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T00:00:00.000Z&amp;rdquo;,&amp;ldquo;lte&amp;rdquo;:&amp;ldquo;2020-09-26T23:59:59.999Z&amp;rdquo;,&amp;ldquo;format&amp;rdquo;:&amp;ldquo;strict_date_optional_time&amp;rdquo;}   1 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T00:00:00.000Z&amp;rdquo;,&amp;ldquo;lte&amp;rdquo;:&amp;ldquo;2020-09-26T09:59:59.999Z&amp;rdquo;,&amp;ldquo;format&amp;rdquo;:&amp;ldquo;strict_date_optional_time&amp;rdquo;}   2 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T08:00:00.000Z&amp;rdquo;,&amp;ldquo;lte&amp;rdquo;:&amp;ldquo;2020-09-26T08:59:59.999Z&amp;rdquo;,&amp;ldquo;format&amp;rdquo;:&amp;ldquo;strict_date_optional_time&amp;rdquo;}   3 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T08:20:00.000Z&amp;rdquo;,&amp;ldquo;lte&amp;rdquo;:&amp;ldquo;2020-09-26T08:29:59.999Z&amp;rdquo;,&amp;ldquo;format&amp;rdquo;:&amp;ldquo;strict_date_optional_time&amp;rdquo;}   4 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T08:21:00.000Z&amp;rdquo;,&amp;ldquo;lte&amp;rdquo;:&amp;ldquo;2020-09-26T08:21:59.999Z&amp;rdquo;,&amp;ldquo;format&amp;rdquo;:&amp;ldquo;strict_date_optional_time&amp;rdquo;}   5 {&amp;ldquo;range&amp;rdquo;:{&amp;quot;@timestamp&amp;quot;:{&amp;ldquo;gte&amp;rdquo;:&amp;ldquo;2019-09-26T08:21:10.</description>
     </item>
     
@@ -905,9 +905,9 @@ flow:- name: testfilter:- date_range_precision_tuning:time_precision: 4- ge
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/drop/</guid>
-      <description>drop#描述#drop 过滤器用来丢弃某个消息，提前结束请求的处理。
-配置示例#一个简单的示例如下：
-flow:- name: dropfilter:- drop:</description>
+      <description>drop #  描述 #  drop 过滤器用来丢弃某个消息，提前结束请求的处理。
+配置示例 #  一个简单的示例如下：
+flow: - name: drop filter: - drop: </description>
     </item>
     
     <item>
@@ -916,10 +916,10 @@ flow:- name: dropfilter:- drop:</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/dump/</guid>
-      <description>dump#描述#dump 过滤器是一个用于在终端打印 Dump 输出相关请求信息的过滤器，主要用于调试。
-配置示例#一个简单的示例如下：
-flow:- name: hello_worldfilter:- dump:uri: truerequest_header: truerequest_body: trueresponse_body: truestatus_code: true参数说明#dump 过滤器比较简单，在需要的流程处理阶段插入 dump 过滤器，即可在终端输出相应阶段的请求信息，方便调试。
-   名称 类型 说明     request bool 是否输出全部完整的请求信息   response bool 是否输出全部完整的返回信息   uri bool 是否输出请求的 URI 信息   query_args bool 是否输出请求的参数信息   user bool 是否输出请求的用户信息   api_key bool 是否输出请求的 APIKey 信息   request_header bool 是否输出请求的头信息   response_header bool 是否输出响应的头信息   status_code bool 是否输出响应的状态码   context array 输出自定义的上下文信息    输出上下文#可以使用 context 参数来调试请求上下文信息，示例配置文件：</description>
+      <description>dump #  描述 #  dump 过滤器是一个用于在终端打印 Dump 输出相关请求信息的过滤器，主要用于调试。
+配置示例 #  一个简单的示例如下：
+flow: - name: hello_world filter: - dump: uri: true request_header: true request_body: true response_body: true status_code: true 参数说明 #  dump 过滤器比较简单，在需要的流程处理阶段插入 dump 过滤器，即可在终端输出相应阶段的请求信息，方便调试。
+   名称 类型 说明     request bool 是否输出全部完整的请求信息   response bool 是否输出全部完整的返回信息   uri bool 是否输出请求的 URI 信息   query_args bool 是否输出请求的参数信息   user bool 是否输出请求的用户信息   api_key bool 是否输出请求的 APIKey 信息   request_header bool 是否输出请求的头信息   response_header bool 是否输出响应的头信息   status_code bool 是否输出响应的状态码   context array 输出自定义的上下文信息    输出上下文 #  可以使用 context 参数来调试请求上下文信息，示例配置文件：</description>
     </item>
     
     <item>
@@ -928,9 +928,9 @@ flow:- name: hello_worldfilter:- dump:uri: truerequest_header: truerequest
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/dump_hash/</guid>
-      <description>dump_hash#描述#dump_hash 处理器用来导出集群的索引文档并计算 Hash。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- dump_hash: #dump es1&#39;s docindices: &amp;quot;medcl-dr3&amp;quot;scroll_time: &amp;quot;10m&amp;quot;elasticsearch: &amp;quot;source&amp;quot;query: &amp;quot;field1:elastic&amp;quot;fields: &amp;quot;doc_hash&amp;quot;output_queue: &amp;quot;source_docs&amp;quot;batch_size: 10000slice_size: 5参数说明#   名称 类型 说明     elasticsearch string 目标集群的名称   scroll_time string Scroll 回话超时时间   batch_size int Scroll 批次大小，默认 5000   slice_size int Slice 大小，默认 1   sort_type string 文档排序类型，默认 asc   sort_field string 文档排序字段   indices string 索引   level string 请求处理级别，可以设置为 cluster 则表示请求不进行节点和分片级别的拆分，适用于 Elasticsearch 前有代理的情况   query string 查询过滤条件   fields string 要返回的字段列表   sort_document_fields bool hash 计算之前是否对 _source 里面的字段进行排序，默认 false   hash_func string hash 函数，可选 xxhash32、xxhash64、fnv1a，默认 xxhash32   output_queue string 输出结果的队列名称    </description>
+      <description>dump_hash #  描述 #  dump_hash 处理器用来导出集群的索引文档并计算 Hash。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - dump_hash: #dump es1&#39;s doc indices: &amp;quot;medcl-dr3&amp;quot; scroll_time: &amp;quot;10m&amp;quot; elasticsearch: &amp;quot;source&amp;quot; query: &amp;quot;field1:elastic&amp;quot; fields: &amp;quot;doc_hash&amp;quot; output_queue: &amp;quot;source_docs&amp;quot; batch_size: 10000 slice_size: 5 参数说明 #     名称 类型 说明     elasticsearch string 目标集群的名称   scroll_time string Scroll 回话超时时间   batch_size int Scroll 批次大小，默认 5000   slice_size int Slice 大小，默认 1   sort_type string 文档排序类型，默认 asc   sort_field string 文档排序字段   indices string 索引   level string 请求处理级别，可以设置为 cluster 则表示请求不进行节点和分片级别的拆分，适用于 Elasticsearch 前有代理的情况   query string 查询过滤条件   fields string 要返回的字段列表   sort_document_fields bool hash 计算之前是否对 _source 里面的字段进行排序，默认 false   hash_func string hash 函数，可选 xxhash32、xxhash64、fnv1a，默认 xxhash32   output_queue string 输出结果的队列名称    </description>
     </item>
     
     <item>
@@ -939,13 +939,13 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/elasticsearch/</guid>
-      <description>elasticsearch#描述#elasticsearch 过滤器是一个用于请求转发给后端 Elasticsearch 集群的过滤器。
-配置示例#使用 elasticsearch 过滤器之前，需要提前定义一个 Elasticsearch 的集群配置节点，如下：
-elasticsearch:- name: prodenabled: trueendpoint: http://192.168.3.201:9200流程的配置示例如下：
-flow:- name: cache_firstfilter:- elasticsearch:elasticsearch: prod 上面的例子即将请求转发给 prod 集群。
-自动更新#对于一个大规模的集群，可能存在很多的节点，不可能一一配置后端的所有节点，只需要先指定 Elasticsearch 模块允许自动发现后端节点，如下：
-elasticsearch:- name: prodenabled: trueendpoint: http://192.168.3.201:9200discovery:enabled: truerefresh:enabled: truebasic_auth:username: elasticpassword: pass然后过滤器这边的配置也开启刷新，即可访问后端所有节点，且节点上下线也会自动更新，示例如下：
-flow:- name: cache_firstfilter:- elasticsearch:elasticsearch: prod refresh: enabled: trueinterval: 30s设置权重#如果后端集群很多，极限网关支持对不同的节点设置不同的访问权重，配置示例如下：</description>
+      <description>elasticsearch #  描述 #  elasticsearch 过滤器是一个用于请求转发给后端 Elasticsearch 集群的过滤器。
+配置示例 #  使用 elasticsearch 过滤器之前，需要提前定义一个 Elasticsearch 的集群配置节点，如下：
+elasticsearch: - name: prod enabled: true endpoint: http://192.168.3.201:9200 流程的配置示例如下：
+flow: - name: cache_first filter: - elasticsearch: elasticsearch: prod 上面的例子即将请求转发给 prod 集群。
+自动更新 #  对于一个大规模的集群，可能存在很多的节点，不可能一一配置后端的所有节点，只需要先指定 Elasticsearch 模块允许自动发现后端节点，如下：
+elasticsearch: - name: prod enabled: true endpoint: http://192.168.3.201:9200 discovery: enabled: true refresh: enabled: true basic_auth: username: elastic password: pass 然后过滤器这边的配置也开启刷新，即可访问后端所有节点，且节点上下线也会自动更新，示例如下：
+flow: - name: cache_first filter: - elasticsearch: elasticsearch: prod refresh: enabled: true interval: 30s 设置权重 #  如果后端集群很多，极限网关支持对不同的节点设置不同的访问权重，配置示例如下：</description>
     </item>
     
     <item>
@@ -954,9 +954,9 @@ flow:- name: cache_firstfilter:- elasticsearch:elasticsearch: prod refresh: 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/elasticsearch_health_check/</guid>
-      <description>elasticsearch_health_check#描述#elasticsearch_health_check 过滤器用来以限速模式下主动探测 Elasticsearch 的健康情况， 当出现后端故障的情况下，可以触发一次主动的集群健康检查，而不用等待 Elasticsearch 默认的轮询检查结果，限速设置为最多每秒发送一次检查请求给后端 Elasticsearch。
-配置示例#一个简单的示例如下：
-flow:- name: elasticsearch_health_checkfilter:- elasticsearch_health_check:elasticsearch: dev参数说明#   名称 类型 说明     elasticsearch string 集群 ID   interval int 设置最少执行请求的时间间隔，单位秒，默认 1    </description>
+      <description>elasticsearch_health_check #  描述 #  elasticsearch_health_check 过滤器用来以限速模式下主动探测 Elasticsearch 的健康情况， 当出现后端故障的情况下，可以触发一次主动的集群健康检查，而不用等待 Elasticsearch 默认的轮询检查结果，限速设置为最多每秒发送一次检查请求给后端 Elasticsearch。
+配置示例 #  一个简单的示例如下：
+flow: - name: elasticsearch_health_check filter: - elasticsearch_health_check: elasticsearch: dev 参数说明 #     名称 类型 说明     elasticsearch string 集群 ID   interval int 设置最少执行请求的时间间隔，单位秒，默认 1    </description>
     </item>
     
     <item>
@@ -965,11 +965,11 @@ flow:- name: elasticsearch_health_checkfilter:- elasticsearch_health_check:e
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/flow/</guid>
-      <description>flow#描述#flow 过滤器用来跳转或执行某个或一系列其他流程。
-配置示例#一个简单的示例如下：
-flow:- name: flowfilter:- flow:flows: - request_logging使用上下文的动态 Flow:
-flow:- name: dns-flowfilter:- flow:ignore_undefined_flow: truecontext_flow:context: _ctx.request.hostcontext_parse_pattern: (?P&amp;lt;uuid&amp;gt;^[0-9a-z_\-]+)\.flow_id_template: flow_$[[uuid]]- set_response:status: 503content_type: application/jsonbody: &#39;{&amp;quot;message&amp;quot;:&amp;quot;invalid HOST&amp;quot;}&#39;支持的上下文变量，请访问 上下文 .
-参数说明#   名称 类型 说明     flow string 流程 ID，支持指定单个 flow 执行   flows array 流程 ID，数组格式，可以指定多个，依次执行   ignore_undefined_flow bool 是否忽略未知的 flow，继续执行   context_flow.</description>
+      <description>flow #  描述 #  flow 过滤器用来跳转或执行某个或一系列其他流程。
+配置示例 #  一个简单的示例如下：
+flow: - name: flow filter: - flow: flows: - request_logging 使用上下文的动态 Flow:
+flow: - name: dns-flow filter: - flow: ignore_undefined_flow: true context_flow: context: _ctx.request.host context_parse_pattern: (?P&amp;lt;uuid&amp;gt;^[0-9a-z_\-]+)\. flow_id_template: flow_$[[uuid]] - set_response: status: 503 content_type: application/json body: &#39;{&amp;quot;message&amp;quot;:&amp;quot;invalid HOST&amp;quot;}&#39; 支持的上下文变量，请访问 上下文 .
+参数说明 #     名称 类型 说明     flow string 流程 ID，支持指定单个 flow 执行   flows array 流程 ID，数组格式，可以指定多个，依次执行   ignore_undefined_flow bool 是否忽略未知的 flow，继续执行   context_flow.</description>
     </item>
     
     <item>
@@ -978,9 +978,9 @@ flow:- name: dns-flowfilter:- flow:ignore_undefined_flow: truecontext_flow:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/flow_runner/</guid>
-      <description>flow_runner#描述#flow_runner 处理器用来异步消费队列里面的请求并使用异步用于在线请求的处理流程来进行消费处理。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- flow_runner:input_queue: &amp;quot;primary_deadletter_requests&amp;quot;flow: primary-flow-post-processingwhen:cluster_available: [ &amp;quot;primary&amp;quot; ]参数说明#   名称 类型 说明     input_queue string 订阅的队列名称   flow string 以什么样的流程来消费队列里面的请求消息   commit_on_tag string 只有当前请求的上下文里面出现指定 tag 才会 commit 消息，默认为空表示执行完就 commit    </description>
+      <description>flow_runner #  描述 #  flow_runner 处理器用来异步消费队列里面的请求并使用异步用于在线请求的处理流程来进行消费处理。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - flow_runner: input_queue: &amp;quot;primary_deadletter_requests&amp;quot; flow: primary-flow-post-processing when: cluster_available: [ &amp;quot;primary&amp;quot; ] 参数说明 #     名称 类型 说明     input_queue string 订阅的队列名称   flow string 以什么样的流程来消费队列里面的请求消息   commit_on_tag string 只有当前请求的上下文里面出现指定 tag 才会 commit 消息，默认为空表示执行完就 commit    </description>
     </item>
     
     <item>
@@ -989,9 +989,9 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/http/</guid>
-      <description>http#描述#http 过滤器用来将请求代理转发到指定的 http 服务器。
-配置示例#一个简单的示例如下：
-flow:- name: default_flowfilter:- basic_auth:valid_users:medcl: passwd- http:schema: &amp;quot;http&amp;quot; #https or http#host: &amp;quot;192.168.3.98:5601&amp;quot;hosts: - &amp;quot;192.168.3.98:5601&amp;quot;- &amp;quot;192.168.3.98:5602&amp;quot;参数说明#   名称 类型 说明     schema string http 或是 https   host string 目标主机地址，带端口，如 localhost:9200   hosts array 主机地址列表，遇到故障，依次尝试   skip_failure_host bool 是否跳过不可以的主机，默认 true   max_connection_per_node int 主机的最大连接数，默认 5000   max_response_size int 支持的最大响应体大小   max_retry_times int 出错的最大重试次数，默认 0   retry_delay_in_ms int 重试的延迟，默认 1000   skip_cleanup_hop_headers bool 是否移除不兼容的 Hop-by-hop 头信息   max_conn_wait_timeout duration 建立连接的超时时间，默认 30s   max_idle_conn_duration duration 空闲连接的超时时间，默认 30s   max_conn_duration duration 长连接的超时时间，默认 0s   timeout duration 请求的超时时间，默认 30s   read_timeout duration 读请求的超时时间，默认 0s   write_timeout duration 写请求的超时时间，默认 0s   read_buffer_size int 读请求的缓冲区大小，默认 16384   write_buffer_size int 写请求的缓冲区大小，默认 16384   tls_insecure_skip_verify bool 是否忽略 TLS 的校验，默认 true    </description>
+      <description>http #  描述 #  http 过滤器用来将请求代理转发到指定的 http 服务器。
+配置示例 #  一个简单的示例如下：
+flow: - name: default_flow filter: - basic_auth: valid_users: medcl: passwd - http: schema: &amp;quot;http&amp;quot; #https or http #host: &amp;quot;192.168.3.98:5601&amp;quot; hosts: - &amp;quot;192.168.3.98:5601&amp;quot; - &amp;quot;192.168.3.98:5602&amp;quot; 参数说明 #     名称 类型 说明     schema string http 或是 https   host string 目标主机地址，带端口，如 localhost:9200   hosts array 主机地址列表，遇到故障，依次尝试   skip_failure_host bool 是否跳过不可以的主机，默认 true   max_connection_per_node int 主机的最大连接数，默认 5000   max_response_size int 支持的最大响应体大小   max_retry_times int 出错的最大重试次数，默认 0   retry_delay_in_ms int 重试的延迟，默认 1000   skip_cleanup_hop_headers bool 是否移除不兼容的 Hop-by-hop 头信息   max_conn_wait_timeout duration 建立连接的超时时间，默认 30s   max_idle_conn_duration duration 空闲连接的超时时间，默认 30s   max_conn_duration duration 长连接的超时时间，默认 0s   timeout duration 请求的超时时间，默认 30s   read_timeout duration 读请求的超时时间，默认 0s   write_timeout duration 写请求的超时时间，默认 0s   read_buffer_size int 读请求的缓冲区大小，默认 16384   write_buffer_size int 写请求的缓冲区大小，默认 16384   tls_insecure_skip_verify bool 是否忽略 TLS 的校验，默认 true    </description>
     </item>
     
     <item>
@@ -1000,9 +1000,9 @@ flow:- name: default_flowfilter:- basic_auth:valid_users:medcl: passwd- ht
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/index_diff/</guid>
-      <description>index_diff#描述#index_diff 处理器用来对两个结果集进行差异对比。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- index_diff:diff_queue: &amp;quot;diff_result&amp;quot;buffer_size: 1text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务source_queue: &#39;source_docs&#39;target_queue: &#39;target_docs&#39;参数说明#   名称 类型 说明     source_queue string 来源数据的名称   target_queue string 目标数据的名称   diff_queue string 存放 diff 结果的队列   buffer_size int 内存 buffer 大小   keep_source bool diff 结果里面是否包含文档 source 信息   text_report bool 是否输出文本格式的结果    </description>
+      <description>index_diff #  描述 #  index_diff 处理器用来对两个结果集进行差异对比。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - index_diff: diff_queue: &amp;quot;diff_result&amp;quot; buffer_size: 1 text_report: true #如果要存 es，这个开关关闭，开启 pipeline 的 diff_result_ingest 任务 source_queue: &#39;source_docs&#39; target_queue: &#39;target_docs&#39; 参数说明 #     名称 类型 说明     source_queue string 来源数据的名称   target_queue string 目标数据的名称   diff_queue string 存放 diff 结果的队列   buffer_size int 内存 buffer 大小   keep_source bool diff 结果里面是否包含文档 source 信息   text_report bool 是否输出文本格式的结果    </description>
     </item>
     
     <item>
@@ -1011,9 +1011,9 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/indexing_merge/</guid>
-      <description>indexing_merge#描述#indexing_merge 处理器用来消费队列里面的纯 JSON 文档，并合并成 Bulk 请求保存到指定的队列里面，需要配合 bulk_indexing 处理器进行消费，用批量写入代替单次请求来提高写入吞吐。
-配置示例#一个简单的示例如下：
-pipeline:- name: indexing_mergeauto_start: truekeep_running: trueprocessor:- indexing_merge:input_queue: &amp;quot;request_logging&amp;quot;elasticsearch: &amp;quot;logging-server&amp;quot;index_name: &amp;quot;infini_gateway_requests&amp;quot;output_queue:name: &amp;quot;gateway_requests&amp;quot;label:tag: &amp;quot;request_logging&amp;quot;worker_size: 1bulk_size_in_mb: 10- name: logging_requestsauto_start: truekeep_running: trueprocessor:- bulk_indexing:bulk:compress: truebatch_size_in_mb: 10batch_size_in_docs: 5000consumer:fetch_max_messages: 100queues:type: indexing_mergewhen:cluster_available: [ &amp;quot;logging-server&amp;quot; ]参数说明#   名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 5，单位秒   bulk_size_in_kb int 批次请求的单位大小，单位 KB   bulk_size_in_mb int 批次请求的单位大小，单位 MB，默认 10   elasticsearch string 保存到目标集群的名称   index_name string 保存到目标集群的索引名称   type_name string 保存到目标集群的索引类型名称，默认根据集群版本来设置，v7 以前为 doc，之后为 _doc   output_queue.</description>
+      <description>indexing_merge #  描述 #  indexing_merge 处理器用来消费队列里面的纯 JSON 文档，并合并成 Bulk 请求保存到指定的队列里面，需要配合 bulk_indexing 处理器进行消费，用批量写入代替单次请求来提高写入吞吐。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: indexing_merge auto_start: true keep_running: true processor: - indexing_merge: input_queue: &amp;quot;request_logging&amp;quot; elasticsearch: &amp;quot;logging-server&amp;quot; index_name: &amp;quot;infini_gateway_requests&amp;quot; output_queue: name: &amp;quot;gateway_requests&amp;quot; label: tag: &amp;quot;request_logging&amp;quot; worker_size: 1 bulk_size_in_mb: 10 - name: logging_requests auto_start: true keep_running: true processor: - bulk_indexing: bulk: compress: true batch_size_in_mb: 10 batch_size_in_docs: 5000 consumer: fetch_max_messages: 100 queues: type: indexing_merge when: cluster_available: [ &amp;quot;logging-server&amp;quot; ] 参数说明 #     名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 5，单位秒   bulk_size_in_kb int 批次请求的单位大小，单位 KB   bulk_size_in_mb int 批次请求的单位大小，单位 MB，默认 10   elasticsearch string 保存到目标集群的名称   index_name string 保存到目标集群的索引名称   type_name string 保存到目标集群的索引类型名称，默认根据集群版本来设置，v7 以前为 doc，之后为 _doc   output_queue.</description>
     </item>
     
     <item>
@@ -1022,12 +1022,12 @@ pipeline:- name: indexing_mergeauto_start: truekeep_running: trueprocessor:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/javascript/</guid>
-      <description>javascript#描述#javascript 过滤器可用于通过用 javascript 编写脚本来执行您自己的处理逻辑，从而提供最大的灵活性。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- javascript:source: &amp;gt;function process(ctx) {var console = require(&#39;console&#39;);console.log(&amp;quot;hello from javascript&amp;quot;);}这个脚本里面的 process 是一个内置的函数，用来处理传进来的上下文信息，函数里面可以自定义业务逻辑。
+      <description>javascript #  描述 #  javascript 过滤器可用于通过用 javascript 编写脚本来执行您自己的处理逻辑，从而提供最大的灵活性。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - javascript: source: &amp;gt; function process(ctx) { var console = require(&#39;console&#39;); console.log(&amp;quot;hello from javascript&amp;quot;); } 这个脚本里面的 process 是一个内置的函数，用来处理传进来的上下文信息，函数里面可以自定义业务逻辑。
 如果脚本比较复杂，也支持通过文件的方式从加载：
-flow:- name: testfilter:- javascript:file: example.js这里的 example.js 是文件的保存路径。
-参数说明#   名称 类型 描述     source string 要执行的 Javascript 代码。   file string 要加载的脚本文件的路径。相对路径被解释为相对于网关实例数据目录的 scripts 子目录。   params map 一个参数字典，传递给脚本的 register 方法。    上下文 API#传递给处理方法的上下文对象具有以下 API 可以被使用。有关上下文的更多信息，请查看 Request Context。</description>
+flow: - name: test filter: - javascript: file: example.js 这里的 example.js 是文件的保存路径。
+参数说明 #     名称 类型 描述     source string 要执行的 Javascript 代码。   file string 要加载的脚本文件的路径。相对路径被解释为相对于网关实例数据目录的 scripts 子目录。   params map 一个参数字典，传递给脚本的 register 方法。    上下文 API #  传递给处理方法的上下文对象具有以下 API 可以被使用。有关上下文的更多信息，请查看 Request Context。</description>
     </item>
     
     <item>
@@ -1036,9 +1036,9 @@ flow:- name: testfilter:- javascript:file: example.js这里的 example.js �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/json_indexing/</guid>
-      <description>json_indexing#描述#json_indexing 处理器用来消费队列里面的纯 JSON 文档，并保存到指定的 Elasticsearch 服务器里面。
-配置示例#一个简单的示例如下：
-pipeline:- name: request_logging_indexauto_start: truekeep_running: trueprocessor:- json_indexing:index_name: &amp;quot;gateway_requests&amp;quot;elasticsearch: &amp;quot;dev&amp;quot;input_queue: &amp;quot;request_logging&amp;quot;idle_timeout_in_seconds: 1worker_size: 1bulk_size_in_mb: 10参数说明#   名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 5，单位秒   bulk_size_in_kb int 批次请求的单位大小，单位 KB   bulk_size_in_mb int 批次请求的单位大小，单位 MB   elasticsearch string 保存到目标集群的名称   index_name string 保存到目标集群的索引名称   type_name string 保存到目标集群的索引类型名称，默认根据集群版本来设置，v7 以前为 doc，之后为 _doc    </description>
+      <description>json_indexing #  描述 #  json_indexing 处理器用来消费队列里面的纯 JSON 文档，并保存到指定的 Elasticsearch 服务器里面。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: request_logging_index auto_start: true keep_running: true processor: - json_indexing: index_name: &amp;quot;gateway_requests&amp;quot; elasticsearch: &amp;quot;dev&amp;quot; input_queue: &amp;quot;request_logging&amp;quot; idle_timeout_in_seconds: 1 worker_size: 1 bulk_size_in_mb: 10 参数说明 #     名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 5，单位秒   bulk_size_in_kb int 批次请求的单位大小，单位 KB   bulk_size_in_mb int 批次请求的单位大小，单位 MB   elasticsearch string 保存到目标集群的名称   index_name string 保存到目标集群的索引名称   type_name string 保存到目标集群的索引类型名称，默认根据集群版本来设置，v7 以前为 doc，之后为 _doc    </description>
     </item>
     
     <item>
@@ -1047,10 +1047,10 @@ pipeline:- name: request_logging_indexauto_start: truekeep_running: trueproc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/ldap_auth/</guid>
-      <description>ldap_auth#描述#ldap_auth 过滤器用来设置基于 LDAP 的身份认证。
-配置示例#一个简单的示例如下：
-flow:- name: ldap_authfilter:- ldap_auth:host: &amp;quot;ldap.forumsys.com&amp;quot;port: 389bind_dn: &amp;quot;cn=read-only-admin,dc=example,dc=com&amp;quot;bind_password: &amp;quot;password&amp;quot;base_dn: &amp;quot;dc=example,dc=com&amp;quot;user_filter: &amp;quot;(uid=%s)&amp;quot;上面的配置使用的是在线的免费 LDAP 测试服务器，测试用户 tesla，密码 password。
-➜ curl http://127.0.0.1:8000/ -u tesla:password {&amp;quot;name&amp;quot; : &amp;quot;192.168.3.7&amp;quot;,&amp;quot;cluster_name&amp;quot; : &amp;quot;elasticsearch&amp;quot;,&amp;quot;cluster_uuid&amp;quot; : &amp;quot;ZGTwWtBfSLWRpsS1VKQDiQ&amp;quot;,&amp;quot;version&amp;quot; : {&amp;quot;number&amp;quot; : &amp;quot;7.8.0&amp;quot;,&amp;quot;build_flavor&amp;quot; : &amp;quot;default&amp;quot;,&amp;quot;build_type&amp;quot; : &amp;quot;tar&amp;quot;,&amp;quot;build_hash&amp;quot; : &amp;quot;757314695644ea9a1dc2fecd26d1a43856725e65&amp;quot;,&amp;quot;build_date&amp;quot; : &amp;quot;2020-06-14T19:35:50.</description>
+      <description>ldap_auth #  描述 #  ldap_auth 过滤器用来设置基于 LDAP 的身份认证。
+配置示例 #  一个简单的示例如下：
+flow: - name: ldap_auth filter: - ldap_auth: host: &amp;quot;ldap.forumsys.com&amp;quot; port: 389 bind_dn: &amp;quot;cn=read-only-admin,dc=example,dc=com&amp;quot; bind_password: &amp;quot;password&amp;quot; base_dn: &amp;quot;dc=example,dc=com&amp;quot; user_filter: &amp;quot;(uid=%s)&amp;quot; 上面的配置使用的是在线的免费 LDAP 测试服务器，测试用户 tesla，密码 password。
+➜ curl http://127.0.0.1:8000/ -u tesla:password { &amp;quot;name&amp;quot; : &amp;quot;192.168.3.7&amp;quot;, &amp;quot;cluster_name&amp;quot; : &amp;quot;elasticsearch&amp;quot;, &amp;quot;cluster_uuid&amp;quot; : &amp;quot;ZGTwWtBfSLWRpsS1VKQDiQ&amp;quot;, &amp;quot;version&amp;quot; : { &amp;quot;number&amp;quot; : &amp;quot;7.8.0&amp;quot;, &amp;quot;build_flavor&amp;quot; : &amp;quot;default&amp;quot;, &amp;quot;build_type&amp;quot; : &amp;quot;tar&amp;quot;, &amp;quot;build_hash&amp;quot; : &amp;quot;757314695644ea9a1dc2fecd26d1a43856725e65&amp;quot;, &amp;quot;build_date&amp;quot; : &amp;quot;2020-06-14T19:35:50.</description>
     </item>
     
     <item>
@@ -1059,10 +1059,10 @@ flow:- name: ldap_authfilter:- ldap_auth:host: &amp;quot;ldap.forumsys.com&a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/logging/</guid>
-      <description>logging#描述#logging 过滤器用来按请求记录下来，通过异步记录到本地磁盘的方式，尽可能降低对请求的延迟影响，对于流量很大的场景，建议配合其它请求过滤器来降低日志的总量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- logging:queue_name: request_logging记录的请求日志样例如下：
- {&amp;quot;_index&amp;quot; : &amp;quot;gateway_requests&amp;quot;,&amp;quot;_type&amp;quot; : &amp;quot;doc&amp;quot;,&amp;quot;_id&amp;quot; : &amp;quot;EH5bG3gBsbC2s3iWFzCF&amp;quot;,&amp;quot;_score&amp;quot; : 1.0,&amp;quot;_source&amp;quot; : {&amp;quot;tls&amp;quot; : false,&amp;quot;@timestamp&amp;quot; : &amp;quot;2021-03-10T08:57:30.645Z&amp;quot;,&amp;quot;conn_time&amp;quot; : &amp;quot;2021-03-10T08:57:30.635Z&amp;quot;,&amp;quot;flow&amp;quot; : {&amp;quot;from&amp;quot; : &amp;quot;127.0.0.1&amp;quot;,&amp;quot;process&amp;quot; : [&amp;quot;request_body_regex_replace&amp;quot;,&amp;quot;get_cache&amp;quot;,&amp;quot;date_range_precision_tuning&amp;quot;,&amp;quot;get_cache&amp;quot;,&amp;quot;elasticsearch&amp;quot;,&amp;quot;set_cache&amp;quot;,&amp;quot;||&amp;quot;,&amp;quot;request_logging&amp;quot;],&amp;quot;relay&amp;quot; : &amp;quot;192.168.43.101-Quartz&amp;quot;,&amp;quot;to&amp;quot; : [&amp;quot;localhost:9200&amp;quot;]},&amp;quot;id&amp;quot; : 3,&amp;quot;local_ip&amp;quot; : &amp;quot;127.</description>
+      <description>logging #  描述 #  logging 过滤器用来按请求记录下来，通过异步记录到本地磁盘的方式，尽可能降低对请求的延迟影响，对于流量很大的场景，建议配合其它请求过滤器来降低日志的总量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - logging: queue_name: request_logging 记录的请求日志样例如下：
+ { &amp;quot;_index&amp;quot; : &amp;quot;gateway_requests&amp;quot;, &amp;quot;_type&amp;quot; : &amp;quot;doc&amp;quot;, &amp;quot;_id&amp;quot; : &amp;quot;EH5bG3gBsbC2s3iWFzCF&amp;quot;, &amp;quot;_score&amp;quot; : 1.0, &amp;quot;_source&amp;quot; : { &amp;quot;tls&amp;quot; : false, &amp;quot;@timestamp&amp;quot; : &amp;quot;2021-03-10T08:57:30.645Z&amp;quot;, &amp;quot;conn_time&amp;quot; : &amp;quot;2021-03-10T08:57:30.635Z&amp;quot;, &amp;quot;flow&amp;quot; : { &amp;quot;from&amp;quot; : &amp;quot;127.0.0.1&amp;quot;, &amp;quot;process&amp;quot; : [ &amp;quot;request_body_regex_replace&amp;quot;, &amp;quot;get_cache&amp;quot;, &amp;quot;date_range_precision_tuning&amp;quot;, &amp;quot;get_cache&amp;quot;, &amp;quot;elasticsearch&amp;quot;, &amp;quot;set_cache&amp;quot;, &amp;quot;||&amp;quot;, &amp;quot;request_logging&amp;quot; ], &amp;quot;relay&amp;quot; : &amp;quot;192.168.43.101-Quartz&amp;quot;, &amp;quot;to&amp;quot; : [ &amp;quot;localhost:9200&amp;quot; ] }, &amp;quot;id&amp;quot; : 3, &amp;quot;local_ip&amp;quot; : &amp;quot;127.</description>
     </item>
     
     <item>
@@ -1071,9 +1071,9 @@ flow:- name: testfilter:- logging:queue_name: request_logging记录的请�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/queue/</guid>
-      <description>queue#描述#queue 过滤器用来保存请求到消息队列。
-配置示例#一个简单的示例如下：
-flow:- name: queuefilter:- queue:queue_name: queue_name参数说明#   名称 类型 说明     depth_threshold int 大于队列指定深度才能存入队列，默认为 0   queue_name string 消息队列名称    </description>
+      <description>queue #  描述 #  queue 过滤器用来保存请求到消息队列。
+配置示例 #  一个简单的示例如下：
+flow: - name: queue filter: - queue: queue_name: queue_name 参数说明 #     名称 类型 说明     depth_threshold int 大于队列指定深度才能存入队列，默认为 0   queue_name string 消息队列名称    </description>
     </item>
     
     <item>
@@ -1082,9 +1082,9 @@ flow:- name: queuefilter:- queue:queue_name: queue_name参数说明#   �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/queue_consumer/</guid>
-      <description>queue_consumer#描述#queue_consumer 处理器用来异步消费队列里面的请求到 Elasticsearch。
-配置示例#一个简单的示例如下：
-pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueprocessor:- queue_consumer:input_queue: &amp;quot;backup&amp;quot;elasticsearch: &amp;quot;backup&amp;quot;waiting_after: [ &amp;quot;backup_failure_requests&amp;quot;]worker_size: 20when:cluster_available: [ &amp;quot;backup&amp;quot; ]参数说明#   名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 1   elasticsearch string 保存到目标集群的名称   waiting_after array 需要先等将这些指定队列消费完才能开始消费主队列里面的数据   failure_queue string 因为后端故障执行失败的请求，默认为 %input_queue%-failure   invalid_queue string 状态码返回为 4xx 的请求，默认为 %input_queue%-invalid   compress bool 是否压缩请求，默认 false   safety_parse bool 是否启用安全解析，即不采用 buffer 的方式，占用内存更高一点，默认为 true   doc_buffer_size bool 单次请求处理的最大文档 buff size，建议设置超过单个文档的最大大小，默认 256*1024    </description>
+      <description>queue_consumer #  描述 #  queue_consumer 处理器用来异步消费队列里面的请求到 Elasticsearch。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: bulk_request_ingest auto_start: true keep_running: true processor: - queue_consumer: input_queue: &amp;quot;backup&amp;quot; elasticsearch: &amp;quot;backup&amp;quot; waiting_after: [ &amp;quot;backup_failure_requests&amp;quot;] worker_size: 20 when: cluster_available: [ &amp;quot;backup&amp;quot; ] 参数说明 #     名称 类型 说明     input_queue int 订阅的队列名称   worker_size int 并行执行消费任务的线程数，默认 1   idle_timeout_in_seconds int 消费队列的超时时间，默认 1   elasticsearch string 保存到目标集群的名称   waiting_after array 需要先等将这些指定队列消费完才能开始消费主队列里面的数据   failure_queue string 因为后端故障执行失败的请求，默认为 %input_queue%-failure   invalid_queue string 状态码返回为 4xx 的请求，默认为 %input_queue%-invalid   compress bool 是否压缩请求，默认 false   safety_parse bool 是否启用安全解析，即不采用 buffer 的方式，占用内存更高一点，默认为 true   doc_buffer_size bool 单次请求处理的最大文档 buff size，建议设置超过单个文档的最大大小，默认 256*1024    </description>
     </item>
     
     <item>
@@ -1093,9 +1093,9 @@ pipeline:- name: bulk_request_ingestauto_start: truekeep_running: trueproces
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/ratio/</guid>
-      <description>ratio#描述#ratio 过滤器用来将正常的流量按照比例迁移转发到另外的一个处理流程，可以实现灰度发布、流量迁移导出，或者将部分流量切换到不同版本集群用于测试的能力。
-配置示例#一个简单的示例如下：
-flow:- name: ratio_traffic_forwardfilter:- ratio:ratio: 0.1flow: hello_worldcontinue: true参数说明#   名称 类型 说明     ratio float 需要迁移的流量比例   flow string 指定新的流量处理流程   continue bool 流量迁移出去之后，是否还继续执行之前的既定流程，设置成 false 则立即返回，默认 false。    </description>
+      <description>ratio #  描述 #  ratio 过滤器用来将正常的流量按照比例迁移转发到另外的一个处理流程，可以实现灰度发布、流量迁移导出，或者将部分流量切换到不同版本集群用于测试的能力。
+配置示例 #  一个简单的示例如下：
+flow: - name: ratio_traffic_forward filter: - ratio: ratio: 0.1 flow: hello_world continue: true 参数说明 #     名称 类型 说明     ratio float 需要迁移的流量比例   flow string 指定新的流量处理流程   continue bool 流量迁移出去之后，是否还继续执行之前的既定流程，设置成 false 则立即返回，默认 false。    </description>
     </item>
     
     <item>
@@ -1104,10 +1104,10 @@ flow:- name: ratio_traffic_forwardfilter:- ratio:ratio: 0.1flow: hello_worl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/record/</guid>
-      <description>record#描述#record 过滤器是一个记录请求的过滤器，输出的请求可以直接复制到 Kibana 的 Console 中用于调试。
-配置示例#一个简单的示例如下：
-flow:- name: request_loggingfilter:- record:stdout: truefilename: requests.txtrecord 过滤器输出的请求日志，格式示例如下：
-GET /_cluster/state/version,master_node,routing_table,metadata/*GET /_aliasGET /_cluster/healthGET /_cluster/statsGET /_nodes/0NSvaoOGRs2VIeLv3lLpmA/stats参数说明#   名称 类型 说明     filename string 录制请求日志在 data 目录下保存的文件名   stdout bool 是否在终端也打印输出，默认为 false    </description>
+      <description>record #  描述 #  record 过滤器是一个记录请求的过滤器，输出的请求可以直接复制到 Kibana 的 Console 中用于调试。
+配置示例 #  一个简单的示例如下：
+flow: - name: request_logging filter: - record: stdout: true filename: requests.txt record 过滤器输出的请求日志，格式示例如下：
+GET /_cluster/state/version,master_node,routing_table,metadata/* GET /_alias GET /_cluster/health GET /_cluster/stats GET /_nodes/0NSvaoOGRs2VIeLv3lLpmA/stats 参数说明 #     名称 类型 说明     filename string 录制请求日志在 data 目录下保存的文件名   stdout bool 是否在终端也打印输出，默认为 false    </description>
     </item>
     
     <item>
@@ -1116,9 +1116,9 @@ GET /_cluster/state/version,master_node,routing_table,metadata/*GET /_aliasGET
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/redirect/</guid>
-      <description>redirect#描述#redirect 过滤器用来跳转到一个指定的 URL。
-配置示例#一个简单的示例如下：
-flow:- name: redirectfilter:- redirect:uri: https://infinilabs.com参数说明#   名称 类型 说明     uri string 需要跳转的完整目标 URI 地址   code int 状态码设置，默认 302    </description>
+      <description>redirect #  描述 #  redirect 过滤器用来跳转到一个指定的 URL。
+配置示例 #  一个简单的示例如下：
+flow: - name: redirect filter: - redirect: uri: https://infinilabs.com 参数说明 #     名称 类型 说明     uri string 需要跳转的完整目标 URI 地址   code int 状态码设置，默认 302    </description>
     </item>
     
     <item>
@@ -1127,9 +1127,9 @@ flow:- name: redirectfilter:- redirect:uri: https://infinilabs.com参数说
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/redis_pubsub/</guid>
-      <description>redis_pubsub#描述#reids 过滤器用来将收到的请求和响应结果保存到 Redis 消息队列中。
-配置示例#一个简单的示例如下：
-flow:- name: redis_pubsubfilter:- redis_pubsub:host: 127.0.0.1port: 6379channel: gatewayresponse: true参数说明#   名称 类型 说明     host string Reids 主机名，默认 localhost   port int Reids 端口号，默认为 6379   password string Redis 密码   db int Redis 默认选择的数据库，默认为 0   channel string Redis 消息队列名称，必填，没有默认值   response bool 是否包含响应结果，默认为 true    </description>
+      <description>redis_pubsub #  描述 #  reids 过滤器用来将收到的请求和响应结果保存到 Redis 消息队列中。
+配置示例 #  一个简单的示例如下：
+flow: - name: redis_pubsub filter: - redis_pubsub: host: 127.0.0.1 port: 6379 channel: gateway response: true 参数说明 #     名称 类型 说明     host string Reids 主机名，默认 localhost   port int Reids 端口号，默认为 6379   password string Redis 密码   db int Redis 默认选择的数据库，默认为 0   channel string Redis 消息队列名称，必填，没有默认值   response bool 是否包含响应结果，默认为 true    </description>
     </item>
     
     <item>
@@ -1138,9 +1138,9 @@ flow:- name: redis_pubsubfilter:- redis_pubsub:host: 127.0.0.1port: 6379ch
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/processors/replay/</guid>
-      <description>replay#描述#replay 处理器用来重放 record 过滤器记录的请求。
-配置示例#一个简单的示例如下：
-pipeline:- name: play_requestsauto_start: truekeep_running: falseprocessor:- replay:filename: requests.txtschema: &amp;quot;http&amp;quot;host: &amp;quot;localhost:8000&amp;quot;参数说明#   名称 类型 说明     filename string 包含重放消息的文件名称   schema string 请求协议类型，http 或 https   host string 接受请求的目标服务器，格式 host:port    </description>
+      <description>replay #  描述 #  replay 处理器用来重放 record 过滤器记录的请求。
+配置示例 #  一个简单的示例如下：
+pipeline: - name: play_requests auto_start: true keep_running: false processor: - replay: filename: requests.txt schema: &amp;quot;http&amp;quot; host: &amp;quot;localhost:8000&amp;quot; 参数说明 #     名称 类型 说明     filename string 包含重放消息的文件名称   schema string 请求协议类型，http 或 https   host string 接受请求的目标服务器，格式 host:port    </description>
     </item>
     
     <item>
@@ -1149,10 +1149,10 @@ pipeline:- name: play_requestsauto_start: truekeep_running: falseprocessor:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_api_key_filter/</guid>
-      <description>request_api_key_filter#描述#当 Elasticsearch 是通过 API Key 方式来进行身份认证的时候，request_api_key_filter 过滤器可用来按请求的 API ID 来进行过滤。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_api_key_filter:message: &amp;quot;Request filtered!&amp;quot;exclude:- VuaCfGcBCdbkQm-e5aOx上面的例子表示，来自 VuaCfGcBCdbkQm-e5aOx 的请求会被拒绝，如下。
-➜ ~ curl localhost:8000 -H &amp;quot;Authorization: ApiKey VnVhQ2ZHY0JDZGJrUW0tZTVhT3g6dWkybHAyYXhUTm1zeWFrdzl0dk5udw==&amp;quot; -v* Rebuilt URL to: localhost:8000/* Trying 127.0.0.1...* TCP_NODELAY set* Connected to localhost (127.0.0.1) port 8000 (#0)&amp;gt; GET / HTTP/1.1&amp;gt; Host: localhost:8000&amp;gt; User-Agent: curl/7.</description>
+      <description>request_api_key_filter #  描述 #  当 Elasticsearch 是通过 API Key 方式来进行身份认证的时候，request_api_key_filter 过滤器可用来按请求的 API ID 来进行过滤。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_api_key_filter: message: &amp;quot;Request filtered!&amp;quot; exclude: - VuaCfGcBCdbkQm-e5aOx 上面的例子表示，来自 VuaCfGcBCdbkQm-e5aOx 的请求会被拒绝，如下。
+➜ ~ curl localhost:8000 -H &amp;quot;Authorization: ApiKey VnVhQ2ZHY0JDZGJrUW0tZTVhT3g6dWkybHAyYXhUTm1zeWFrdzl0dk5udw==&amp;quot; -v * Rebuilt URL to: localhost:8000/ * Trying 127.0.0.1... * TCP_NODELAY set * Connected to localhost (127.0.0.1) port 8000 (#0) &amp;gt; GET / HTTP/1.1 &amp;gt; Host: localhost:8000 &amp;gt; User-Agent: curl/7.</description>
     </item>
     
     <item>
@@ -1161,10 +1161,10 @@ flow:- name: testfilter:- request_api_key_filter:message: &amp;quot;Request 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_api_key_limiter/</guid>
-      <description>request_api_key_limiter#描述#request_api_key_limiter 过滤器用来按照 API Key 来进行限速。
-配置示例#配置示例如下：
-flow:- name: rate_limit_flowfilter:- request_api_key_limiter:id:- VuaCfGcBCdbkQm-e5aOxmax_requests: 1action: drop # retry or dropmessage: &amp;quot;your api_key reached our limit&amp;quot;上面的配置中，对 VuaCfGcBCdbkQm-e5aOx 这个 API ID 进行限速，允许的最大 qps 为 1 每秒。
-➜ ~ curl localhost:8000 -H &amp;quot;Authorization: ApiKey VnVhQ2ZHY0JDZGJrUW0tZTVhT3g6dWkybHAyYXhUTm1zeWFrdzl0dk5udw==&amp;quot; -v* Rebuilt URL to: localhost:8000/* Trying 127.0.0.1...* TCP_NODELAY set* Connected to localhost (127.</description>
+      <description>request_api_key_limiter #  描述 #  request_api_key_limiter 过滤器用来按照 API Key 来进行限速。
+配置示例 #  配置示例如下：
+flow: - name: rate_limit_flow filter: - request_api_key_limiter: id: - VuaCfGcBCdbkQm-e5aOx max_requests: 1 action: drop # retry or drop message: &amp;quot;your api_key reached our limit&amp;quot; 上面的配置中，对 VuaCfGcBCdbkQm-e5aOx 这个 API ID 进行限速，允许的最大 qps 为 1 每秒。
+➜ ~ curl localhost:8000 -H &amp;quot;Authorization: ApiKey VnVhQ2ZHY0JDZGJrUW0tZTVhT3g6dWkybHAyYXhUTm1zeWFrdzl0dk5udw==&amp;quot; -v * Rebuilt URL to: localhost:8000/ * Trying 127.0.0.1... * TCP_NODELAY set * Connected to localhost (127.</description>
     </item>
     
     <item>
@@ -1173,9 +1173,9 @@ flow:- name: rate_limit_flowfilter:- request_api_key_limiter:id:- VuaCfGcBC
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_body_json_del/</guid>
-      <description>request_body_json_del#描述#request_body_json_del 过滤器用来删除 JSON 格式的请求体里面的部分字段。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_body_json_del:path:- query.bool.should.[0]- query.bool.must参数说明#   名称 类型 说明     path array 需要删除的 JSON PATH 键值   ignore_missing bool 如果这个 JSON Path 不存在，是否忽略处理，默认 false    </description>
+      <description>request_body_json_del #  描述 #  request_body_json_del 过滤器用来删除 JSON 格式的请求体里面的部分字段。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_body_json_del: path: - query.bool.should.[0] - query.bool.must 参数说明 #     名称 类型 说明     path array 需要删除的 JSON PATH 键值   ignore_missing bool 如果这个 JSON Path 不存在，是否忽略处理，默认 false    </description>
     </item>
     
     <item>
@@ -1184,9 +1184,9 @@ flow:- name: testfilter:- request_body_json_del:path:- query.bool.should.[0
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_body_json_set/</guid>
-      <description>request_body_json_set#描述#request_body_json_set 过滤器用来修改 JSON 格式的请求体。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_body_json_set:path:- aggs.total_num.terms.field -&amp;gt; &amp;quot;name&amp;quot;- aggs.total_num.terms.size -&amp;gt; 3- size -&amp;gt; 0参数说明#   名称 类型 说明     path map 使用 -&amp;gt; 作为标识符的键值对， JSON PATH 和需要替换的值   ignore_missing bool 如果这个 JSON Path 不存在，是否忽略处理，默认 false    </description>
+      <description>request_body_json_set #  描述 #  request_body_json_set 过滤器用来修改 JSON 格式的请求体。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_body_json_set: path: - aggs.total_num.terms.field -&amp;gt; &amp;quot;name&amp;quot; - aggs.total_num.terms.size -&amp;gt; 3 - size -&amp;gt; 0 参数说明 #     名称 类型 说明     path map 使用 -&amp;gt; 作为标识符的键值对， JSON PATH 和需要替换的值   ignore_missing bool 如果这个 JSON Path 不存在，是否忽略处理，默认 false    </description>
     </item>
     
     <item>
@@ -1195,12 +1195,12 @@ flow:- name: testfilter:- request_body_json_set:path:- aggs.total_num.terms
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_body_regex_replace/</guid>
-      <description>request_body_regex_replace#描述#request_body_regex_replace 过滤器使用正则表达式来替换请求体正文的字符串内容。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_body_regex_replace:pattern: &#39;&amp;quot;size&amp;quot;: 10000&#39;to: &#39;&amp;quot;size&amp;quot;: 100&#39;- elasticsearch:elasticsearch: prod - dump:request_body: true上面的示例将会替换发送给 Elasticsearch 请求体里面，size 设置为 10000 的部分修改为 100，可以用来动态修复错误或者不合理的查询。
+      <description>request_body_regex_replace #  描述 #  request_body_regex_replace 过滤器使用正则表达式来替换请求体正文的字符串内容。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_body_regex_replace: pattern: &#39;&amp;quot;size&amp;quot;: 10000&#39; to: &#39;&amp;quot;size&amp;quot;: 100&#39; - elasticsearch: elasticsearch: prod - dump: request_body: true 上面的示例将会替换发送给 Elasticsearch 请求体里面，size 设置为 10000 的部分修改为 100，可以用来动态修复错误或者不合理的查询。
 测试如下：
-curl -XPOST &amp;quot;http://localhost:8000/myindex/_search&amp;quot; -H &#39;Content-Type: application/json&#39; -d&#39;{&amp;quot;query&amp;quot;: {&amp;quot;match_all&amp;quot;: {}},&amp;quot;size&amp;quot;: 10000}&#39;实际发生的查询：
- {&amp;quot;_index&amp;quot; : &amp;quot;gateway_requests&amp;quot;,&amp;quot;_type&amp;quot; : &amp;quot;doc&amp;quot;,&amp;quot;_id&amp;quot; : &amp;quot;EH5bG3gBsbC2s3iWFzCF&amp;quot;,&amp;quot;_score&amp;quot; : 1.</description>
+curl -XPOST &amp;quot;http://localhost:8000/myindex/_search&amp;quot; -H &#39;Content-Type: application/json&#39; -d&#39; { &amp;quot;query&amp;quot;: { &amp;quot;match_all&amp;quot;: {} },&amp;quot;size&amp;quot;: 10000 }&#39; 实际发生的查询：
+ { &amp;quot;_index&amp;quot; : &amp;quot;gateway_requests&amp;quot;, &amp;quot;_type&amp;quot; : &amp;quot;doc&amp;quot;, &amp;quot;_id&amp;quot; : &amp;quot;EH5bG3gBsbC2s3iWFzCF&amp;quot;, &amp;quot;_score&amp;quot; : 1.</description>
     </item>
     
     <item>
@@ -1209,12 +1209,12 @@ curl -XPOST &amp;quot;http://localhost:8000/myindex/_search&amp;quot; -H &#39;Co
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_client_ip_filter/</guid>
-      <description>request_client_ip_filter#描述#request_client_ip_filter 过滤器用来按请求的来源用户 IP 信息来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_client_ip_filter:exclude:- 192.168.3.67上面的例子表示，来自 192.168.3.67 的请求不允许通过。
+      <description>request_client_ip_filter #  描述 #  request_client_ip_filter 过滤器用来按请求的来源用户 IP 信息来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_client_ip_filter: exclude: - 192.168.3.67 上面的例子表示，来自 192.168.3.67 的请求不允许通过。
 路由跳转的例子:
-flow:- name: echofilter:- echo:message: hello stanger- name: default_flowfilter:- request_client_ip_filter:action: redirect_flowflow: echoexclude:- 192.168.3.67来自 192.168.3.67 会跳转到另外的 echo 流程。
-参数说明#   名称 类型 说明     exclude array 拒绝通过的请求 IP 数组列表   include array 允许通过的请求 IP 数组列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+flow: - name: echo filter: - echo: message: hello stanger - name: default_flow filter: - request_client_ip_filter: action: redirect_flow flow: echo exclude: - 192.168.3.67 来自 192.168.3.67 会跳转到另外的 echo 流程。
+参数说明 #     名称 类型 说明     exclude array 拒绝通过的请求 IP 数组列表   include array 允许通过的请求 IP 数组列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -1223,10 +1223,10 @@ flow:- name: echofilter:- echo:message: hello stanger- name: default_flowf
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_client_ip_limiter/</guid>
-      <description>request_client_ip_limiter#描述#request_client_ip_limiter 过滤器用来按照请求客户端 IP 来进行限速。
-配置示例#配置示例如下：
-flow:- name: rate_limit_flowfilter:- request_client_ip_limiter:ip: #only limit for specify ips- 127.0.0.1max_requests: 256# max_bytes: 102400 #100kaction: retry # retry or drop# max_retry_times: 1000# retry_interval: 500 #100msmessage: &amp;quot;your ip reached our limit&amp;quot;上面的配置中，对 127.0.0.1 这个 IP 进行限速，允许的最大 qps 为 256。
-参数说明#   名称 类型 说明     ip array 设置哪些客户端 IP 会参与限速，不设置表示所有 IP 参与   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
+      <description>request_client_ip_limiter #  描述 #  request_client_ip_limiter 过滤器用来按照请求客户端 IP 来进行限速。
+配置示例 #  配置示例如下：
+flow: - name: rate_limit_flow filter: - request_client_ip_limiter: ip: #only limit for specify ips - 127.0.0.1 max_requests: 256 # max_bytes: 102400 #100k action: retry # retry or drop # max_retry_times: 1000 # retry_interval: 500 #100ms message: &amp;quot;your ip reached our limit&amp;quot; 上面的配置中，对 127.0.0.1 这个 IP 进行限速，允许的最大 qps 为 256。
+参数说明 #     名称 类型 说明     ip array 设置哪些客户端 IP 会参与限速，不设置表示所有 IP 参与   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
     </item>
     
     <item>
@@ -1235,10 +1235,10 @@ flow:- name: rate_limit_flowfilter:- request_client_ip_limiter:ip: #only lim
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_header_filter/</guid>
-      <description>request_header_filter#描述#request_header_filter 过滤器用来按请求的 Header 信息来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_header_filter:include:- TRACE: true上面的例子表示，当 Header 里面包含 TRACE: true 的请求才被允许通过。
-curl 192.168.3.4:8000 -v -H &#39;TRACE: true&#39;参数说明#   名称 类型 说明     exclude array 拒绝通过的请求 Header 信息   include array 允许通过的请求 Header 信息   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+      <description>request_header_filter #  描述 #  request_header_filter 过滤器用来按请求的 Header 信息来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_header_filter: include: - TRACE: true 上面的例子表示，当 Header 里面包含 TRACE: true 的请求才被允许通过。
+curl 192.168.3.4:8000 -v -H &#39;TRACE: true&#39; 参数说明 #     名称 类型 说明     exclude array 拒绝通过的请求 Header 信息   include array 允许通过的请求 Header 信息   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -1247,10 +1247,10 @@ curl 192.168.3.4:8000 -v -H &#39;TRACE: true&#39;参数说明#   名称 类�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_host_filter/</guid>
-      <description>request_host_filter#描述#request_host_filter 过滤器主要用来按照指定的域名或者主机名来进行请求过滤，适合只有一个 IP 多个域名需要进行域名访问控制的场景。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_host_filter:include:- domain-test2.com:8000上面的例子表示，只有访问的是这个域名 domain-test2.com:8000 的请求才被允许通过。
-示例如下：#✗ curl -k -u user:passwd http://domain-test4.com:8000/ -v* Trying 192.168.3.67...* TCP_NODELAY set* Connected to domain-test4.com (192.168.3.67) port 8000 (#0)* Server auth using Basic with user &#39;medcl&#39;&amp;gt; GET / HTTP/1.1&amp;gt; Host: domain-test4.com:8000&amp;gt; Authorization: Basic 123=&amp;gt; User-Agent: curl/7.</description>
+      <description>request_host_filter #  描述 #  request_host_filter 过滤器主要用来按照指定的域名或者主机名来进行请求过滤，适合只有一个 IP 多个域名需要进行域名访问控制的场景。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_host_filter: include: - domain-test2.com:8000 上面的例子表示，只有访问的是这个域名 domain-test2.com:8000 的请求才被允许通过。
+示例如下： #  ✗ curl -k -u user:passwd http://domain-test4.com:8000/ -v * Trying 192.168.3.67... * TCP_NODELAY set * Connected to domain-test4.com (192.168.3.67) port 8000 (#0) * Server auth using Basic with user &#39;medcl&#39; &amp;gt; GET / HTTP/1.1 &amp;gt; Host: domain-test4.com:8000 &amp;gt; Authorization: Basic 123= &amp;gt; User-Agent: curl/7.</description>
     </item>
     
     <item>
@@ -1259,10 +1259,10 @@ flow:- name: testfilter:- request_host_filter:include:- domain-test2.com:80
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_host_limiter/</guid>
-      <description>request_host_limiter#描述#request_host_limiter 过滤器用来按照请求主机（域名）来进行限速。
-配置示例#配置示例如下：
-flow:- name: rate_limit_flowfilter:- request_host_limiter:host:- api.elasticsearch.cn:8000- logging.elasticsearch.cn:8000max_requests: 256# max_bytes: 102400 #100kaction: retry # retry or drop# max_retry_times: 1000# retry_interval: 500 #100msmessage: &amp;quot;you reached our limit&amp;quot;上面的配置中，对 api.elasticsearch.cn 和 logging.elasticsearch.cn 这两个访问域名进行限速，允许的最大 qps 为 256 每秒。
-参数说明#   名称 类型 说明     host array 设置哪些主机域名会参与限速，不设置表示都参与，注意，如果访问的域名带端口号，这里也需包含端口号，如 localhost:8080   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
+      <description>request_host_limiter #  描述 #  request_host_limiter 过滤器用来按照请求主机（域名）来进行限速。
+配置示例 #  配置示例如下：
+flow: - name: rate_limit_flow filter: - request_host_limiter: host: - api.elasticsearch.cn:8000 - logging.elasticsearch.cn:8000 max_requests: 256 # max_bytes: 102400 #100k action: retry # retry or drop # max_retry_times: 1000 # retry_interval: 500 #100ms message: &amp;quot;you reached our limit&amp;quot; 上面的配置中，对 api.elasticsearch.cn 和 logging.elasticsearch.cn 这两个访问域名进行限速，允许的最大 qps 为 256 每秒。
+参数说明 #     名称 类型 说明     host array 设置哪些主机域名会参与限速，不设置表示都参与，注意，如果访问的域名带端口号，这里也需包含端口号，如 localhost:8080   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   status string 设置达到限速条件的返回状态码，默认 429   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000   failed_retry_message string 设置达到最大重试次数的请求的拒绝返回消息    </description>
     </item>
     
     <item>
@@ -1271,9 +1271,9 @@ flow:- name: rate_limit_flowfilter:- request_host_limiter:host:- api.elasti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_method_filter/</guid>
-      <description>request_method_filter#描述#request_method_filter 过滤器用来按请求 Method 来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_method_filter:exclude:- PUT- POSTinclude:- GET- HEAD- DELETE参数说明#   名称 类型 说明     exclude array 拒绝通过的请求 Method   include array 允许通过的请求 Method   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+      <description>request_method_filter #  描述 #  request_method_filter 过滤器用来按请求 Method 来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_method_filter: exclude: - PUT - POST include: - GET - HEAD - DELETE 参数说明 #     名称 类型 说明     exclude array 拒绝通过的请求 Method   include array 允许通过的请求 Method   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -1282,9 +1282,9 @@ flow:- name: testfilter:- request_method_filter:exclude:- PUT- POSTinclud
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_path_filter/</guid>
-      <description>request_path_filter#描述#request_path_filter 过滤器用来按请求的 Path 路径来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_path_filter:must: #must match all rules to continueprefix:- /medclcontain:- _searchsuffix:- _count- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dclmust_not: # any match will be filteredprefix:- /.kibana- /_security- /_security- /gateway_requests*- /.reporting- /_monitoring/bulkcontain:- _searchsuffix:- _count- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dclshould:prefix:- /medclcontain:- _search- _async_searchsuffix:- _refreshwildcard:- /*/_refreshregex:- ^/m[\w]+dcl参数说明#   名称 类型 说明     must.</description>
+      <description>request_path_filter #  描述 #  request_path_filter 过滤器用来按请求的 Path 路径来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_path_filter: must: #must match all rules to continue prefix: - /medcl contain: - _search suffix: - _count - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl must_not: # any match will be filtered prefix: - /.kibana - /_security - /_security - /gateway_requests* - /.reporting - /_monitoring/bulk contain: - _search suffix: - _count - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl should: prefix: - /medcl contain: - _search - _async_search suffix: - _refresh wildcard: - /*/_refresh regex: - ^/m[\w]+dcl 参数说明 #     名称 类型 说明     must.</description>
     </item>
     
     <item>
@@ -1293,10 +1293,10 @@ flow:- name: testfilter:- request_path_filter:must: #must match all rules to
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_path_limiter/</guid>
-      <description>request_path_limiter#描述#request_path_limiter 过滤器用来定义请求的限速规则，可以实现索引级别的限速。
-配置示例#配置示例如下：
-flow:- name: rate_limit_flowfilter:- request_path_limiter:message: &amp;quot;Hey, You just reached our request limit!&amp;quot;rules: - pattern: &amp;quot;/(?P&amp;lt;index_name&amp;gt;medcl)/_search&amp;quot; max_qps: 3 group: index_name - pattern: &amp;quot;/(?P&amp;lt;index_name&amp;gt;.*?)/_search&amp;quot; max_qps: 100group: index_name上面的配置中，对 medcl 这个索引执行查询，允许的最大 qps 为 3，而对其它的索引执行查询的 qps 为 100。
-参数说明#   名称 类型 说明     message string 设置达到限速条件的请求的返回消息   rules array 设置限速的策略，支持多种规则，按照配置的先后顺序处理，先匹配的先执行   rules.</description>
+      <description>request_path_limiter #  描述 #  request_path_limiter 过滤器用来定义请求的限速规则，可以实现索引级别的限速。
+配置示例 #  配置示例如下：
+flow: - name: rate_limit_flow filter: - request_path_limiter: message: &amp;quot;Hey, You just reached our request limit!&amp;quot; rules: - pattern: &amp;quot;/(?P&amp;lt;index_name&amp;gt;medcl)/_search&amp;quot; max_qps: 3 group: index_name - pattern: &amp;quot;/(?P&amp;lt;index_name&amp;gt;.*?)/_search&amp;quot; max_qps: 100 group: index_name 上面的配置中，对 medcl 这个索引执行查询，允许的最大 qps 为 3，而对其它的索引执行查询的 qps 为 100。
+参数说明 #     名称 类型 说明     message string 设置达到限速条件的请求的返回消息   rules array 设置限速的策略，支持多种规则，按照配置的先后顺序处理，先匹配的先执行   rules.</description>
     </item>
     
     <item>
@@ -1305,10 +1305,10 @@ flow:- name: rate_limit_flowfilter:- request_path_limiter:message: &amp;quot
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_user_filter/</guid>
-      <description>request_user_filter#描述#当 Elasticsearch 是通过 Basic Auth 方式来进行身份认证的时候，request_user_filter 过滤器可用来按请求的用户名信息来进行过滤。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- request_user_filter:include:- &amp;quot;elastic&amp;quot;上面的例子表示，只有来自 elastic 的请求才被允许通过。
-参数说明#   名称 类型 说明     exclude array 拒绝通过的请求的用户名列表   include array 允许通过的请求的用户名列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+      <description>request_user_filter #  描述 #  当 Elasticsearch 是通过 Basic Auth 方式来进行身份认证的时候，request_user_filter 过滤器可用来按请求的用户名信息来进行过滤。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - request_user_filter: include: - &amp;quot;elastic&amp;quot; 上面的例子表示，只有来自 elastic 的请求才被允许通过。
+参数说明 #     名称 类型 说明     exclude array 拒绝通过的请求的用户名列表   include array 允许通过的请求的用户名列表   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -1317,10 +1317,10 @@ flow:- name: testfilter:- request_user_filter:include:- &amp;quot;elastic&a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/request_user_limiter/</guid>
-      <description>request_user_limiter#描述#request_user_limiter 过滤器用来按照用户名来进行限速。
-配置示例#配置示例如下：
-flow:- name: rate_limit_flowfilter:- request_user_limiter:user:- elastic- medclmax_requests: 256# max_bytes: 102400 #100kaction: retry # retry or drop# max_retry_times: 1000# retry_interval: 500 #100msmessage: &amp;quot;you reached our limit&amp;quot;上面的配置中，对 medcl 和 elastic 这两个用户进行限速，允许的最大 qps 为 256 每秒。
-参数说明#   名称 类型 说明     user array 设置哪些用户会参与限速，不设置表示所有用户参与   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000    </description>
+      <description>request_user_limiter #  描述 #  request_user_limiter 过滤器用来按照用户名来进行限速。
+配置示例 #  配置示例如下：
+flow: - name: rate_limit_flow filter: - request_user_limiter: user: - elastic - medcl max_requests: 256 # max_bytes: 102400 #100k action: retry # retry or drop # max_retry_times: 1000 # retry_interval: 500 #100ms message: &amp;quot;you reached our limit&amp;quot; 上面的配置中，对 medcl 和 elastic 这两个用户进行限速，允许的最大 qps 为 256 每秒。
+参数说明 #     名称 类型 说明     user array 设置哪些用户会参与限速，不设置表示所有用户参与   interval string 评估限速的单位时间间隔，默认为 1s   max_requests int 单位间隔内最大的请求次数限额   max_bytes int 单位间隔内最大的请求流量限额   action string 触发限速之后的处理动作，分为 retry 和 drop 两种，默认为 retry   message string 设置达到限速条件的请求的拒绝返回消息   retry_interval int 限速重试的时间间隔，单位毫秒，默认 10，即 10 毫秒   max_retry_times int 限速重试的最大重试次数，默认 1000    </description>
     </item>
     
     <item>
@@ -1329,10 +1329,10 @@ flow:- name: rate_limit_flowfilter:- request_user_limiter:user:- elastic- 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/response_body_regex_replace/</guid>
-      <description>response_body_regex_replace#描述#response_body_regex_replace 过滤器使用正则表达式来替换请求响应内容的字符串。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- echo:message: &amp;quot;hello infini\n&amp;quot;- response_body_regex_replace:pattern: infinito: world上面的结果输出为 hello world。
-参数说明#   名称 类型 说明     pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    </description>
+      <description>response_body_regex_replace #  描述 #  response_body_regex_replace 过滤器使用正则表达式来替换请求响应内容的字符串。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - echo: message: &amp;quot;hello infini\n&amp;quot; - response_body_regex_replace: pattern: infini to: world 上面的结果输出为 hello world。
+参数说明 #     名称 类型 说明     pattern string 用于匹配替换的正则表达式   to string 替换为目标的字符串内容    </description>
     </item>
     
     <item>
@@ -1341,10 +1341,10 @@ flow:- name: testfilter:- echo:message: &amp;quot;hello infini\n&amp;quot;-
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/response_header_filter/</guid>
-      <description>response_header_filter#描述#response_header_filter 过滤器用来按请求响应的 Header 信息来过滤流量。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:...- response_header_filter:exclude:- INFINI-CACHE: CACHED上面的例子表示，当 Header 信息里面出现 INFINI-CACHE: CACHED 的请求不允许通过。
-参数说明#   名称 类型 说明     exclude array 拒绝通过的响应 Header 信息   include array 允许通过的响应 Header 信息   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+      <description>response_header_filter #  描述 #  response_header_filter 过滤器用来按请求响应的 Header 信息来过滤流量。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: ... - response_header_filter: exclude: - INFINI-CACHE: CACHED 上面的例子表示，当 Header 信息里面出现 INFINI-CACHE: CACHED 的请求不允许通过。
+参数说明 #     名称 类型 说明     exclude array 拒绝通过的响应 Header 信息   include array 允许通过的响应 Header 信息   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -1353,9 +1353,9 @@ flow:- name: testfilter:...- response_header_filter:exclude:- INFINI-CACHE
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/response_header_format/</guid>
-      <description>response_header_format#描述#response_header_format 过滤器用来将请求响应的 Header 信息里面的 Key 都转换成小写。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- response_header_format:</description>
+      <description>response_header_format #  描述 #  response_header_format 过滤器用来将请求响应的 Header 信息里面的 Key 都转换成小写。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - response_header_format: </description>
     </item>
     
     <item>
@@ -1364,9 +1364,9 @@ flow:- name: testfilter:- response_header_format:</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/response_status_filter/</guid>
-      <description>response_status_filter#描述#response_status_filter 过滤器用来按后端服务响应的状态码来进行过滤。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- response_status_filter:message: &amp;quot;Request filtered!&amp;quot;exclude:- 404include:- 200- 201- 500参数说明#   名称 类型 说明     exclude array 拒绝通过的响应码   include array 允许通过的响应码   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。</description>
+      <description>response_status_filter #  描述 #  response_status_filter 过滤器用来按后端服务响应的状态码来进行过滤。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - response_status_filter: message: &amp;quot;Request filtered!&amp;quot; exclude: - 404 include: - 200 - 201 - 500 参数说明 #     名称 类型 说明     exclude array 拒绝通过的响应码   include array 允许通过的响应码   action string 符合过滤条件之后的处理动作，可以是 deny 和 redirect_flow，默认为 deny   status int 自定义模式匹配之后返回的状态码   message string 自定义 deny 模式返回的消息文本   flow string 自定义 redirect_flow 模式执行的 flow ID    注意: 当设置了 include 条件的情况下，必须至少满足 include 设置的其中一种响应码才能被允许通过。 当仅设置了 exclude 条件的情况下，不符合 exclude 的任意请求都允许通过。  </description>
     </item>
     
     <item>
@@ -1375,9 +1375,9 @@ flow:- name: testfilter:- response_status_filter:message: &amp;quot;Request 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/retry_limiter/</guid>
-      <description>retry_limiter#描述#retry_limiter 过滤器用来判断一个请求是否达到最大重试次数，避免一个请求的无限重试。
-配置示例#一个简单的示例如下：
-flow:- name: retry_limiterfilter:- retry_limiter:queue_name: &amp;quot;deadlock_messages&amp;quot;max_retry_times: 3参数说明#   名称 类型 说明     max_retry_times int 最大重试次数，默认为 3   queue_name string 达到重试最大次数后，输出消息到指定消息队列的名称   tag_on_success array 触发重试条件之后，请求上下文打上指定标记    </description>
+      <description>retry_limiter #  描述 #  retry_limiter 过滤器用来判断一个请求是否达到最大重试次数，避免一个请求的无限重试。
+配置示例 #  一个简单的示例如下：
+flow: - name: retry_limiter filter: - retry_limiter: queue_name: &amp;quot;deadlock_messages&amp;quot; max_retry_times: 3 参数说明 #     名称 类型 说明     max_retry_times int 最大重试次数，默认为 3   queue_name string 达到重试最大次数后，输出消息到指定消息队列的名称   tag_on_success array 触发重试条件之后，请求上下文打上指定标记    </description>
     </item>
     
     <item>
@@ -1386,9 +1386,9 @@ flow:- name: retry_limiterfilter:- retry_limiter:queue_name: &amp;quot;deadl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/sample/</guid>
-      <description>sample#描述#sample 过滤器用来将正常的流量按照比例采样，对于海量查询的场景，全流量收集日志需要耗费大量的资源，可以考虑进行抽样统计，对查询日志进行采样分析。
-配置示例#一个简单的示例如下：
-flow:- name: samplefilter:- sample:ratio: 0.2参数说明#   名称 类型 说明     ratio float 采样比例    </description>
+      <description>sample #  描述 #  sample 过滤器用来将正常的流量按照比例采样，对于海量查询的场景，全流量收集日志需要耗费大量的资源，可以考虑进行抽样统计，对查询日志进行采样分析。
+配置示例 #  一个简单的示例如下：
+flow: - name: sample filter: - sample: ratio: 0.2 参数说明 #     名称 类型 说明     ratio float 采样比例    </description>
     </item>
     
     <item>
@@ -1397,9 +1397,9 @@ flow:- name: samplefilter:- sample:ratio: 0.2参数说明#   名称 类�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_basic_auth/</guid>
-      <description>set_basic_auth#描述#set_basic_auth 过滤器用来设置请求的身份认证信息，可以用于重置请求的身份信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_basic_authfilter:- set_basic_auth:username: adminpassword: password参数说明#   名称 类型 说明     username string 用户名   password string 密码    </description>
+      <description>set_basic_auth #  描述 #  set_basic_auth 过滤器用来设置请求的身份认证信息，可以用于重置请求的身份信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_basic_auth filter: - set_basic_auth: username: admin password: password 参数说明 #     名称 类型 说明     username string 用户名   password string 密码    </description>
     </item>
     
     <item>
@@ -1408,9 +1408,9 @@ flow:- name: set_basic_authfilter:- set_basic_auth:username: adminpassword:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_context/</guid>
-      <description>set_context#描述#set_context 过滤器用来设置请求上下文的相关信息。
-配置示例#一个简单的示例如下：
-flow:- name: testfilter:- set_response:body: &#39;{&amp;quot;message&amp;quot;:&amp;quot;hello world&amp;quot;}&#39;- set_context:context:# _ctx.request.uri: http://baidu.com# _ctx.request.path: new_request_path# _ctx.request.host: api.infinilabs.com# _ctx.request.method: DELETE# _ctx.request.body: &amp;quot;hello world&amp;quot;# _ctx.request.body_json.explain: true# _ctx.request.query_args.from: 100# _ctx.request.header.ENV: dev# _ctx.response.content_type: &amp;quot;application/json&amp;quot;# _ctx.response.header.TIMES: 100# _ctx.response.status: 419# _ctx.response.body: &amp;quot;new_body&amp;quot;_ctx.response.body_json.success: true- dump:request: true参数说明#   名称 类型 说明     context map 请求的上下文及对应的新值    支持的上下文变量列表如下：</description>
+      <description>set_context #  描述 #  set_context 过滤器用来设置请求上下文的相关信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: test filter: - set_response: body: &#39;{&amp;quot;message&amp;quot;:&amp;quot;hello world&amp;quot;}&#39; - set_context: context: # _ctx.request.uri: http://baidu.com # _ctx.request.path: new_request_path # _ctx.request.host: api.infinilabs.com # _ctx.request.method: DELETE # _ctx.request.body: &amp;quot;hello world&amp;quot; # _ctx.request.body_json.explain: true # _ctx.request.query_args.from: 100 # _ctx.request.header.ENV: dev # _ctx.response.content_type: &amp;quot;application/json&amp;quot; # _ctx.response.header.TIMES: 100 # _ctx.response.status: 419 # _ctx.response.body: &amp;quot;new_body&amp;quot; _ctx.response.body_json.success: true - dump: request: true 参数说明 #     名称 类型 说明     context map 请求的上下文及对应的新值    支持的上下文变量列表如下：</description>
     </item>
     
     <item>
@@ -1419,10 +1419,10 @@ flow:- name: testfilter:- set_response:body: &#39;{&amp;quot;message&amp;quo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_hostname/</guid>
-      <description>set_hostname#描述#set_hostname 过滤器用来设置请求 Header 关于要访问的主机或域名信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_hostnamefilter:- set_hostname:hostname: api.infini.sh为避免
-参数说明#   名称 类型 说明     hostname string 主机信息    </description>
+      <description>set_hostname #  描述 #  set_hostname 过滤器用来设置请求 Header 关于要访问的主机或域名信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_hostname filter: - set_hostname: hostname: api.infini.sh 为避免
+参数说明 #     名称 类型 说明     hostname string 主机信息    </description>
     </item>
     
     <item>
@@ -1431,10 +1431,10 @@ flow:- name: set_hostnamefilter:- set_hostname:hostname: api.infini.sh为�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_request_header/</guid>
-      <description>set_request_header#描述#set_request_header 过滤器用来设置请求的 Header 头信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_request_headerfilter:- set_request_header:headers:- Trial -&amp;gt; true- Department -&amp;gt; Engineering为避免
-参数说明#   名称 类型 说明     headers map 使用 -&amp;gt; 作为标识符的键值对，用于设置 Header 信息    </description>
+      <description>set_request_header #  描述 #  set_request_header 过滤器用来设置请求的 Header 头信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_request_header filter: - set_request_header: headers: - Trial -&amp;gt; true - Department -&amp;gt; Engineering 为避免
+参数说明 #     名称 类型 说明     headers map 使用 -&amp;gt; 作为标识符的键值对，用于设置 Header 信息    </description>
     </item>
     
     <item>
@@ -1443,10 +1443,10 @@ flow:- name: set_request_headerfilter:- set_request_header:headers:- Trial 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_request_query_args/</guid>
-      <description>set_request_query_args#描述#set_request_query_args 过滤器用来设置请求的 QueryString 参数信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_request_query_argsfilter:- set_request_query_args:args:- size -&amp;gt; 10为避免
-参数说明#   名称 类型 说明     args map 使用 -&amp;gt; 作为标识符的键值对，用于设置 QueryString 参数信息    </description>
+      <description>set_request_query_args #  描述 #  set_request_query_args 过滤器用来设置请求的 QueryString 参数信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_request_query_args filter: - set_request_query_args: args: - size -&amp;gt; 10 为避免
+参数说明 #     名称 类型 说明     args map 使用 -&amp;gt; 作为标识符的键值对，用于设置 QueryString 参数信息    </description>
     </item>
     
     <item>
@@ -1455,9 +1455,9 @@ flow:- name: set_request_query_argsfilter:- set_request_query_args:args:- s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_response/</guid>
-      <description>set_response#描述#set_response 过滤器用来设置请求响应返回信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_responsefilter:- set_response:status: 200content_type: application/jsonbody: &#39;{&amp;quot;message&amp;quot;:&amp;quot;hello world&amp;quot;}&#39;参数说明#   名称 类型 说明     status int 请求状态码，默认 200   content_type string 设置请求返回的内容类型   body string 设置请求返回的结构体    </description>
+      <description>set_response #  描述 #  set_response 过滤器用来设置请求响应返回信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_response filter: - set_response: status: 200 content_type: application/json body: &#39;{&amp;quot;message&amp;quot;:&amp;quot;hello world&amp;quot;}&#39; 参数说明 #     名称 类型 说明     status int 请求状态码，默认 200   content_type string 设置请求返回的内容类型   body string 设置请求返回的结构体    </description>
     </item>
     
     <item>
@@ -1466,9 +1466,9 @@ flow:- name: set_responsefilter:- set_response:status: 200content_type: app
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/set_response_header/</guid>
-      <description>set_response_header#描述#set_response_header 过滤器用来设置请求响应的 Header 头信息。
-配置示例#一个简单的示例如下：
-flow:- name: set_response_headerfilter:- set_response_header:headers:- Trial -&amp;gt; true- Department -&amp;gt; Engineering参数说明#   名称 类型 说明     headers map 使用 -&amp;gt; 作为标识符的键值对，用于设置 Header 信息    </description>
+      <description>set_response_header #  描述 #  set_response_header 过滤器用来设置请求响应的 Header 头信息。
+配置示例 #  一个简单的示例如下：
+flow: - name: set_response_header filter: - set_response_header: headers: - Trial -&amp;gt; true - Department -&amp;gt; Engineering 参数说明 #     名称 类型 说明     headers map 使用 -&amp;gt; 作为标识符的键值对，用于设置 Header 信息    </description>
     </item>
     
     <item>
@@ -1477,9 +1477,9 @@ flow:- name: set_response_headerfilter:- set_response_header:headers:- Tria
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/sleep/</guid>
-      <description>sleep#描述#sleep 过滤器用来添加一个固定的延迟到请求，可以人为降速。
-配置示例#一个简单的示例如下：
-flow:- name: slow_query_logging_testfilter:- sleep:sleep_in_million_seconds: 1024参数说明#   名称 类型 说明     sleep_in_million_seconds int64 需要添加的延迟长度，单位为毫秒    </description>
+      <description>sleep #  描述 #  sleep 过滤器用来添加一个固定的延迟到请求，可以人为降速。
+配置示例 #  一个简单的示例如下：
+flow: - name: slow_query_logging_test filter: - sleep: sleep_in_million_seconds: 1024 参数说明 #     名称 类型 说明     sleep_in_million_seconds int64 需要添加的延迟长度，单位为毫秒    </description>
     </item>
     
     <item>
@@ -1488,9 +1488,9 @@ flow:- name: slow_query_logging_testfilter:- sleep:sleep_in_million_seconds:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/switch/</guid>
-      <description>switch#描述#switch 过滤器用来将流量按照请求路径转发到另外的一个处理流程，可以方便的实现跨集群操作，且 Elasticsearch 集群不需要做任何修改，且各个集群内所有的 API 都可以访问，包括索引的读写和集群操作。
-配置示例#一个简单的示例如下：
-flow:- name: es1-flowfilter:- elasticsearch:elasticsearch: es1- name: es2-flowfilter:- elasticsearch:elasticsearch: es2- name: cross_cluste_searchfilter:- switch:path_rules:- prefix: &amp;quot;es1:&amp;quot;flow: es1-flow- prefix: &amp;quot;es2:&amp;quot;flow: es2-flow- elasticsearch:elasticsearch: dev #elasticsearch configure reference name上面的例子中，以 es1: 开头的索引将转发给集群 es1 集群，以 es2: 开头的索引转发给 es2 集群，不匹配的转发给 dev 集群，在一个 Kibana 里面可以直接操作不同版本的集群了，如下：</description>
+      <description>switch #  描述 #  switch 过滤器用来将流量按照请求路径转发到另外的一个处理流程，可以方便的实现跨集群操作，且 Elasticsearch 集群不需要做任何修改，且各个集群内所有的 API 都可以访问，包括索引的读写和集群操作。
+配置示例 #  一个简单的示例如下：
+flow: - name: es1-flow filter: - elasticsearch: elasticsearch: es1 - name: es2-flow filter: - elasticsearch: elasticsearch: es2 - name: cross_cluste_search filter: - switch: path_rules: - prefix: &amp;quot;es1:&amp;quot; flow: es1-flow - prefix: &amp;quot;es2:&amp;quot; flow: es2-flow - elasticsearch: elasticsearch: dev #elasticsearch configure reference name 上面的例子中，以 es1: 开头的索引将转发给集群 es1 集群，以 es2: 开头的索引转发给 es2 集群，不匹配的转发给 dev 集群，在一个 Kibana 里面可以直接操作不同版本的集群了，如下：</description>
     </item>
     
     <item>
@@ -1499,9 +1499,9 @@ flow:- name: es1-flowfilter:- elasticsearch:elasticsearch: es1- name: es2-f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/latest/gateway/references/filters/translog/</guid>
-      <description>translog#描述#translog 过滤器用来将收到的请求保存到本地文件，并压缩存放，可记录部分或完整的请求日志，用于归档和请求重放。
-配置示例#一个简单的示例如下：
-flow:- name: translogfilter:- translog:max_file_age: 7max_file_count: 10参数说明#   名称 类型 说明     path string 日志存放根目录，默认为网关数据目录下的 translog 子目录   category string 区分不同日志的二级分类子目录，默认为 default   filename string 设置日志的文件名，默认为 translog.log   compress bool 文件滚动之后是否压缩归档，默认为 true   max_file_age int 最多保留的归档文件天数，默认为 30 天   max_file_count int 最多保留的归档文件个数，默认为 100 天   max_file_size_in_mb int 单个归档文件的最大字节数，默认为 1024 MB    </description>
+      <description>translog #  描述 #  translog 过滤器用来将收到的请求保存到本地文件，并压缩存放，可记录部分或完整的请求日志，用于归档和请求重放。
+配置示例 #  一个简单的示例如下：
+flow: - name: translog filter: - translog: max_file_age: 7 max_file_count: 10 参数说明 #     名称 类型 说明     path string 日志存放根目录，默认为网关数据目录下的 translog 子目录   category string 区分不同日志的二级分类子目录，默认为 default   filename string 设置日志的文件名，默认为 translog.log   compress bool 文件滚动之后是否压缩归档，默认为 true   max_file_age int 最多保留的归档文件天数，默认为 30 天   max_file_count int 最多保留的归档文件个数，默认为 100 天   max_file_size_in_mb int 单个归档文件的最大字节数，默认为 1024 MB    </description>
     </item>
     
   </channel>
